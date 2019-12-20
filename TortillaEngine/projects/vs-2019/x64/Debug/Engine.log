@@ -1,0 +1,48 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(452,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (Engine.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  TMusic.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(2052,1): error C2079: 'std::_Wrap<_Ty>::_Value' utiliza struct '_Mix_Music' sin definir
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(2052,1): error C2079:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(2052,1): error C2079:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(2052,1): error C2079:             _Ty=Mix_Music
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(2052,1): error C2079:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1501): message : vea la referencia a la creación de instancias de clase plantilla "std::_Wrap<_Ty>" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1501): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1501): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1501): message :             _Ty=Mix_Music
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1501): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message : vea la referencia a la creación de instancias de clase plantilla "std::_Ref_count_obj2<_Ty>" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :             _Ty=Mix_Music
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         ]
+  TSound.cpp
+D:\Repositorios\CPP_ClassProjects\Proyectos\TortillaEngine\code\sources\TMusic.cpp(39): message : vea la referencia a la creación de instancias de plantilla de función "std::shared_ptr<Mix_Music> std::make_shared<Mix_Music,Mix_Music*>(Mix_Music *&&)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664: 'Mix_Chunk::Mix_Chunk(Mix_Chunk &&)': el argumento 1 no puede convertirse de '_Ty' a 'const Mix_Chunk &'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:             _Ty=Mix_Chunk *
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(198,115): message : Razón: no se puede realizar la conversión de '_Ty' a 'const Mix_Chunk'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(198,115): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(198,115): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(198,115): message :             _Ty=Mix_Chunk *
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(198,115): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(198,115): message : Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+D:\Repositorios\CPP_ClassProjects\Proyectos\TortillaEngine\libraries\sdl2_mixer\include\SDL_mixer.h(118,1): message : vea la declaración de 'Mix_Chunk::Mix_Chunk'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message : vea la referencia a la creación de instancias de plantilla de función "void std::_Construct_in_place<_Ty,Mix_Chunk*>(_Ty &,Mix_Chunk *&&) noexcept(false)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :             _Ty=Mix_Chunk
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Mix_Chunk*>(Mix_Chunk *&&)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :             _Ty=Mix_Chunk
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<Mix_Chunk*>(Mix_Chunk *&&)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :             _Ty=Mix_Chunk
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         ]
+  Generando código...
+D:\Repositorios\CPP_ClassProjects\Proyectos\TortillaEngine\code\sources\TSound.cpp(39): message : vea la referencia a la creación de instancias de plantilla de función "std::shared_ptr<Mix_Chunk> std::make_shared<Mix_Chunk,Mix_Chunk*>(Mix_Chunk *&&)" que se está compilando
