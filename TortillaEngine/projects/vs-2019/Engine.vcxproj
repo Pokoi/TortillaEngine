@@ -14,7 +14,7 @@
     <ClCompile Include="..\..\code\sources\TAudio.cpp" />
     <ClCompile Include="..\..\code\sources\TMusic.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
-    <ClCompile Include="..\..\code\sources\Window.cpp" />
+    <ClCompile Include="..\..\code\sources\TWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />
@@ -22,7 +22,7 @@
     <ClInclude Include="..\..\code\headers\TKeyboardInput.h" />
     <ClInclude Include="..\..\code\headers\TMusic.hpp" />
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
-    <ClInclude Include="..\..\code\headers\Window.hpp" />
+    <ClInclude Include="..\..\code\headers\TWindow.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
