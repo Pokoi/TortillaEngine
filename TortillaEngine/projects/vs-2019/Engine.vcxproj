@@ -19,9 +19,11 @@
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />
     <ClInclude Include="..\..\code\headers\TInputDevice.h" />
+    <ClInclude Include="..\..\code\headers\TKernel.hpp" />
     <ClInclude Include="..\..\code\headers\TKeyboardInput.h" />
     <ClInclude Include="..\..\code\headers\TMusic.hpp" />
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
+    <ClInclude Include="..\..\code\headers\TTask.hpp" />
     <ClInclude Include="..\..\code\headers\TWindow.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
