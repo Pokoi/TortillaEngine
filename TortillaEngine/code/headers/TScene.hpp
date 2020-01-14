@@ -58,5 +58,9 @@ namespace TortillaEngine
 		//Get y Set window
 		//const TWindow & get_window() { return this-> *window; }
 
+		//load scene
+		//Cada vez que se encuentra un tag entity extrae su id y lo añade al mapa
+		//Después extrae cada componente y los va añadiendo a la entidad
+
     };
 }
