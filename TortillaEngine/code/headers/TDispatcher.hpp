@@ -37,7 +37,7 @@ namespace TortillaEngine
     class TDispatcher
     {
 
-        std::map<char*, std::list<TObserver*>> observers;
+        std::map<const char*, std::list<TObserver*>> observers;
 
     public: 
         
@@ -67,7 +67,7 @@ namespace TortillaEngine
 
         void remove(TObserver& observer, const char* id)
         {
-          std::map<char*, std::list<TObserver*>>::iterator it = observers.find(observer);
+          std::map<const char*, std::list<TObserver*>>::iterator it = observers.find(observer);
           observers.clear(it);
         }
 

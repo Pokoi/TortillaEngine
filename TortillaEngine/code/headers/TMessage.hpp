@@ -38,13 +38,13 @@ namespace TortillaEngine
     class TMessage
     {
         char * id;
-        std::multimap<char *, TVariant> parameters;
+        std::multimap<const char *, TVariant> parameters;
 
     public:
 
         TMessage(char * id) : id(id) {}
 
-        void add_parameter(char * key, TVariant& value)
+        void add_parameter(const char * key, TVariant& value)
         {
             parameters[key] = value;
         }
