@@ -43,5 +43,7 @@ namespace TortillaEngine
         {
         
         }
+
+		TTransformComponent operator * (TTransformComponent& other) const {}
     };
 }

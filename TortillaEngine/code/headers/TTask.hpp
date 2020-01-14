@@ -29,6 +29,8 @@
 
 #pragma once
 
+#include <TScene.hpp>
+
 namespace TortillaEngine
 {
 	class TTask
@@ -36,6 +38,7 @@ namespace TortillaEngine
 	protected:
 
 		int priority;
+		TScene * owner_scene;
 
 	public:
 
@@ -51,6 +54,17 @@ namespace TortillaEngine
 		{
 			return this->priority < other.get_priority();
 		}
+
+		//get scene
 	};
 
+
+	//TASK PRIORITY
+	//input task
+	//input mapper
 }
+
+// La tarea de render es un sistema que recorre todas las entidades que tengan un componente de render. Pilla el transform de cada entidad 
+// y se lo aplica a cada componente de render que tenga vinculado. DEspués llama a render node render y después a swap buffer de la ventana
+// Por tanto los pasos son:
+// actualizar matrices; clear window; render_node -> render(); swap buffers

@@ -31,6 +31,7 @@
 #include <TTransformComponent.hpp>
 #include <map>
 #include <memory>
+#include <string>
 
 
 namespace TortillaEngine
@@ -40,7 +41,8 @@ namespace TortillaEngine
     {
         TTransformComponent transform;
         
-        std::map<const char*, std::shared_ptr <TComponent> > components;
+        std::map<std::string, std::shared_ptr <TComponent> > components;
+		TEntity* parent;
 
     public:
 
@@ -57,7 +59,7 @@ namespace TortillaEngine
             return true;
         }
 
-        bool add_component(const char* type, std::shared_ptr <TComponent>& component)
+        bool add_component(std::string type, std::shared_ptr <TComponent>& component)
         {
             if (components.count(type) != 0)
             {
@@ -69,6 +71,12 @@ namespace TortillaEngine
                 return true;
             }
         }
+
+		TTransformComponent get_transform()
+		{
+			if (parent) return parent->get_transform() * this->transform;
+			else return this->transform;
+		}
 
     };
 

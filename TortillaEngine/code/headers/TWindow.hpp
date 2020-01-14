@@ -29,14 +29,14 @@
 
 #pragma once
 
-#include <SDL.h>
 #include <string>
 
 namespace TortillaEngine
 {
+	struct SDL_Window;
+
 	class TWindow
 	{
-
 	private:
 
 		SDL_Window		*	window;

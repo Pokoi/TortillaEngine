@@ -29,7 +29,12 @@
 
 #pragma once
 
+#include <TWindow.hpp>
+#include <TEntity.hpp>
+#include <TDispatcher.hpp>
 
+#include <map>
+#include <string>
 
 
 namespace TortillaEngine
@@ -37,7 +42,21 @@ namespace TortillaEngine
    
     class TScene
     {
+		TWindow * window;
+		std::map<std::string, TEntity* > entities;
+
+		static TDispatcher Message_Dispatcher;
+		// Gestor de mensajes
+		// permite mandar mensajes de la escena 
+
+
+		TScene(TWindow* window) : window{ window }
+		{}
        
+		void run();
+
+		//Get y Set window
+		//const TWindow & get_window() { return this-> *window; }
 
     };
 }

@@ -29,6 +29,7 @@
  */
 
 #include <TWindow.hpp>
+#include <SDL.h>
 
 namespace TortillaEngine
 {

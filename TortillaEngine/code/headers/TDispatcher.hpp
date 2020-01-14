@@ -30,14 +30,18 @@
 #pragma once
 #include <map>
 #include <list>
+#include <string>
+#include <algorithm>
 #include <TObserver.hpp>
+
+
 
 namespace TortillaEngine
 {
     class TDispatcher
     {
 
-        std::map<const char*, std::list<TObserver*>> observers;
+        std::map<std::string, std::list<TObserver*>> observers;
 
     public: 
         
@@ -47,13 +51,14 @@ namespace TortillaEngine
             return instance;
         }
 
-        void add(TObserver& observer, const char* id)
+        void add(TObserver& observer, std::string id)
         {
             observers[id].push_back(&observer);
         }
 
-        void send(const TMessage& message)
+        void send(TMessage& message)
         {
+			//std::find(observers.begin, observers.end, message.get_id());
             auto list = observers.find(message.get_id());
 
             if (list != observers.end)
@@ -65,10 +70,11 @@ namespace TortillaEngine
             }
         }
 
-        void remove(TObserver& observer, const char* id)
+        void remove(TObserver& observer, std::string id)
         {
-          std::map<const char*, std::list<TObserver*>>::iterator it = observers.find(observer);
-          observers.clear(it);
+			//Incluir algorithm y usar el método find para obtener el iterador para borrar el observer
+			//std::map<const char*, std::list<TObserver*>>::iterator it = observers.find(observer);
+            //observers.clear(it);
         }
 
     private:

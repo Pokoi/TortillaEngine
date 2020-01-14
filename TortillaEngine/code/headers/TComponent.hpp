@@ -46,3 +46,5 @@ namespace TortillaEngine
         virtual bool parse_property(const char* name, const char* value) = 0;
     };
 }
+
+//Componentes gráficos con openGLToolkit -> luz, malla y cámara

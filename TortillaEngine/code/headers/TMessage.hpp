@@ -30,6 +30,7 @@
 #pragma once
 
 #include <map>
+#include <string>
 #include <TVariant.hpp>
 
 namespace TortillaEngine
@@ -38,18 +39,21 @@ namespace TortillaEngine
     class TMessage
     {
         char * id;
-        std::multimap<const char *, TVariant> parameters;
+        std::multimap<std::string, TVariant> parameters;
 
     public:
 
-        TMessage(char * id) : id(id) {}
+        TMessage(std::string id) 
+		{
+			id = id.c_str();
+		}
 
-        void add_parameter(const char * key, TVariant& value)
+        void add_parameter(std::string key, TVariant& value)
         {
             parameters[key] = value;
         }
 
-        char* get_id() { return id; }
+        const char * get_id() { return id; }
 
 
     private:

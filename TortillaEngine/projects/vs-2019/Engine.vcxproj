@@ -11,9 +11,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\code\headers\TTransformComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TAudio.cpp" />
     <ClCompile Include="..\..\code\sources\TMusic.cpp" />
+    <ClCompile Include="..\..\code\sources\TScene.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
     <ClCompile Include="..\..\code\sources\TWindow.cpp" />
   </ItemGroup>
@@ -34,6 +34,7 @@
     <ClInclude Include="..\..\code\headers\TObserver.hpp" />
     <ClInclude Include="..\..\code\headers\TScene.hpp" />
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
+    <ClInclude Include="..\..\code\headers\TSystem.hpp" />
     <ClInclude Include="..\..\code\headers\TTask.hpp" />
     <ClInclude Include="..\..\code\headers\TTransformComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TVariant.hpp" />
@@ -86,17 +87,17 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers; ../../libraries/sdl2/include; ../../libraries/sdl2_mixer/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/opengl-toolkit/headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2_mixer.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2_mixer.lib;opengl-toolkit-debug.lib</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/x64;../../libraries/sdl2_mixer/lib/x64;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/x64;../../libraries/sdl2_mixer/lib/x64;../../libraries/opengl-toolkit/lib/x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -117,10 +118,10 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalDependencies>SDL2.lib;SDL2_mixer.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2_mixer.lib;opengl-toolkit-release.lib</AdditionalDependencies>
     </Lib>
     <Lib>
-      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/x64;../../libraries/sdl2_mixer/lib/x64;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/x64;../../libraries/sdl2_mixer/lib/x64;../../libraries/opengl-toolkit/lib/x64</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

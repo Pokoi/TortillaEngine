@@ -28,6 +28,7 @@
  */
 
 #include <TAudio.hpp>
+#include <SDL_mixer.h>
 
 
 namespace TortillaEngine
