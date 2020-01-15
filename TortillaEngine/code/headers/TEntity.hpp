@@ -53,20 +53,7 @@ namespace TortillaEngine
     public:
 
         TEntity(std::string name, TScene* scene) : scene{ scene }, name{ name }, transform{ {this} } {}
-
-        bool initialize()
-        {
-            for (auto component : components)
-            {
-                if (component.second->initialize() == false)
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
+               
         void add_component(const std::string type, std::shared_ptr <TComponent>& component)
         {
             components[type].push_back(component);           
@@ -79,8 +66,6 @@ namespace TortillaEngine
                 std::shared_ptr <TComponent> new_component (nullptr);
                 new_component = std::make_shared<TComponent>(this);
                 add_component(type, new_component);
-
-                // TODO: preguntar ámbito
             }
             return components[name];
         }

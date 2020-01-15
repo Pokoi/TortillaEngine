@@ -40,3 +40,4 @@ typedef struct Mix_Chunk;
 
 typedef struct      SDL_Window SDL_Window;
 typedef void    *   SDL_GLContext;
+

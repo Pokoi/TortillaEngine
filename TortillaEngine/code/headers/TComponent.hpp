@@ -28,7 +28,7 @@
  */
 
 #pragma once
-#include <rapidxml.hpp>
+#include <rapidxml-1.13/rapidxml.hpp>
 
 namespace TortillaEngine
 {
@@ -48,7 +48,7 @@ namespace TortillaEngine
 
         virtual void    execute() = 0;
 
-        virtual bool    parse_component(rapidxml::xml_node<> * component_node) = 0;
+        virtual bool    parse_component(rapidxml::xml_node<>* component_node) = 0;
 
         TEntity*        get_parent() { return parent; }
     };

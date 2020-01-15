@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TAudio.cpp" />
+    <ClCompile Include="..\..\code\sources\TKeyboardInput.cpp" />
     <ClCompile Include="..\..\code\sources\TMusic.cpp" />
     <ClCompile Include="..\..\code\sources\TScene.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
@@ -25,13 +26,10 @@
     <ClInclude Include="..\..\code\headers\TComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TDispatcher.hpp" />
     <ClInclude Include="..\..\code\headers\TEntity.hpp" />
-    <ClInclude Include="..\..\code\headers\TFactory.hpp" />
-    <ClInclude Include="..\..\code\headers\TInputDevice.h" />
     <ClInclude Include="..\..\code\headers\TKernel.hpp" />
     <ClInclude Include="..\..\code\headers\TKeyboardInput.h" />
     <ClInclude Include="..\..\code\headers\TMemoryPool.hpp" />
     <ClInclude Include="..\..\code\headers\TMessage.hpp" />
-    <ClInclude Include="..\..\code\headers\TModule.hpp" />
     <ClInclude Include="..\..\code\headers\TMusic.hpp" />
     <ClInclude Include="..\..\code\headers\TObjectPool.hpp" />
     <ClInclude Include="..\..\code\headers\TObserver.hpp" />
@@ -91,7 +89,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/opengl-toolkit/headers;../../libraries/rapidxml-1.13</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/opengl-toolkit/headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -113,7 +111,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;e;../../libraries/rapidxml-1.13</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/opengl-toolkit/headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

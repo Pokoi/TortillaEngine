@@ -32,9 +32,12 @@
 #include <TWindow.hpp>
 #include <TEntity.hpp>
 #include <TDispatcher.hpp>
+#include <TSystem.hpp>
+#include <rapidxml-1.13/rapidxml.hpp>
 
 #include <map>
 #include <string>
+
 
 
 namespace TortillaEngine
@@ -45,11 +48,13 @@ namespace TortillaEngine
 		TWindow * window;
 		TKernel * kernel;
 		std::map<std::string, TEntity* > entities;
+        std::map<std::string, TSystem* > systems;
 
-		static TDispatcher Message_Dispatcher;
+		static TDispatcher message_dispatcher;
 		// Gestor de mensajes
 		// permite mandar mensajes de la escena 
 
+    public:
 
 		TScene(TWindow* window) : window{ window }
 		{
@@ -61,17 +66,49 @@ namespace TortillaEngine
 			load(path);
 		}
        
-		void run();
+        ~TScene()
+        {
+            entities.clear();
+            systems. clear();
 
-		//Get y Set window
-		const TWindow & get_window() { return *window; }
+            delete window;
+            delete kernel;
+        }	
 
+		TWindow     *   get_window() 
+        { 
+            return window;
+        }
+        
+        TKernel     *   get_kernel() 
+        { 
+            return kernel;
+        }
+        
+        TDispatcher *   get_dispatcher() 
+        {
+            return &message_dispatcher;
 
+        }
 
-		//load scene
+        void            run()
+        {
+            kernel->exec();
+        }
+
+        TEntity     *   get_entity(std::string name)
+        {
+            return entities[name];
+        }
+		
+        //load scene
 		void load(const std::string& path);
 		//Cada vez que se encuentra un tag entity extrae su id y lo añade al mapa
 		//Después extrae cada componente y los va añadiendo a la entidad
+
+        void parse_scene     (rapidxml::xml_node<>* node);
+        void parse_entities  (rapidxml::xml_node<>* node);
+        void parse_components(rapidxml::xml_node<>* node);
 
     };
 }

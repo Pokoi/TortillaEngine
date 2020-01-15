@@ -73,8 +73,6 @@ namespace TortillaEngine
         {			
             std::map<std::string, std::list<TObserver*>>::const_iterator it = std::find(observers.begin(), observers.end(), observer);
             observers.erase(it); 
-
-            // TODO: observer or &observer 
         }
 
     private:

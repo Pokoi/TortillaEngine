@@ -1,5 +1,5 @@
 /*
- * File: TKeyboardInput.cpp
+ * File: TKeyboardInput.hpp
  * File Created: 12th December 2019
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
@@ -29,12 +29,11 @@
 
 #pragma once
 
-#include <TInputDevice.h>
 #include <string>
 
 namespace TortillaEngine
 {
-	class TKeyboardInput : TInputDevice
+	class TKeyboardInput 
 	{
 	private:
 
@@ -42,14 +41,19 @@ namespace TortillaEngine
 		{
 		private:
 			std::string common_name;
-			int input_index;
+            bool        pressed;
+
 		public:
 			
-			TKey(std::string name);		
-			bool isPressed();
+            TKey(std::string name) : common_name{ name }    , pressed{ false } {};
+            TKey()                 : common_name{ "UNKWON" }, pressed{ false } {};
+            
+            bool isPressed() { return pressed; }
+
+            
 		};
 
-		TKey  KeyboardKeys[51]
+		const TKey KeyboardKeys[50]
 		{
 			{"NUM_0"}, 
 			{"NUM_1"}, {"NUM_2"}, {"NUM_3"},
@@ -60,7 +64,7 @@ namespace TortillaEngine
 			{"D"}, {"E"}, {"F"},
 			{"G"}, {"H"}, {"I"},
 			{"J"}, {"K"}, {"L"},
-			{"M"}, {"N"}, {"Ñ"},
+			{"M"}, {"N"}, 
 			{"O"}, {"P"}, {"Q"},
 			{"R"}, {"S"}, {"T"},
 			{"U"}, {"V"}, {"W"},
@@ -80,6 +84,8 @@ namespace TortillaEngine
 	public:
 
 		TKeyboardInput();
+
+        TKey translate_sdl_code(int sdl_code);
 
 	};
 }

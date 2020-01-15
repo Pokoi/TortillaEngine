@@ -30,3 +30,13 @@
 #pragma once
 
 //Procesado de componentes
+
+namespace TortillaEngine
+{
+    class TSystem
+    {
+
+
+    };
+
+}
