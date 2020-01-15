@@ -35,9 +35,9 @@ namespace TortillaEngine
 {
 	class TMemoryPool
 	{
-		uint8_t * pool;
-		size_t size;
-		size_t allocated;
+		uint8_t *	pool;
+		size_t		size;
+		size_t		allocated;
 
 	public:
 		
@@ -61,8 +61,8 @@ namespace TortillaEngine
 			return offset;			
 		}
 
-		size_t get_size()			const { return this->size; }
-		size_t get_allocated()		const { return this->allocated; }
+		size_t get_size()			const { return this->size;					 }
+		size_t get_allocated()		const { return this->allocated;				 }
 		size_t get_available_size() const { return this->size - this->allocated; }
 
 	};

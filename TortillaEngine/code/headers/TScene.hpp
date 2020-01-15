@@ -43,6 +43,7 @@ namespace TortillaEngine
     class TScene
     {
 		TWindow * window;
+		TKernel * kernel;
 		std::map<std::string, TEntity* > entities;
 
 		static TDispatcher Message_Dispatcher;
@@ -51,14 +52,24 @@ namespace TortillaEngine
 
 
 		TScene(TWindow* window) : window{ window }
-		{}
+		{
+		
+		}
+
+		TScene(TWindow* window, const std::string& path) : window{window}
+		{
+			load(path);
+		}
        
 		void run();
 
 		//Get y Set window
-		//const TWindow & get_window() { return this-> *window; }
+		const TWindow & get_window() { return *window; }
+
+
 
 		//load scene
+		void load(const std::string& path);
 		//Cada vez que se encuentra un tag entity extrae su id y lo añade al mapa
 		//Después extrae cada componente y los va añadiendo a la entidad
 

@@ -40,7 +40,7 @@ namespace TortillaEngine
 
     public:
 
-        TComponent(TEntity* parent) : parent{ parent } {}
+        TComponent(TEntity* parent = nullptr) : parent{ parent } {}
         
         virtual         ~TComponent() { delete parent; };
 

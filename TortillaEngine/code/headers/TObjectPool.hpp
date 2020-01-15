@@ -110,7 +110,7 @@ namespace TortillaEngine
                     Node* node = first, Node* end = node + (size * sizeof(Node);
                           node < end;
                           node++;
-            )
+				)
             {
                 node->next = node + 1;
             }
