@@ -33,35 +33,38 @@
 
 namespace TortillaEngine
 {
-	TWindow::TWindow()
-	{
-		window	= nullptr;
-		context = nullptr;
+	
 
-		if (SDL_Init(SDL_INIT_VIDEO))
-		{
-			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
-			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
+    TWindow::TWindow()
+    {
+        window = nullptr;
+        context = nullptr;
 
-			window = SDL_CreateWindow(
-										"Untitled",
-										SDL_WINDOWPOS_CENTERED,
-										SDL_WINDOWPOS_CENTERED,
-										600,
-										400,
-										SDL_WINDOW_RESIZABLE
-									);
-			if (window != nullptr)
-			{
-				context = SDL_GL_CreateContext(window);
-			}
-	}
+        if (SDL_Init(SDL_INIT_VIDEO))
+        {
+            SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 3);
+            SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
 
-	TWindow::TWindow	(
-						std::string window_name,
-						int			width,
-						int			height
-					)
+            window = SDL_CreateWindow(
+                "Untitled",
+                SDL_WINDOWPOS_CENTERED,
+                SDL_WINDOWPOS_CENTERED,
+                600,
+                400,
+                SDL_WINDOW_RESIZABLE
+            );
+            if (window != nullptr)
+            {
+                context = SDL_GL_CreateContext(window);
+            }
+        }
+    }
+
+    TWindow::TWindow	(
+						    char * window_name,
+						    int			width,
+						    int			height
+					    )
 	{
 		window	= nullptr; 
 		context = nullptr;
@@ -72,7 +75,7 @@ namespace TortillaEngine
 			SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
 
 			window = SDL_CreateWindow	(
-											window_name.c_str(),
+											window_name,
 											SDL_WINDOWPOS_CENTERED,
 											SDL_WINDOWPOS_CENTERED,
 											width,

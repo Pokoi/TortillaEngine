@@ -28,6 +28,7 @@
  */
 
 #include <TSound.hpp>
+#include <SDL_mixer.h>
 
 inline TortillaEngine::TSound::TSound(char* sound_path)
 {

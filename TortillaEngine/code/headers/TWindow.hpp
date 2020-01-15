@@ -30,11 +30,11 @@
 #pragma once
 
 #include <string>
+#include <declarations.hpp>
 
 namespace TortillaEngine
 {
-	struct SDL_Window;
-
+	
 	class TWindow
 	{
 	private:
@@ -45,7 +45,7 @@ namespace TortillaEngine
 	public:
 		TWindow	();
 		TWindow	(
-					std::string window_name,
+					char *      window_name,
 					int			width,
 					int			height
 				);

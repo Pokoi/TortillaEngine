@@ -28,6 +28,7 @@
  */
 
 #include <TMusic.hpp>
+#include <SDL_mixer.h>
 
 inline TortillaEngine::TMusic::TMusic(char* music_path)
 {

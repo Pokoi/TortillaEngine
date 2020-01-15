@@ -29,7 +29,7 @@
 
 #pragma once
 #include <memory>
-
+#include <declarations.hpp>
 
 
 namespace TortillaEngine 
@@ -43,8 +43,8 @@ namespace TortillaEngine
 		Opens the mixer
 		*/
 		inline void OpenMixer	(
+								Uint16 format, 
 								int frequency  = 22050,
-								Uint16 format  = MIX_DEFAULT_FORMAT, 
 								int channels   = 2, 
 								int chunk_size = 4096
 								);

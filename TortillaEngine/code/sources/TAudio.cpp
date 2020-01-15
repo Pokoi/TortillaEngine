@@ -38,7 +38,11 @@ namespace TortillaEngine
 	Opens the mixer
 	*/
 
-	inline void TAudio::OpenMixer(int frequency, Uint16 format, int channels, int chunk_size)
+	inline void TAudio::OpenMixer(  Uint16  format      = MIX_DEFAULT_FORMAT, 
+                                    int     frequency   = 22050,
+                                    int     channels    = 2,
+                                    int     chunk_size  = 4096
+                                 )
 	{
 		Mix_OpenAudio(frequency, format, channels, chunk_size);
 	}

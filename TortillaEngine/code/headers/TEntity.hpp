@@ -29,22 +29,30 @@
 
 #pragma once
 #include <TTransformComponent.hpp>
+#include <TComponent.hpp>
 #include <map>
 #include <memory>
 #include <string>
 
 
+
 namespace TortillaEngine
 {
+    class TScene;
 
     class TEntity
     {
-        TTransformComponent transform;
         
-        std::map<std::string, std::shared_ptr <TComponent> > components;
-		TEntity* parent;
+        std::map<std::string, std::list <std::shared_ptr <TComponent>> > components;
+        
+        TTransformComponent   transform;        
+		TEntity             * parent;
+        TScene              * scene;
+        std::string           name;
 
     public:
+
+        TEntity(std::string name, TScene* scene) : scene{ scene }, name{ name }, transform{ {this} } {}
 
         bool initialize()
         {
@@ -59,17 +67,27 @@ namespace TortillaEngine
             return true;
         }
 
-        bool add_component(std::string type, std::shared_ptr <TComponent>& component)
+        void add_component(const std::string type, std::shared_ptr <TComponent>& component)
         {
-            if (components.count(type) != 0)
+            components[type].push_back(component);           
+        }
+
+        std::list <std::shared_ptr <TComponent>> get_component(const std::string type)
+        {
+            if (!has_component(type))
             {
-                return false;
+                std::shared_ptr <TComponent> new_component (nullptr);
+                new_component = std::make_shared<TComponent>(this);
+                add_component(type, new_component);
+
+                // TODO: preguntar ámbito
             }
-            else
-            {
-                components[type] = component;
-                return true;
-            }
+            return components[name];
+        }
+
+        bool has_component(const std::string type)
+        {
+            return components[type].size() != 0;
         }
 
 		TTransformComponent get_transform()
@@ -78,6 +96,17 @@ namespace TortillaEngine
 			else return this->transform;
 		}
 
+        TScene* get_scene()
+        {
+            return scene;
+        }
+
+        ~TEntity ()
+        {
+            delete parent;
+            delete scene;
+            components.clear();
+        }
     };
 
 }

@@ -37,8 +37,8 @@ namespace TortillaEngine
 	{
 	protected:
 
-		int priority;
-		TScene * owner_scene;
+		int         priority;
+		TScene   *  owner_scene;
 
 	public:
 
@@ -48,14 +48,20 @@ namespace TortillaEngine
 		void			initialize();
 		void			finalize();
 
-		int get_priority() const { return this->priority; }
+		int             get_priority()                   const
+        { 
+            return this->priority;
+        }
 
-		bool operator < (const TTask & other) const
+		bool            operator < (const TTask & other) const
 		{
 			return this->priority < other.get_priority();
 		}
+        TScene  *       get_scene()
+        {
+            return owner_scene;
+        }
 
-		//get scene
 	};
 
 

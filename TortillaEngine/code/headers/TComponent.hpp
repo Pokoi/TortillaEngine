@@ -28,22 +28,29 @@
  */
 
 #pragma once
-#include <TEntity.hpp>
+#include <rapidxml.hpp>
 
 namespace TortillaEngine
 {
+    class TEntity;
+
     class TComponent
     {
-        TEntity* parent;
+        TEntity*    parent;
 
     public:
 
         TComponent(TEntity* parent) : parent{ parent } {}
-        virtual ~TComponent() {};
+        
+        virtual         ~TComponent() { delete parent; };
 
-        virtual bool initialize() = 0;
+        virtual void    initialize() = 0;
 
-        virtual bool parse_property(const char* name, const char* value) = 0;
+        virtual void    execute() = 0;
+
+        virtual bool    parse_component(rapidxml::xml_node<> * component_node) = 0;
+
+        TEntity*        get_parent() { return parent; }
     };
 }
 

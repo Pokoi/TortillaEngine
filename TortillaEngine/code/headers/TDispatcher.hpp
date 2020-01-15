@@ -58,10 +58,9 @@ namespace TortillaEngine
 
         void send(TMessage& message)
         {
-			//std::find(observers.begin, observers.end, message.get_id());
             auto list = observers.find(message.get_id());
 
-            if (list != observers.end)
+            if (list != observers.end())
             {
                 for (auto& observer : list->second)
                 {
@@ -71,10 +70,11 @@ namespace TortillaEngine
         }
 
         void remove(TObserver& observer, std::string id)
-        {
-			//Incluir algorithm y usar el método find para obtener el iterador para borrar el observer
-			//std::map<const char*, std::list<TObserver*>>::iterator it = observers.find(observer);
-            //observers.clear(it);
+        {			
+            std::map<std::string, std::list<TObserver*>>::const_iterator it = std::find(observers.begin(), observers.end(), observer);
+            observers.erase(it); 
+
+            // TODO: observer or &observer 
         }
 
     private:
