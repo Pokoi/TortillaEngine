@@ -44,7 +44,7 @@ namespace TortillaEngine
 
 		TTask(int priority) : priority(priority) {}
 
-		void virtual	run() = 0;
+		void virtual	run(float delta) = 0;
 		void			initialize();
 		void			finalize();
 
@@ -57,6 +57,11 @@ namespace TortillaEngine
 		{
 			return this->priority < other.get_priority();
 		}
+        
+        void            set_scene(TScene& scene) 
+        {
+            owner_scene = &scene;
+        }
         TScene  *       get_scene()
         {
             return owner_scene;

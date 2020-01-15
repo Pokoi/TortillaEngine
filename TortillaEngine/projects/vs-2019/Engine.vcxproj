@@ -15,6 +15,7 @@
     <ClCompile Include="..\..\code\sources\TMusic.cpp" />
     <ClCompile Include="..\..\code\sources\TScene.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
+    <ClCompile Include="..\..\code\sources\TTimer.cpp" />
     <ClCompile Include="..\..\code\sources\TWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -37,6 +38,7 @@
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
     <ClInclude Include="..\..\code\headers\TSystem.hpp" />
     <ClInclude Include="..\..\code\headers\TTask.hpp" />
+    <ClInclude Include="..\..\code\headers\TTimer.hpp" />
     <ClInclude Include="..\..\code\headers\TTransformComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TVariant.hpp" />
     <ClInclude Include="..\..\code\headers\TWindow.hpp" />

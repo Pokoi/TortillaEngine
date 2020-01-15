@@ -31,6 +31,7 @@
 
 #include <set>
 #include <TTask.hpp>
+#include <TTimer.hpp>
 
 namespace TortillaEngine
 {
@@ -45,10 +46,14 @@ namespace TortillaEngine
 
 		void exec()
 		{
+            float delta_time = 1.f /60.f;
 			running = true;
 
 			while (running)
 			{
+                //TTimer timer;
+                //timer.start();
+
 				for (TTask* task : tasks)
 				{
 					task->initialize();
@@ -56,7 +61,7 @@ namespace TortillaEngine
 
 				for (TTask* task : tasks)
 				{
-					task->run();
+					task->run(delta_time);
 				}
 
 				for (TTask* task : tasks)
@@ -68,7 +73,15 @@ namespace TortillaEngine
 
 		void stop() { running = false; }
 
+        void add_task   (TTask& task)
+        {
+            tasks.insert(&task);
+        }
 
+        void remove_task(TTask& task)
+        {
+            tasks.erase(&task);
+        }
 	};
 
 

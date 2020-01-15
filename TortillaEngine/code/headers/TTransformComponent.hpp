@@ -46,7 +46,6 @@ namespace TortillaEngine
         // Rotation in X axis
         float pitch;
 
-
         std::shared_ptr<glt::Node> transform;
 
 

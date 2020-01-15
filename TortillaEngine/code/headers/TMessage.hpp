@@ -31,6 +31,7 @@
 
 #include <map>
 #include <string>
+#include <list>
 #include <TVariant.hpp>
 
 namespace TortillaEngine
@@ -39,7 +40,7 @@ namespace TortillaEngine
     class TMessage
     {
         char * id;
-        std::multimap<std::string, TVariant> parameters;
+        std::map<std::string, TVariant> parameters;
 
     public:
 
@@ -48,13 +49,17 @@ namespace TortillaEngine
 			id = id.c_str();
 		}
 
-        void add_parameter(std::string key, TVariant& value)
+        void add_parameter(const std::string & key, TVariant& value)
         {
             parameters[key] = value;
         }
 
         const char * get_id() { return id; }
 
+        TVariant& operator[] (std::string key)
+        {
+            return parameters[key];
+        }
 
     private:
 

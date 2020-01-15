@@ -94,7 +94,7 @@ namespace TortillaEngine
             }
         }
 
-        
+    public:    
 
         TVariant & operator = (const TVariant& other)
         {
