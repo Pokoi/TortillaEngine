@@ -32,7 +32,6 @@
 #include <TWindow.hpp>
 #include <TEntity.hpp>
 #include <TDispatcher.hpp>
-#include <TSystem.hpp>
 #include <rapidxml-1.13/rapidxml.hpp>
 
 #include <map>
@@ -47,8 +46,7 @@ namespace TortillaEngine
     {
 		TWindow * window;
 		TKernel * kernel;
-		std::map<std::string, TEntity* > entities;
-        std::map<std::string, TSystem* > systems;
+		std::map<std::string, TEntity* > entities;        
 
 		static TDispatcher message_dispatcher;
 		// Gestor de mensajes
@@ -68,8 +66,7 @@ namespace TortillaEngine
        
         ~TScene()
         {
-            entities.clear();
-            systems. clear();
+            entities.clear();            
 
             delete window;
             delete kernel;

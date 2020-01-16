@@ -40,16 +40,17 @@ namespace TortillaEngine
 		struct TKey 
 		{
 		private:
-			std::string common_name;
-            bool        pressed;
+			std::string common_name;          
 
 		public:
 			
-            TKey(std::string name) : common_name{ name }    , pressed{ false } {};
-            TKey()                 : common_name{ "UNKWON" }, pressed{ false } {};
+            TKey(std::string name) : common_name{ name }    {};
+            TKey()                 : common_name{ "UNKWON" }{};
             
-            bool isPressed() { return pressed; }
-
+            std::string get_name()
+            {
+                return common_name;
+            }
             
 		};
 

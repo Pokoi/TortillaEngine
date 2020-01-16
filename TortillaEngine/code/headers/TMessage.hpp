@@ -61,8 +61,6 @@ namespace TortillaEngine
             return parameters[key];
         }
 
-    private:
-
         ~TMessage()
         {
             delete[] id;

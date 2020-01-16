@@ -36,6 +36,7 @@ namespace TortillaEngine
 
     class TComponent
     {
+    protected:
         TEntity*    parent;
 
     public:

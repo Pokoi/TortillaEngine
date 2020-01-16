@@ -29,6 +29,7 @@
 
 #pragma once
 #include <TComponent.hpp>
+#include <declarations.hpp>
 
 namespace TortillaEngine
 {
@@ -52,7 +53,7 @@ namespace TortillaEngine
 
 		TTransformComponent(glm::mat4 transformation);
        
-		glm::mat4	get_transformation() const
+        glm::mat4	get_transformation() const
 		{
 			return transformation;
 		}
@@ -72,6 +73,19 @@ namespace TortillaEngine
 		TTransformComponent operator * (TTransformComponent& other) const;
 		void				operator = (TTransformComponent& other);
         
+        float *         get_position()
+        {
+        
+            float position[]
+            {
+                transformation[3][0],
+                transformation[3][1],
+                transformation[3][2]
+            };
+
+            return position;
+            
+        }
 
     };
 }

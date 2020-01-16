@@ -1,6 +1,6 @@
 /*
  * File: TTask.hpp
- * File Created: 9th January 2020
+ * File Created: 16th January 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
@@ -33,16 +33,21 @@
 
 namespace TortillaEngine
 {
-	class TTask
-	{
-	protected:
+    class TTask
+    {
+    protected:
 
-		int         priority;
-		TScene   *  owner_scene;
+        int         priority;
+        TScene* owner_scene;
 
-	public:
+    public:
 
-		TTask(int priority) : priority(priority) {}
+        TTask(int priority, TScene* scene) : priority{ priority }, owner_scene{ scene } {}
+        
+        ~TTask()
+        {
+            delete scene;
+        }
 
 		void virtual	run(float delta) = 0;
 		void			initialize();

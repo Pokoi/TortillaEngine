@@ -30,10 +30,11 @@
 
 #include <TWindow.hpp>
 #include <SDL.h>
+#include <OpenGL.hpp>
 
 namespace TortillaEngine
 {
-	
+    
 
     TWindow::TWindow()
     {
@@ -102,5 +103,27 @@ namespace TortillaEngine
 			SDL_DestroyWindow( window );
 		}
 	}
+
+    void TWindow::reset()
+    {
+        if (context != nullptr)
+        {
+            glClearColor(0.f, 0.f, 0.f, 1.f);
+            glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+        }
+    }
+
+    void TWindow::swap_buffers() const
+    {
+        if (context != nullptr)
+        {
+            SDL_GL_SwapWindow(window);
+        }
+    }
+
+    int TWindow::poll_events(SDL_Event & e)
+    {
+        return SDL_PollEvent(&e);
+    }
 	
 }

@@ -40,4 +40,14 @@ typedef struct Mix_Chunk;
 
 typedef struct      SDL_Window SDL_Window;
 typedef void    *   SDL_GLContext;
+typedef union       SDL_Event SDL_Event;
+
+////////////////////////////////////////////
+// OpenGL-toolkit
+
+namespace glm
+{
+     struct mat4 ;
+
+}
 

@@ -37,6 +37,9 @@ namespace TortillaEngine
 	
 	class TWindow
 	{
+
+    public:
+        
 	private:
 
 		SDL_Window		*	window;
@@ -50,6 +53,10 @@ namespace TortillaEngine
 					int			height
 				);
 		~TWindow	();
+
+        void reset();
+        void swap_buffers() const;
+        int  poll_events(SDL_Event & e);
 
 	};
 }
