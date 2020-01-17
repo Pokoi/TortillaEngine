@@ -19,6 +19,7 @@
     <ClCompile Include="..\..\code\sources\TRenderTask.cpp" />
     <ClCompile Include="..\..\code\sources\TScene.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
+    <ClCompile Include="..\..\code\sources\TSphereCollider.cpp" />
     <ClCompile Include="..\..\code\sources\TTimer.cpp" />
     <ClCompile Include="..\..\code\sources\TTransformComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TWindow.cpp" />
@@ -26,8 +27,8 @@
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\declarations.hpp" />
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />
-    <ClInclude Include="..\..\code\headers\TBoxCollider.hpp" />
     <ClInclude Include="..\..\code\headers\TCollider.hpp" />
+    <ClInclude Include="..\..\code\headers\TCollisionsTask.hpp" />
     <ClInclude Include="..\..\code\headers\TComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TDispatcher.hpp" />
     <ClInclude Include="..\..\code\headers\TEntity.hpp" />
@@ -42,6 +43,7 @@
     <ClInclude Include="..\..\code\headers\TRenderTask.hpp" />
     <ClInclude Include="..\..\code\headers\TScene.hpp" />
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
+    <ClInclude Include="..\..\code\headers\TSphereCollider.hpp" />
     <ClInclude Include="..\..\code\headers\TTask.hpp" />
     <ClInclude Include="..\..\code\headers\TTimer.hpp" />
     <ClInclude Include="..\..\code\headers\TTransformComponent.hpp" />

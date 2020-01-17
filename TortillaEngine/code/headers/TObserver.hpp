@@ -36,6 +36,6 @@ namespace TortillaEngine
     class TObserver
     {
     public:
-        virtual void handle(const TMessage& m) = 0;
+        virtual void handle(TMessage& m) = 0;
     };
 }

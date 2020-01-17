@@ -48,6 +48,9 @@
     <ClCompile Include="..\..\code\sources\TCollider.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\code\sources\TSphereCollider.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\TAudio.hpp">
@@ -116,7 +119,10 @@
     <ClInclude Include="..\..\code\headers\TCollider.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\TBoxCollider.hpp">
+    <ClInclude Include="..\..\code\headers\TSphereCollider.hpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\TCollisionsTask.hpp">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

@@ -31,25 +31,58 @@
 
 #include <TComponent.hpp>
 #include <declarations.hpp>
+#include <TObserver.hpp>
 #include <list>
 
 namespace TortillaEngine
 {
-    class TCollider : protected TComponent
+    class TCollider : public TComponent, TObserver
     {
-        struct TVertex;
 
-        std::list <TVertex> vertices;
+    public:             
 
-        float min_x;
-        float min_y;
-        float min_z;
-        float max_x;
-        float max_y;
-        float max_z;
+        struct T3Components
+        {   
+            T3Components()
+            {
+                x = y = z = 0;
+            }
+
+            T3Components(float x, float y, float z) : x{ x }, y{ y }, z{ z }{};
+            float x;
+            float y;
+            float z;
+
+            void operator = (T3Components& other)
+            {
+                x = other.x;
+                y = other.y;
+                z = other.z;
+            }            
+        };
+
+    protected:
+
+        T3Components center;
+        T3Components offset;
+
 
     public:
-        TCollider(TEntity* parent) : TComponent(parent) {};
 
+        TCollider(
+                    TEntity* parent,
+                    float x_offset,
+                    float y_offset,
+                    float z_offset
+                 );
+
+        void calculate_center();
+        virtual void resize(float x, float y, float z);
+        virtual void handle(TMessage& m) override;
+                
+        virtual void initialize() override {};
+        virtual void execute() override {};
+        virtual bool parse_component(rapidxml::xml_node<>* component_node) override;
+        virtual bool collides(TCollider& other) = 0;
     };
 }

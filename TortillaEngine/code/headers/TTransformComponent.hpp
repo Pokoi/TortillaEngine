@@ -30,6 +30,8 @@
 #pragma once
 #include <TComponent.hpp>
 #include <declarations.hpp>
+#include <glm/glm.hpp>
+#include <Node.hpp>
 
 namespace TortillaEngine
 {
@@ -51,7 +53,7 @@ namespace TortillaEngine
 								float    z_scale		= 1
 							);
 
-		TTransformComponent(glm::mat4 transformation);
+		TTransformComponent (glm::mat4 transformation);
        
         glm::mat4	get_transformation() const
 		{

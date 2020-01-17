@@ -82,9 +82,7 @@ namespace TortillaEngine
 
         Type    get_type()  const { return this->type;  }
         Value   get_value() const { return this->value; }
-
-
-    private:
+                  
 
         ~TVariant()
         {
@@ -114,7 +112,7 @@ namespace TortillaEngine
         TVariant & operator = (float value)
         {
             this->type              = TVariant::Type::FLOAT;
-            this->value.int_value   = value;
+            this->value.float_value   = value;
         }
 
         TVariant & operator = (bool value)
@@ -128,7 +126,26 @@ namespace TortillaEngine
             this->type               = TVariant::Type::STRING;
             this->value.string_value = value.c_str();
         }
-               
+         
+        float to_float()
+        {
+            return this->value.float_value;
+        }
+
+        int to_int()
+        {
+            return this->value.int_value;
+        }
+
+        bool to_bool()
+        {
+            return this->value.bool_value;
+        }
+
+        std::string to_string()
+        {
+            return this->value.string_value;
+        }
     };
 
 }

@@ -28,12 +28,65 @@
  */
 
 #include <TCollider.hpp>
+#include <glm/glm.hpp>
+#include <Node.hpp>
+#include <TEntity.hpp>
+#include <TScene.hpp>
+#include <string>
 
 namespace TortillaEngine
 {
-    
-    struct TCollider::TVertex
+    TCollider::TCollider(
+                            TEntity* parent,
+                            float x_offset,
+                            float y_offset,
+                            float z_offset
+                        ) : TComponent(parent)
     {
-        glm::mat4 matrix;
-    };
-}
+        this->offset.x = x_offset;
+        this->offset.y = y_offset;
+        this->offset.z = z_offset;
+
+        calculate_center();
+
+        parent->get_scene()->get_dispatcher()->add(*this, parent->get_name() + "_RESIZED");
+        parent->get_scene()->get_dispatcher()->add(*this, parent->get_name() + "_MOVED");
+
+    }
+       
+    void TCollider::calculate_center()
+    {
+        float* parent_position = parent->get_transform().get_position();
+
+        this->center.x = *parent_position;
+        this->center.y = *(parent_position + 1);
+        this->center.z = *(parent_position + 2);
+    }
+    
+    void TCollider::resize(float x, float y, float z)
+    {
+        this->offset.x *= x;
+        this->offset.y *= y;
+        this->offset.z *= z;
+
+        calculate_center();
+    }
+
+    void TCollider::handle(TMessage& m)
+    {
+        if (m.get_id() == parent->get_name() + "_RESIZED")
+        {
+            resize(m["x"].to_float(), m["y"].to_float(), m["z"].to_float());
+        }
+
+        if (m.get_id() == parent->get_name() + "_MOVED")
+        {
+            calculate_center();
+        }
+    }
+   
+    bool TCollider::parse_component(rapidxml::xml_node<>* component_node)
+    {
+        return false;
+    }
+};

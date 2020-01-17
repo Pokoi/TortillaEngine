@@ -71,6 +71,11 @@ namespace TortillaEngine
             return components[name];
         }
 
+        std::string get_name() 
+        { 
+            return name;
+        }
+
         bool has_component(const std::string type)
         {
             return components[type].size() != 0;
