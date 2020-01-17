@@ -1,2 +1,0 @@
-﻿main.obj : error LNK2019: símbolo externo "void __cdecl TortillaEngine::window(void)" (?window@TortillaEngine@@YAXXZ) sin resolver al que se hace referencia en la función main
-D:\Repositorios\CPP_ClassProjects\Proyectos\Demo\projects\vs-2019\x64\Debug\Demo.exe : fatal error LNK1120: 1 externos sin resolver
