@@ -31,7 +31,9 @@
 
 #include <TTask.hpp>
 #include <declarations.hpp>
+#include <TRenderComponent.hpp>
 #include <memory>
+#include <vector>
 
 
 namespace TortillaEngine
@@ -40,10 +42,12 @@ namespace TortillaEngine
     {
 
         std::unique_ptr<glt::Render_Node> renderer;
+        std::vector<TRenderComponent*> render_components;
+
 
     public:
 
-        TRenderTask(TScene* scene, int priority = 1) : TTask(priority, scene) { };
+        TRenderTask(TScene* scene, int priority = 1);
 
         void run(float delta) override;
 

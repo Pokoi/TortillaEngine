@@ -1,12 +1,12 @@
 /*
- * File: declarations.hpp
- * File Created: 15th December 2019
+ * File: TCameraComponent.cpp
+ * File Created: 17th January 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
  * MIT License
  *
- * Copyright (c) 2019 Pokoidev
+ * Copyright (c) 2020 Pokoidev
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -27,28 +27,18 @@
  * SOFTWARE.
  */
 
-#pragma once
+#include <TCameraComponent.hpp>
+#include <Camera.hpp>
 
 
-////////////////////////////////////////////
-// SDL Mixer
-
-typedef struct Mix_Chunk T_Chunk;
-
-////////////////////////////////////////////
-// SDL2
-
-typedef struct      SDL_Window SDL_Window;
-typedef void    *   SDL_GLContext;
-typedef union       SDL_Event SDL_Event;
-
-////////////////////////////////////////////
-// OpenGL ToolKit
-
-namespace glt
+namespace TortillaEngine
 {
-    class Render_Node;
-    class Model_Obj;
-    class Camera;
+    TCameraComponent::TCameraComponent  (
+                                        TEntity* parent,
+                                        float near_field = 1.f,
+                                        float far_field = 200.f,
+                                        float fov = 60.f,
+                                        float aspect_ratio = 1.f
+                                        ) : TComponent{ parent }, camera{ new glt::Camera (fov, near_field, far_field, aspect_ratio)}
+    {}
 }
-

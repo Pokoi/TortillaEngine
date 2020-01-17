@@ -14,6 +14,7 @@
     <ClInclude Include="..\..\code\headers\declarations.hpp" />
     <ClInclude Include="..\..\code\headers\initialize.hpp" />
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />
+    <ClInclude Include="..\..\code\headers\TCameraComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TCollider.hpp" />
     <ClInclude Include="..\..\code\headers\TCollisionsTask.hpp" />
     <ClInclude Include="..\..\code\headers\TComponent.hpp" />
@@ -40,6 +41,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\initialize.cpp" />
     <ClCompile Include="..\..\code\sources\TAudio.cpp" />
+    <ClCompile Include="..\..\code\sources\TCameraComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TCollider.cpp" />
     <ClCompile Include="..\..\code\sources\TCollisionsTask.cpp" />
     <ClCompile Include="..\..\code\sources\TInputTask.cpp" />

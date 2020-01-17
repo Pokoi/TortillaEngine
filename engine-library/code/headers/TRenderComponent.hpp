@@ -43,7 +43,13 @@ namespace TortillaEngine
     public:
 
 
-        TRenderComponent(TEntity* parent = nullptr) : TComponent{ parent } {}
+        TRenderComponent(TEntity* parent = nullptr) : TComponent{ parent } 
+        {
+            model = nullptr;
+        }
+
+        TRenderComponent(TEntity* parent, std::string path);
+        
 
         std::shared_ptr<glt::Model_Obj> get_model()
         {

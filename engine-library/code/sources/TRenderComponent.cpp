@@ -29,8 +29,67 @@
 
 #include <TRenderComponent.hpp>
 #include <Render_Node.hpp>
+#include <Model_Obj.hpp>
+#include <TEntity.hpp>
 
 namespace TortillaEngine
 {
+    TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{ parent }, model{new glt::Model_Obj(path)}
+    {
+    }
+
+    bool TRenderComponent::parse_component(rapidxml::xml_node<>* component)
+    {
+
+        std::string component_name;
+        std::string value_name;
+
+        for (
+            rapidxml::xml_node<>* component_node = component->first_node();
+            component_node;
+            component_node = component_node->next_sibling()
+            )
+        {
+            component_name = component_node->name();
+
+            if (component_name.empty()) return;
+
+            for (
+                rapidxml::xml_attribute <>* attribute = component_node->first_attribute();
+                attribute;
+                attribute = attribute->next_attribute()
+                )
+            {
+                value_name = attribute->value();
+
+                if (value_name.empty()) return;
+            }
+
+            if (component_name == "mesh")
+            {
+            
+            }
+
+            else if (component_name == "camera")
+            {
+
+            }
+            else if (component_name == "light")
+            {
+
+            }
+        }
+
+
+
+
+
+        std::string name = component->value();
+
+        std::string path = "assets//" + name;
+        model.reset(new glt::Model_Obj(path));
+
+        return true;
+    }
 
 }

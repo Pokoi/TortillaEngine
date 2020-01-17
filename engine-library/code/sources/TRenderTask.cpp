@@ -33,10 +33,16 @@
 
 namespace TortillaEngine
 {
+    TRenderTask::TRenderTask(TScene* scene, int priority = 1)
+        :TTask{priority, scene} 
+    {
+        renderer.reset(new glt::Render_Node);
+    }
+
     void TRenderTask::run(float delta) 
     {
         owner_scene->get_window()->reset();
-
+        renderer->render();
         owner_scene->get_window()->swap_buffers();
     }
 }
