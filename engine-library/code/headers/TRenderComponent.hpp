@@ -35,7 +35,7 @@
 
 namespace TortillaEngine
 {
-    class TRenderComponent : TComponent
+    class TRenderComponent : public TComponent
     {
         
         std::shared_ptr<glt::Model_Obj> model;

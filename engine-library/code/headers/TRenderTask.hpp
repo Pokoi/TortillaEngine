@@ -51,5 +51,7 @@ namespace TortillaEngine
 
         void run(float delta) override;
 
+        void add_component(TRenderComponent* component);
+
     };
 }

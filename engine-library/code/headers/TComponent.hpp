@@ -55,4 +55,3 @@ namespace TortillaEngine
     };
 }
 
-//Componentes gráficos con openGLToolkit -> luz, malla y cámara

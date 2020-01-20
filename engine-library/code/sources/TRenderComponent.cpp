@@ -34,9 +34,8 @@
 
 namespace TortillaEngine
 {
-    TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{ parent }, model{new glt::Model_Obj(path)}
-    {
-    }
+   
+
 
     bool TRenderComponent::parse_component(rapidxml::xml_node<>* component)
     {
@@ -81,15 +80,16 @@ namespace TortillaEngine
         }
 
 
-
-
-
         std::string name = component->value();
 
         std::string path = "assets//" + name;
         model.reset(new glt::Model_Obj(path));
 
         return true;
+    }
+
+    TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{parent}, model{ new glt::Model_Obj(path) }
+    {
     }
 
 }

@@ -28,8 +28,11 @@
  */
 
 #include <TRenderTask.hpp>
+#include <TRenderComponent.hpp>
 #include <TScene.hpp>
+#include <Model_Obj.hpp>
 #include <Render_Node.hpp>
+
 
 namespace TortillaEngine
 {
@@ -44,5 +47,10 @@ namespace TortillaEngine
         owner_scene->get_window()->reset();
         renderer->render();
         owner_scene->get_window()->swap_buffers();
+    }
+
+    void TRenderTask::add_component(TRenderComponent * component)
+    {
+        renderer->add(component->get_parent()->get_name(), component->get_model());
     }
 }
