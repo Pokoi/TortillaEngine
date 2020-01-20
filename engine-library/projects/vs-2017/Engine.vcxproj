@@ -23,6 +23,7 @@
     <ClInclude Include="..\..\code\headers\TInputTask.hpp" />
     <ClInclude Include="..\..\code\headers\TKernel.hpp" />
     <ClInclude Include="..\..\code\headers\TKeyboardInput.h" />
+    <ClInclude Include="..\..\code\headers\TLightComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TMemoryPool.hpp" />
     <ClInclude Include="..\..\code\headers\TMessage.hpp" />
     <ClInclude Include="..\..\code\headers\TObjectPool.hpp" />
@@ -46,6 +47,7 @@
     <ClCompile Include="..\..\code\sources\TCollisionsTask.cpp" />
     <ClCompile Include="..\..\code\sources\TInputTask.cpp" />
     <ClCompile Include="..\..\code\sources\TKeyboardInput.cpp" />
+    <ClCompile Include="..\..\code\sources\TLightComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TRenderComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TRenderTask.cpp" />
     <ClCompile Include="..\..\code\sources\TScene.cpp" />

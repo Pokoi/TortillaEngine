@@ -91,6 +91,9 @@
     <ClInclude Include="..\..\code\headers\TCameraComponent.hpp">
       <Filter>headers</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\headers\TLightComponent.hpp">
+      <Filter>headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\initialize.cpp">
@@ -136,6 +139,9 @@
       <Filter>sources</Filter>
     </ClCompile>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">
+      <Filter>sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\TLightComponent.cpp">
       <Filter>sources</Filter>
     </ClCompile>
   </ItemGroup>
