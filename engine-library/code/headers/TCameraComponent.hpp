@@ -45,10 +45,10 @@ namespace TortillaEngine
 
         TCameraComponent(
                             TEntity* parent,
-                            float near_field = 1.f,
-                            float far_field = 200.f,
-                            float fov = 60.f,
-                            float aspect_ratio = 1.f
+                            float near_field,
+                            float far_field,
+                            float fov,
+                            float aspect_ratio
                         );
 
 

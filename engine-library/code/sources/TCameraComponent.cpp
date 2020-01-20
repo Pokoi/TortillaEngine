@@ -34,11 +34,11 @@
 namespace TortillaEngine
 {
     TCameraComponent::TCameraComponent  (
-                                        TEntity* parent,
-                                        float near_field = 1.f,
-                                        float far_field = 200.f,
-                                        float fov = 60.f,
-                                        float aspect_ratio = 1.f
+                                            TEntity* parent,
+                                            float near_field = 1.f,
+                                            float far_field = 200.f,
+                                            float fov = 60.f,
+                                            float aspect_ratio = 1.f
                                         ) : TComponent{ parent }, camera{ new glt::Camera (fov, near_field, far_field, aspect_ratio)}
     {}
 }

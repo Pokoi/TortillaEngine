@@ -1,2 +1,6 @@
-﻿  initialize.cpp
-  Engine.vcxproj -> C:\Users\jesus\OneDrive\Escritorio\sdl2\engine-library\projects\vs-2017\x64\Debug\Engine.lib
+﻿  TRenderComponent.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(98,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+  Engine.vcxproj -> D:\Repositorios\TortillaEngine\engine-library\projects\vs-2017\x64\Debug\Engine.lib

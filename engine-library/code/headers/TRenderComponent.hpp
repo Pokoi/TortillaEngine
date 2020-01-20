@@ -31,6 +31,7 @@
 
 #include <TComponent.hpp>
 #include <memory>
+#include <string>
 #include <declarations.hpp>
 
 namespace TortillaEngine
@@ -58,7 +59,7 @@ namespace TortillaEngine
 
         virtual void    execute() {}
 
-        virtual bool    parse_component(rapidxml::xml_node<>* component_node) { return false; }
+        virtual bool    parse_component(rapidxml::xml_node<>* component_node);
 
     };
 }

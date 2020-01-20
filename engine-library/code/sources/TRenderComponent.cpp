@@ -51,7 +51,7 @@ namespace TortillaEngine
         {
             component_name = component_node->name();
 
-            if (component_name.empty()) return;
+            if (component_name.empty()) return true;
 
             for (
                 rapidxml::xml_attribute <>* attribute = component_node->first_attribute();
@@ -61,7 +61,7 @@ namespace TortillaEngine
             {
                 value_name = attribute->value();
 
-                if (value_name.empty()) return;
+                if (value_name.empty()) return true;
             }
 
             if (component_name == "mesh")
