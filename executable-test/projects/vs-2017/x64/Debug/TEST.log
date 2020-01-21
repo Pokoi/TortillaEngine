@@ -1,3 +1,6 @@
 ﻿  main.cpp
-     Creando biblioteca C:\Users\jesus\OneDrive\Escritorio\sdl2\executable-test\projects\vs-2017\x64\Debug\TEST.lib y objeto C:\Users\jesus\OneDrive\Escritorio\sdl2\executable-test\projects\vs-2017\x64\Debug\TEST.exp
-  TEST.vcxproj -> C:\Users\jesus\OneDrive\Escritorio\sdl2\executable-test\projects\vs-2017\x64\Debug\TEST.exe
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTransformComponent.hpp(33,10): fatal error C1083: No se puede abrir el archivo incluir: 'glm/glm.hpp': No such file or directory

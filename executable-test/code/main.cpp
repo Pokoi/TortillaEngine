@@ -31,6 +31,10 @@
 #include <TWindow.hpp>
 #include <iostream>
 #include <string>
+#include <memory>
+#include <TScene.hpp>
+#include <TRenderComponent.hpp>
+#include <TComponent.hpp>
 using namespace TortillaEngine;
 
 
@@ -42,20 +46,16 @@ int main()
 
     TWindow window (name, 1280, 720);
 
-    bool exit = false;
-
-    while (!exit)
-    {
-        TWindow::
-    }
-    
-    
-
-
 	// Crear escena
+    TScene scene(&window);
 
-	//Llamar a run de escena
-    int a;
-    std::cin >> a;
+    TEntity player("Player", &scene, nullptr);  
+    player.add_component("Render", std::make_shared<TRenderComponent>(new TRenderComponent{ &player }));
+    
+    
+
+    scene.run();
+
+	
 	return 0;
 }

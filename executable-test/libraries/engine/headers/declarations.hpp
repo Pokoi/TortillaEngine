@@ -42,5 +42,14 @@ typedef struct      SDL_Window SDL_Window;
 typedef void    *   SDL_GLContext;
 typedef union       SDL_Event SDL_Event;
 
+////////////////////////////////////////////
+// OpenGL ToolKit
 
+namespace glt
+{
+    class Render_Node;
+    class Model_Obj;
+    class Camera;
+    class Light;
+}
 
