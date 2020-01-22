@@ -1,6 +1,54 @@
-﻿  TRenderComponent.cpp
+﻿  TCollider.cpp
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(98,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  TCollisionsTask.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  TInputTask.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  TLightComponent.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  TRenderComponent.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  TRenderTask.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  TScene.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  TTransformComponent.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+  Generando código...
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
   Engine.vcxproj -> D:\Repositorios\TortillaEngine\engine-library\projects\vs-2017\x64\Debug\Engine.lib

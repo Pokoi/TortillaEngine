@@ -30,14 +30,13 @@
 #pragma once
 #include <TComponent.hpp>
 #include <declarations.hpp>
-#include <glm/glm.hpp>
-#include <Node.hpp>
+#include <rapidxml-1.13/rapidxml.hpp>
 
 namespace TortillaEngine
 {
     class TTransformComponent : TComponent
 	{
-		glm::mat4 transformation;
+        glt::Node * transformation;
 
     public:
         TTransformComponent	(
@@ -53,12 +52,10 @@ namespace TortillaEngine
 								float    z_scale		= 1
 							);
 
-		TTransformComponent (glm::mat4 transformation);
+		TTransformComponent (glt::Node transformation);
        
-        glm::mat4	get_transformation() const
-		{
-			return transformation;
-		}
+        glt::Node *	get_transformation() const;
+		
 
 		void translate	(float x			, float y		 , float z			);        
 		void rotate		(float pitch_angle	, float yaw_angle, float roll_angle	);        
@@ -72,22 +69,10 @@ namespace TortillaEngine
         virtual bool    parse_component(rapidxml::xml_node<>* component_node) override;
         
 
-		TTransformComponent operator * (TTransformComponent& other) const;
+		//TTransformComponent operator * (TTransformComponent& other) const;
 		void				operator = (TTransformComponent& other);
         
-        float *         get_position()
-        {
-        
-            float position[]
-            {
-                transformation[3][0],
-                transformation[3][1],
-                transformation[3][2]
-            };
-
-            return position;
-            
-        }
+        float* get_position();
 
     };
 }

@@ -31,6 +31,8 @@
 #include <TEntity.hpp>
 #include <TScene.hpp>
 #include <TVariant.hpp>
+#include <glm/glm.hpp>
+#include <Node.hpp>
 
 namespace TortillaEngine
 {
@@ -47,21 +49,26 @@ namespace TortillaEngine
 													float z_scale
 												) : TComponent (entity)
 	{
-		translate(x_position	, y_position, z_position);
+        translate(x_position	, y_position, z_position);
 		rotate	 (pitch_angle	, yaw_angle	, roll_angle);
 		scale	 (x_scale		, y_scale	, z_scale	);
 	}
 
-    TTransformComponent::TTransformComponent(glm::mat4 transformation)
+    TTransformComponent::TTransformComponent(glt::Node transformation)
     {
-        this->transformation = transformation;
+        this->transformation = &transformation;
+    }
+
+    glt::Node * TTransformComponent::get_transformation() const
+    {
+        return transformation;
     }
     	
 
 	inline void TTransformComponent::translate	(float x		  , float y			, float z			)
 	{
-		transformation = glt::translate(transformation, { x,y,z });
-        
+        transformation->translate({ x,y,z });
+		        
         TMessage message = TMessage(parent->get_name() + "_MOVED");       
         parent->get_scene()->get_dispatcher()->send(message);
     }
@@ -70,15 +77,15 @@ namespace TortillaEngine
 	{
 		if (pitch_angle)
 		{
-			transformation = glt::rotate_around_x(transformation, pitch_angle);
+            transformation->rotate_around_x(pitch_angle);			
 		}
 		if (yaw_angle)
 		{
-			transformation = glt::rotate_around_y(transformation, yaw_angle);
+            transformation->rotate_around_y(yaw_angle);
 		}
 		if (roll_angle)
 		{
-			transformation = glt::rotate_around_z(transformation, roll_angle);
+            transformation->rotate_around_z(roll_angle);
 		}
 
         TMessage message = TMessage(parent->get_name() + "_MOVED");
@@ -87,7 +94,7 @@ namespace TortillaEngine
 
 	inline void TTransformComponent::scale		(float scale_x	  , float scale_y	, float scale_z		)
 	{
-		transformation = glt::scale(transformation, scale_x, scale_y, scale_z);
+        transformation->scale(scale_x, scale_y, scale_z);		
         
         TMessage message = TMessage(parent->get_name() + "_RESIZED");
         
@@ -103,15 +110,30 @@ namespace TortillaEngine
     }
 		
 
-	TTransformComponent TTransformComponent::operator*(TTransformComponent& other) const
+	/*TTransformComponent TTransformComponent::operator*(TTransformComponent& other) const
 	{
-		return {(transformation * other.get_transformation())};
-	}
+
+        //return transformation->get_transformation() * other.get_transformation()->get_transformation();
+	}*/
 
 	void TTransformComponent::operator=(TTransformComponent& other)
 	{
 		transformation = other.get_transformation();
 	}
+
+    inline float* TTransformComponent::get_position()
+    {
+
+        float position[]
+        {
+            transformation->get_transformation()[3][0],
+            transformation->get_transformation()[3][1],
+            transformation->get_transformation()[3][2]
+        };
+
+        return position;
+
+    }
 
 
 }

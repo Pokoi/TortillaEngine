@@ -83,8 +83,11 @@ namespace TortillaEngine
 
 		TTransformComponent get_transform()
 		{
+            return this->transform;
+            /*
 			if (parent) return parent->get_transform() * this->transform;
 			else return this->transform;
+            */
 		}
 
         TScene* get_scene()

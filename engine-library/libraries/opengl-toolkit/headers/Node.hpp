@@ -37,7 +37,7 @@
 
             bool           visible;
 
-        protected:
+        public:
 
             Node()
             {
