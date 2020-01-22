@@ -48,9 +48,9 @@ namespace TortillaEngine
             delete owner_scene;
         }
 
-        void virtual	run(float delta) {};
-		void			initialize();
-		void			finalize();
+        void virtual	run(float delta) {}
+        void			initialize() {}
+        void			finalize() {}
 
 		int             get_priority()                   const
         { 

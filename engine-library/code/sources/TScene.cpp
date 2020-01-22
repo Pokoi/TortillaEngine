@@ -31,5 +31,19 @@
 
 namespace TortillaEngine
 {
+
+    void TScene::load(const std::string& path)
+    {
     
+    }
+
+    void TScene::parse_scene(rapidxml::xml_node<>* node)
+    {
+    
+    }
+
+    void TScene::parse_entities(rapidxml::xml_node<>* node)
+    {
+
+    }
 }

@@ -80,7 +80,7 @@ namespace TortillaEngine
             this->value.bool_value  = value;
         }
 
-        TVariant(std::string & value)
+        TVariant(std::string value)
         {
             this->type               = TVariant::Type::STRING;
             this->value.string_value = value.c_str();

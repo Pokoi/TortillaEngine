@@ -44,8 +44,8 @@ namespace TortillaEngine
 
 		public:
 			
-            TKey(std::string name) : common_name{ name }    {};
-            TKey()                 : common_name{ "UNKWON" }{};
+            TKey(std::string name) : common_name{ name }    {}
+            TKey()                 : common_name{ "UNKWON" }{}
             
             std::string get_name()
             {
@@ -84,7 +84,7 @@ namespace TortillaEngine
 
 	public:
 
-		TKeyboardInput();
+        TKeyboardInput() {}
 
         TKey translate_sdl_code(int sdl_code);
 

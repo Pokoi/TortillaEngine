@@ -3,4 +3,28 @@ D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hp
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
-D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTransformComponent.hpp(33,10): fatal error C1083: No se puede abrir el archivo incluir: 'glm/glm.hpp': No such file or directory
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664: 'TortillaEngine::TRenderComponent::TRenderComponent(TortillaEngine::TRenderComponent &&)': el argumento 1 no puede convertirse de '_Ty' a 'TortillaEngine::TEntity *'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:             _Ty=TortillaEngine::TRenderComponent *
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,33): message : Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TRenderComponent.hpp(47,9): message : vea la declaración de 'TortillaEngine::TRenderComponent::TRenderComponent'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message : vea la referencia a la creación de instancias de plantilla de función "void std::_Construct_in_place<_Ty,TortillaEngine::TRenderComponent*>(_Ty &,TortillaEngine::TRenderComponent *&&) noexcept(false)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :             _Ty=TortillaEngine::TRenderComponent
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<TortillaEngine::TRenderComponent*>(TortillaEngine::TRenderComponent *&&)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :             _Ty=TortillaEngine::TRenderComponent
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<TortillaEngine::TRenderComponent*>(TortillaEngine::TRenderComponent *&&)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :             _Ty=TortillaEngine::TRenderComponent
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         ]
+D:\Repositorios\TortillaEngine\executable-test\code\main.cpp(53): message : vea la referencia a la creación de instancias de plantilla de función "std::shared_ptr<TortillaEngine::TRenderComponent> std::make_shared<TortillaEngine::TRenderComponent,TortillaEngine::TRenderComponent*>(TortillaEngine::TRenderComponent *&&)" que se está compilando

@@ -39,14 +39,14 @@ namespace TortillaEngine
 
     class TMessage
     {
-        char * id;
+        const char * id = nullptr;
         std::map<std::string, TVariant> parameters;
 
     public:
 
         TMessage(std::string id) 
 		{
-			id = id.c_str();
+			this->id = id.c_str();
 		}
 
         void add_parameter(const std::string & key, TVariant& value)

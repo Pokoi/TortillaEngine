@@ -29,7 +29,9 @@
 */
 
 #include <TCollisionsTask.hpp>
+#include <TVariant.hpp>
 #include <TScene.hpp>
+#include <string>
 
 namespace TortillaEngine
 {
@@ -42,7 +44,7 @@ namespace TortillaEngine
                 if (colliders[i]->collides(*colliders[j]))
                 {
                     TMessage message(colliders[i]->get_parent()->get_name() + "_COLLIDES");
-                    TVariant value(&colliders[j]->get_parent()->get_name());
+                    TVariant value(colliders[j]->get_parent()->get_name());
                     message.add_parameter("collision", value);
                     owner_scene->get_dispatcher()->send(message);
                 }

@@ -36,7 +36,7 @@
 namespace TortillaEngine
 {
 
-    class TLightComponent : TComponent
+    class TLightComponent : public TComponent
     {
 
     public:
@@ -79,7 +79,7 @@ namespace TortillaEngine
         float   get_intensity();
        
 
-        virtual bool    parse_component(rapidxml::xml_node<>* component_node) { return false; }
+        virtual bool    parse_component(rapidxml::xml_node<>* component_node);
 
     };
 

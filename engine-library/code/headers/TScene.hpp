@@ -34,6 +34,8 @@
 #include <TEntity.hpp>
 #include <TDispatcher.hpp>
 #include <TCollisionsTask.hpp>
+#include <TInputTask.hpp>
+#include <TRenderTask.hpp>
 #include <rapidxml-1.13/rapidxml.hpp>
 
 #include <map>
@@ -48,26 +50,43 @@ namespace TortillaEngine
     {
 		TKernel * own_kernel = new TKernel();
 		TWindow * window;
-		std::map<std::string, TEntity* > entities;         
+        std::map<std::string, TEntity* > entities;
+		
+        TDispatcher     * message_dispatcher;	
 
-		static TDispatcher message_dispatcher;
-		// Gestor de mensajes
-		// permite mandar mensajes de la escena 
-
-        TCollisionsTask* collisions = nullptr;
+        TInputTask      * input      = nullptr;
+        TRenderTask     * render     = nullptr;
+        TCollisionsTask * collisions = nullptr;
 
 
     public:
 
 		TScene(TWindow* window) : window{ window }
 		{
-            collisions = new TCollisionsTask{ this };
+            message_dispatcher = &(TDispatcher::instance());
+            
+            render      = new TRenderTask    { this };
+            input       = new TInputTask     { this };
+            collisions  = new TCollisionsTask{ this };
+
+            own_kernel -> add_task( * render      );
+            own_kernel -> add_task( * input       );
+            own_kernel -> add_task( * collisions  );
+
 		}
 
 		TScene(TWindow* window, const std::string& path) : window{window}
 		{
             collisions = new TCollisionsTask{ this };
 			load(path);
+
+            render      = new TRenderTask    { this };
+            input       = new TInputTask     { this };
+            collisions  = new TCollisionsTask{ this };
+
+            own_kernel -> add_task( * render      );
+            own_kernel -> add_task( * input       );
+            own_kernel -> add_task( * collisions  );
 		}
        
         ~TScene()
@@ -83,15 +102,14 @@ namespace TortillaEngine
             return window;
         }
         
-        TKernel * get_kernel() 
+        TKernel     *   get_kernel() 
         { 
             return  own_kernel;
         }
         
         TDispatcher *   get_dispatcher() 
         {
-            return &message_dispatcher;
-
+            return message_dispatcher;
         }
 
         void            run()
@@ -115,8 +133,7 @@ namespace TortillaEngine
 		//Después extrae cada componente y los va añadiendo a la entidad
 
         void parse_scene     (rapidxml::xml_node<>* node);
-        void parse_entities  (rapidxml::xml_node<>* node);
-        void parse_components(rapidxml::xml_node<>* node);
+        void parse_entities  (rapidxml::xml_node<>* node);       
 
     };
 }

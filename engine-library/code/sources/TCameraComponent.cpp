@@ -41,4 +41,9 @@ namespace TortillaEngine
                                             float aspect_ratio = 1.f
                                         ) : TComponent{ parent }, camera{ new glt::Camera (fov, near_field, far_field, aspect_ratio)}
     {}
+
+    bool TCameraComponent::parse_component(rapidxml::xml_node<>* component_node)
+    {
+        return false;
+    }
 }

@@ -34,7 +34,7 @@
 
 namespace TortillaEngine
 {
-    class TSphereCollider : TCollider
+    class TSphereCollider : public TCollider
     {
         float radius; 
 
@@ -71,8 +71,8 @@ namespace TortillaEngine
             TCollider::handle(m);
         }
 
-        virtual void initialize() override {};
-        virtual void execute() override {};
+        virtual void initialize() override {}
+        virtual void execute() override {}
         virtual bool parse_component(rapidxml::xml_node<>* component_node) override;        
         
         virtual bool collides(TCollider& other)
@@ -81,10 +81,10 @@ namespace TortillaEngine
 
             if (collider != nullptr)
             {
-                return ((   pow(center.x - collider->center.x   , 2) +
-                            pow(center.y - collider->center.y   , 2) +
-                            pow(center.z - collider->center.z   , 2)
-                        ) < pow(radius + collider->get_radius() , 2)
+                return ((   pow((double)center.x - collider->center.x   , 2) +
+                            pow((double)center.y - collider->center.y   , 2) +
+                            pow((double)center.z - collider->center.z   , 2)
+                        ) < pow((double)radius + collider->get_radius() , 2)
                        );                
             }
             return false;

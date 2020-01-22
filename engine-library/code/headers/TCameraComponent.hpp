@@ -37,7 +37,7 @@
 namespace TortillaEngine
 {
 
-    class TCameraComponent : TComponent
+    class TCameraComponent : public TComponent
     {
         std::shared_ptr<glt::Camera> camera;
 
@@ -52,7 +52,7 @@ namespace TortillaEngine
                         );
 
 
-        virtual bool    parse_component(rapidxml::xml_node<>* component_node) { return false; }
+        virtual bool    parse_component(rapidxml::xml_node<>* component_node);
     };
 
     

@@ -80,4 +80,10 @@ namespace TortillaEngine
     {
         return intensity;
     }
+
+    bool TLightComponent::parse_component(rapidxml::xml_node<>* component_node)
+    {
+        return false;
+    }
+
 }

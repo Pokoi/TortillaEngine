@@ -41,7 +41,7 @@ namespace TortillaEngine
 
     public:
 
-        TInputTask(TScene* scene, int priority = 2 ) : TTask(priority, scene) { };
+        TInputTask(TScene* scene, int priority = 2 ) : TTask(priority, scene) { }
 
         virtual void run(float delta) override;
 

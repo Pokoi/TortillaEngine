@@ -36,7 +36,7 @@
 
 namespace TortillaEngine
 {
-    TRenderTask::TRenderTask(TScene* scene, int priority = 1)
+    TRenderTask::TRenderTask(TScene* scene, int priority)
         :TTask{priority, scene} 
     {
         renderer.reset(new glt::Render_Node);

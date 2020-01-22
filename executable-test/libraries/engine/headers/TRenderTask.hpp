@@ -38,7 +38,7 @@
 
 namespace TortillaEngine
 {
-    class TRenderTask : TTask
+    class TRenderTask : public TTask
     {
 
         std::unique_ptr<glt::Render_Node> renderer;
@@ -47,7 +47,7 @@ namespace TortillaEngine
 
     public:
 
-        TRenderTask(TScene* scene, int priority);
+        TRenderTask(TScene* scene, int priority = 1);
 
         void run(float delta) override;
 

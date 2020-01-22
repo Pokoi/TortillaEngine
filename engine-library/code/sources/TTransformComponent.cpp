@@ -135,5 +135,8 @@ namespace TortillaEngine
 
     }
 
-
+    bool TTransformComponent::parse_component(rapidxml::xml_node<>* component_node)
+    {
+        return false;
+    }
 }

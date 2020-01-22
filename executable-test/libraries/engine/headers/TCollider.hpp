@@ -76,12 +76,12 @@ namespace TortillaEngine
                     float z_offset
                  );
 
-        void calculate_center();
+        void         calculate_center();
         virtual void resize(float x, float y, float z);
         virtual void handle(TMessage& m) override;
                 
-        virtual void initialize() override {};
-        virtual void execute() override {};
+        virtual void initialize() override {}
+        virtual void execute() override {}
         virtual bool parse_component(rapidxml::xml_node<>* component_node) override;
         virtual bool collides(TCollider& other) = 0;
     };

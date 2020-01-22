@@ -102,6 +102,10 @@ namespace TortillaEngine
 	/**
 	Closes the mixer
 	*/
+	inline void TAudio::CloseMixer()
+	{
+		Mix_CloseAudio();
+	}
 
 
 	/**
@@ -123,9 +127,5 @@ namespace TortillaEngine
 		Mix_HaltMusic();
 	}
 
-	inline void TAudio::CloseMixer()
-	{
-		Mix_CloseAudio();
-	}
 
 }
