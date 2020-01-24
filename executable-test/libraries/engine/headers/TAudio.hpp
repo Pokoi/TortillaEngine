@@ -32,66 +32,74 @@
 
 namespace TortillaEngine 
 {
+    /**
+    @brief Class for audio management.
+    */
 	class TAudio
 	{		
 		
 	public:
 		
+        /**
+        @brief Creates an audio object
+        */
+        TAudio();
+
 		/**
-		Opens the mixer
+		@brief Opens the mixer
 		*/
-		inline void OpenMixer	( 
+		void OpenMixer	( 
 								int frequency  = 22050,
 								int channels   = 2, 
 								int chunk_size = 4096
 								);
 
 		/**
-		Sets the volume of a specific channel
+		@brief Sets the volume of a specific channel
 		@param channel Index of the channel. Use "-1" to set the volume of all channels
 		@param volume Volume level in the range of 0-128
 		*/
-		inline void SetVolumeOfChannel(int channel, int volume);
+		void SetVolumeOfChannel(int channel, int volume);
 
 		/**
-		Gets the volume level of a specific channel
+		@brief Gets the volume level of a specific channel
 		@param channel Index of the channel.
 		*/
-		inline int GetVolumeOfChannel(int channel);
+		int GetVolumeOfChannel(int channel);
 
 		/**
-		Pauses a channel 
+		@brief Pauses a channel 
 		@param channel The specific channel
 		*/
-		inline void PauseChannel	(int channel);
+		void PauseChannel	(int channel);
 
 		/**
-		Resumes a channel
+		@brief Resumes a channel
 		@param channel The specific channel
 		*/
-		inline void ResumeChannel	(int channel);
+		void ResumeChannel	(int channel);
 
 		/**
-		Check if a specific channel is being played
+		@brief Check if a specific channel is being played
 		@param channel The specific channel.  Use "-1" to check all channels
 		*/
-		inline bool IsChannelPlaying(int channel);
+		bool IsChannelPlaying(int channel);
 
 		/**
-		Halts playing a specific channel.
+		@brief Halts playing a specific channel.
 		@param channel The specific channel. Use "-1" to halt all channels
 		*/
-		inline void HaltChannel(int channel);
+		void HaltChannel(int channel);
 
 		/**
-		Halts playing the music.
+		@brief Halts playing the music.
 		*/
-		inline void HaltMusic();
+		void HaltMusic();
 
 		/**
-		Closes the mixer
+		@brief Closes the mixer
 		*/
-		inline void CloseMixer();
+		void CloseMixer();
 
 	};
 }

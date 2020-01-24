@@ -58,6 +58,8 @@ namespace TortillaEngine
         TRenderTask     * render     = nullptr;
         TCollisionsTask * collisions = nullptr;
 
+        std::string scene_path;
+
 
     public:
 
@@ -134,6 +136,8 @@ namespace TortillaEngine
 
         void parse_scene     (rapidxml::xml_node<>* node);
         void parse_entities  (rapidxml::xml_node<>* node);       
+
+        std::string get_path() { return scene_path; }
 
     };
 }

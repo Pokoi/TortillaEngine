@@ -35,7 +35,8 @@ namespace TortillaEngine
 {
 	class TKeyboardInput 
 	{
-	private:
+
+    public:
 
 		struct TKey 
 		{
@@ -53,6 +54,9 @@ namespace TortillaEngine
             }
             
 		};
+
+	private:
+
 
 		const TKey KeyboardKeys[50]
 		{

@@ -35,14 +35,19 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Execute the collision detection check of all the subscribed colliders.
+    @param delta The time between execution calls.
+    */
     void TCollisionsTask::run(float delta)
     {
-        for (int i = 0; i < colliders.size() - 1; ++i)
+        for (int i = 0; i < colliders.size(); ++i)
         {
             for (int j = 0; i < colliders.size(); ++j)
             {
                 if (colliders[i]->collides(*colliders[j]))
                 {
+                    //When a collision occurs, a message its sent with the info of the collision
                     TMessage message(colliders[i]->get_parent()->get_name() + "_COLLIDES");
                     TVariant value(colliders[j]->get_parent()->get_name());
                     message.add_parameter("collision", value);

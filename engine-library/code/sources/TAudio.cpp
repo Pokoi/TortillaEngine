@@ -29,16 +29,37 @@
 
 #include <TAudio.hpp>
 #include <SDL_mixer.h>
+#include <SDL.h>
 
 
 namespace TortillaEngine
 {
+    /**
+    @brief Creates an audio object
+    */
+    TAudio::TAudio()
+    {
+        int flags = MIX_INIT_OGG | MIX_INIT_MOD;
+
+        if (SDL_Init(flags) == -1)
+        {
+            printf("SDL_Init: %s\n", SDL_GetError());
+            exit(1);
+        }
+
+        if (Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024) == -1)
+        {
+            printf("Mix_OpenAudio: %s\n", Mix_GetError());
+            exit(2);
+        }
+
+        OpenMixer();
+    }
 
 	/**
-	Opens the mixer
+	@brief Opens the mixer
 	*/
-
-	inline void TAudio::OpenMixer(   
+	void TAudio::OpenMixer(   
                                     int     frequency,
                                     int     channels,
                                     int     chunk_size
@@ -49,80 +70,73 @@ namespace TortillaEngine
 	}
 
 	/**
-	Sets the volume of a specific channel
+	@brief Sets the volume of a specific channel
 	@param channel Index of the channel. Use "-1" to set the volume of all channels
 	@param volume Volume level in the range of 0-128
 	*/
-
-	inline void TAudio::SetVolumeOfChannel(int channel, int volume)
+	void TAudio::SetVolumeOfChannel(int channel, int volume)
 	{
 		Mix_Volume(channel, volume);
 	}
 
 	/**
-	Gets the volume level of a specific channel
+	@brief Gets the volume level of a specific channel
 	@param channel Index of the channel.
 	*/
-
-	inline int TAudio::GetVolumeOfChannel(int channel)
+	int TAudio::GetVolumeOfChannel(int channel)
 	{
 		return Mix_Volume(channel, -1);
 	}
 
 	/**
-	Pauses a channel
+	@brief Pauses a channel
 	@param channel The specific channel
 	*/
-
-	inline void TAudio::PauseChannel(int channel)
+	void TAudio::PauseChannel(int channel)
 	{
 		Mix_Pause(channel);
 	}
 
 	/**
-	Resumes a channel
+	@brief Resumes a channel
 	@param channel The specific channel
 	*/
-
-	inline void TAudio::ResumeChannel(int channel)
+	void TAudio::ResumeChannel(int channel)
 	{
 		Mix_Resume(channel);
 	}
 
 	/**
-	Check if a specific channel is being played
+	@brief Check if a specific channel is being played
 	@param channel The specific channel.  Use "-1" to check all channels
 	*/
-
-	inline bool TAudio::IsChannelPlaying(int channel)
+	bool TAudio::IsChannelPlaying(int channel)
 	{
 		return Mix_Playing(channel) != 0;
 	}
 
 	/**
-	Closes the mixer
+	@brief Closes the mixer
 	*/
-	inline void TAudio::CloseMixer()
+	void TAudio::CloseMixer()
 	{
 		Mix_CloseAudio();
 	}
 
 
 	/**
-	Halts playing a specific channel.
+	@brief Halts playing a specific channel.
 	@param channel The specific channel. Use "-1" to halt all channels
 	*/
-
-	inline void TAudio::HaltChannel(int channel)
+	void TAudio::HaltChannel(int channel)
 	{
 		Mix_HaltChannel(channel);
 	}
 
 	/**
-	Halts playing the music.
+	@brief Halts playing the music.
 	*/
-
-	inline void TAudio::HaltMusic()
+	void TAudio::HaltMusic()
 	{
 		Mix_HaltMusic();
 	}

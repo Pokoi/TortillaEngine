@@ -39,17 +39,32 @@ namespace TortillaEngine
 {
     class TScene;
 
+    /**
+    @brief The task class to manage collisions in a scene.
+    */
     class TCollisionsTask : public TTask
     {
+        /**
+        @brief The collection of colliders subscribed to the task         
+        */
         std::vector<TCollider*> colliders;
 
     public:
 
+        /**
+        @brief Creates the task.
+        @param scene A reference to the scene where this task belong.
+        @param priority The execution order in kernel.
+        */
         TCollisionsTask(TScene* scene, int priority = 3) : TTask(priority, scene) 
         { 
            
         }
 
+        /**
+        @brief Subscribe a collider to the collection.
+        @param collider A reference to the collider to add.
+        */
         void add_collider(TCollider * collider)
         {
             if (collider != nullptr)
@@ -58,6 +73,10 @@ namespace TortillaEngine
             }
         }
 
+        /**
+        @brief Unsubscribe a collider to the collection.
+        @param collider A reference to the script to remove.
+        */
         void remove_collider(TCollider* collider)
         {
             if (collider != nullptr)
@@ -70,6 +89,10 @@ namespace TortillaEngine
             }
         }
 
+        /**
+        @brief Execute the collision detection check of all the subscribed colliders.
+        @param delta The time between execution calls.
+        */
         virtual void run(float delta);
     };
 }

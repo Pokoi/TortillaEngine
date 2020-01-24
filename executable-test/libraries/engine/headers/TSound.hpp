@@ -33,37 +33,62 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Class for sound effects audio management
+    */
 	class TSound : public TAudio
 	{
+        /**
+        @brief The source of the sound effect
+        */
 		T_Chunk * sound_source;
 
 	public:
 
-		TSound() : sound_source { nullptr } {}
+        /**
+        @brief Creates a new sound effect object
+        */
+        TSound() : sound_source{ nullptr }, TAudio{}{}
+        
+        /**
+        @brief Creates a new sound effect object with a sound located in the given path
+        @param sound_path The path where the sound file is located
+        */
+		TSound(char* sound_path);
+
+        /**
+        @brief Frees the heap memory 
+        */
         ~TSound()
         {
             delete sound_source;
         }
-		TSound(char* sound_path);
-		
-		inline void LoadSound(char* path);
+        
+        /**
+        @brief Loads an audio file for this sound effect object
+        @param path The path where the sound file is located
+        */
+		void LoadSound(char* path);
 
 		/**
-		Plays the sound source in loop
+		@brief Plays the sound source in loop
 		@param channel Index of the channel. Use "-1" to use the first free channel
 		@param loops Count of loops. For infinite loop use "-1" value
 		*/
-		inline void PlaySound(int channel, int loops);
+		void PlaySound(int channel, int loops);
 
 		/**
-		Fades the sound source in loop
+		@brief Fades the sound source in loop
 		@param channel Index of the channel. Use "-1" to use the first free channel
 		@param loops Count of loops. For infinite loop use "-1" value
 		@param fade_duration_in_milliseconds Fades the sound over this amount of milliseconds
 		*/
-		inline void PlaySoundWithFade(int channel, int loops, int fade_duration_in_milliseconds);
+		void PlaySoundWithFade(int channel, int loops, int fade_duration_in_milliseconds);
 
-		inline void FreeSound();
+        /**
+        @brief Frees the channel        
+        */
+		void FreeSound();
 		
 
 	};

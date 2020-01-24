@@ -34,12 +34,26 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Class for sphere collision component management
+    */
     class TSphereCollider : public TCollider
     {
+        /**
+        @brief The radius of the sphere
+        */
         float radius; 
 
     public:
 
+        /**
+        @brief Creates a collider with the given values.
+        @param parent The entity this collider is attached to.
+        @param x_offset The offset in x axis with parent position.
+        @param y_offset The offset in y axis with parent position.
+        @param z_offset The offset in z axis with parent position.
+        @param radius The radius of the sphere.
+        */
         TSphereCollider(
                         TEntity* parent,
                         float x_offset,
@@ -51,11 +65,21 @@ namespace TortillaEngine
             this->radius = radius;
         }
 
+        /**
+        @brief Gives the radius of the sphere        
+        @return The radius of the sphere
+        */
         float get_radius()
         {
             return radius;
         }
 
+        /**
+        @brief Apply an scale to the collider
+        @param x The scale in x axis
+        @param y The scale in y axis
+        @param z The scale in z axis
+        */
         virtual void resize(float x, float y, float z) 
         {
             if (x == y && y == z)
@@ -66,15 +90,36 @@ namespace TortillaEngine
             TCollider::resize(x, y, z);
         }
 
+        /**
+        @brief Handle the messages this collider is subscribed to
+        @param m The message
+        */
         virtual void handle(TMessage& m)
         {
             TCollider::handle(m);
         }
 
+        /**
+        @brief Initialize the component values
+        */
         virtual void initialize() override {}
+        
+        /**
+        @brief Execute the component
+        */
         virtual void execute() override {}
+
+        /**
+        @brief Load the component info from a xml node.
+        @param component_node A reference to the node with this component info.
+        */
         virtual bool parse_component(rapidxml::xml_node<>* component_node) override;        
         
+        /**
+        @brief Checks if there is a collision between this and other collider
+        @param other The collider with check collision to
+        @return If there is a collision
+        */
         virtual bool collides(TCollider& other)
         {
             TSphereCollider* collider = dynamic_cast<TSphereCollider*>(&other);

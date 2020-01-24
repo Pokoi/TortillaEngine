@@ -1,8 +1,5 @@
 ﻿  TAudio.cpp
-  TCameraComponent.cpp
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
   TCollider.cpp
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
@@ -23,16 +20,6 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39)
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
   TKeyboardInput.cpp
-  TLightComponent.cpp
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
-  TRenderComponent.cpp
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
   TRenderTask.cpp
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
@@ -47,8 +34,11 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\TTask.hpp(34): messag
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
-  TSphereCollider.cpp
+  TSound.cpp
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
+  TSphereCollider.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
   TTransformComponent.cpp
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'

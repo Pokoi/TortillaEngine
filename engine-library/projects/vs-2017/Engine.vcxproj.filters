@@ -56,6 +56,9 @@
     <Filter Include="sources\TTransformSystem">
       <UniqueIdentifier>{0b524858-65e9-4b8e-ad9f-6f486293f73e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="headers\TScriptSystem">
+      <UniqueIdentifier>{eeff5209-9f77-47e1-b437-46a1a9f7ef36}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\TCollider.hpp">
@@ -138,6 +141,12 @@
     </ClInclude>
     <ClInclude Include="..\..\code\headers\TTransformComponent.hpp">
       <Filter>headers\TTransformSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\TScriptComponent.hpp">
+      <Filter>headers\TScriptSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\TScriptTask.hpp">
+      <Filter>headers\TScriptSystem</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

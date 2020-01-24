@@ -1,30 +1,70 @@
-﻿  main.cpp
+﻿  EnemyController.cpp
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TSound.hpp(45,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
+D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(45,1): error C2027: uso del tipo 'TortillaEngine::TEntity' sin definir
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(46,1): error C2027: uso del tipo 'TortillaEngine::TEntity' sin definir
+  main.cpp
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664: 'TortillaEngine::TRenderComponent::TRenderComponent(TortillaEngine::TRenderComponent &&)': el argumento 1 no puede convertirse de '_Ty' a 'TortillaEngine::TEntity *'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         with
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         [
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:             _Ty=TortillaEngine::TRenderComponent *
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,12): error C2664:         ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,33): message : Los tipos señalados no están relacionados; la conversión requiere reinterpret_cast, conversión de estilo de C o conversión de estilo de función
-D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TRenderComponent.hpp(47,9): message : vea la declaración de 'TortillaEngine::TRenderComponent::TRenderComponent'
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message : vea la referencia a la creación de instancias de plantilla de función "void std::_Construct_in_place<_Ty,TortillaEngine::TRenderComponent*>(_Ty &,TortillaEngine::TRenderComponent *&&) noexcept(false)" que se está compilando
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         with
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         [
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :             _Ty=TortillaEngine::TRenderComponent
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<TortillaEngine::TRenderComponent*>(TortillaEngine::TRenderComponent *&&)" que se está compilando
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         with
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         [
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :             _Ty=TortillaEngine::TRenderComponent
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<TortillaEngine::TRenderComponent*>(TortillaEngine::TRenderComponent *&&)" que se está compilando
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         with
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         [
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :             _Ty=TortillaEngine::TRenderComponent
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         ]
-D:\Repositorios\TortillaEngine\executable-test\code\main.cpp(53): message : vea la referencia a la creación de instancias de plantilla de función "std::shared_ptr<TortillaEngine::TRenderComponent> std::make_shared<TortillaEngine::TRenderComponent,TortillaEngine::TRenderComponent*>(TortillaEngine::TRenderComponent *&&)" que se está compilando
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TSound.hpp(45,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
+  PlayerController.cpp
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(46,39): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TEntity' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TComponent.hpp(35): message : vea la declaración de 'TortillaEngine::TEntity'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(42,26): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(42,58): error C3646: 'vertical_positive_movement_key': especificador de invalidación desconocido
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(42,58): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(43,26): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(43,58): error C3646: 'vertical_negative_movement_key': especificador de invalidación desconocido
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(43,58): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(44,26): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(44,58): error C3646: 'horizontal_positive_movement_key': especificador de invalidación desconocido
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(44,58): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(45,26): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(45,58): error C3646: 'horizontal_negative_movement_key': especificador de invalidación desconocido
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(45,58): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(56,66): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(56,66): error C2061: error de sintaxis: identificador 'TKey'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(60,66): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(60,66): error C2061: error de sintaxis: identificador 'TKey'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(64,68): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(64,68): error C2061: error de sintaxis: identificador 'TKey'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(68,68): error C2653: 'TKeyboardInput': no es un nombre de clase o espacio de nombres
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(68,68): error C2061: error de sintaxis: identificador 'TKey'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(58,9): error C2065: 'vertical_positive_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(58,42): error C2065: 'key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(62,9): error C2065: 'vertical_negative_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(62,42): error C2065: 'key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(66,9): error C2065: 'horizontal_positive_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(66,44): error C2065: 'key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(70,9): error C2065: 'horizontal_negative_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.hpp(70,44): error C2065: 'key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TEntity.hpp(101,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TEntity.hpp(42): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hpp(48,1): warning C4150: eliminación de puntero a tipo 'TortillaEngine::TScene' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TTask.hpp(34): message : vea la declaración de 'TortillaEngine::TScene'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(39,55): error C2065: 'vertical_positive_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(39,96): error C2660: 'TortillaEngine::TDispatcher::add': la función no acepta 1 argumentos
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TDispatcher.hpp(54,14): message : vea la declaración de 'TortillaEngine::TDispatcher::add'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(40,55): error C2065: 'vertical_negative_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(40,96): error C2660: 'TortillaEngine::TDispatcher::add': la función no acepta 1 argumentos
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TDispatcher.hpp(54,14): message : vea la declaración de 'TortillaEngine::TDispatcher::add'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(41,55): error C2065: 'horizontal_positive_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(41,98): error C2660: 'TortillaEngine::TDispatcher::add': la función no acepta 1 argumentos
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TDispatcher.hpp(54,14): message : vea la declaración de 'TortillaEngine::TDispatcher::add'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(42,55): error C2065: 'horizontal_negative_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(42,98): error C2660: 'TortillaEngine::TDispatcher::add': la función no acepta 1 argumentos
+D:\Repositorios\TortillaEngine\executable-test\libraries\engine\headers\TDispatcher.hpp(54,14): message : vea la declaración de 'TortillaEngine::TDispatcher::add'
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(49,23): error C2065: 'vertical_positive_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(53,23): error C2065: 'vertical_negative_movement_key': identificador no declarado
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(57,23): error C2065: 'horizontal_positive_movement_key': identificador no declarado
+  Generando código...
+D:\Repositorios\TortillaEngine\executable-test\code\PlayerController.cpp(61,23): error C2065: 'horizontal_negative_movement_key': identificador no declarado

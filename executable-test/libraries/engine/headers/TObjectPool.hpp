@@ -33,11 +33,15 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief A template class for memory management object oriented
+    */
 	template <typename T>
 	class TObjectPool
 	{
 
     private:
+        
 		struct Node
 		{
 			uint8_t object[sizeof(T)];

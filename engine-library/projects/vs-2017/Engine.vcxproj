@@ -31,6 +31,8 @@
     <ClInclude Include="..\..\code\headers\TRenderComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TRenderTask.hpp" />
     <ClInclude Include="..\..\code\headers\TScene.hpp" />
+    <ClInclude Include="..\..\code\headers\TScriptComponent.hpp" />
+    <ClInclude Include="..\..\code\headers\TScriptTask.hpp" />
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
     <ClInclude Include="..\..\code\headers\TSphereCollider.hpp" />
     <ClInclude Include="..\..\code\headers\TTask.hpp" />

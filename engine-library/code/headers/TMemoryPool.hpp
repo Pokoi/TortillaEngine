@@ -33,21 +33,47 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Class for memory management
+    */
 	class TMemoryPool
 	{
+        /**
+        @brief The array of reserved bytes.
+        */
 		uint8_t *	pool;
+
+        /**
+        @brief The count of reserved bytes.
+        */
 		size_t		size;
+
+        /**
+        @brief The count of allocated bytes.
+        */
 		size_t		allocated;
 
 	public:
 		
+        /**
+        @brief Creates a memory pool of the given size.
+        @param size The amount of bytes to reserve.
+        */
 		TMemoryPool(size_t size) : size{ size }, allocated{0}
 		{
 			pool = new uint8_t[size];
 		}
 
+        /**
+        @brief Frees the memory in the destruction of the object.
+        */
 		~TMemoryPool() { delete[] pool; }
 
+        /**
+        @brief Gives where to allocate a count of bytes.
+        @param allocation_size The amount of bytes to allocate.
+        @return A pointer where allocate the memory.
+        */
 		void * allocate(size_t allocation_size)
 		{
 			void * offset = nullptr;
@@ -61,8 +87,22 @@ namespace TortillaEngine
 			return offset;			
 		}
 
+        /**
+        @brief Gives the reserved bytes.
+        @return The amount of reserved bytes.
+        */
 		size_t get_size()			const { return this->size;					 }
-		size_t get_allocated()		const { return this->allocated;				 }
+        
+        /**
+        @brief Gives the amount of allocated bytes.
+        @return The amount of allocated bytes.
+        */
+        size_t get_allocated()		const { return this->allocated;				 }
+
+        /**
+        @brief Gives the amount of free bytes in the pool.
+        @return The amount of free space in the pool.
+        */
 		size_t get_available_size() const { return this->size - this->allocated; }
 
 	};

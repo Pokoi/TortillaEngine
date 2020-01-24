@@ -30,23 +30,30 @@
 #include <TSound.hpp>
 #include <SDL_mixer.h>
 
-inline TortillaEngine::TSound::TSound(char* sound_path)
+ /**
+@brief Creates a new sound effect object with a sound located in the given path
+@param sound_path The path where the sound file is located
+*/
+TortillaEngine::TSound::TSound(char* sound_path)
 {
 	LoadSound(sound_path);
 }
 
-inline void TortillaEngine::TSound::LoadSound(char* path)
+/**
+@brief Loads an audio file for this sound effect object
+@param path The path where the sound file is located
+*/
+ void TortillaEngine::TSound::LoadSound(char* path)
 {
 	sound_source = (Mix_LoadWAV(path));
 }
 
 /**
-Plays the sound source in loop
+@brief Plays the sound source in loop
 @param channel Index of the channel. Use "-1" to use the first free channel
 @param loops Count of loops. For infinite loop use "-1" value
 */
-
-inline void TortillaEngine::TSound::PlaySound(int channel, int loops)
+void TortillaEngine::TSound::PlaySound(int channel, int loops)
 {
 	if (sound_source != nullptr)
 	{
@@ -55,13 +62,12 @@ inline void TortillaEngine::TSound::PlaySound(int channel, int loops)
 }
 
 /**
-Fades the sound source in loop
+@brief Fades the sound source in loop
 @param channel Index of the channel. Use "-1" to use the first free channel
 @param loops Count of loops. For infinite loop use "-1" value
 @param fade_duration_in_milliseconds Fades the sound over this amount of milliseconds
 */
-
-inline void TortillaEngine::TSound::PlaySoundWithFade(int channel, int loops, int fade_duration_in_milliseconds)
+void TortillaEngine::TSound::PlaySoundWithFade(int channel, int loops, int fade_duration_in_milliseconds)
 {
 	if (sound_source != nullptr)
 	{
@@ -69,7 +75,10 @@ inline void TortillaEngine::TSound::PlaySoundWithFade(int channel, int loops, in
 	}
 }
 
-inline void TortillaEngine::TSound::FreeSound()
+/**
+@brief Frees the channel
+*/
+void TortillaEngine::TSound::FreeSound()
 {
 	Mix_FreeChunk(sound_source);
 }

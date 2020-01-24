@@ -36,23 +36,54 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Class for collision component management      
+    */
     class TCollider : public TComponent, TObserver
     {
 
     public:             
 
+        /**
+        @brief Struct with 3 float components
+        */
         struct T3Components
         {   
+            /**
+            @brief Creates a default instance. By default the value of each component is 0.
+            */
             T3Components()
             {
                 x = y = z = 0;
             }
 
+            /**
+            @brief Creates an instance with the given values.
+            @param x The value of the x component
+            @param y The value of the y component
+            @param z The value of the z component
+            */
             T3Components(float x, float y, float z) : x{ x }, y{ y }, z{ z }{};
+            
+            /**
+            @brief The x component
+            */
             float x;
+
+            /**
+            @brief The y component
+            */
             float y;
+
+            /**
+            @brief The z component
+            */
             float z;
 
+            /**
+            @brief Overloading of the = operator to copy the values of another object
+            @param other The object to copy
+            */
             void operator = (T3Components& other)
             {
                 x = other.x;
@@ -63,12 +94,26 @@ namespace TortillaEngine
 
     protected:
 
+        /**
+        @brief The center coordinates of the collider
+        */
         T3Components center;
+
+        /**
+        @brief The offset in each axis with parent's center
+        */
         T3Components offset;
 
 
     public:
 
+        /**
+        @brief Creates a collider with the given values.
+        @param parent The entity this collider is attached to.
+        @param x_offset The offset in x axis with parent position.
+        @param y_offset The offset in y axis with parent position.
+        @param z_offset The offset in z axis with parent position.
+        */
         TCollider(
                     TEntity* parent,
                     float x_offset,
@@ -76,13 +121,46 @@ namespace TortillaEngine
                     float z_offset
                  );
 
+        /**
+        @brief Calculates the center of the collider
+        */
         void         calculate_center();
+
+        /**
+        @brief Apply an scale to the collider
+        @param x The scale in x axis
+        @param y The scale in y axis
+        @param z The scale in z axis
+        */
         virtual void resize(float x, float y, float z);
+
+        /**
+        @brief Handle the messages this collider is subscribed to
+        @param m The message
+        */
         virtual void handle(TMessage& m) override;
-                
+        
+        /**
+        @brief Initialize the component values       
+        */
         virtual void initialize() override {}
+
+        /**
+        @brief Execute the component
+        */
         virtual void execute() override {}
+        
+        /**
+        @brief Load the component info from a xml node.
+        @param component_node A reference to the node with this component info.
+        */
         virtual bool parse_component(rapidxml::xml_node<>* component_node) override;
+        
+        /**
+        @brief Checks if there is a collision between this and other collider
+        @param other The collider with check collision to
+        @return If there is a collision
+        */
         virtual bool collides(TCollider& other) = 0;
     };
 }

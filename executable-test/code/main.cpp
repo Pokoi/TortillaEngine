@@ -35,27 +35,54 @@
 #include <TScene.hpp>
 #include <TRenderComponent.hpp>
 #include <TComponent.hpp>
+#include <TSound.hpp>
 using namespace TortillaEngine;
 
 
 int main()
 {
-	//Crear ventana
+    // TEST DE CREAR VENTANA
+	// error: ninguno
+    // observaciones: se cierra inmediatamente    
+    TWindow window ((char *) "ventana", 1280, 720);    
+    
+	return 0;
+}
 
+
+
+void Test()
+{
+
+    // TEST DE CREAR VENTANA
+    // error: ninguno
+    // observaciones: se cierra inmediatamente
+    /*
     char name [] = "ventana";
-
     TWindow window (name, 1280, 720);
+    window.reset();
+    window.swap_buffers();
+    */
 
-	// Crear escena
+
+    /*
+
+    // Crear escena
     TScene scene(&window);
 
-    TEntity player("Player", &scene, nullptr);  
+    TEntity player("Player", &scene, nullptr);
     player.add_component("Render", std::make_shared<TRenderComponent>(new TRenderComponent{ &player }));
-    
-    
+
+
 
     scene.run();
+    */
 
-	
-	return 0;
+    // TEST DE SONIDO
+    // error: no se encontró SDL_mixer.dll
+    /*
+    TSound * sound_effect = new TSound;
+    sound_effect->LoadSound((char *)"../../assets/sound.wav");
+    sound_effect->PlaySound(-1,1);
+    */
 }
