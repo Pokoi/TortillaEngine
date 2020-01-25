@@ -37,30 +37,16 @@ PlayerController::PlayerController(TEntity* player)
     : TComponent{ player }
 {
     
-    parent->get_scene()->get_dispatcher()->add(*this, vertical_positive_movement_key.get_name());
-    parent->get_scene()->get_dispatcher()->add(*this, vertical_negative_movement_key.get_name());
-    parent->get_scene()->get_dispatcher()->add(*this, horizontal_positive_movement_key.get_name());
-    parent->get_scene()->get_dispatcher()->add(*this, horizontal_negative_movement_key.get_name());
+   
     
 }
 
 void PlayerController::handle(TMessage& m)
 {
     
-    if (m.get_id() == vertical_positive_movement_key.get_name())
+    if (m.get_id() == "Move Up")
     {
         if (able_to_increase_vertical_position())
-        {
-            parent->get_transform().translate(0, 0, movement_speed);
-        }
-        else
-        {
-            GameManager::get()->play_sound();
-        }
-    }
-    if (m.get_id() == vertical_negative_movement_key.get_name())
-    {
-        if (able_to_decrease_vertical_position())
         {
             parent->get_transform().translate(0, 0, -movement_speed);
         }
@@ -69,22 +55,33 @@ void PlayerController::handle(TMessage& m)
             GameManager::get()->play_sound();
         }
     }
-    if (m.get_id() == horizontal_positive_movement_key.get_name())
+    if (m.get_id() == "Move Down")
     {
-        if (able_to_increase_horizontal_position())
+        if (able_to_decrease_vertical_position())
         {
-            parent->get_transform().translate(movement_speed, 0, 0);
+            parent->get_transform().translate(0, 0, movement_speed);
         }
         else
         {
             GameManager::get()->play_sound();
         }
     }
-    if (m.get_id() == horizontal_negative_movement_key.get_name())
+    if (m.get_id() == "Move Left")
     {
         if (able_to_increase_horizontal_position())
         {
             parent->get_transform().translate(-movement_speed, 0, 0);
+        }
+        else
+        {
+            GameManager::get()->play_sound();
+        }
+    }
+    if (m.get_id() == "Move Right")
+    {
+        if (able_to_increase_horizontal_position())
+        {
+            parent->get_transform().translate(movement_speed, 0, 0);
         }
         else
         {

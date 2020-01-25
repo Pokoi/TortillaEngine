@@ -58,15 +58,15 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\M
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza class 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza struct 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(89,34): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(98,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(101,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -77,7 +77,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): error C2664: 'glt::Matrix44 glt::inverse(const glt::Matrix44 &)': el argumento 1 no puede convertirse de 'const int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(42,25): message : vea la declaración de 'glt::inverse'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(113,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
@@ -92,7 +92,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): error C2664: 'glt::Matrix44 glt::translate(const glt::Matrix44 &,const glt::Vector3 &)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(52,25): message : vea la declaración de 'glt::translate'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(142,1): error C2665: 'glt::scale': ninguna de las 2 sobrecargas pudo convertir todos los tipos de argumento
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(57,25): message : puede ser 'glt::Matrix44 glt::scale(const glt::Matrix44 &,float)'
@@ -103,23 +103,23 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\N
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): error C2664: 'glt::Matrix44 glt::rotate_around_x(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(67,25): message : vea la declaración de 'glt::rotate_around_x'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): error C2664: 'glt::Matrix44 glt::rotate_around_y(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(72,25): message : vea la declaración de 'glt::rotate_around_y'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): error C2664: 'glt::Matrix44 glt::rotate_around_z(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(77,25): message : vea la declaración de 'glt::rotate_around_z'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(27,39): error C2079: 'glt::Camera::projection_matrix' utiliza class 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(27,39): error C2079: 'glt::Camera::projection_matrix' utiliza struct 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(71,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(71,49): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -203,67 +203,70 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\M
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(107,92): error C2784: 'bool glm::decompose(const glm::tmat4x4<T,P> &,glm::tvec3<T,P> &,glm::tquat<T,P> &,glm::tvec3<T,P> &,glm::tvec3<T,P> &,glm::tvec4<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(89,34): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation &'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(98,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(101,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(101,64): error C2676: '*' binario: 'glt::Node::Transformation' no define este operador o una conversión a un tipo aceptable para el operador predefinido
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(108,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): error C2664: 'glt::Matrix44 glt::inverse(const glt::Matrix44 &)': el argumento 1 no puede convertirse de 'const int' a 'const glt::Matrix44 &'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(42,25): message : vea la declaración de 'glt::inverse'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(113,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(114,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(124,54): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(130,58): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(131,58): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): error C2664: 'glt::Matrix44 glt::translate(const glt::Matrix44 &,const glt::Vector3 &)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(52,25): message : vea la declaración de 'glt::translate'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(142,1): error C2665: 'glt::scale': ninguna de las 2 sobrecargas pudo convertir todos los tipos de argumento
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(57,25): message : puede ser 'glt::Matrix44 glt::scale(const glt::Matrix44 &,float)'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(142,1): message : al hacer coincidir la lista de argumentos '(int, float)'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(147,1): error C2665: 'glt::scale': ninguna de las 2 sobrecargas pudo convertir todos los tipos de argumento
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(62,25): message : puede ser 'glt::Matrix44 glt::scale(const glt::Matrix44 &,float,float,float)'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(147,1): message : al hacer coincidir la lista de argumentos '(int, float, float, float)'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): error C2664: 'glt::Matrix44 glt::rotate_around_x(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(67,25): message : vea la declaración de 'glt::rotate_around_x'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): error C2664: 'glt::Matrix44 glt::rotate_around_y(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(72,25): message : vea la declaración de 'glt::rotate_around_y'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): error C2664: 'glt::Matrix44 glt::rotate_around_z(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
   TCollisionsTask.cpp
+  TComponent.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(30,27): error C2371: 'glt::Matrix44': nueva definición; tipos básicos distintos
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(43,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(44,25): error C2672: 'glm::inverse': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(44,40): error C2784: 'glm::tquat<T,P> glm::inverse(const glm::tquat<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(242): message : vea la declaración de 'glm::inverse'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(44,40): error C2784: 'matType<T,P> glm::inverse(const matType<T,P> &)': no se pudo deducir el argumento de plantilla para 'const matType<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\detail\type_mat.hpp(29): message : vea la declaración de 'glm::inverse'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(48,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(49,25): error C2672: 'glm::transpose': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(49,42): error C2784: 'matType<T,P>::transpose_type glm::transpose(const matType<T,P> &)': no se pudo deducir el argumento de plantilla para 'const matType<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\detail\func_matrix.hpp(125): message : vea la declaración de 'glm::transpose'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(53,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(54,25): error C2672: 'glm::translate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(54,56): error C2784: 'glm::tmat4x4<T,P> glm::translate(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(58): message : vea la declaración de 'glm::translate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(58,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(59,25): error C2672: 'glm::scale': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(59,68): error C2784: 'glm::tmat4x4<T,P> glm::scale(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(86): message : vea la declaración de 'glm::scale'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(63,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(64,25): error C2672: 'glm::scale': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(64,74): error C2784: 'glm::tmat4x4<T,P> glm::scale(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(86): message : vea la declaración de 'glm::scale'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(68,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(69,25): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(69,72): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(69,72): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(73,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(74,25): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(74,72): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(74,72): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(78,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(79,25): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(79,72): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(79,72): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(83,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(95,60): error C2676: '[' binario: 'const glt::Matrix44' no define este operador o una conversión a un tipo aceptable para el operador predefinido
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(95,42): error C2530: 'translation': se deben inicializar las referencias
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(107,18): error C2672: 'glm::decompose': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(107,92): error C2784: 'bool glm::decompose(const glm::tmat4x4<T,P> &,glm::tvec3<T,P> &,glm::tquat<T,P> &,glm::tvec3<T,P> &,glm::tvec3<T,P> &,glm::tvec4<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
   TInputTask.cpp
   TLightComponent.cpp
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(77,25): message : vea la declaración de 'glt::rotate_around_z'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(30,27): error C2371: 'glt::Matrix44': nueva definición; tipos básicos distintos
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(43,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -323,15 +326,15 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\M
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza class 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza struct 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(89,34): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(98,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(101,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -342,7 +345,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): error C2664: 'glt::Matrix44 glt::inverse(const glt::Matrix44 &)': el argumento 1 no puede convertirse de 'const int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(42,25): message : vea la declaración de 'glt::inverse'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(113,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
@@ -357,7 +360,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): error C2664: 'glt::Matrix44 glt::translate(const glt::Matrix44 &,const glt::Vector3 &)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(52,25): message : vea la declaración de 'glt::translate'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(142,1): error C2665: 'glt::scale': ninguna de las 2 sobrecargas pudo convertir todos los tipos de argumento
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(57,25): message : puede ser 'glt::Matrix44 glt::scale(const glt::Matrix44 &,float)'
@@ -368,17 +371,17 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\N
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): error C2664: 'glt::Matrix44 glt::rotate_around_x(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(67,25): message : vea la declaración de 'glt::rotate_around_x'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): error C2664: 'glt::Matrix44 glt::rotate_around_y(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(72,25): message : vea la declaración de 'glt::rotate_around_y'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): error C2664: 'glt::Matrix44 glt::rotate_around_z(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
   TRenderComponent.cpp
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(77,25): message : vea la declaración de 'glt::rotate_around_z'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(30,27): error C2371: 'glt::Matrix44': nueva definición; tipos básicos distintos
@@ -440,15 +443,15 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\M
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza class 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza struct 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(89,34): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(98,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(101,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -459,7 +462,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): error C2664: 'glt::Matrix44 glt::inverse(const glt::Matrix44 &)': el argumento 1 no puede convertirse de 'const int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(42,25): message : vea la declaración de 'glt::inverse'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(113,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
@@ -474,7 +477,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): error C2664: 'glt::Matrix44 glt::translate(const glt::Matrix44 &,const glt::Vector3 &)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(52,25): message : vea la declaración de 'glt::translate'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(142,1): error C2665: 'glt::scale': ninguna de las 2 sobrecargas pudo convertir todos los tipos de argumento
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(57,25): message : puede ser 'glt::Matrix44 glt::scale(const glt::Matrix44 &,float)'
@@ -485,48 +488,19 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\N
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): error C2664: 'glt::Matrix44 glt::rotate_around_x(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(67,25): message : vea la declaración de 'glt::rotate_around_x'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): error C2664: 'glt::Matrix44 glt::rotate_around_y(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(72,25): message : vea la declaración de 'glt::rotate_around_y'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): error C2664: 'glt::Matrix44 glt::rotate_around_z(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(77,25): message : vea la declaración de 'glt::rotate_around_z'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(27,39): error C2079: 'glt::Camera::projection_matrix' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Matrix44 &'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(71,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(71,49): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(76,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(76,49): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(81,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(81,49): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(86,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(86,49): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(91,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(91,49): error C2027: uso del tipo 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(96,1): error C2665: 'glt::extract_translation': ninguna de las 2 sobrecargas pudo convertir todos los tipos de argumento
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(93,24): message : puede ser 'glt::Vector3 glt::extract_translation(const glt::Matrix44 &)'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(87,24): message : o       'glt::Vector2 glt::extract_translation(const glt::Matrix33 &)'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
   TRenderTask.cpp
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(96,1): message : al hacer coincidir la lista de argumentos '(int)'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(77,25): message : vea la declaración de 'glt::rotate_around_z'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(30,27): error C2371: 'glt::Matrix44': nueva definición; tipos básicos distintos
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(43,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -586,15 +560,15 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\M
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza class 'glt::Matrix44' sin definir
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza class 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(34,39): error C2079: 'glt::Node::local_scale' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(35,40): error C2079: 'glt::Node::local_anchor' utiliza struct 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(36,42): error C2079: 'glt::Node::transformation' utiliza struct 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(89,34): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Node::Transformation'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(94,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(98,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(101,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -605,7 +579,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): error C2664: 'glt::Matrix44 glt::inverse(const glt::Matrix44 &)': el argumento 1 no puede convertirse de 'const int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(109,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(42,25): message : vea la declaración de 'glt::inverse'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(113,13): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
@@ -620,7 +594,7 @@ D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55):
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): error C2664: 'glt::Matrix44 glt::translate(const glt::Matrix44 &,const glt::Vector3 &)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(137,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(52,25): message : vea la declaración de 'glt::translate'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(142,1): error C2665: 'glt::scale': ninguna de las 2 sobrecargas pudo convertir todos los tipos de argumento
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(57,25): message : puede ser 'glt::Matrix44 glt::scale(const glt::Matrix44 &,float)'
@@ -631,23 +605,23 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\N
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): error C2664: 'glt::Matrix44 glt::rotate_around_x(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(152,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(67,25): message : vea la declaración de 'glt::rotate_around_x'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): error C2664: 'glt::Matrix44 glt::rotate_around_y(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(157,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(72,25): message : vea la declaración de 'glt::rotate_around_y'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): error C2664: 'glt::Matrix44 glt::rotate_around_z(const glt::Matrix44 &,float)': el argumento 1 no puede convertirse de 'int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Razón: no se puede realizar la conversión de 'int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Node.hpp(162,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(77,25): message : vea la declaración de 'glt::rotate_around_z'
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(27,39): error C2079: 'glt::Camera::projection_matrix' utiliza class 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(27,39): error C2079: 'glt::Camera::projection_matrix' utiliza struct 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): error C2440: 'return': no se puede realizar la conversión de 'const int' a 'const glt::Matrix44 &'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): message : Razón: no se puede realizar la conversión de 'const int' a 'const glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(64,1): message : Uso del tipo no definido 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,11): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(71,1): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(71,49): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -672,11 +646,12 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\C
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(93,24): message : puede ser 'glt::Vector3 glt::extract_translation(const glt::Matrix44 &)'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(87,24): message : o       'glt::Vector2 glt::extract_translation(const glt::Matrix33 &)'
   TScene.cpp
-  TSphereCollider.cpp
+  TSound.cpp
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Camera.hpp(96,1): message : al hacer coincidir la lista de argumentos '(int)'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TSphereCollider.hpp(140,5): error C2143: error de sintaxis: falta ';' delante de '}'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
+  TSphereCollider.cpp
   TTransformComponent.cpp
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TSphereCollider.hpp(139,5): error C2182: 'apply_transform': uso no válido del tipo 'void'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(30,27): error C2371: 'glt::Matrix44': nueva definición; tipos básicos distintos
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(43,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
@@ -736,30 +711,94 @@ D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\M
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(51,45): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(52,45): error C2027: uso del tipo 'glt::Matrix44' sin definir
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(64,30): warning C4150: eliminación de puntero a tipo 'glt::Matrix44' incompleto; no se ha llamado a un destructor
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(65,30): warning C4150: eliminación de puntero a tipo 'glt::Matrix44' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(75,32): error C2672: 'glm::translate': no se encontró una función sobrecargada que coincida
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(75,80): error C2784: 'glm::tmat4x4<T,P> glm::translate(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(76,32): error C2672: 'glm::translate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(76,80): error C2784: 'glm::tmat4x4<T,P> glm::translate(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(58): message : vea la declaración de 'glm::translate'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(82,36): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(82,97): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(83,36): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(83,97): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(82,97): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(83,97): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(86,36): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(86,95): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(87,36): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(87,95): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(86,95): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(87,95): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(90,36): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(90,96): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(91,36): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(91,96): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(90,96): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(91,96): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'glt::Matrix44'
 D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(96,32): error C2672: 'glm::scale': no se encontró una función sobrecargada que coincida
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(96,91): error C2784: 'glm::tmat4x4<T,P> glm::scale(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(97,32): error C2672: 'glm::scale': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(97,91): error C2784: 'glm::tmat4x4<T,P> glm::scale(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'glt::Matrix44'
+  TUpdateComponent.cpp
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(86): message : vea la declaración de 'glm::scale'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(30,27): error C2371: 'glt::Matrix44': nueva definición; tipos básicos distintos
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(43,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(44,25): error C2672: 'glm::inverse': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(44,40): error C2784: 'glm::tquat<T,P> glm::inverse(const glm::tquat<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(242): message : vea la declaración de 'glm::inverse'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(44,40): error C2784: 'matType<T,P> glm::inverse(const matType<T,P> &)': no se pudo deducir el argumento de plantilla para 'const matType<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\detail\type_mat.hpp(29): message : vea la declaración de 'glm::inverse'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(48,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(49,25): error C2672: 'glm::transpose': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(49,42): error C2784: 'matType<T,P>::transpose_type glm::transpose(const matType<T,P> &)': no se pudo deducir el argumento de plantilla para 'const matType<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\detail\func_matrix.hpp(125): message : vea la declaración de 'glm::transpose'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(53,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(54,25): error C2672: 'glm::translate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(54,56): error C2784: 'glm::tmat4x4<T,P> glm::translate(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(58): message : vea la declaración de 'glm::translate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(58,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(59,25): error C2672: 'glm::scale': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(59,68): error C2784: 'glm::tmat4x4<T,P> glm::scale(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(86): message : vea la declaración de 'glm::scale'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(63,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(64,25): error C2672: 'glm::scale': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(64,74): error C2784: 'glm::tmat4x4<T,P> glm::scale(const glm::tmat4x4<T,P> &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(86): message : vea la declaración de 'glm::scale'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(68,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(69,25): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(69,72): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(69,72): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(73,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(74,25): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(74,72): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(74,72): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(78,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(79,25): error C2672: 'glm::rotate': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(79,72): error C2784: 'glm::tmat4x4<T,P> glm::rotate(const glm::tmat4x4<T,P> &,T,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(72): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(79,72): error C2784: 'glm::tquat<T,P> glm::rotate(const glm::tquat<T,P> &,const T &,const glm::tvec3<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tquat<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\quaternion.hpp(252): message : vea la declaración de 'glm::rotate'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(83,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(95,60): error C2676: '[' binario: 'const glt::Matrix44' no define este operador o una conversión a un tipo aceptable para el operador predefinido
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(95,42): error C2530: 'translation': se deben inicializar las referencias
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(107,18): error C2672: 'glm::decompose': no se encontró una función sobrecargada que coincida
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(107,92): error C2784: 'bool glm::decompose(const glm::tmat4x4<T,P> &,glm::tvec3<T,P> &,glm::tquat<T,P> &,glm::tvec3<T,P> &,glm::tvec3<T,P> &,glm::tvec4<T,P> &)': no se pudo deducir el argumento de plantilla para 'const glm::tmat4x4<T,P> &' desde 'const glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtx\matrix_decompose.hpp(35): message : vea la declaración de 'glm::decompose'
+D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\Math.hpp(113,9): error C2027: uso del tipo 'glt::Matrix44' sin definir
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55): message : vea la declaración de 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TUpdateComponent.cpp(46,108): error C2664: 'void TortillaEngine::TComponent::apply_transform(glt::Matrix44)': el argumento 1 no puede convertirse de 'glt::Matrix44' a 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TUpdateComponent.cpp(46,108): message : Uso del tipo no definido 'glt::Matrix44'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(55,12): message : vea la declaración de 'glt::Matrix44'
   TWindow.cpp
   Generando código...
-D:\Repositorios\TortillaEngine\engine-library\libraries\opengl-toolkit\headers\glm\gtc\matrix_transform.hpp(86): message : vea la declaración de 'glm::scale'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TComponent.hpp(53,25): message : vea la declaración de 'TortillaEngine::TComponent::apply_transform'

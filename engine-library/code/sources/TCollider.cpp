@@ -57,7 +57,7 @@ namespace TortillaEngine
 
         calculate_center();       
 
-        parent->get_scene()->get_collision_task()->add_collider(this);
+        subscribe_to_task();
 
         add_to_update_component();
     }
@@ -104,5 +104,13 @@ namespace TortillaEngine
     void TCollider::apply_transform(glt::Matrix44 transform)
     {
         calculate_center();
+    }
+
+    /**
+    @brief Subscription of the component to the task that manages it
+    */
+    void TCollider::subscribe_to_task()
+    {
+        std::dynamic_pointer_cast<TCollisionsTask>(parent->get_scene()->get_task("TCollissionsTask"))->add_collider(this);
     }
 };

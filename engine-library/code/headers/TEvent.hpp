@@ -41,6 +41,19 @@ namespace TortillaEngine
         std::string key;
         
         TEvent(Type type, std::string key) : type{ type }, key{ key }{}
+
+        const std::string& to_string()
+        {
+            switch (type)
+            {
+            case TEvent::Type::KEY_PRESSED:
+                return "KEY_PRESSED_" + key;
+                break;
+            case TEvent::Type::KEY_RELEASED:
+                return "KEY_RELEASED_" + key;
+                break;            
+            }
+        }
     };
 
 }

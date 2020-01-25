@@ -157,6 +157,9 @@
     <ClInclude Include="..\..\code\headers\TUpdateComponent.hpp">
       <Filter>headers\TScriptSystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\headers\TInputMapperTask.hpp">
+      <Filter>headers\TInputSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">
@@ -214,7 +217,7 @@
       <Filter>sources\TScriptSystem</Filter>
     </ClCompile>
     <ClCompile Include="..\..\code\sources\TComponent.cpp">
-      <Filter>sources\TBase</Filter>
+      <Filter>sources\TPrimitives</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

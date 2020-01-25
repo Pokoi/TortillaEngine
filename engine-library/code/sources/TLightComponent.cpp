@@ -30,7 +30,9 @@
 #include <TLightComponent.hpp>
 #include <TEntity.hpp>
 #include <Light.hpp>
-
+#include <TRenderTask.hpp>
+#include <memory>
+#include <TScene.hpp>
 
 namespace TortillaEngine
 {
@@ -50,6 +52,7 @@ namespace TortillaEngine
         light->translate(glt::Vector3(0, 0, 1));
 
         add_to_update_component();
+        subscribe_to_task();
     }
 
     void TLightComponent::set_color(float red, float green, float blue)
@@ -92,6 +95,11 @@ namespace TortillaEngine
     std::shared_ptr<glt::Light> TLightComponent::get_light()
     {
         return light;
+    }
+
+    void TLightComponent::subscribe_to_task()
+    {
+        std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_light(this);
     }
 
 }

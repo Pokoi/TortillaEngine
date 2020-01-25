@@ -49,7 +49,7 @@ namespace TortillaEngine
 
     public:
 
-        TRenderTask(TScene* scene, int priority = 1);
+        TRenderTask(TScene* scene, int priority = 5);
         ~TRenderTask();
 
         void run(float delta) override;

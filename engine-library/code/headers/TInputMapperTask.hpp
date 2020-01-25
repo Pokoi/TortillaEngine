@@ -1,12 +1,12 @@
 /*
- * File: TInputTask.hpp
- * File Created: 16th December 2019
+ * File: TInputMapperTask.hpp
+ * File Created: 24th January 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
  * MIT License
  *
- * Copyright (c) 2019 Pokoidev
+ * Copyright (c) 2020 Pokoidev
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -30,52 +30,61 @@
 #pragma once
 
 #include <TTask.hpp>
-#include <TKeyboardInput.h>
-#include <TEvent.hpp>
-#include <list>
+#include <TInputTask.hpp>
+#include <TScene.hpp>
+#include <rapidxml-1.13/rapidxml.hpp>
+#include <map>
 #include <memory>
+#include <string>
 
 namespace TortillaEngine
 {
-    /**
-    @brief The task class to manage the input.
-    */
-    class TInputTask : public TTask
+    class TInputMapperTask : public TTask
     {
-        /**
-        @brief Reference to the keyboard manager.
-        */
-        TKeyboardInput keyboard;
-
-        /**
-        @brief Collection of events
-        */
-        std::list<std::shared_ptr<TEvent>> events;
+        std::map<const std::string&, std::string& > actions;
 
     public:
 
         /**
         @brief Creates the task.
         @param scene A reference to the scene where this task belong.
-        @param priority The execution order in kernel. 
+        @param priority The execution order in kernel.
         */
-        TInputTask(TScene* scene, int priority = 1 ) : TTask(priority, scene) { }
+        TInputMapperTask(TScene* scene, int priority = 2) : TTask(priority, scene)
+        {}
 
         /**
-        @brief Execute the input detection.
+        @brief Add an action to the action map.
+        @param key The input id of the action.
+        @param action_name The name of the action
+        */
+        void add_action(const std::string& key, const std::string& action_name)
+        {            
+            actions[key] = action_name;
+        }       
+
+        /**
+        @brief Recives the events in order and launch the messages of the actions.
         @param delta The time between execution calls.
         */
-        virtual void run(float delta) override;
+        virtual void run(float delta)
+        {
+            const std::string& key = std::dynamic_pointer_cast<TInputTask>(owner_scene->get_task("TInputTask"))->get_event()->to_string();
+
+            //Only sends a message if the action map contains this key 
+            if (actions.find(key) != actions.end())
+            {
+                TMessage message {key};
+                owner_scene->get_dispatcher()->send(message);  
+            }
+        }
 
         /**
-        @brief Gets the first event of the collection of events.        
+        @brief Loads the map from a xml file.
+        @param The path of the file to load.
         */
-        std::shared_ptr<TEvent> get_event()
-        {
-            std::shared_ptr<TEvent> event = events.front();
-            events.pop_front();
-            return event;
-        }
+        void load_from_xml(const std::string& path) {}
+
 
     };
 }

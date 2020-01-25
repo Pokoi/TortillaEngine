@@ -55,6 +55,9 @@ namespace TortillaEngine
 
         TEntity(const std::string & name, TScene* scene, TEntity* parent) : scene{ scene }, name{ name }, transform{ this }, parent{parent} {}
                
+        ~TEntity ()
+        {}
+
         void add_component(const std::string type, std::shared_ptr <TComponent> component)
         {
             components[type].push_back(component);           
@@ -95,12 +98,6 @@ namespace TortillaEngine
             return scene;
         }
 
-        ~TEntity ()
-        {
-            //delete parent;
-            //delete scene;
-            //components.clear();
-        }
     };
 
 }

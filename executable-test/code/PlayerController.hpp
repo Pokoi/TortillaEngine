@@ -31,7 +31,7 @@
 
 #include <TObserver.hpp>
 #include <TComponent.hpp>
-#include <TKeyboardInput.h>
+#include <string>
 
 using namespace TortillaEngine;
 
@@ -39,12 +39,7 @@ class PlayerController : public TObserver, public TComponent
 {
 private:
     float movement_speed = 2.f;
-    
-    TKeyboardInput::TKey vertical_positive_movement_key  ;
-    TKeyboardInput::TKey vertical_negative_movement_key  ;
-    TKeyboardInput::TKey horizontal_positive_movement_key;
-    TKeyboardInput::TKey horizontal_negative_movement_key;
-    
+        
        
 public:
 
@@ -52,24 +47,8 @@ public:
     
     virtual void    handle(TMessage& m) override;
     virtual bool    parse_component(rapidxml::xml_node<>* component_node);
+      
     
-    
-    void set_vertical_positive_movement_key(TKeyboardInput::TKey key)
-    {
-        vertical_positive_movement_key = key;
-    }
-    void set_vertical_negative_movement_key(TKeyboardInput::TKey key)
-    {
-        vertical_negative_movement_key = key;
-    }
-    void set_horizontal_positive_movement_key(TKeyboardInput::TKey key)
-    {
-        horizontal_positive_movement_key = key;
-    }
-    void set_horizontal_negative_movement_key(TKeyboardInput::TKey key)
-    {
-        horizontal_negative_movement_key = key;
-    }
     
     void set_speed(float speed) { this->movement_speed = speed; }
 

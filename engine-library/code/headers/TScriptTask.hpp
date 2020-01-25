@@ -53,7 +53,7 @@ namespace TortillaEngine
         @param scene A reference to the scene where this task belong.
         @param priority The execution order in kernel.
         */
-        TScriptTask(TScene* scene, int priority = 4) : TTask(priority, scene)
+        TScriptTask(TScene* scene, int priority = 3) : TTask(priority, scene)
         {
 
         }

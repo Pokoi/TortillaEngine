@@ -44,7 +44,7 @@ namespace TortillaEngine
 
         TUpdateComponent(TEntity* parent) : TScriptComponent{ parent } 
         {
-            
+            subscribe_to_task();
         }
 
         void add_component(TComponent* component)
@@ -69,5 +69,6 @@ namespace TortillaEngine
 
         virtual void    execute();
 
+        virtual void    subscribe_to_task() override;
     };
 }

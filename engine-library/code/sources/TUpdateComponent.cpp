@@ -29,7 +29,11 @@
 
 #include <TUpdateComponent.hpp>
 #include <TEntity.hpp>
+#include <TScriptTask.hpp>
 #include <Math.hpp>
+#include <memory>
+#include <TScene.hpp>
+
 
 namespace TortillaEngine
 { 
@@ -42,5 +46,10 @@ namespace TortillaEngine
                 component->apply_transform(*(component->get_parent()->get_transform().get_transformation()));
             }
         }
+    }
+    
+    void TUpdateComponent::subscribe_to_task()
+    {
+        std::dynamic_pointer_cast<TScriptTask>(parent->get_scene()->get_task("TScriptTask"))->add_script(this);
     }
 }

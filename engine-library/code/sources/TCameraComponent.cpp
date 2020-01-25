@@ -29,6 +29,9 @@
 
 #include <TCameraComponent.hpp>
 #include <Camera.hpp>
+#include <memory>
+#include <TRenderTask.hpp>
+#include <TScene.hpp>
 
 
 namespace TortillaEngine
@@ -53,5 +56,10 @@ namespace TortillaEngine
     std::shared_ptr<glt::Camera> TCameraComponent::get_camera()
     {
         return camera;
+    }
+
+    void TCameraComponent::subscribe_to_task()
+    {
+        std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_camera(this);
     }
 }

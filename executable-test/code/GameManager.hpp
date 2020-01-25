@@ -74,10 +74,12 @@ private:
 public:
     void play_sound()
     {
+        
         if (sound_effect != nullptr)
         {
             sound_effect->PlaySoundEffect(-1, 1);
         }
+        
     }
 
     void set_sound(char* path)

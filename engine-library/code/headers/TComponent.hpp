@@ -57,6 +57,11 @@ namespace TortillaEngine
         TEntity*        get_parent() { return parent; }
 
         virtual void    add_to_update_component();
+
+        /**
+        @brief Subscription of the component to the task that manages it
+        */
+        virtual void    subscribe_to_task() {}
     };
 }
 

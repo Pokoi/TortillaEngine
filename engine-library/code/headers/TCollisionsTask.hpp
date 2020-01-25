@@ -56,7 +56,7 @@ namespace TortillaEngine
         @param scene A reference to the scene where this task belong.
         @param priority The execution order in kernel.
         */
-        TCollisionsTask(TScene* scene, int priority = 3) : TTask(priority, scene) 
+        TCollisionsTask(TScene* scene, int priority = 4) : TTask(priority, scene) 
         { 
            
         }
@@ -90,7 +90,7 @@ namespace TortillaEngine
         }
 
         /**
-        @brief Execute the collision detection check of all the subscribed colliders before applying the parents transformation.
+        @brief Execute the collision detection check of all the subscribed colliders.
         @param delta The time between execution calls.
         */
         virtual void run(float delta);

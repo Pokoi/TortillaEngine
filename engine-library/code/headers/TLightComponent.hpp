@@ -83,6 +83,8 @@ namespace TortillaEngine
 
         std::shared_ptr<glt::Light> get_light();
 
+        virtual void subscribe_to_task() override;
+
 
     };
 

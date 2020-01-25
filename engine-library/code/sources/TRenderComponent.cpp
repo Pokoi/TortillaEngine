@@ -31,6 +31,8 @@
 #include <Model_Obj.hpp>
 #include <TEntity.hpp>
 #include <Math.hpp>
+#include <memory>
+#include <TScene.hpp>
 
 namespace TortillaEngine
 {
@@ -38,7 +40,7 @@ namespace TortillaEngine
     TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{parent}, model{ new glt::Model_Obj(path) }
     {
         add_to_update_component();
-        //model->add(std::shared_ptr< glt::Drawable >(new glt::Cube), glt::Material::default_material());
+        subscribe_to_task();       
     }
 
 
@@ -92,6 +94,11 @@ namespace TortillaEngine
         model.reset(new glt::Model_Obj(path));
 
         return true;
+    }
+
+    void TRenderComponent::subscribe_to_task()
+    {
+        std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_component(this);
     }
 
     void TRenderComponent::apply_transform(glt::Matrix44 transform)

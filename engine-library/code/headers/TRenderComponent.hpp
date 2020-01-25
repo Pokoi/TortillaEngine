@@ -47,6 +47,8 @@ namespace TortillaEngine
         TRenderComponent(TEntity* parent = nullptr) : TComponent{ parent } 
         {
             model = nullptr;
+            add_to_update_component();
+            subscribe_to_task();
         }
 
         TRenderComponent(TEntity* parent, std::string path);
@@ -62,6 +64,8 @@ namespace TortillaEngine
         virtual void    execute() {}
 
         virtual bool    parse_component(rapidxml::xml_node<>* component_node);
+
+        virtual void    subscribe_to_task() override;
 
     };
 }

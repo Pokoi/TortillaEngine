@@ -21,6 +21,7 @@
     <ClInclude Include="..\..\code\headers\TDispatcher.hpp" />
     <ClInclude Include="..\..\code\headers\TEntity.hpp" />
     <ClInclude Include="..\..\code\headers\TEvent.hpp" />
+    <ClInclude Include="..\..\code\headers\TInputMapperTask.hpp" />
     <ClInclude Include="..\..\code\headers\TInputTask.hpp" />
     <ClInclude Include="..\..\code\headers\TKernel.hpp" />
     <ClInclude Include="..\..\code\headers\TKeyboardInput.h" />

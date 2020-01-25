@@ -160,6 +160,11 @@ namespace TortillaEngine
         /**
         @brief Apply the transform of the parent
         */
-        virtual void apply_transform(glt::Matrix44 transform) override;
+        virtual void apply_transform(glt::Matrix44 transform);
+
+        /**
+        @brief Subscription of the component to the task that manages it
+        */
+        virtual void subscribe_to_task() override;
     };
 }

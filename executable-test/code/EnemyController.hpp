@@ -30,11 +30,11 @@
 #pragma once
 
 #include <TObserver.hpp>
-#include <TComponent.hpp>
+#include <TScriptComponent.hpp>
 
 using namespace TortillaEngine;
 
-class EnemyController : public TObserver, public TComponent
+class EnemyController : public TObserver, public TScriptComponent
 {
 private:
     float movement_speed = 1.5f;
@@ -46,5 +46,5 @@ public:
     virtual void handle(TMessage& m) override;
     virtual bool parse_component(rapidxml::xml_node<>* component_node);
     virtual void execute();
-
+    virtual void subscribe_to_task() override;
 };

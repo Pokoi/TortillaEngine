@@ -30,6 +30,9 @@
 #include "EnemyController.hpp"
 #include "GameManager.hpp"
 #include <TEntity.hpp>
+#include <TScene.hpp>
+#include <TScriptTask.hpp>
+#include <memory>
 #include <math.h>
 
 
@@ -37,9 +40,11 @@ EnemyController::EnemyController(
                                     TEntity* parent,
                                     TEntity* target
                                 ) 
-                                :   TComponent{ parent },
+                                :   TScriptComponent{ parent },
                                     target{target}
-{}
+{
+    subscribe_to_task();
+}
 
 void EnemyController::handle(TMessage& m)
 {
@@ -80,4 +85,9 @@ void EnemyController::execute()
                                         normalized_y * movement_speed,
                                         normalized_z * movement_speed
                                       );
+}
+
+void EnemyController::subscribe_to_task()
+{    
+    std::dynamic_pointer_cast<TScriptTask>(parent->get_scene()->get_task("TScriptTask"))->add_script(this);
 }
