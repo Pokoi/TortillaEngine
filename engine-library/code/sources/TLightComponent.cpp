@@ -48,8 +48,7 @@ namespace TortillaEngine
                                         intensity{ intensity }
     {
         light->set_color({ light_color.red, light_color.green, light_color.blue });
-        light->set_intensity(intensity);
-        light->translate(glt::Vector3(0, 0, 1));
+        light->set_intensity(intensity);       
 
         add_to_update_component();
         subscribe_to_task();
@@ -100,6 +99,11 @@ namespace TortillaEngine
     void TLightComponent::subscribe_to_task()
     {
         std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_light(this);
+    }
+
+    void TLightComponent::apply_transform(glm::mat4& transform)
+    {
+        light->set_transformation(transform);
     }
 
 }

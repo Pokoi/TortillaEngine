@@ -30,7 +30,6 @@
 #pragma once
 
 #include <TComponent.hpp>
-#include <declarations.hpp>
 #include <TObserver.hpp>
 #include <list>
 
@@ -160,7 +159,7 @@ namespace TortillaEngine
         /**
         @brief Apply the transform of the parent
         */
-        virtual void apply_transform(glt::Matrix44 transform);
+        virtual void apply_transform(glm::mat4 & transform) override;
 
         /**
         @brief Subscription of the component to the task that manages it

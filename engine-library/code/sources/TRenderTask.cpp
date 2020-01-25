@@ -49,12 +49,10 @@ namespace TortillaEngine
     }
 
     void TRenderTask::run(float delta) 
-    {
-
-        //aplicar el transform del n
-        owner_scene->get_window()->reset();
-        renderer->render();
-        owner_scene->get_window()->swap_buffers();
+    {        
+        owner_scene ->get_window()->reset();
+        renderer    ->render();
+        owner_scene ->get_window()->swap_buffers();
     }
 
     void TRenderTask::add_component(TRenderComponent * component)

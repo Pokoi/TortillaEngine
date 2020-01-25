@@ -60,7 +60,7 @@ namespace TortillaEngine
         @brief Load the component info from a xml node.
         @param component_node A reference to the node with this component info.
         */
-        virtual bool parse_component(rapidxml::xml_node<>* component_node) override {}
+        virtual bool parse_component(rapidxml::xml_node<>* component_node) override { return false; }
        
     };
 

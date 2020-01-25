@@ -1,16 +1,4 @@
-﻿  EnemyController.cpp
+﻿  main.cpp
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
-D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(69,21): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(74,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(75,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-  PlayerController.cpp
-D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(76,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
-  main.cpp
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
-D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TSphereCollider.hpp(140,5): error C2143: error de sintaxis: falta ';' delante de '}'
-  Generando código...
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TSphereCollider.hpp(139,5): error C2182: 'apply_transform': uso no válido del tipo 'void'
+  TEST.vcxproj -> D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\TEST.exe

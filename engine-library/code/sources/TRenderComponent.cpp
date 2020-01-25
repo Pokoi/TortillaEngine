@@ -28,9 +28,14 @@
  */
 
 #include <TRenderComponent.hpp>
+
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/matrix_decompose.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
 #include <Model_Obj.hpp>
 #include <TEntity.hpp>
-#include <Math.hpp>
 #include <memory>
 #include <TScene.hpp>
 
@@ -42,8 +47,7 @@ namespace TortillaEngine
         add_to_update_component();
         subscribe_to_task();       
     }
-
-
+    
 
     bool TRenderComponent::parse_component(rapidxml::xml_node<>* component)
     {
@@ -101,9 +105,8 @@ namespace TortillaEngine
         std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_component(this);
     }
 
-    void TRenderComponent::apply_transform(glt::Matrix44 transform)
+    void TRenderComponent::apply_transform(glm::mat4 & transform)
     {
         model->set_transformation(transform);
     }
-
 }

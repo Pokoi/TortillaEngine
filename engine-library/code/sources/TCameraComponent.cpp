@@ -43,9 +43,9 @@ namespace TortillaEngine
                                             float fov = 0.5f,
                                             float aspect_ratio = 1.f
                                         ) : TComponent{ parent }, camera{ new glt::Camera (fov, near_field, far_field, aspect_ratio)}
-    {
-        camera->translate(glt::Vector3(0,0,1.2f));
+    {        
         add_to_update_component();
+        subscribe_to_task();
     }
 
     bool TCameraComponent::parse_component(rapidxml::xml_node<>* component_node)
@@ -61,5 +61,10 @@ namespace TortillaEngine
     void TCameraComponent::subscribe_to_task()
     {
         std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_camera(this);
+    }
+
+    void TCameraComponent::apply_transform(glm::mat4& transform)
+    {
+       camera->set_transformation(transform);
     }
 }

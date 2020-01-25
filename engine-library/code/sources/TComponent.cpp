@@ -28,21 +28,27 @@
  */
 
 #include <TComponent.hpp>
-#include <Math.hpp>
 #include <TUpdateComponent.hpp>
 #include <TEntity.hpp>
 #include <memory>
+#include <list>
 
 namespace TortillaEngine
 {
-   void TComponent::apply_transform(glt::Matrix44 transform) {}
-   inline void TComponent::add_to_update_component()
+   
+   void TComponent::add_to_update_component()
    {
        if (!parent->has_component("TUpdateComponent"))
        {
            parent->add_component("TUpdateComponent", std::make_shared<TUpdateComponent>(parent));
        }
-
-       std::dynamic_pointer_cast<TUpdateComponent>(parent->get_component("TUpdateComponent").front())->add_component(this);
+       
+       std::shared_ptr<TUpdateComponent> update = std::dynamic_pointer_cast<TUpdateComponent>(parent->get_component("TUpdateComponent"));
+       
+       if (update != nullptr)
+       {
+            update->add_component(this);
+       }
+       
    }
 }

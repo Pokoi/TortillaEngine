@@ -31,7 +31,6 @@
 #include <TEntity.hpp>
 #include <TScene.hpp>
 #include <TVariant.hpp>
-#include <Math.hpp>
 
 
 namespace TortillaEngine
@@ -49,23 +48,22 @@ namespace TortillaEngine
 													float z_scale
 												) : TComponent (entity)
 	{
-        transformation = new glt::Matrix44();
+        transformation = new glm::mat4();
         translate(x_position	, y_position, z_position);
 		rotate	 (pitch_angle	, yaw_angle	, roll_angle);
 		scale	 (x_scale		, y_scale	, z_scale	);
 	}
 
-    TTransformComponent::TTransformComponent(glt::Matrix44 transformation)
-    {
+    TTransformComponent::TTransformComponent(glm::mat4 & transformation)
+    {        
         this->transformation = &transformation;
     }
 
     TTransformComponent::~TTransformComponent()
-    {
-        delete transformation;
+    {        
     }
 
-    glt::Matrix44* TTransformComponent::get_transformation() const
+    glm::mat4* TTransformComponent::get_transformation() const
     {
         return transformation;
     }
@@ -73,7 +71,7 @@ namespace TortillaEngine
 
 	inline void TTransformComponent::translate	(float x		  , float y			, float z			)
 	{        
-        *transformation = glm::translate(*transformation, glt::Vector3{ x,y,z });       
+        *transformation = glm::translate(*transformation, glm::vec3{ x,y,z });       
     }
 
 	inline void TTransformComponent::rotate		(float pitch_angle, float yaw_angle	, float roll_angle	)
@@ -111,7 +109,7 @@ namespace TortillaEngine
 
     float* TTransformComponent::get_position()
     {
-        glm::vec3 vector_position = glt::extract_translation(*transformation);
+        glm::vec4 & vector_position = (*transformation)[3];
         
         float position[]
         {

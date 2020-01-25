@@ -51,9 +51,9 @@ namespace glt
     class Model_Obj;
     class Camera;
     class Light;
-    class Node; 
-    struct Matrix44;
+    class Node;   
 }
+
 
 
 

@@ -29,10 +29,10 @@
 
 #pragma once
 
+#include <declarations.hpp>
 #include <TComponent.hpp>
 #include <memory>
 #include <string>
-#include <declarations.hpp>
 
 namespace TortillaEngine
 {
@@ -40,6 +40,7 @@ namespace TortillaEngine
     {
         
         std::shared_ptr<glt::Model_Obj> model;
+                
 
     public:
 
@@ -59,7 +60,7 @@ namespace TortillaEngine
             return model;
         }
 
-        void            apply_transform(glt::Matrix44 transform);
+        void            apply_transform(glm::mat4 & transform ) override;
 
         virtual void    execute() {}
 

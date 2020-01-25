@@ -72,9 +72,14 @@ namespace TortillaEngine
         */
         std::shared_ptr<TEvent> get_event()
         {
-            std::shared_ptr<TEvent> event = events.front();
-            events.pop_front();
-            return event;
+            if (!events.empty())
+            {
+                std::shared_ptr<TEvent> event = events.front();
+                events.pop_front();
+                return event;
+            }
+
+            return nullptr;
         }
 
     };

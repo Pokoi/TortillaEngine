@@ -28,15 +28,15 @@
  */
 
 #pragma once
-#include <TComponent.hpp>
 #include <declarations.hpp>
+#include <TComponent.hpp>
 #include <rapidxml-1.13/rapidxml.hpp>
 
 namespace TortillaEngine
 {
-    class TTransformComponent : TComponent
+    class TTransformComponent : public TComponent
 	{
-        glt::Matrix44* transformation;
+        glm::mat4* transformation;
 
     public:
         TTransformComponent	(
@@ -52,11 +52,11 @@ namespace TortillaEngine
 								float    z_scale		= 1
 							);
 
-		TTransformComponent (glt::Matrix44 transformation);
+		TTransformComponent (glm::mat4 & transformation);
        
         ~TTransformComponent();
 
-        glt::Matrix44*	get_transformation() const;
+        glm::mat4*	get_transformation() const;
 		
 
 		void translate	(float x			, float y		 , float z			);        

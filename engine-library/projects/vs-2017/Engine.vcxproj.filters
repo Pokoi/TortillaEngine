@@ -219,5 +219,8 @@
     <ClCompile Include="..\..\code\sources\TComponent.cpp">
       <Filter>sources\TPrimitives</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\code\sources\TInputMapperTask.cpp">
+      <Filter>sources\TInputSystem</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

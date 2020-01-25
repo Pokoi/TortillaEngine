@@ -35,6 +35,7 @@
 #include <TDispatcher.hpp>
 #include <TCollisionsTask.hpp>
 #include <TInputTask.hpp>
+#include <TInputMapperTask.hpp>
 #include <TRenderTask.hpp>
 #include <TScriptTask.hpp>
 #include <rapidxml-1.13/rapidxml.hpp>
@@ -52,14 +53,15 @@ namespace TortillaEngine
     {
 		TKernel * own_kernel = new TKernel();
 		TWindow * window;
-        std::map<const std::string &, std::shared_ptr<TEntity> > entities;
+        std::map<std::string, std::shared_ptr<TEntity> > entities;
 		
         TDispatcher     * message_dispatcher;	
 
-        std::shared_ptr <TInputTask     > input      = nullptr;
-        std::shared_ptr <TRenderTask    > render     = nullptr;
-        std::shared_ptr <TCollisionsTask> collisions = nullptr;
-        std::shared_ptr <TScriptTask    > scripts    = nullptr;
+        std::shared_ptr <TInputTask       > input      = nullptr;
+        std::shared_ptr <TInputMapperTask > mapper     = nullptr;
+        std::shared_ptr <TScriptTask      > scripts    = nullptr;
+        std::shared_ptr <TCollisionsTask  > collisions = nullptr;
+        std::shared_ptr <TRenderTask      > render     = nullptr;
 
         std::string scene_path;
 
@@ -103,7 +105,7 @@ namespace TortillaEngine
         }
 
         void            run()
-        {
+        {           
             own_kernel->exec();
         }
 
@@ -119,10 +121,11 @@ namespace TortillaEngine
 
         std::shared_ptr<TTask> get_task(const std::string& type)
         {
-            if (type == "TInputTask"     ) return input;
-            if (type == "TRenderTask"    ) return render;
-            if (type == "TCollisionsTask") return collisions;
-            if (type == "TScriptTask"    ) return scripts;
+            if (type == "TInputTask"        ) return input;
+            if (type == "TInputMapperTask"  ) return mapper;
+            if (type == "TRenderTask"       ) return render;
+            if (type == "TCollisionsTask"   ) return collisions;
+            if (type == "TScriptTask"       ) return scripts;
 
             return nullptr;
         }
@@ -138,15 +141,17 @@ namespace TortillaEngine
 
         void creates_tasks()
         {
-            render      = std::make_shared<TRenderTask    >(this);
-            input       = std::make_shared<TInputTask     >(this);
-            collisions  = std::make_shared<TCollisionsTask>(this);
-            scripts     = std::make_shared<TScriptTask    >(this);
+            input       = std::make_shared<TInputTask       >(this);
+            mapper      = std::make_shared<TInputMapperTask >(this);
+            scripts     = std::make_shared<TScriptTask      >(this);
+            collisions  = std::make_shared<TCollisionsTask  >(this);
+            render      = std::make_shared<TRenderTask      >(this);
 
-            own_kernel->add_task(*render);
             own_kernel->add_task(*input);
-            own_kernel->add_task(*collisions);
+            own_kernel->add_task(*mapper);
             own_kernel->add_task(*scripts);
+            own_kernel->add_task(*collisions);
+            own_kernel->add_task(*render);
         }
 
     };

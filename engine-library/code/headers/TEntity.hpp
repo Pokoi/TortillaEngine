@@ -44,7 +44,7 @@ namespace TortillaEngine
     class TEntity
     {
         
-        std::map<std::string, std::list <std::shared_ptr <TComponent>> > components;
+        std::map<std::string, std::shared_ptr <TComponent>> components;
         
         TTransformComponent   transform;        
 		TEntity             * parent;
@@ -60,10 +60,10 @@ namespace TortillaEngine
 
         void add_component(const std::string type, std::shared_ptr <TComponent> component)
         {
-            components[type].push_back(component);           
+            components[type] = component;           
         }
 
-        std::list <std::shared_ptr <TComponent>> get_component(const std::string & type)
+        std::shared_ptr <TComponent> get_component(const std::string & type)
         {
             if (!has_component(type))
             {
@@ -71,7 +71,7 @@ namespace TortillaEngine
                 new_component = std::make_shared<TComponent>(this);
                 add_component(type, new_component);
             }
-            return components[name];
+            return components[type];
         }
 
         std::string get_name() 
@@ -80,8 +80,8 @@ namespace TortillaEngine
         }
 
         bool has_component(const std::string type)
-        {
-            return components[type].size() != 0;
+        {          
+            return components.find(type) != components.end();
         }
 
 		TTransformComponent get_transform()

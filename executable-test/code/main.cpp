@@ -36,41 +36,37 @@
 #include <TRenderComponent.hpp>
 #include <TComponent.hpp>
 #include <TSound.hpp>
-#include "UnitTesting.hpp"
+
 using namespace TortillaEngine;
 
 
 int main()
 {
     
-    /////////////////////////////////////////
-    //  Window
-    UnitTesting::get()->CreateWindowTEST();
-    UnitTesting::get()->WindowRenderCycleTEST();
+    TWindow window{(char*) "ventana", 800,800 };
+    
+    TScene scene(&window);
 
-    /////////////////////////////////////////
-    //  Sound
-    //UnitTesting::get()->SoundTEST();
+    TEntity player("Player", &scene, nullptr);
 
-    /////////////////////////////////////////
-    //  Scene
-    UnitTesting::get()->CreateSceneTEST();
+    TEntity camera("Camera", &scene, nullptr);
+    std::shared_ptr<TCameraComponent> camera_component{ new TCameraComponent{ &camera, 1.f, 2000.f, 20.f, 1.f } };
+    camera.add_component("Camera", camera_component);
 
-    /////////////////////////////////////////
-    //  Entities and component
-    //UnitTesting::get()->CreateEntityTEST();
-    //UnitTesting::get()->AddComponentToEntityTEST();
-    UnitTesting::get()->TransformComponentTEST();
-
-    /////////////////////////////////////////
-    //  Input and Messages
-    //UnitTesting::get()->InputEntityMessageTEST();
-
-    /////////////////////////////////////////
-    //  Render
-    //UnitTesting::get()->RenderTEST();
+    TEntity light1("Light1", &scene, nullptr);
+    std::shared_ptr<TLightComponent> light_component1{ new TLightComponent{ &light1, {1.f, 1.f, 1.f}, 0.9f } };
+    light1.add_component("Light1", light_component1);
+    
+    std::shared_ptr < TRenderComponent> render_component{ new TRenderComponent{ &player, "../../assets/head.obj" } };
+    player.add_component("Render Model", render_component);
 
     
+    camera.get_transform().translate(0, 0, 1.5f);    
+    light1.get_transform().translate(0, 0, 1);
+    
+
+    scene.run();
+
 	return 0;
 }
 

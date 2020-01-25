@@ -54,25 +54,25 @@ namespace TortillaEngine
             float delta_time = 1.f /60.f;
 			running = true;
 
-			while (running)
+			for (TTask* task : tasks)
 			{
-                //TTimer timer;
-                //timer.start();
+				task->initialize();
+			}
 
+			while (running)
+			{   
 				for (TTask* task : tasks)
 				{
-					task->initialize();
+                    if (task != nullptr)
+                    {
+					    task->run(delta_time);
+                    }
 				}
+			}
 
-				for (TTask* task : tasks)
-				{
-					task->run(delta_time);
-				}
-
-				for (TTask* task : tasks)
-				{
-					task->finalize();
-				}
+			for (TTask* task : tasks)
+			{
+				task->finalize();
 			}
 		}
 

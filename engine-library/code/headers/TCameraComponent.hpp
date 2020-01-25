@@ -57,6 +57,8 @@ namespace TortillaEngine
         std::shared_ptr<glt::Camera> get_camera();
 
         virtual void subscribe_to_task() override;
+
+        void            apply_transform(glm::mat4& transform) override;
     };
 
     

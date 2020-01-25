@@ -101,7 +101,7 @@ namespace TortillaEngine
     /**
      @brief Apply the transform of the parent
     */
-    void TCollider::apply_transform(glt::Matrix44 transform)
+    void TCollider::apply_transform(glm::mat4 & transform)
     {
         calculate_center();
     }

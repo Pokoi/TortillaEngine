@@ -28,8 +28,13 @@
  */
 
 #pragma once
+
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
+#include <glm/gtx/matrix_decompose.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+
 #include <rapidxml-1.13/rapidxml.hpp>
-#include <declarations.hpp>
 
 namespace TortillaEngine
 {
@@ -50,7 +55,7 @@ namespace TortillaEngine
 
         virtual void    execute() {}
 
-        virtual void    apply_transform(glt::Matrix44 transform);
+        virtual void    apply_transform(glm::mat4 & transform) {}
 
         virtual bool    parse_component(rapidxml::xml_node<>* component_node) { return false; }
 

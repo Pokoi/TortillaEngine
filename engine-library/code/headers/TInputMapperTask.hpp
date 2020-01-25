@@ -31,17 +31,16 @@
 
 #include <TTask.hpp>
 #include <TInputTask.hpp>
-#include <TScene.hpp>
 #include <rapidxml-1.13/rapidxml.hpp>
-#include <map>
 #include <memory>
+#include <map>
 #include <string>
 
 namespace TortillaEngine
 {
     class TInputMapperTask : public TTask
     {
-        std::map<const std::string&, std::string& > actions;
+        std::map<std::string, std::string > actions;
 
     public:
 
@@ -67,17 +66,7 @@ namespace TortillaEngine
         @brief Recives the events in order and launch the messages of the actions.
         @param delta The time between execution calls.
         */
-        virtual void run(float delta)
-        {
-            const std::string& key = std::dynamic_pointer_cast<TInputTask>(owner_scene->get_task("TInputTask"))->get_event()->to_string();
-
-            //Only sends a message if the action map contains this key 
-            if (actions.find(key) != actions.end())
-            {
-                TMessage message {key};
-                owner_scene->get_dispatcher()->send(message);  
-            }
-        }
+        virtual void run(float delta);
 
         /**
         @brief Loads the map from a xml file.

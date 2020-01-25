@@ -37,7 +37,8 @@ namespace TortillaEngine
     {
     public:
 
-        enum class Type{KEY_PRESSED, KEY_RELEASED} type;        
+        enum class Type{KEY_PRESSED, KEY_RELEASED};
+        Type type;
         std::string key;
         
         TEvent(Type type, std::string key) : type{ type }, key{ key }{}
