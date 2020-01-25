@@ -93,7 +93,9 @@ namespace TortillaEngine
 
             if (window)
             {
-                context = SDL_GL_CreateContext (window);             
+                context = SDL_GL_CreateContext (window);        
+
+                if (context)  glt::initialize_opengl_extensions();
             }
         }
 			
@@ -116,7 +118,7 @@ namespace TortillaEngine
     {
         if (context != nullptr)
         {
-            glClearColor(0.f, 0.f, 0.f, 1.f);
+            glClearColor(0.5f, 0.5f, 0.5f, 1.f);
             glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         }
     }

@@ -36,53 +36,42 @@
 #include <TRenderComponent.hpp>
 #include <TComponent.hpp>
 #include <TSound.hpp>
+#include "UnitTesting.hpp"
 using namespace TortillaEngine;
 
 
 int main()
 {
-    // TEST DE CREAR VENTANA
-	// error: ninguno
-    // observaciones: se cierra inmediatamente    
-    TWindow window ((char *) "ventana", 1280, 720);    
+    
+    /////////////////////////////////////////
+    //  Window
+    UnitTesting::get()->CreateWindowTEST();
+    UnitTesting::get()->WindowRenderCycleTEST();
+
+    /////////////////////////////////////////
+    //  Sound
+    //UnitTesting::get()->SoundTEST();
+
+    /////////////////////////////////////////
+    //  Scene
+    UnitTesting::get()->CreateSceneTEST();
+
+    /////////////////////////////////////////
+    //  Entities and component
+    //UnitTesting::get()->CreateEntityTEST();
+    //UnitTesting::get()->AddComponentToEntityTEST();
+    UnitTesting::get()->TransformComponentTEST();
+
+    /////////////////////////////////////////
+    //  Input and Messages
+    //UnitTesting::get()->InputEntityMessageTEST();
+
+    /////////////////////////////////////////
+    //  Render
+    //UnitTesting::get()->RenderTEST();
+
     
 	return 0;
 }
 
 
-
-void Test()
-{
-
-    // TEST DE CREAR VENTANA
-    // error: ninguno
-    // observaciones: se cierra inmediatamente
-    /*
-    char name [] = "ventana";
-    TWindow window (name, 1280, 720);
-    window.reset();
-    window.swap_buffers();
-    */
-
-
-    /*
-
-    // Crear escena
-    TScene scene(&window);
-
-    TEntity player("Player", &scene, nullptr);
-    player.add_component("Render", std::make_shared<TRenderComponent>(new TRenderComponent{ &player }));
-
-
-
-    scene.run();
-    */
-
-    // TEST DE SONIDO
-    // error: no se encontró SDL_mixer.dll
-    /*
-    TSound * sound_effect = new TSound;
-    sound_effect->LoadSound((char *)"../../assets/sound.wav");
-    sound_effect->PlaySound(-1,1);
-    */
-}

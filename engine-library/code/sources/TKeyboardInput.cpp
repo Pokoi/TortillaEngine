@@ -32,6 +32,10 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Translate the sdl code of the key
+    @param sdl_code Code of the key in sdl
+    */
     TKeyboardInput::TKey TKeyboardInput::translate_sdl_code(int sdl_code)
     {
         int sdl_codes[50]

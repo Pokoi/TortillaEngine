@@ -20,6 +20,7 @@
     <ClInclude Include="..\..\code\headers\TComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TDispatcher.hpp" />
     <ClInclude Include="..\..\code\headers\TEntity.hpp" />
+    <ClInclude Include="..\..\code\headers\TEvent.hpp" />
     <ClInclude Include="..\..\code\headers\TInputTask.hpp" />
     <ClInclude Include="..\..\code\headers\TKernel.hpp" />
     <ClInclude Include="..\..\code\headers\TKeyboardInput.h" />
@@ -38,6 +39,7 @@
     <ClInclude Include="..\..\code\headers\TTask.hpp" />
     <ClInclude Include="..\..\code\headers\TTimer.hpp" />
     <ClInclude Include="..\..\code\headers\TTransformComponent.hpp" />
+    <ClInclude Include="..\..\code\headers\TUpdateComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TVariant.hpp" />
     <ClInclude Include="..\..\code\headers\TWindow.hpp" />
   </ItemGroup>
@@ -47,6 +49,7 @@
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TCollider.cpp" />
     <ClCompile Include="..\..\code\sources\TCollisionsTask.cpp" />
+    <ClCompile Include="..\..\code\sources\TComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TInputTask.cpp" />
     <ClCompile Include="..\..\code\sources\TKeyboardInput.cpp" />
     <ClCompile Include="..\..\code\sources\TLightComponent.cpp" />
@@ -57,6 +60,7 @@
     <ClCompile Include="..\..\code\sources\TSphereCollider.cpp" />
     <ClCompile Include="..\..\code\sources\TTimer.cpp" />
     <ClCompile Include="..\..\code\sources\TTransformComponent.cpp" />
+    <ClCompile Include="..\..\code\sources\TUpdateComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TWindow.cpp" />
     <ClCompile Include="..\..\code\sources\winmain.cpp" />
   </ItemGroup>
@@ -115,7 +119,7 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>../../libraries/sdl2/lib/static/x64;../../libraries/opengl-toolkit/lib/x64;../../libraries/sdl2_mixer/lib/x64</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2d.lib;opengl-toolkit-debug.lib;SDL2_mixer.lib</AdditionalDependencies>
+      <AdditionalDependencies>SDL2d.lib;opengl-toolkit-debug.lib</AdditionalDependencies>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>

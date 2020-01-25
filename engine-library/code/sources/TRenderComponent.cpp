@@ -28,17 +28,19 @@
  */
 
 #include <TRenderComponent.hpp>
-#include <Render_Node.hpp>
 #include <Model_Obj.hpp>
 #include <TEntity.hpp>
+#include <Math.hpp>
 
 namespace TortillaEngine
 {
    
     TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{parent}, model{ new glt::Model_Obj(path) }
     {
-
+        add_to_update_component();
+        //model->add(std::shared_ptr< glt::Drawable >(new glt::Cube), glt::Material::default_material());
     }
+
 
 
     bool TRenderComponent::parse_component(rapidxml::xml_node<>* component)
@@ -92,5 +94,9 @@ namespace TortillaEngine
         return true;
     }
 
+    void TRenderComponent::apply_transform(glt::Matrix44 transform)
+    {
+        model->set_transformation(transform);
+    }
 
 }

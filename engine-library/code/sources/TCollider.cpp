@@ -28,11 +28,12 @@
  */
 
 #include <TCollider.hpp>
-#include <glm/glm.hpp>
-#include <Node.hpp>
 #include <TEntity.hpp>
 #include <TScene.hpp>
+#include <Math.hpp>
 #include <string>
+#include <memory>
+#include <TUpdateComponent.hpp>
 
 namespace TortillaEngine
 {
@@ -54,12 +55,11 @@ namespace TortillaEngine
         this->offset.y = y_offset;
         this->offset.z = z_offset;
 
-        calculate_center();
-
-        parent->get_scene()->get_dispatcher()->add(*this, parent->get_name() + "_RESIZED");
-        parent->get_scene()->get_dispatcher()->add(*this, parent->get_name() + "_MOVED");
+        calculate_center();       
 
         parent->get_scene()->get_collision_task()->add_collider(this);
+
+        add_to_update_component();
     }
     
     /**
@@ -69,9 +69,9 @@ namespace TortillaEngine
     {
         float* parent_position = parent->get_transform().get_position();
 
-        this->center.x = *parent_position;
-        this->center.y = *(parent_position + 1);
-        this->center.z = *(parent_position + 2);
+        this->center.x = *parent_position       + offset.x;
+        this->center.y = *(parent_position + 1) + offset.y;
+        this->center.z = *(parent_position + 2) + offset.z;
     }
     
     /**
@@ -88,26 +88,7 @@ namespace TortillaEngine
 
         calculate_center();
     }
-
-    /**
-    @brief Handle the messages this collider is subscribed to
-    @param m The message
-    */
-    void TCollider::handle(TMessage& m)
-    {
-        //Resizes the collider when parents entity is resized
-        if (m.get_id() == parent->get_name() + "_RESIZED")
-        {
-            resize(m["x"].to_float(), m["y"].to_float(), m["z"].to_float());
-        }
-
-        //Moves the collider when parents entity is moved
-        if (m.get_id() == parent->get_name() + "_MOVED")
-        {
-            calculate_center();
-        }
-    }
-   
+          
     /**
     @brief Load the component info from a xml node.
     @param component_node A reference to the node with this component info.
@@ -115,5 +96,13 @@ namespace TortillaEngine
     bool TCollider::parse_component(rapidxml::xml_node<>* component_node)
     {
         return false;
+    }
+
+    /**
+     @brief Apply the transform of the parent
+    */
+    void TCollider::apply_transform(glt::Matrix44 transform)
+    {
+        calculate_center();
     }
 };

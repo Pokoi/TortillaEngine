@@ -36,11 +36,17 @@
 namespace TortillaEngine
 {
     /**
-    @brief Execute the collision detection check of all the subscribed colliders.
+    @brief Execute the collision detection check of all the subscribed colliders before applying the parents transformation.
     @param delta The time between execution calls.
     */
     void TCollisionsTask::run(float delta)
     {
+
+        for (TCollider * collider : colliders)
+        {
+            collider->apply_transform();
+        }
+
         for (int i = 0; i < colliders.size(); ++i)
         {
             for (int j = 0; i < colliders.size(); ++j)

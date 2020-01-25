@@ -53,14 +53,14 @@ namespace TortillaEngine
 
     public:
 
-        TEntity(std::string name, TScene* scene, TEntity* parent) : scene{ scene }, name{ name }, transform{ {this} }, parent{parent} {}
+        TEntity(const std::string & name, TScene* scene, TEntity* parent) : scene{ scene }, name{ name }, transform{ this }, parent{parent} {}
                
         void add_component(const std::string type, std::shared_ptr <TComponent> component)
         {
             components[type].push_back(component);           
         }
 
-        std::list <std::shared_ptr <TComponent>> get_component(const std::string type)
+        std::list <std::shared_ptr <TComponent>> get_component(const std::string & type)
         {
             if (!has_component(type))
             {
@@ -97,9 +97,9 @@ namespace TortillaEngine
 
         ~TEntity ()
         {
-            delete parent;
-            delete scene;
-            components.clear();
+            //delete parent;
+            //delete scene;
+            //components.clear();
         }
     };
 

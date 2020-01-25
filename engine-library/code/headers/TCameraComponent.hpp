@@ -53,6 +53,8 @@ namespace TortillaEngine
 
 
         virtual bool    parse_component(rapidxml::xml_node<>* component_node);
+
+        std::shared_ptr<glt::Camera> get_camera();
     };
 
     

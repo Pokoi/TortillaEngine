@@ -76,7 +76,7 @@ public:
     {
         if (sound_effect != nullptr)
         {
-            sound_effect->PlaySound(-1, 1);
+            sound_effect->PlaySoundEffect(-1, 1);
         }
     }
 

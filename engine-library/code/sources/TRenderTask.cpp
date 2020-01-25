@@ -32,6 +32,7 @@
 #include <TScene.hpp>
 #include <Model_Obj.hpp>
 #include <Render_Node.hpp>
+#include <Light.hpp>
 
 
 namespace TortillaEngine
@@ -42,8 +43,15 @@ namespace TortillaEngine
         renderer.reset(new glt::Render_Node);
     }
 
+    TRenderTask::~TRenderTask()
+    {
+
+    }
+
     void TRenderTask::run(float delta) 
     {
+
+        //aplicar el transform del n
         owner_scene->get_window()->reset();
         renderer->render();
         owner_scene->get_window()->swap_buffers();
@@ -53,4 +61,15 @@ namespace TortillaEngine
     {
         renderer->add(component->get_parent()->get_name(), component->get_model());
     }
+
+    void TRenderTask::add_camera(TCameraComponent* camera)
+    {
+        renderer->add(camera->get_parent()->get_name(), camera->get_camera());
+    }
+
+    void TRenderTask::add_light(TLightComponent* light)
+    {
+       renderer->add(light->get_parent()->get_name(), light->get_light());
+    }
+   
 }

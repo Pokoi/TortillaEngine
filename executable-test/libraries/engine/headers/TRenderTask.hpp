@@ -32,6 +32,8 @@
 #include <TTask.hpp>
 #include <declarations.hpp>
 #include <TRenderComponent.hpp>
+#include <TCameraComponent.hpp>
+#include <TLightComponent.hpp>
 #include <memory>
 #include <vector>
 
@@ -52,6 +54,10 @@ namespace TortillaEngine
         void run(float delta) override;
 
         void add_component(TRenderComponent* component);
+
+        void add_camera(TCameraComponent* camera);
+
+        void add_light(TLightComponent* light);
 
     };
 }

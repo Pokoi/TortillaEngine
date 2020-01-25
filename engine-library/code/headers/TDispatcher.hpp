@@ -38,13 +38,19 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Management of messages
+    */
     class TDispatcher
     {
-
+        /**
+        @brief Collection of observers subscribed 
+        */
         std::map<std::string, std::list<TObserver*>> observers;
 
     public: 
         
+
         static TDispatcher& instance()
         {
             static TDispatcher instance;

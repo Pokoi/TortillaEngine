@@ -35,6 +35,10 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Execute the input detection.
+    @param delta The time between execution calls.
+    */
     void TInputTask::run(float delta)
     {
         SDL_Event event;
@@ -48,9 +52,10 @@ namespace TortillaEngine
 
             if (event.type == SDL_KEYDOWN)
             {
-                TMessage message(keyboard.translate_sdl_code(event.key.keysym.sym).get_name());
-                owner_scene->get_dispatcher()->send( message );                
-            }
+                //Create an event
+                events.push_back(std::make_shared<TEvent>(TEvent::Type::KEY_PRESSED, keyboard.translate_sdl_code(event.key.keysym.sym).get_name() ));
+            }               
+            
         }
     }
 }

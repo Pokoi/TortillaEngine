@@ -36,7 +36,7 @@
 */
 TortillaEngine::TSound::TSound(char* sound_path)
 {
-	LoadSound(sound_path);
+	//LoadSound(sound_path);
 }
 
 /**
@@ -45,7 +45,7 @@ TortillaEngine::TSound::TSound(char* sound_path)
 */
  void TortillaEngine::TSound::LoadSound(char* path)
 {
-	sound_source = (Mix_LoadWAV(path));
+	//sound_source = (Mix_LoadWAV(path));
 }
 
 /**
@@ -53,12 +53,12 @@ TortillaEngine::TSound::TSound(char* sound_path)
 @param channel Index of the channel. Use "-1" to use the first free channel
 @param loops Count of loops. For infinite loop use "-1" value
 */
-void TortillaEngine::TSound::PlaySound(int channel, int loops)
+void TortillaEngine::TSound::PlaySoundEffect(int channel, int loops)
 {
-	if (sound_source != nullptr)
+	/*if (sound_source != nullptr)
 	{
 		Mix_PlayChannel(channel, sound_source, loops);
-	}
+	}*/
 }
 
 /**
@@ -69,10 +69,10 @@ void TortillaEngine::TSound::PlaySound(int channel, int loops)
 */
 void TortillaEngine::TSound::PlaySoundWithFade(int channel, int loops, int fade_duration_in_milliseconds)
 {
-	if (sound_source != nullptr)
+	/*if (sound_source != nullptr)
 	{
 		Mix_FadeInChannel(channel, sound_source, loops, fade_duration_in_milliseconds);
-	}
+	}*/
 }
 
 /**
@@ -80,5 +80,5 @@ void TortillaEngine::TSound::PlaySoundWithFade(int channel, int loops, int fade_
 */
 void TortillaEngine::TSound::FreeSound()
 {
-	Mix_FreeChunk(sound_source);
+	//Mix_FreeChunk(sound_source);
 }

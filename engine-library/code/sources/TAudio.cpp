@@ -39,7 +39,7 @@ namespace TortillaEngine
     */
     TAudio::TAudio()
     {
-        int flags = MIX_INIT_OGG | MIX_INIT_MOD;
+        /*int flags = MIX_INIT_OGG | MIX_INIT_MOD;
 
         if (SDL_Init(flags) == -1)
         {
@@ -53,7 +53,7 @@ namespace TortillaEngine
             exit(2);
         }
 
-        OpenMixer();
+        OpenMixer();*/
     }
 
 	/**
@@ -65,8 +65,8 @@ namespace TortillaEngine
                                     int     chunk_size
                                  )
 	{
-        Uint16  format = MIX_DEFAULT_FORMAT;
-		Mix_OpenAudio(frequency, format, channels, chunk_size);
+        /*Uint16  format = MIX_DEFAULT_FORMAT;
+		Mix_OpenAudio(frequency, format, channels, chunk_size);*/
 	}
 
 	/**
@@ -76,7 +76,7 @@ namespace TortillaEngine
 	*/
 	void TAudio::SetVolumeOfChannel(int channel, int volume)
 	{
-		Mix_Volume(channel, volume);
+		//Mix_Volume(channel, volume);
 	}
 
 	/**
@@ -85,7 +85,7 @@ namespace TortillaEngine
 	*/
 	int TAudio::GetVolumeOfChannel(int channel)
 	{
-		return Mix_Volume(channel, -1);
+        return -1;// return Mix_Volume(channel, -1);
 	}
 
 	/**
@@ -94,7 +94,7 @@ namespace TortillaEngine
 	*/
 	void TAudio::PauseChannel(int channel)
 	{
-		Mix_Pause(channel);
+		//Mix_Pause(channel);
 	}
 
 	/**
@@ -103,7 +103,7 @@ namespace TortillaEngine
 	*/
 	void TAudio::ResumeChannel(int channel)
 	{
-		Mix_Resume(channel);
+		//Mix_Resume(channel);
 	}
 
 	/**
@@ -112,7 +112,7 @@ namespace TortillaEngine
 	*/
 	bool TAudio::IsChannelPlaying(int channel)
 	{
-		return Mix_Playing(channel) != 0;
+        return false;// return Mix_Playing(channel) != 0;
 	}
 
 	/**
@@ -120,7 +120,7 @@ namespace TortillaEngine
 	*/
 	void TAudio::CloseMixer()
 	{
-		Mix_CloseAudio();
+		//Mix_CloseAudio();
 	}
 
 
@@ -130,7 +130,7 @@ namespace TortillaEngine
 	*/
 	void TAudio::HaltChannel(int channel)
 	{
-		Mix_HaltChannel(channel);
+		//Mix_HaltChannel(channel);
 	}
 
 	/**
@@ -138,7 +138,7 @@ namespace TortillaEngine
 	*/
 	void TAudio::HaltMusic()
 	{
-		Mix_HaltMusic();
+		//Mix_HaltMusic();
 	}
 
 

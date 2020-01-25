@@ -59,6 +59,9 @@
     <Filter Include="headers\TScriptSystem">
       <UniqueIdentifier>{eeff5209-9f77-47e1-b437-46a1a9f7ef36}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sources\TScriptSystem">
+      <UniqueIdentifier>{cd331d47-4b4a-4956-917a-25c6c8469e00}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\TCollider.hpp">
@@ -148,6 +151,12 @@
     <ClInclude Include="..\..\code\headers\TScriptTask.hpp">
       <Filter>headers\TScriptSystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\headers\TEvent.hpp">
+      <Filter>headers\TBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\TUpdateComponent.hpp">
+      <Filter>headers\TScriptSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">
@@ -200,6 +209,12 @@
     </ClCompile>
     <ClCompile Include="..\..\code\sources\TSphereCollider.cpp">
       <Filter>sources\TCollisionSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\TUpdateComponent.cpp">
+      <Filter>sources\TScriptSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\TComponent.cpp">
+      <Filter>sources\TBase</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

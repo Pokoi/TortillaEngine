@@ -75,7 +75,7 @@ namespace TortillaEngine
 		@param channel Index of the channel. Use "-1" to use the first free channel
 		@param loops Count of loops. For infinite loop use "-1" value
 		*/
-		void PlaySound(int channel, int loops);
+		void PlaySoundEffect(int channel, int loops);
 
 		/**
 		@brief Fades the sound source in loop

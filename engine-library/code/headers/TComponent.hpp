@@ -29,6 +29,7 @@
 
 #pragma once
 #include <rapidxml-1.13/rapidxml.hpp>
+#include <declarations.hpp>
 
 namespace TortillaEngine
 {
@@ -43,15 +44,19 @@ namespace TortillaEngine
 
         TComponent(TEntity* parent = nullptr) : parent{ parent } {}
         
-        virtual         ~TComponent() { delete parent; }
+        virtual         ~TComponent() { /*delete parent;*/ }
 
         virtual void    initialize() {}
 
         virtual void    execute() {}
 
+        virtual void    apply_transform(glt::Matrix44 transform);
+
         virtual bool    parse_component(rapidxml::xml_node<>* component_node) { return false; }
 
         TEntity*        get_parent() { return parent; }
+
+        virtual void    add_to_update_component();
     };
 }
 

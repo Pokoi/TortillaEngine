@@ -57,6 +57,8 @@ namespace TortillaEngine
             return model;
         }
 
+        void            apply_transform(glt::Matrix44 transform);
+
         virtual void    execute() {}
 
         virtual bool    parse_component(rapidxml::xml_node<>* component_node);

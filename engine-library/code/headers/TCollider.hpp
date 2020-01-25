@@ -39,7 +39,7 @@ namespace TortillaEngine
     /**
     @brief Class for collision component management      
     */
-    class TCollider : public TComponent, TObserver
+    class TCollider : public TComponent
     {
 
     public:             
@@ -132,13 +132,7 @@ namespace TortillaEngine
         @param y The scale in y axis
         @param z The scale in z axis
         */
-        virtual void resize(float x, float y, float z);
-
-        /**
-        @brief Handle the messages this collider is subscribed to
-        @param m The message
-        */
-        virtual void handle(TMessage& m) override;
+        virtual void resize(float x, float y, float z);        
         
         /**
         @brief Initialize the component values       
@@ -162,5 +156,10 @@ namespace TortillaEngine
         @return If there is a collision
         */
         virtual bool collides(TCollider& other) = 0;
+
+        /**
+        @brief Apply the transform of the parent
+        */
+        virtual void apply_transform(glt::Matrix44 transform) override;
     };
 }

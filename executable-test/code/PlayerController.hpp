@@ -31,6 +31,7 @@
 
 #include <TObserver.hpp>
 #include <TComponent.hpp>
+#include <TKeyboardInput.h>
 
 using namespace TortillaEngine;
 

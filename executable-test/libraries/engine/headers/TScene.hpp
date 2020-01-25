@@ -36,6 +36,7 @@
 #include <TCollisionsTask.hpp>
 #include <TInputTask.hpp>
 #include <TRenderTask.hpp>
+#include <TScriptTask.hpp>
 #include <rapidxml-1.13/rapidxml.hpp>
 
 #include <map>
@@ -57,6 +58,7 @@ namespace TortillaEngine
         TInputTask      * input      = nullptr;
         TRenderTask     * render     = nullptr;
         TCollisionsTask * collisions = nullptr;
+        TScriptTask     * scripts    = nullptr;
 
         std::string scene_path;
 
@@ -70,10 +72,12 @@ namespace TortillaEngine
             render      = new TRenderTask    { this };
             input       = new TInputTask     { this };
             collisions  = new TCollisionsTask{ this };
+            scripts     = new TScriptTask    { this };
 
             own_kernel -> add_task( * render      );
             own_kernel -> add_task( * input       );
             own_kernel -> add_task( * collisions  );
+            own_kernel->add_task(*scripts);
 
 		}
 

@@ -33,21 +33,43 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Keyboard management
+    */
 	class TKeyboardInput 
 	{
 
     public:
 
+        /**
+        @brief Key data 
+        */
 		struct TKey 
 		{
 		private:
+            
+            /**
+            @brief Name of the key
+            */
 			std::string common_name;          
 
 		public:
 			
+            /**
+            @brief Creates a key with the given name
+            @param name The name of the key
+            */
             TKey(std::string name) : common_name{ name }    {}
+            
+            /**
+            @brief Creates a default key. By default the name is "Unknown"
+            */
             TKey()                 : common_name{ "UNKWON" }{}
             
+            /**
+            @brief Gives the name of the key
+            @return The key name
+            */
             std::string get_name()
             {
                 return common_name;
@@ -57,7 +79,9 @@ namespace TortillaEngine
 
 	private:
 
-
+        /**
+        @brief The collection of the keys
+        */
 		const TKey KeyboardKeys[50]
 		{
 			{"NUM_0"}, 
@@ -88,8 +112,15 @@ namespace TortillaEngine
 
 	public:
 
+        /**
+        @brief Creates an instance
+        */
         TKeyboardInput() {}
 
+        /**
+        @brief Translate the sdl code of the key
+        @param sdl_code Code of the key in sdl
+        */
         TKey translate_sdl_code(int sdl_code);
 
 	};

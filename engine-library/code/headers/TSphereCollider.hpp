@@ -88,16 +88,7 @@ namespace TortillaEngine
             }
             
             TCollider::resize(x, y, z);
-        }
-
-        /**
-        @brief Handle the messages this collider is subscribed to
-        @param m The message
-        */
-        virtual void handle(TMessage& m)
-        {
-            TCollider::handle(m);
-        }
+        }       
 
         /**
         @brief Initialize the component values
@@ -108,7 +99,7 @@ namespace TortillaEngine
         @brief Execute the component
         */
         virtual void execute() override {}
-
+        
         /**
         @brief Load the component info from a xml node.
         @param component_node A reference to the node with this component info.
@@ -134,7 +125,7 @@ namespace TortillaEngine
             }
             return false;
         }
-
+                
     };
 
 

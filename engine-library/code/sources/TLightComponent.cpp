@@ -47,6 +47,9 @@ namespace TortillaEngine
     {
         light->set_color({ light_color.red, light_color.green, light_color.blue });
         light->set_intensity(intensity);
+        light->translate(glt::Vector3(0, 0, 1));
+
+        add_to_update_component();
     }
 
     void TLightComponent::set_color(float red, float green, float blue)
@@ -84,6 +87,11 @@ namespace TortillaEngine
     bool TLightComponent::parse_component(rapidxml::xml_node<>* component_node)
     {
         return false;
+    }
+
+    std::shared_ptr<glt::Light> TLightComponent::get_light()
+    {
+        return light;
     }
 
 }

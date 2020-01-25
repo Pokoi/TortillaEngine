@@ -31,8 +31,8 @@
 #include <TEntity.hpp>
 #include <TScene.hpp>
 #include <TVariant.hpp>
-#include <glm/glm.hpp>
-#include <Node.hpp>
+#include <Math.hpp>
+
 
 namespace TortillaEngine
 {
@@ -49,64 +49,52 @@ namespace TortillaEngine
 													float z_scale
 												) : TComponent (entity)
 	{
+        transformation = new glt::Matrix44();
         translate(x_position	, y_position, z_position);
 		rotate	 (pitch_angle	, yaw_angle	, roll_angle);
 		scale	 (x_scale		, y_scale	, z_scale	);
 	}
 
-    TTransformComponent::TTransformComponent(glt::Node transformation)
+    TTransformComponent::TTransformComponent(glt::Matrix44 transformation)
     {
         this->transformation = &transformation;
     }
 
-    glt::Node * TTransformComponent::get_transformation() const
+    TTransformComponent::~TTransformComponent()
+    {
+        delete transformation;
+    }
+
+    glt::Matrix44* TTransformComponent::get_transformation() const
     {
         return transformation;
     }
     	
 
 	inline void TTransformComponent::translate	(float x		  , float y			, float z			)
-	{
-        transformation->translate({ x,y,z });
-		        
-        TMessage message = TMessage(parent->get_name() + "_MOVED");       
-        parent->get_scene()->get_dispatcher()->send(message);
+	{        
+        *transformation = glm::translate(*transformation, glt::Vector3{ x,y,z });       
     }
 
 	inline void TTransformComponent::rotate		(float pitch_angle, float yaw_angle	, float roll_angle	)
 	{
 		if (pitch_angle)
 		{
-            transformation->rotate_around_x(pitch_angle);			
+            *transformation = glm::rotate(*transformation, pitch_angle, glm::vec3(1.f, 0.f, 0.f));
 		}
 		if (yaw_angle)
 		{
-            transformation->rotate_around_y(yaw_angle);
+            *transformation = glm::rotate(*transformation, yaw_angle, glm::vec3(0.f, 1.f, 0.f));
 		}
 		if (roll_angle)
 		{
-            transformation->rotate_around_z(roll_angle);
+            *transformation = glm::rotate(*transformation, roll_angle, glm::vec3(0.f, 0.f, 1.f));
 		}
-
-        TMessage message = TMessage(parent->get_name() + "_MOVED");
-        parent->get_scene()->get_dispatcher()->send(message);
 	}
 
 	inline void TTransformComponent::scale		(float scale_x	  , float scale_y	, float scale_z		)
 	{
-        transformation->scale(scale_x, scale_y, scale_z);		
-        
-        TMessage message = TMessage(parent->get_name() + "_RESIZED");
-        
-        TVariant x(scale_x);
-        TVariant y(scale_y);
-        TVariant z(scale_z);
-        
-        message.add_parameter("x", x);
-        message.add_parameter("y", y);
-        message.add_parameter("z", z);
-
-        parent->get_scene()->get_dispatcher()->send(message);
+        *transformation = glm::scale(*transformation, glm::vec3(scale_x, scale_y, scale_z));
     }
 		
 
@@ -121,18 +109,18 @@ namespace TortillaEngine
 		transformation = other.get_transformation();
 	}
 
-    inline float* TTransformComponent::get_position()
+    float* TTransformComponent::get_position()
     {
-
+        glm::vec3 vector_position = glt::extract_translation(*transformation);
+        
         float position[]
         {
-            transformation->get_transformation()[3][0],
-            transformation->get_transformation()[3][1],
-            transformation->get_transformation()[3][2]
+            position[0],
+            position[1],
+            position[2]
         };
 
         return position;
-
     }
 
     bool TTransformComponent::parse_component(rapidxml::xml_node<>* component_node)

@@ -36,14 +36,22 @@ namespace TortillaEngine
     TCameraComponent::TCameraComponent  (
                                             TEntity* parent,
                                             float near_field = 1.f,
-                                            float far_field = 200.f,
-                                            float fov = 60.f,
+                                            float far_field = 2000.f,
+                                            float fov = 0.5f,
                                             float aspect_ratio = 1.f
                                         ) : TComponent{ parent }, camera{ new glt::Camera (fov, near_field, far_field, aspect_ratio)}
-    {}
+    {
+        camera->translate(glt::Vector3(0,0,1.2f));
+        add_to_update_component();
+    }
 
     bool TCameraComponent::parse_component(rapidxml::xml_node<>* component_node)
     {
         return false;
+    }
+
+    std::shared_ptr<glt::Camera> TCameraComponent::get_camera()
+    {
+        return camera;
     }
 }

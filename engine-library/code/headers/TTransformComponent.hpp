@@ -36,7 +36,7 @@ namespace TortillaEngine
 {
     class TTransformComponent : TComponent
 	{
-        glt::Node * transformation;
+        glt::Matrix44* transformation;
 
     public:
         TTransformComponent	(
@@ -52,16 +52,17 @@ namespace TortillaEngine
 								float    z_scale		= 1
 							);
 
-		TTransformComponent (glt::Node transformation);
+		TTransformComponent (glt::Matrix44 transformation);
        
-        glt::Node *	get_transformation() const;
+        ~TTransformComponent();
+
+        glt::Matrix44*	get_transformation() const;
 		
 
 		void translate	(float x			, float y		 , float z			);        
 		void rotate		(float pitch_angle	, float yaw_angle, float roll_angle	);        
-		void scale		(float scale_x		, float scale_y	 , float scale_z	);
-       
-
+		void scale		(float scale_x		, float scale_y	 , float scale_z	);      
+        
         virtual void    initialize() override {}
 
 		virtual void    execute() override {};

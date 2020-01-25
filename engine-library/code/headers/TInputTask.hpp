@@ -31,19 +31,51 @@
 
 #include <TTask.hpp>
 #include <TKeyboardInput.h>
+#include <TEvent.hpp>
+#include <list>
+#include <memory>
 
 namespace TortillaEngine
 {
+    /**
+    @brief The task class to manage the input.
+    */
     class TInputTask : public TTask
     {
-
+        /**
+        @brief Reference to the keyboard manager.
+        */
         TKeyboardInput keyboard;
+
+        /**
+        @brief Collection of events
+        */
+        std::list<std::shared_ptr<TEvent>> events;
 
     public:
 
+        /**
+        @brief Creates the task.
+        @param scene A reference to the scene where this task belong.
+        @param priority The execution order in kernel. 
+        */
         TInputTask(TScene* scene, int priority = 2 ) : TTask(priority, scene) { }
 
+        /**
+        @brief Execute the input detection.
+        @param delta The time between execution calls.
+        */
         virtual void run(float delta) override;
+
+        /**
+        @brief Gets the first event of the collection of events.        
+        */
+        std::shared_ptr<TEvent> get_event()
+        {
+            std::shared_ptr<TEvent> event = events.front();
+            events.pop_front();
+            return event;
+        }
 
     };
 }

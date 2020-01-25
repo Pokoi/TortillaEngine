@@ -90,7 +90,7 @@ namespace TortillaEngine
         }
 
         /**
-        @brief Execute the collision detection check of all the subscribed colliders.
+        @brief Execute the collision detection check of all the subscribed colliders before applying the parents transformation.
         @param delta The time between execution calls.
         */
         virtual void run(float delta);

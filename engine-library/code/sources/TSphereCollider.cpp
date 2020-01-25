@@ -28,9 +28,11 @@
  */
 
 #include <TSphereCollider.hpp>
+#include <TEntity.hpp>
 
 namespace TortillaEngine
 {
+    
     /**
     @brief Load the component info from a xml node.
     @param component_node A reference to the node with this component info.
@@ -39,4 +41,5 @@ namespace TortillaEngine
     {
         return false;
     }
+    
 }

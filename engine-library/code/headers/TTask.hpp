@@ -45,7 +45,7 @@ namespace TortillaEngine
         
         ~TTask()
         {
-            delete owner_scene;
+            //delete owner_scene;
         }
 
         void virtual	run(float delta) {}
