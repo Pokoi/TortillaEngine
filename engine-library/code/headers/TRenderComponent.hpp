@@ -36,34 +36,63 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Render component for 3D models and meshes
+    */
     class TRenderComponent : public TComponent
     {
-        
+        /**
+        @brief A reference to the model 
+        */
         std::shared_ptr<glt::Model_Obj> model;
                 
 
     public:
 
-
+        /**
+        @brief Creates the component with default values. By default, the model is null.
+        */
         TRenderComponent(TEntity* parent = nullptr) : TComponent{ parent } 
         {
             model = nullptr;
         }
 
+        /**
+        @brief Creates the component with the given values.
+        @param parent A reference to the entity this component is attached to.
+        @param path The path for obj file with the 3D mesh
+        */
         TRenderComponent(TEntity* parent, std::string path);
         
-
+        /**
+        @brief Gets a reference to the model
+        @return A reference to the model 
+        */
         std::shared_ptr<glt::Model_Obj> get_model()
         {
             return model;
         }
 
+        /**
+        @brief Applies a given transformation to the model
+        @param transfrom The transformation to apply
+        */
         void            apply_transform(glm::mat4 & transform ) override;
 
+        /**
+        @brief Executes the component
+        */
         virtual void    execute() {}
 
+        /**
+        @brief Loads the component data from a xml node
+        @param component_node The xml node with the data
+        */
         virtual bool    parse_component(rapidxml::xml_node<>* component_node);
 
+        /**
+        @brief Subscribes to the render task
+        */
         virtual void    subscribe_to_task() override;
 
     };

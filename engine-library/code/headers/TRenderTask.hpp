@@ -40,24 +40,57 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Render management.
+    */
     class TRenderTask : public TTask
     {
-
+        /**
+        @brief A reference to the renderer node
+        */
         std::unique_ptr<glt::Render_Node> renderer;
+
+        /**
+        @brief A collection of the components subscribed to the task
+        */
         std::vector<TRenderComponent*> render_components;
 
 
     public:
 
+        /**
+        @brief Creates the task with the given values
+        @param scene A reference to the scene this task belongs to
+        @param priority The execution priority order
+        */
         TRenderTask(TScene* scene, int priority = 5);
+
+        /**
+        @brief The destructor method for memory management
+        */
         ~TRenderTask();
 
+        /**
+        @brief Executes the task rendering all the components subscribed to the task
+        */
         void run(float delta) override;
 
+        /**
+        @brief Adds a model/mesh to the subscribed component collection
+        @param component A reference to the component to add
+        */
         void add_component(TRenderComponent* component);
 
+        /**
+        @brief Adds a camera to the subscribed component collection
+        @param camera A reference to the camera to add
+        */
         void add_camera(TCameraComponent* camera);
 
+        /**
+        @brief Adds a light to the subscribed component collection
+        @param light A reference to the light to add
+        */
         void add_light(TLightComponent* light);
 
     };

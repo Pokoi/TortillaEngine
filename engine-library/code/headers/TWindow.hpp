@@ -34,7 +34,9 @@
 
 namespace TortillaEngine
 {
-	
+    /**
+    @brief Window management 
+    */
 	class TWindow
 	{
 
@@ -42,20 +44,55 @@ namespace TortillaEngine
         
 	private:
 
+        /**
+        @brief A reference to the window
+        */
 		SDL_Window		*	window;
+        
+        /**
+        @brief The context of the window
+        */
 		SDL_GLContext		context;
 
 	public:
+        
+        /**
+        @brief Creates a window with default values
+        */
 		TWindow	();
+
+        /**
+        @brief Creates a window with the given values
+        @param window_name The name 
+        @param width The window width in pixels
+        @param height The window height in pixels
+        */
 		TWindow	(
 					char *      window_name,
 					int			width,
 					int			height
 				);
+
+        /**
+        @brief Destructor method for memory management
+        */
 		~TWindow	();
 
+        /**
+        @brief Clears the window
+        */
         void reset();
+
+        /**
+        @brief Swaps the windows buffers
+        */
         void swap_buffers() const;
+
+        /**
+        @brief Gets the event index
+        @param e The event
+        @return The index
+        */
         int  poll_events(SDL_Event & e);
 
 	};

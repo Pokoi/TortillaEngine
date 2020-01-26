@@ -36,13 +36,26 @@
 
 namespace TortillaEngine
 {
-
+    /**
+    @brief Camera component
+    */
     class TCameraComponent : public TComponent
     {
+        /**
+        @brief A reference to the camera
+        */
         std::shared_ptr<glt::Camera> camera;
 
     public:
 
+        /**
+        @brief Creates a camera with the given values
+        @param parent A reference to the entity this component is attached to
+        @param near_field Near field of render
+        @param far_field Far field of render
+        @param fov Camera field of view
+        @param aspect_ratio Camera aspect ratio
+        */
         TCameraComponent(
                             TEntity* parent,
                             float near_field,
@@ -52,12 +65,27 @@ namespace TortillaEngine
                         );
 
 
+        /**
+        @brief Loads the component data from a xml node
+        @param component_node The xml node with the data
+        */
         virtual bool    parse_component(rapidxml::xml_node<>* component_node);
 
+        /**
+        @brief Gets a reference of the camera
+        @return The reference to the camera
+        */
         std::shared_ptr<glt::Camera> get_camera();
 
+        /**
+        @brief Subscribe to the render task
+        */
         virtual void subscribe_to_task() override;
 
+        /**
+        @brief Apply the given transform to the camera
+        @param transfrom The transform to apply
+        */
         void            apply_transform(glm::mat4& transform) override;
     };
 

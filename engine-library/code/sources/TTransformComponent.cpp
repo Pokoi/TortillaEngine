@@ -35,6 +35,19 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Creates a component with the given values
+    @param entity A reference to the entity this component is attached to
+    @param x_position The x component of the position data
+    @param y_position The y component of the position data
+    @param z_position The z component of the position data
+    @param pitch_angle The rotation in x axis
+    @param yaw_angle The rotation in y axis
+    @param roll_angle The rotation in z axis
+    @param x_scale The x component of the scale data
+    @param y_scale The y component of the scale data
+    @param z_scale The z component of the scale data
+    */
 	TTransformComponent::TTransformComponent	(
 													TEntity* entity,
 													float x_position,
@@ -54,26 +67,48 @@ namespace TortillaEngine
 		scale	 (x_scale		, y_scale	, z_scale	);
 	}
 
+    /**
+    @brief Creates a component in base of a given transformation matrix
+    @param transformation A reference of the transformation matrix
+    */
     TTransformComponent::TTransformComponent(glm::mat4 & transformation)
     {        
         this->transformation = &transformation;
     }
 
+    /**
+    @brief Destructor method for memory management
+    */
     TTransformComponent::~TTransformComponent()
     {        
     }
 
+    /**
+    @brief Gets the transformation matrix
+    @return A reference to the transformation matrix
+    */
     glm::mat4* TTransformComponent::get_transformation() const
     {
         return transformation;
     }
     	
-
+    /**
+    @brief Translates the matrix
+    @param x Translation in x axis
+    @param y Translation in y axis
+    @param z Translation in z axis
+    */
 	inline void TTransformComponent::translate	(float x		  , float y			, float z			)
 	{        
         *transformation = glm::translate(*transformation, glm::vec3{ x,y,z });       
     }
 
+    /**
+    @brief Rotates the matrix
+    @param pitch_angle Rotation in x axis
+    @param yaw_angle Rotation in y axis
+    @param roll_angle Rotation in z axis
+    */
 	inline void TTransformComponent::rotate		(float pitch_angle, float yaw_angle	, float roll_angle	)
 	{
 		if (pitch_angle)
@@ -90,6 +125,12 @@ namespace TortillaEngine
 		}
 	}
 
+    /**
+    @brief Scale the matrix
+    @param scale_x Scale in x axis
+    @param scale_y Scale in y axis
+    @param scale_z Scale in z axis
+    */
 	inline void TTransformComponent::scale		(float scale_x	  , float scale_y	, float scale_z		)
 	{
         *transformation = glm::scale(*transformation, glm::vec3(scale_x, scale_y, scale_z));
@@ -102,17 +143,29 @@ namespace TortillaEngine
         //return transformation->get_transformation() * other.get_transformation()->get_transformation();
 	}*/
 
+    /**
+    @brief Copy the transform component
+    @param other A reference to the transform component to copy
+    */
 	void TTransformComponent::operator=(TTransformComponent& other)
 	{
 		transformation = other.get_transformation();
 	}
 
+    /**
+    @brief Gets the position
+    @return The position
+    */
     glm::vec4 TTransformComponent::get_position()
     {
         return (*transformation)[3];      
         
     }
 
+    /**
+    @brief Loads the component data from a xml file
+    @param component_node The xml node with the data
+    */
     bool TTransformComponent::parse_component(rapidxml::xml_node<>* component_node)
     {      
 

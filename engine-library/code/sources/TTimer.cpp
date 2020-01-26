@@ -32,16 +32,27 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Starts the timer
+    */
     void TTimer::start()
     {
         ticks = SDL_GetTicks();
     }
 
+    /**
+    @brief Gets the elapsed time in seconds
+    @return The elapsed time
+    */
     float TTimer::elapsed_seconds() const
     {
         return float(elapsed_milliseconds()) * 0.001f;
     }
 
+    /**
+    @brief Gets the elapsed time in milliseconds
+    @return The elapsed time
+    */
     uint32_t TTimer::elapsed_milliseconds() const
     {
         return SDL_GetTicks() - ticks;

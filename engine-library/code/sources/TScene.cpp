@@ -40,7 +40,10 @@
 
 namespace TortillaEngine
 {
-
+    /**
+    @brief Loads the scene data from an xml file
+    @param path The xml file path
+    */
     void TScene::load(const std::string& path)
     {        
         scene_path = path;
@@ -59,6 +62,10 @@ namespace TortillaEngine
         }
     }
 
+    /**
+    @brief Parse the scene data from a xml node
+    @param node The xml node with the data
+    */
     void TScene::parse_scene(rapidxml::xml_node<>* node)
     {
         for (
@@ -77,6 +84,10 @@ namespace TortillaEngine
         }
     }
 
+    /**
+    @brief Parse all the entities data from a xml node
+    @param node The xml node with the data
+    */
     void TScene::parse_entities(rapidxml::xml_node<>* node)
     {
         std::shared_ptr<TEntity> new_entity = nullptr;

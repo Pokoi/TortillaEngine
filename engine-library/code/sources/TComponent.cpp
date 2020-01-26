@@ -35,7 +35,10 @@
 
 namespace TortillaEngine
 {
-   
+  
+    /**
+    @brief Adds this component to the update component of the entity. If no update component is added, it creates one.
+    */
    void TComponent::add_to_update_component()
    {
        if (!parent->has_component("TUpdateComponent"))

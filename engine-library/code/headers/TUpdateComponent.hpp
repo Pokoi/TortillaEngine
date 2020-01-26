@@ -35,18 +35,33 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Script component that updates other components
+    */
     class TUpdateComponent : public TScriptComponent
     {
     private:
+        
+        /**
+        @brief Collection of the subscribed components
+        */
         std::list<TComponent*> components;
 
     public:
 
+        /**
+        @brief Creates the component
+        @param parent A reference to the entity this component is attached to
+        */
         TUpdateComponent(TEntity* parent) : TScriptComponent{ parent } 
         {
             subscribe_to_task();
         }
 
+        /**
+        @brief Adds a component to the collection of subscribed components
+        @param component The component to add
+        */
         void add_component(TComponent* component)
         {
             if (component != nullptr)
@@ -54,7 +69,11 @@ namespace TortillaEngine
                 components.push_back(component);
             }
         }
-                
+        
+        /**
+        @brief Removes a component from the collection of subscribed components
+        @param component The component to unsubscribe
+        */
         void remove_component(TComponent* component)
         {
             if (component != nullptr)
@@ -67,8 +86,14 @@ namespace TortillaEngine
             }
         }
 
+        /**
+        @brief Executes the component, updating all the subscribed components
+        */
         virtual void    execute();
 
+        /**
+        @brief Subscribe the component to the script task
+        */
         virtual void    subscribe_to_task() override;
     };
 }

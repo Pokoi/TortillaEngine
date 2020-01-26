@@ -37,17 +37,28 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Creates the task with the given values
+    @param scene A reference to the scene this task belongs to
+    @param priority The execution priority order
+    */
     TRenderTask::TRenderTask(TScene* scene, int priority)
         :TTask{priority, scene} 
     {
         renderer.reset(new glt::Render_Node);
     }
 
+    /**
+    @brief The destructor method for memory management
+    */
     TRenderTask::~TRenderTask()
     {
 
     }
 
+    /**
+    @brief Executes the task rendering all the components subscribed to the task
+    */
     void TRenderTask::run(float delta) 
     {        
         owner_scene ->get_window()->reset();
@@ -55,16 +66,28 @@ namespace TortillaEngine
         owner_scene ->get_window()->swap_buffers();
     }
 
+    /**
+    @brief Adds a model/mesh to the subscribed component collection
+    @param component A reference to the component to add
+    */
     void TRenderTask::add_component(TRenderComponent * component)
     {
         renderer->add(component->get_parent()->get_name(), component->get_model());
     }
 
+    /**
+    @brief Adds a camera to the subscribed component collection
+    @param camera A reference to the camera to add
+    */
     void TRenderTask::add_camera(TCameraComponent* camera)
     {
         renderer->add(camera->get_parent()->get_name(), camera->get_camera());
     }
 
+    /**
+    @brief Adds a light to the subscribed component collection
+    @param light A reference to the light to add
+    */
     void TRenderTask::add_light(TLightComponent* light)
     {
        renderer->add(light->get_parent()->get_name(), light->get_light());

@@ -36,6 +36,12 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Creates a light with the given values
+    @param parent The entity this component is attached to
+    @param light_color The color of the light
+    @param intensity The light intesity
+    */
     TLightComponent::TLightComponent(
                                         TEntity * parent,
                                         TColor    light_color,
@@ -54,6 +60,12 @@ namespace TortillaEngine
         subscribe_to_task();
     }
 
+    /**
+    @brief Sets the color of the light
+    @param red The red color component in range 0-1
+    @param green The green color component in range 0-1
+    @param blue The blue color component in range 0-1
+    */
     void TLightComponent::set_color(float red, float green, float blue)
     {
         light_color.red = red;
@@ -63,6 +75,10 @@ namespace TortillaEngine
         light->set_color({ red, green, blue });
     }
 
+    /**
+    @brief Sets the color of the light
+    @param color The color of the light
+    */
     void TLightComponent::set_color(TLightComponent::TColor color)
     {
         light_color = color;
@@ -70,22 +86,38 @@ namespace TortillaEngine
         light->set_color({ light_color.red, light_color.green, light_color.blue });
     }
 
+    /**
+    @brief Gets the color of the light
+    @return The color
+    */
     TLightComponent::TColor TLightComponent::get_color()
     {
         return light_color;
     }
 
+    /**
+    @brief Sets the light intensity
+    @param intensity The intensity of the light in range 0-1
+    */
     void TLightComponent::set_intensity(float intensity)
     {
         this->intensity = intensity;
         light->set_intensity(intensity);
     }
 
+    /**
+    @brief Gets the light intensity
+    @return The intensity of the light in range 0-1
+    */
     float TLightComponent::get_intensity()
     {
         return intensity;
     }
 
+    /**
+    @brief Load the component data from a xml node
+    @param component_node The xml node with the data
+    */
     bool TLightComponent::parse_component(rapidxml::xml_node<>* component_node)
     {
         float red_color     = 0;
@@ -123,16 +155,27 @@ namespace TortillaEngine
         return true;
     }
 
+    /**
+    @brief Gets a reference to the light
+    @return The reference to the light
+    */
     std::shared_ptr<glt::Light> TLightComponent::get_light()
     {
         return light;
     }
 
+    /**
+    @brief Adds the ligth to the render task
+    */
     void TLightComponent::subscribe_to_task()
     {
         std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_light(this);
     }
 
+    /**
+    @brief Applies the given transform to the light
+    @param transform The transformation to apply
+    */
     void TLightComponent::apply_transform(glm::mat4& transform)
     {
         light->set_transformation(transform);

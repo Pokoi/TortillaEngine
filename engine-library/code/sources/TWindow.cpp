@@ -36,7 +36,9 @@
 
 namespace TortillaEngine
 {   
-
+    /**
+    @brief Creates a window with default values
+    */
     TWindow::TWindow()
     {
         window = nullptr;
@@ -67,6 +69,13 @@ namespace TortillaEngine
         std::cout << "Created";
     }
 
+
+    /**
+    @brief Creates a window with the given values
+    @param window_name The name
+    @param width The window width in pixels
+    @param height The window height in pixels
+    */
     TWindow::TWindow	(
 						    char * window_name,
 						    int			width,
@@ -101,6 +110,10 @@ namespace TortillaEngine
 			
 
 	}
+
+    /**
+    @brief Destructor method for memory management
+    */
 	TWindow::~TWindow()
 	{
 		if ( context != nullptr )
@@ -114,6 +127,9 @@ namespace TortillaEngine
 		}
 	}
 
+    /**
+    @brief Clears the window
+    */
     void TWindow::reset()
     {
         if (context != nullptr)
@@ -123,6 +139,9 @@ namespace TortillaEngine
         }
     }
 
+    /**
+    @brief Swaps the windows buffers
+    */
     void TWindow::swap_buffers() const
     {
         if (context != nullptr)
@@ -131,6 +150,11 @@ namespace TortillaEngine
         }
     }
 
+    /**
+    @brief Gets the event index
+    @param e The event
+    @return The index
+    */
     int TWindow::poll_events(SDL_Event & e)
     {
         return SDL_PollEvent(&e);

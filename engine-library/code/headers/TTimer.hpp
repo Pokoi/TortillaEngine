@@ -33,19 +33,41 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Timer for time management
+    */
     class TTimer
     {
+        /**
+        @brief Number of ticks in the timer
+        */
         uint32_t ticks;
 
     public:
 
+        /**
+        @brief Creates and starts a timer
+        */
         TTimer() 
         {
             start();
         }
 
+        /**
+        @brief Starts the timer
+        */
         void        start();
+        
+        /**
+        @brief Gets the elapsed time in seconds
+        @return The elapsed time
+        */
         float       elapsed_seconds() const;
+        
+        /**
+        @brief Gets the elapsed time in milliseconds
+        @return The elapsed time
+        */
         uint32_t    elapsed_milliseconds() const;
     };
 }

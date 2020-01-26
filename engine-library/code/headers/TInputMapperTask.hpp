@@ -38,8 +38,14 @@
 
 namespace TortillaEngine
 {
+    /*
+    @brief Task to manage the input event - message system
+    */
     class TInputMapperTask : public TTask
     {
+        /*
+        @brief The collection of actions in the game
+        */
         std::map<std::string, std::string > actions;
 
     public:
@@ -53,7 +59,7 @@ namespace TortillaEngine
         {}
 
         /**
-        @brief Add an action to the action map.
+        @brief Adds an action to the action map.
         @param key The input id of the action.
         @param action_name The name of the action
         */

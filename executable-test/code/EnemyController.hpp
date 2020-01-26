@@ -34,17 +34,50 @@
 
 using namespace TortillaEngine;
 
+/**
+@brief Controller of enemy behaviour
+*/
 class EnemyController : public TObserver, public TScriptComponent
 {
 private:
+
+    /**
+    @brief Movement speed
+    */
     float movement_speed = 0.03f;
+
+    /**
+    @brief A reference to the entity this component is attached to
+    */
     TEntity* target;
 
 public:
+    /**
+    @brief Creates the controller
+    @param parent A reference to the entity this component is attached to
+    @param target A reference to the entity to follow 
+    */
     EnemyController(TEntity* parent, TEntity* target);
 
+    /**
+    @brief Handles the recieved messages
+    @param m The message
+    */
     virtual void handle(TMessage& m) override;
+
+    /**
+    @brief Load the data from a xml file
+    @param component_node The xml node with the data
+    */
     virtual bool parse_component(rapidxml::xml_node<>* component_node);
+    
+    /**
+    @brief Executes the component
+    */
     virtual void execute();
+
+    /**
+    @brief Subscribes to the script task
+    */
     virtual void subscribe_to_task() override;
 };

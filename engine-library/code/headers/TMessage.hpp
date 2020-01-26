@@ -36,26 +36,52 @@
 
 namespace TortillaEngine
 {
-
+    /**
+    @brief Messages form the send - receive messages system
+    */
     class TMessage
     {
+        /**
+        @brief The message id. Observers subscribes in base of this id.
+        */
         std::string id;
+        /**
+        @brief Collection of parameters attached to this message.
+        */
         std::map<std::string, TVariant> parameters;
 
     public:
 
+        /**
+        @brief Creates a message with the given id.
+        @param id The message id.
+        */
         TMessage(std::string id) 
 		{
 			this->id = id;
 		}
 
+        /**
+        @brief Attaches a new parameter to the message.
+        @param key The key of this param in the collection of parameters in the message
+        @param value The parameter to attach
+        */
         void add_parameter(const std::string & key, TVariant& value)
         {
             parameters[key] = value;
         }
 
+        /**
+        @brief Gets the id of the message
+        @return The message id.
+        */
         std::string get_id() { return id; }
 
+        /**
+        @brief Operator [] overloading to get a parameter in base of this key
+        @param key The key of the parameter to get
+        @return A reference to the parameter 
+        */
         TVariant& operator[] (std::string key)
         {
             return parameters[key];

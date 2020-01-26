@@ -44,14 +44,21 @@
 
 namespace TortillaEngine
 {
-   
+    /**
+    @brief Creates the component with the given values.
+    @param parent A reference to the entity this component is attached to.
+    @param path The path for obj file with the 3D mesh
+    */
     TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{parent}, model{ new glt::Model_Obj(path) }
     {
         add_to_update_component();
         subscribe_to_task();       
     }
     
-
+    /**
+    @brief Loads the component data from a xml node
+    @param component_node The xml node with the data
+    */
     bool TRenderComponent::parse_component(rapidxml::xml_node<>* component)
     {
         for (
@@ -74,11 +81,18 @@ namespace TortillaEngine
         return true;
     }
 
+    /**
+    @brief Subscribes to the render task
+    */
     void TRenderComponent::subscribe_to_task()
     {
         std::dynamic_pointer_cast<TRenderTask>(parent->get_scene()->get_task("TRenderTask"))->add_component(this);
     }
 
+    /**
+    @brief Applies a given transformation to the model
+    @param transfrom The transformation to apply
+    */
     void TRenderComponent::apply_transform(glm::mat4 & transform)
     {
         model->set_transformation(transform);

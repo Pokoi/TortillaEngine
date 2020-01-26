@@ -35,7 +35,11 @@
 #include <memory>
 #include <math.h>
 
-
+ /**
+@brief Creates the controller
+@param parent A reference to the entity this component is attached to
+@param target A reference to the entity to follow
+*/
 EnemyController::EnemyController(
                                     TEntity* parent,
                                     TEntity* target
@@ -46,6 +50,10 @@ EnemyController::EnemyController(
     subscribe_to_task();
 }
 
+/**
+@brief Handles the recieved messages
+@param m The message
+*/
 void EnemyController::handle(TMessage& m)
 {
     if (
@@ -57,11 +65,18 @@ void EnemyController::handle(TMessage& m)
     }
 }
 
+/**
+@brief Load the data from a xml file
+@param component_node The xml node with the data
+*/
 bool EnemyController::parse_component(rapidxml::xml_node<>* component_node)
 {
     return false;
 }
 
+/**
+@brief Executes the component
+*/
 void EnemyController::execute()
 {
     glm::vec4 target_position  = target->get_transform().get_position();
@@ -87,6 +102,9 @@ void EnemyController::execute()
                                       );
 }
 
+/**
+@brief Subscribes to the script task
+*/
 void EnemyController::subscribe_to_task()
 {    
     std::dynamic_pointer_cast<TScriptTask>(parent->get_scene()->get_task("TScriptTask"))->add_script(this);

@@ -118,9 +118,6 @@
     <ClInclude Include="..\..\code\headers\TSphereCollider.hpp">
       <Filter>headers\TCollisionSystem</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\TTimer.hpp">
-      <Filter>headers\TPrimitives</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\code\headers\TTask.hpp">
       <Filter>headers\TPrimitives</Filter>
     </ClInclude>
@@ -159,6 +156,9 @@
     </ClInclude>
     <ClInclude Include="..\..\code\headers\TInputMapperTask.hpp">
       <Filter>headers\TInputSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\TTimer.hpp">
+      <Filter>headers\TBase</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -201,9 +201,6 @@
     <ClCompile Include="..\..\code\sources\TScene.cpp">
       <Filter>sources\TPrimitives</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\code\sources\TTimer.cpp">
-      <Filter>sources\TPrimitives</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\code\sources\TWindow.cpp">
       <Filter>sources\TPrimitives</Filter>
     </ClCompile>
@@ -221,6 +218,9 @@
     </ClCompile>
     <ClCompile Include="..\..\code\sources\TInputMapperTask.cpp">
       <Filter>sources\TInputSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\TTimer.cpp">
+      <Filter>sources\TBase</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

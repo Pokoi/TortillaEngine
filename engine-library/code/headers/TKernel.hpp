@@ -37,18 +37,30 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Management of the tasks execution cycle
+    */
 	class TKernel
 	{
+        /**
+        @brief The collection of tasks
+        */
 		std::multiset<TTask*> tasks;
 		bool running;        
 
 	public:
 
+        /**
+        @brief Creates a kernel
+        */
 		TKernel() : tasks{ nullptr }, running{false}
         {
             
         }
 
+        /**
+        @brief Executes all the tasks in order or priority before initialize them.
+        */
 		void exec()
 		{
             float delta_time = 1.f /60.f;
@@ -76,18 +88,32 @@ namespace TortillaEngine
 			}
 		}
 
+        /**
+        @brief Stops the execution
+        */
 		void stop() { running = false; }
 
+        /**
+        @brief Adds a given task to the collection of tasks
+        @param task A reference to the task to add.
+        */
         void add_task   (TTask& task)
         {
             tasks.insert(&task);
         }
 
+        /**
+        @brief Removes a given task from the collection of tasks
+        @param A reference to the task to removes.
+        */
         void remove_task(TTask& task)
         {
             tasks.erase(&task);
         }       
 
+        /**
+        @brief Destructor method for memory management
+        */
         ~TKernel()
         {
             tasks.clear();

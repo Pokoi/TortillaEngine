@@ -31,55 +31,98 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Forward declaration
+    */
     class TScene;
+
+    /**
+    @brief Base class for all the tasks
+    */
     class TTask
     {
     protected:
 
+        /**
+        @brief The execution priority order
+        */
         int         priority;
+
+        /**
+        @brief A reference to the scene this task belongs to
+        */
         TScene* owner_scene;
 
     public:
 
+        /**
+        @brief Creates a task with the given data
+        @param priority The execution priority order
+        @param scene A reference to the scene this task belongs to
+        */
         TTask(int priority, TScene* scene) : priority{ priority }, owner_scene{ scene } {}
-        
+
+        /**
+        @brief Destructor method for memory management
+        */
         ~TTask()
         {
-            //delete owner_scene;
         }
 
+        /**
+        @brief Executes the task
+        @param delta The time between calls
+        */
         void virtual	run(float delta) {}
+
+        /**
+        @brief Initializes the task
+        */
         void			initialize() {}
+
+        /**
+        @brief Finalizes the task
+        */
         void			finalize() {}
 
-		int             get_priority()                   const
-        { 
+        /**
+        @brief Gets the execution priority order
+        @return The execution priority order
+        */
+        int             get_priority()                   const
+        {
             return this->priority;
         }
 
-		bool            operator < (const TTask & other) const
-		{
-			return this->priority < other.get_priority();
-		}
-        
-        void            set_scene(TScene& scene) 
+        /**
+        @brief Compares the tasks execution priority order
+        @param other A reference to the task to compare with
+        @return If this priority is lower than the given task one
+        */
+        bool            operator < (const TTask& other) const
+        {
+            return this->priority < other.get_priority();
+        }
+
+        /**
+        @brief Sets the scene this task belongs to
+        @param scene A scene reference to set to
+        */
+        void            set_scene(TScene& scene)
         {
             owner_scene = &scene;
         }
-        TScene  *       get_scene()
+
+        /**
+        @brief Gets the scene this task belongs to
+        @return A reference to the scene this task belongs to
+        */
+        TScene* get_scene()
         {
             return owner_scene;
         }
 
-	};
-
-
-	//TASK PRIORITY
-	//input task
-	//input mapper
+    };
 }
 
-// La tarea de render es un sistema que recorre todas las entidades que tengan un componente de render. Pilla el transform de cada entidad 
-// y se lo aplica a cada componente de render que tenga vinculado. DEspués llama a render node render y después a swap buffer de la ventana
-// Por tanto los pasos son:
-// actualizar matrices; clear window; render_node -> render(); swap buffers
+	

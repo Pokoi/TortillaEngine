@@ -37,6 +37,9 @@
 
 namespace TortillaEngine
 { 
+    /**
+    @brief Executes the component, updating all the subscribed components
+    */
     void TUpdateComponent::execute()
     {
         for (TComponent* component : components)
@@ -48,6 +51,9 @@ namespace TortillaEngine
         }
     }
     
+    /**
+    @brief Subscribe the component to the script task
+    */
     void TUpdateComponent::subscribe_to_task()
     {
         std::dynamic_pointer_cast<TScriptTask>(parent->get_scene()->get_task("TScriptTask"))->add_script(this);

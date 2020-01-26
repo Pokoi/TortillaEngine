@@ -33,6 +33,10 @@
 #include "GameManager.hpp"
 #include <string>
 
+/**
+@brief Creates the component
+@param player A reference to the entity this component is attached to
+*/
 PlayerController::PlayerController(TEntity* player)
     : TComponent{ player }
 {
@@ -42,6 +46,10 @@ PlayerController::PlayerController(TEntity* player)
     parent->get_scene()->get_dispatcher()->add(*this, "Move Right");
 }
 
+/**
+@brief Handle the messages
+@param m The message
+*/
 void PlayerController::handle(TMessage& m)
 {
     
@@ -92,29 +100,45 @@ void PlayerController::handle(TMessage& m)
     
 }
 
+/**
+@brief Load the component data from a xml file
+@param component_node The xml node with the data
+*/
 bool PlayerController::parse_component(rapidxml::xml_node<>* component_node)
 {
     return false;
 }
 
+/**
+@brief Checks if the player character can moves towards lower z values
+*/
 bool PlayerController::able_to_increase_vertical_position()
 {
     float z = parent->get_transform().get_position().z;
     return z < GameManager::get()->limits.max_z;
 }
 
+/**
+@brief Checks if the player character can moves towards greater z values
+*/
 bool PlayerController::able_to_decrease_vertical_position()
 {
     float z = parent->get_transform().get_position().z;
     return  z > GameManager::get()->limits.min_z;
 }
 
+/**
+@brief Checks if the player character can moves towards lower x values
+*/
 bool PlayerController::able_to_increase_horizontal_position()
 {
     float x = parent->get_transform().get_position().x;
     return x < GameManager::get()->limits.max_x;
 }
 
+/**
+@brief Checks if the player character can moves towards greater x values
+*/
 bool PlayerController::able_to_decrease_horizontal_position()
 {
     float x = parent->get_transform().get_position().x;

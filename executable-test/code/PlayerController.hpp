@@ -35,25 +35,59 @@
 
 using namespace TortillaEngine;
 
+/**
+@brief The controller of player's behaviour
+*/
 class PlayerController : public TObserver, public TComponent
 {
 private:
+
+    /**
+    @brief The player movement speed
+    */
     float movement_speed = 0.05f;
-        
+      
        
 public:
 
+    /**
+    @brief Creates the component
+    @param player A reference to the entity this component is attached to
+    */
     PlayerController(TEntity* player);
     
+    /**
+    @brief Handle the messages
+    @param m The message
+    */
     virtual void    handle(TMessage& m) override;
+    
+    /**
+    @brief Load the component data from a xml file
+    @param component_node The xml node with the data
+    */
     virtual bool    parse_component(rapidxml::xml_node<>* component_node);
-      
-    
-    
+       
+    /**
+    @brief Sets the speed of the player character
+    @param speed The desired speed
+    */
     void set_speed(float speed) { this->movement_speed = speed; }
-
+    
+    /**
+    @brief Checks if the player character can moves towards lower z values
+    */
     bool able_to_increase_vertical_position();
+    /**
+    @brief Checks if the player character can moves towards greater z values
+    */
     bool able_to_decrease_vertical_position();
+    /**
+    @brief Checks if the player character can moves towards lower x values
+    */
     bool able_to_increase_horizontal_position();
+    /**
+    @brief Checks if the player character can moves towards greater x values
+    */
     bool able_to_decrease_horizontal_position();
 };

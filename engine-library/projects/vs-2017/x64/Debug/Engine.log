@@ -30,6 +30,5 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
   TTransformComponent.cpp
   TUpdateComponent.cpp
   Generando código...
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TScene.cpp(139): message : vea la referencia a la creación de instancias de plantilla de función "std::shared_ptr<TortillaEngine::TSphereCollider> std::make_shared<TortillaEngine::TSphereCollider,TortillaEngine::TEntity*,int,int,int,int>(TortillaEngine::TEntity *&&,int &&,int &&,int &&,int &&)" que se está compilando
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEvent.hpp(57): warning C4715: 'TortillaEngine::TEvent::to_string': no todas las rutas de acceso de control devuelven un valor
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TScene.cpp(150): message : vea la referencia a la creación de instancias de plantilla de función "std::shared_ptr<TortillaEngine::TSphereCollider> std::make_shared<TortillaEngine::TSphereCollider,TortillaEngine::TEntity*,int,int,int,int>(TortillaEngine::TEntity *&&,int &&,int &&,int &&,int &&)" que se está compilando
   Engine.vcxproj -> D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\Engine.lib

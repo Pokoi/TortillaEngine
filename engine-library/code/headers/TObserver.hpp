@@ -33,9 +33,17 @@
 
 namespace TortillaEngine
 {
+    /**
+    @brief Management of messages receiving
+    */
     class TObserver
     {
     public:
+
+        /**
+        @brief Management of messages receiving
+        @param m A reference of the message
+        */
         virtual void handle(TMessage& m) = 0;
     };
 }

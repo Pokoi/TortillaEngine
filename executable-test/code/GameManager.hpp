@@ -33,16 +33,25 @@
 #include <TScene.hpp>
 using namespace TortillaEngine;
 
+/**
+@brief Manager of the game 
+*/
 class GameManager
 {
 
 private:
 
+    /**
+    @brief Reference to the sound effect
+    */
     TSound* sound_effect;   
    
 
 public:
 
+    /**
+    @brief The limits of the player's movement
+    */
     struct
     {  
         float max_x = 3.5;
@@ -52,6 +61,9 @@ public:
 
     } limits;
 
+    /**
+    @brief Gets an instance. If its not created, it create one
+    */
     static GameManager * get()
     {
         static GameManager * instance;
@@ -66,15 +78,21 @@ public:
 
 private:
 
+    /**
+    @brief Create the component
+    */
     GameManager() 
     {
         sound_effect = nullptr;
     }
 
 public:
+
+    /**
+    @brief Plays the sound
+    */
     void play_sound()
-    {
-        
+    {        
         if (sound_effect != nullptr)
         {
             sound_effect->PlaySoundEffect(-1, 1);
@@ -82,12 +100,20 @@ public:
         
     }
 
+    /**
+    @brief Sets the sound
+    @param path The asset path
+    */
     void set_sound(char* path)
     {
         sound_effect = new TSound;
         sound_effect->LoadSound(path);
     }
 
+    /**
+    @brief Reset the game scene
+    @param scene A reference to the scene to reset
+    */
     void reset_game(TScene * scene)
     {
         scene->reset();

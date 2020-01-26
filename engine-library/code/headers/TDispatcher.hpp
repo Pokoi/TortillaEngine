@@ -28,6 +28,7 @@
  */
 
 #pragma once
+
 #include <map>
 #include <list>
 #include <string>
@@ -44,24 +45,36 @@ namespace TortillaEngine
     class TDispatcher
     {
         /**
-        @brief Collection of observers subscribed 
+        @brief Collection of subscribed observers 
         */
         std::map<std::string, std::list<TObserver*>> observers;
 
     public: 
         
-
+        /**
+        @brief Gets an instance of the dispatcher
+        @return A instance of the dispatcher.
+        */
         static TDispatcher& instance()
         {
             static TDispatcher instance;
             return instance;
         }
 
+        /**
+        @brief Adds an observer to the collection of subscribed observers
+        @param observer A reference from the observer
+        @param id The message id is subscribed to
+        */
         void add(TObserver& observer, std::string id)
         {
             observers[id].push_back(&observer);
         }
 
+        /**
+        @brief Sends a message to all the observers subscribed to this message id
+        @param message The message to send
+        */
         void send(TMessage message)
         {
             auto list = observers.find(message.get_id());
@@ -75,6 +88,11 @@ namespace TortillaEngine
             }
         }
 
+        /**
+        @brief Removes an observer from the collection of subscribed observers
+        @param observer A reference to the observer to unsubscribe
+        @param id The id of the message this observer want to unsubscribe
+        */
         void remove(TObserver& observer, std::string id)
         {			
             /*std::map<std::string, std::list<TObserver*>>::const_iterator it = std::find(observers.begin(), observers.end(), observer);

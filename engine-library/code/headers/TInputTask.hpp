@@ -83,6 +83,10 @@ namespace TortillaEngine
             return nullptr;
         }
 
+        /**
+        @brief Check if the event pool is empty
+        @return If the event pool is empty or not
+        */
         bool event_pool_empty()
         {
             return events.empty();
