@@ -1,4 +1,17 @@
-﻿  main.cpp
+﻿  EnemyController.cpp
 D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
 D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
+D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(74,21): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(79,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(80,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  PlayerController.cpp
+D:\Repositorios\TortillaEngine\executable-test\code\EnemyController.cpp(81,24): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
+  main.cpp
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TSound.hpp(64,1): warning C4150: eliminación de puntero a tipo 'Mix_Chunk' incompleto; no se ha llamado a un destructor
+  Generando código...
+D:\Repositorios\TortillaEngine\engine-library\code\headers\declarations.hpp(36): message : vea la declaración de 'Mix_Chunk'
+  LINK : no se encontr¾ D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\TEST.exe o no lo gener¾ el ·ltimo vÝnculo incremental; ejecutando vÝnculo completo
+     Creando biblioteca D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\TEST.lib y objeto D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\TEST.exp
   TEST.vcxproj -> D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\TEST.exe

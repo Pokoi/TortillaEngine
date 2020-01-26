@@ -11,7 +11,7 @@
 					
 					<xposition>0</xposition>
 					<yposition>0</yposition>
-					<zposition>-2</zposition>
+					<zposition>0</zposition>
 					
 					<pitch>0</pitch>
 					<yaw>0</yaw>
@@ -33,15 +33,15 @@
 
 		</entity>
 
-		<entity name="Enemy">
+		<entity name="Enemy1">
 			
 			<components>
 
 				<component type="transform">
 					
-					<xposition>4</xposition>
-					<yposition>0</yposition>
-					<zposition>-6</zposition>
+					<xposition>3.5</xposition>
+					<yposition>-0.25</yposition>
+					<zposition>-3.5</zposition>
 					
 					<pitch>0</pitch>
 					<yaw>0</yaw>
@@ -63,6 +63,247 @@
 
 		</entity>
 
+		<entity name="Enemy2">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>-3.5</xposition>
+					<yposition>-0.25</yposition>
+					<zposition>-3.5</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>0.5</xscale>
+					<yscale>0.5</yscale>
+					<zscale>0.5</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/bunny-lowpoly.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+		<entity name="Enemy3">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>3.5</xposition>
+					<yposition>-0.25</yposition>
+					<zposition>3.5</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>0.5</xscale>
+					<yscale>0.5</yscale>
+					<zscale>0.5</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/bunny-lowpoly.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+		<entity name="Enemy4">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>-3.5</xposition>
+					<yposition>-0.25</yposition>
+					<zposition>3.5</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>0.5</xscale>
+					<yscale>0.5</yscale>
+					<zscale>0.5</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/bunny-lowpoly.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+
+
+		<entity name="Wall1">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>0</xposition>
+					<yposition>0</yposition>
+					<zposition>-4</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>12</xscale>
+					<yscale>12</yscale>
+					<zscale>0.01</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/wall.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+		<entity name="Wall2">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>-4</xposition>
+					<yposition>0</yposition>
+					<zposition>0</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>0.01</xscale>
+					<yscale>12</yscale>
+					<zscale>12</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/wall.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+		<entity name="Wall3">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>0</xposition>
+					<yposition>0</yposition>
+					<zposition>4</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>12</xscale>
+					<yscale>12</yscale>
+					<zscale>0.01</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/wall.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+		<entity name="Wall4">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>4</xposition>
+					<yposition>0</yposition>
+					<zposition>0</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>0.01</xscale>
+					<yscale>12</yscale>
+					<zscale>12</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/wall.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+		<entity name="Floor">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>0</xposition>
+					<yposition>-0.5</yposition>
+					<zposition>0</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>12</xscale>
+					<yscale>0.01</yscale>
+					<zscale>12</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/wall.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
 
 		<entity name="Light">
 			
@@ -120,9 +361,9 @@
 
 				<component type="camera">
 					
-					<near>1</near>
+					<near>0.1</near>
 
-					<far>2000</far>
+					<far>100</far>
 					<fov>20</fov>
 					<ratio>1.67</ratio>									
 

@@ -47,7 +47,7 @@ void PlayerController::handle(TMessage& m)
     
     if (m.get_id() == "Move Up")
     {
-        if (able_to_increase_vertical_position())
+        if (able_to_decrease_vertical_position())
         {
             parent->get_transform().translate(0, 0, -movement_speed);
         }
@@ -58,7 +58,7 @@ void PlayerController::handle(TMessage& m)
     }
     if (m.get_id() == "Move Down")
     {
-        if (able_to_decrease_vertical_position())
+        if (able_to_increase_vertical_position())
         {
             parent->get_transform().translate(0, 0, movement_speed);
         }
@@ -69,7 +69,7 @@ void PlayerController::handle(TMessage& m)
     }
     if (m.get_id() == "Move Left")
     {
-        if (able_to_increase_horizontal_position())
+        if (able_to_decrease_horizontal_position())
         {
             parent->get_transform().translate(-movement_speed, 0, 0);
         }

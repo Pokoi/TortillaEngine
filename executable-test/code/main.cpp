@@ -45,29 +45,26 @@ using namespace TortillaEngine;
 
 int main()
 {
-    
+    //Window creation
     TWindow window{(char*) "ventana", 1500,900 };
     
+    //Scene creation from a xml file
     TScene scene(&window);
-    scene.load("../../assets/scene.xml");  
+    scene.load("../../assets/scene.xml");
+
+    //Read the input mapping from a xml file
+    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->load_from_xml("../../assets/input.xml");
     
-    //Add the custom components
+    //Add the custom components created in the demo. 
+    //The developer add the components not native from the engine
     std::shared_ptr <TEntity> player = scene.get_entity("Player");
     player->add_component("PlayerController", std::make_shared<PlayerController>(player.get()));
 
-    std::shared_ptr <TEntity> enemy = scene.get_entity("Enemy");
-    enemy->add_component("EnemyController", std::make_shared<EnemyController>(enemy.get(), player.get()));
-
-    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_A", "Move Left");
-    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_S", "Move Down");
-    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_D", "Move Right");
-    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_W", "Move Up");
-    
-    GameManager::get()->limits.max_x = 100;
-    GameManager::get()->limits.max_z = 100;
-    GameManager::get()->limits.min_x = -100;
-    GameManager::get()->limits.min_z = -100;
-
+    for (int i = 1; i < 5; ++i)
+    {        
+        std::shared_ptr <TEntity> enemy = scene.get_entity("Enemy" + std::to_string(i));
+        enemy->add_component("EnemyController", std::make_shared<EnemyController>(enemy.get(), player.get()));
+    }        
     scene.run();
 
 	return 0;

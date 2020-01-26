@@ -72,7 +72,7 @@ namespace TortillaEngine
         @brief Loads the map from a xml file.
         @param The path of the file to load.
         */
-        void load_from_xml(const std::string& path) {}
+        void load_from_xml(const std::string& path);
 
 
     };

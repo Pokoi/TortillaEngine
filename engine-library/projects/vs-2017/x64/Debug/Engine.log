@@ -1,2 +1,35 @@
-﻿  TTransformComponent.cpp
+﻿  TCameraComponent.cpp
+  TCollider.cpp
+  TCollisionsTask.cpp
+  TInputMapperTask.cpp
+  TInputTask.cpp
+  TLightComponent.cpp
+  TRenderComponent.cpp
+  TRenderTask.cpp
+  TScene.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,33): warning C4244: 'argumento': conversión de '_Ty' a 'float'; posible pérdida de datos
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,33): warning C4244:         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,33): warning C4244:         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,33): warning C4244:             _Ty=int
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\xmemory(200,33): warning C4244:         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message : vea la referencia a la creación de instancias de plantilla de función "void std::_Construct_in_place<_Ty,TortillaEngine::TEntity*,int,int,int,int>(_Ty &,TortillaEngine::TEntity *&&,int &&,int &&,int &&,int &&) noexcept(false)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :             _Ty=TortillaEngine::TSphereCollider
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1492): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<TortillaEngine::TEntity*,int,int,int,int>(TortillaEngine::TEntity *&&,int &&,int &&,int &&,int &&)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :             _Ty=TortillaEngine::TSphereCollider
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1592): message :         ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message : vea la referencia a la creación de instancias de plantilla de función "std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<TortillaEngine::TEntity*,int,int,int,int>(TortillaEngine::TEntity *&&,int &&,int &&,int &&,int &&)" que se está compilando
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         with
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         [
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :             _Ty=TortillaEngine::TSphereCollider
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105\include\memory(1593): message :         ]
+  TTransformComponent.cpp
+  TUpdateComponent.cpp
+  Generando código...
+D:\Repositorios\TortillaEngine\engine-library\code\sources\TScene.cpp(139): message : vea la referencia a la creación de instancias de plantilla de función "std::shared_ptr<TortillaEngine::TSphereCollider> std::make_shared<TortillaEngine::TSphereCollider,TortillaEngine::TEntity*,int,int,int,int>(TortillaEngine::TEntity *&&,int &&,int &&,int &&,int &&)" que se está compilando
+D:\Repositorios\TortillaEngine\engine-library\code\headers\TEvent.hpp(57): warning C4715: 'TortillaEngine::TEvent::to_string': no todas las rutas de acceso de control devuelven un valor
   Engine.vcxproj -> D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\Engine.lib

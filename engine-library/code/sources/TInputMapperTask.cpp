@@ -28,6 +28,7 @@
  */
 
 #include <TInputMapperTask.hpp>
+#include <fstream>
 #include <TScene.hpp>
 
 namespace TortillaEngine
@@ -55,6 +56,77 @@ namespace TortillaEngine
                 }
             }
         }
+    }
+
+    void TInputMapperTask::load_from_xml(const std::string& path)
+    {        
+        rapidxml::xml_document<> doc;
+
+        std::ifstream xml_file(path);
+        std::vector<char> buffer((std::istreambuf_iterator<char>(xml_file)), std::istreambuf_iterator<char>());
+        buffer.push_back('\0');
+
+        doc.parse<0>(&buffer[0]);
+        rapidxml::xml_node<>* root = doc.first_node();
+
+        if (root && (std::string) root->name() == "input")
+        {
+            for (
+                rapidxml::xml_node <>* actions = root->first_node();
+                actions;
+                actions = actions->next_sibling()
+                )
+            {
+                if (actions->type() == rapidxml::node_element)
+                {
+                    if ((std::string) actions->name() == "actions")
+                    {
+                        for (
+                            rapidxml::xml_node <>* action = actions->first_node();
+                            action;
+                            action = action->next_sibling()
+                            )
+                        {
+                            std::string key_name;
+                            std::string action_name;
+
+                            if (action->type() == rapidxml::node_element)
+                            {
+                                if ((std::string)action->name() != "action") return;
+                            }
+
+                            for (
+                                rapidxml::xml_attribute<>* attributes = action->first_attribute();
+                                attributes;
+                                attributes = attributes->next_attribute()
+                                )
+                            {
+                                if ((std::string)attributes->name() == "name")
+                                {
+                                    action_name = (std::string) attributes->value();
+                                    
+                                    for (
+                                        rapidxml::xml_node<>* key = action->first_node();
+                                        key;
+                                        key = key->next_sibling()
+                                        )
+                                    {
+                                        if ((std::string)key->name() == "key")
+                                        {
+                                            key_name = key->value();
+                                        }
+                                    }
+                                }
+                            }
+                        
+                            add_action(key_name, action_name);
+                        }
+                    }
+                }
+            }
+        }
+
+
     }
 
 }

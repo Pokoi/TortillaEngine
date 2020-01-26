@@ -35,7 +35,10 @@
 #include <glm/gtc/matrix_transform.hpp>
 
 #include <Model_Obj.hpp>
+
+#include <Cube.hpp>
 #include <TEntity.hpp>
+#include <Render_Node.hpp>
 #include <memory>
 #include <TScene.hpp>
 
@@ -62,7 +65,7 @@ namespace TortillaEngine
             if ((std::string)render->name() == "asset")
             {
                 model = std::make_shared < glt::Model_Obj>(glt::Model_Obj(value));
-            }
+            }            
         }
 
         add_to_update_component();

@@ -45,10 +45,10 @@ public:
 
     struct
     {  
-        float max_x = 0;
-        float max_z = 0;
-        float min_x = 0;
-        float min_z = 0;
+        float max_x = 3.5;
+        float max_z = 3.5;
+        float min_x = -3.5;
+        float min_z = -3.5;
 
     } limits;
 

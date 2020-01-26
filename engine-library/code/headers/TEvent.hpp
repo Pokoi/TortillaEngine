@@ -54,6 +54,8 @@ namespace TortillaEngine
                 return "KEY_RELEASED_" + key;
                 break;            
             }
+
+            return "";
         }
     };
 
