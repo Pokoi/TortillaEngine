@@ -107,22 +107,71 @@ namespace TortillaEngine
 		transformation = other.get_transformation();
 	}
 
-    float* TTransformComponent::get_position()
+    glm::vec4 TTransformComponent::get_position()
     {
-        glm::vec4 & vector_position = (*transformation)[3];
+        return (*transformation)[3];      
         
-        float position[]
-        {
-            position[0],
-            position[1],
-            position[2]
-        };
-
-        return position;
     }
 
     bool TTransformComponent::parse_component(rapidxml::xml_node<>* component_node)
-    {
-        return false;
+    {      
+
+        for (
+            rapidxml::xml_node<>* transform = component_node->first_node();
+            transform;
+            transform = transform->next_sibling()
+            )
+        {
+            std::string value = transform->value();
+
+            if ((std::string)transform->name() == "xposition")
+            {
+                translate(std::stof(value), 0, 0);
+            }
+
+            else if ((std::string)transform->name() == "yposition")
+            {
+                translate(0,std::stof(value), 0);
+            }
+
+            else if ((std::string)transform->name() == "zposition")
+            {
+                translate(0,0,std::stof(value));
+            }
+
+            else if ((std::string)transform->name() == "pitch")
+            {
+                rotate(std::stof(value), 0, 0);
+            }
+
+            else if ((std::string)transform->name() == "yaw")
+            {
+                rotate(0,0,std::stof(value));
+            }
+
+            else if ((std::string)transform->name() == "roll")
+            {
+                rotate(0,0,std::stof(value));
+            }
+
+            else if ((std::string)transform->name() == "xscale")
+            {
+                scale(std::stof(value), 1, 1);
+            }
+
+            else if ((std::string)transform->name() == "yscale")
+            {
+                scale(1,std::stof(value), 1);
+            }
+
+            else if ((std::string)transform->name() == "zscale")
+            {
+                scale(1,1,std::stof(value));
+            }
+
+        }
+
+
+        return true;
     }
 }

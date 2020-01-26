@@ -1,17 +1,2 @@
-﻿  TCameraComponent.cpp
-  TCollider.cpp
-  TCollisionsTask.cpp
-  TInputMapperTask.cpp
-  TInputTask.cpp
-  TLightComponent.cpp
-  TRenderComponent.cpp
-  TRenderTask.cpp
-  TScene.cpp
-  TTransformComponent.cpp
-  TUpdateComponent.cpp
-  Generando código...
-D:\Repositorios\TortillaEngine\engine-library\code\sources\TTransformComponent.cpp(121): warning C4172: devolución de dirección de la variable local o temporal: position
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEvent.hpp(57): warning C4715: 'TortillaEngine::TEvent::to_string': no todas las rutas de acceso de control devuelven un valor
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEvent.hpp(51): warning C4172: devolución de dirección de la variable local o temporal
-D:\Repositorios\TortillaEngine\engine-library\code\headers\TEvent.hpp(54): warning C4172: devolución de dirección de la variable local o temporal
+﻿  TTransformComponent.cpp
   Engine.vcxproj -> D:\Repositorios\TortillaEngine\executable-test\projects\vs-2017\x64\Debug\Engine.lib

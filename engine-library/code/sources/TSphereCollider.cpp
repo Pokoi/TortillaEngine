@@ -39,7 +39,33 @@ namespace TortillaEngine
     */
     bool TSphereCollider::parse_component(rapidxml::xml_node<>* component_node)
     {
-        return false;
+        for (
+            rapidxml::xml_node<>* collider = component_node->first_node();
+            collider;
+            collider = collider->next_sibling()
+            )
+        {
+            std::string value = collider->value();
+
+            if ((std::string)collider->name()        == "radius")
+            {
+              radius = std::stof(value);
+            }
+            else if ((std::string)collider->name()   == "xoffset")
+            {
+                offset.x = stof(value);                
+            }
+            else if ((std::string)collider->name()   == "yoffset")
+            {
+                offset.y = stof(value);
+            }
+            else if ((std::string)collider->name()   == "zoffset")
+            {
+                offset.z = stof(value);
+            }
+        }
+
+        return true;
     }
     
 }

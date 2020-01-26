@@ -38,7 +38,7 @@ using namespace TortillaEngine;
 class PlayerController : public TObserver, public TComponent
 {
 private:
-    float movement_speed = 2.f;
+    float movement_speed = 0.05f;
         
        
 public:

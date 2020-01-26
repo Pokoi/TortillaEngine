@@ -37,7 +37,7 @@ using namespace TortillaEngine;
 class EnemyController : public TObserver, public TScriptComponent
 {
 private:
-    float movement_speed = 1.5f;
+    float movement_speed = 0.03f;
     TEntity* target;
 
 public:

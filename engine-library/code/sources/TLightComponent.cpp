@@ -88,7 +88,39 @@ namespace TortillaEngine
 
     bool TLightComponent::parse_component(rapidxml::xml_node<>* component_node)
     {
-        return false;
+        float red_color     = 0;
+        float green_color   = 0;
+        float blue_color    = 0;
+
+        for (
+            rapidxml::xml_node<>* light = component_node->first_node();
+            light;
+            light = light->next_sibling()
+            )
+        {
+            std::string value   = light->value();
+
+            if ((std::string)light->name() == "intensity")
+            {
+                set_intensity(std::stof(value));
+            }
+            else if ((std::string)light->name() == "redcolor")
+            {
+                red_color = std::stof(value);
+            }
+            else if ((std::string)light->name() == "greencolor")
+            {
+                green_color = std::stof(value);
+            }
+            else if ((std::string)light->name() == "bluecolor")
+            {
+                blue_color = std::stof(value);
+            }
+        }
+
+        set_color({red_color, green_color, blue_color});
+
+        return true;
     }
 
     std::shared_ptr<glt::Light> TLightComponent::get_light()

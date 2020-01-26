@@ -48,9 +48,10 @@ namespace TortillaEngine
         TKeyboardInput keyboard;
 
         /**
-        @brief Collection of events
+        @brief Collection of events.
         */
         std::list<std::shared_ptr<TEvent>> events;
+        
 
     public:
 
@@ -80,6 +81,11 @@ namespace TortillaEngine
             }
 
             return nullptr;
+        }
+
+        bool event_pool_empty()
+        {
+            return events.empty();
         }
 
     };

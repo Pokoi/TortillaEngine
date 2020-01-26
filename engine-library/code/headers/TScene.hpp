@@ -130,6 +130,12 @@ namespace TortillaEngine
             return nullptr;
         }
 		
+        void reset()
+        {
+            own_kernel->stop();
+            load(scene_path);
+            run();
+        }
         
 		void load(const std::string& path);
 		

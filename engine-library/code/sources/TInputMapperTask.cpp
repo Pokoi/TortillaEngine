@@ -38,17 +38,21 @@ namespace TortillaEngine
     */
     void TInputMapperTask::run(float delta)
     {   
-        std::shared_ptr<TEvent> event = std::dynamic_pointer_cast<TInputTask>(owner_scene->get_task("TInputTask"))->get_event();
-        
-        if (event != nullptr)
-        {
-            const std::string& key = event->to_string();
+        std::shared_ptr<TInputTask> input = std::dynamic_pointer_cast<TInputTask>(owner_scene->get_task("TInputTask"));
 
-            //Only sends a message if the action map contains this key 
-            if (actions.find(key) != actions.end())
+        while(!input->event_pool_empty())
+        { 
+            std::shared_ptr<TEvent> event = input ->get_event();
+        
+            if (event != nullptr)
             {
-                TMessage message{ key };
-                owner_scene->get_dispatcher()->send(message);
+                std::string key = event->to_string();
+
+                //Only sends a message if the action map contains this key 
+                if (actions.find(key) != actions.end())
+                {                
+                    owner_scene->get_dispatcher()->send({actions[key]});
+                }
             }
         }
     }

@@ -51,52 +51,23 @@ namespace TortillaEngine
 
     bool TRenderComponent::parse_component(rapidxml::xml_node<>* component)
     {
-
-        std::string component_name;
-        std::string value_name;
-
         for (
-            rapidxml::xml_node<>* component_node = component->first_node();
-            component_node;
-            component_node = component_node->next_sibling()
+            rapidxml::xml_node<>* render = component->first_node();
+            render;
+            render = render->next_sibling()
             )
         {
-            component_name = component_node->name();
+            std::string value = render->value();
 
-            if (component_name.empty()) return true;
-
-            for (
-                rapidxml::xml_attribute <>* attribute = component_node->first_attribute();
-                attribute;
-                attribute = attribute->next_attribute()
-                )
+            if ((std::string)render->name() == "asset")
             {
-                value_name = attribute->value();
-
-                if (value_name.empty()) return true;
-            }
-
-            if (component_name == "mesh")
-            {
-            
-            }
-
-            else if (component_name == "camera")
-            {
-
-            }
-            else if (component_name == "light")
-            {
-
+                model = std::make_shared < glt::Model_Obj>(glt::Model_Obj(value));
             }
         }
 
-
-        std::string name = component->value();
-
-        std::string path = "assets//" + name;
-        model.reset(new glt::Model_Obj(path));
-
+        add_to_update_component();
+        subscribe_to_task();
+        
         return true;
     }
 

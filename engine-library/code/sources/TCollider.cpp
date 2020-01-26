@@ -67,11 +67,11 @@ namespace TortillaEngine
     */
     void TCollider::calculate_center()
     {
-        float* parent_position = parent->get_transform().get_position();
+        glm::vec4 parent_position = parent->get_transform().get_position();
 
-        this->center.x = *parent_position       + offset.x;
-        this->center.y = *(parent_position + 1) + offset.y;
-        this->center.z = *(parent_position + 2) + offset.z;
+        this->center.x = parent_position.x + offset.x;
+        this->center.y = parent_position.y + offset.y;
+        this->center.z = parent_position.z + offset.z;
     }
     
     /**

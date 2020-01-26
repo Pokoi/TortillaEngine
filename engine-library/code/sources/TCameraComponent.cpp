@@ -50,7 +50,36 @@ namespace TortillaEngine
 
     bool TCameraComponent::parse_component(rapidxml::xml_node<>* component_node)
     {
-        return false;
+
+        for (
+            rapidxml::xml_node<>* camera = component_node->first_node();
+            camera;
+            camera = camera->next_sibling()
+            )
+        {
+            std::string value = camera->value();
+
+            if ((std::string)camera->name() == "near")
+            {
+                this->camera->set_near(std::stof(value));                
+            }
+            else if ((std::string)camera->name() == "far")
+            {
+                this->camera->set_far(std::stof(value));
+            }
+            else if ((std::string)camera->name() == "fov")
+            {
+                this->camera->set_fov(std::stof(value));
+            }
+            else if ((std::string)camera->name() == "ratio")
+            {
+                this->camera->set_aspect_ratio(std::stof(value));
+            }
+        }
+
+        
+
+        return true;
     }
 
     std::shared_ptr<glt::Camera> TCameraComponent::get_camera()

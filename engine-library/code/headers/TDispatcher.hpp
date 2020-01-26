@@ -62,7 +62,7 @@ namespace TortillaEngine
             observers[id].push_back(&observer);
         }
 
-        void send(TMessage& message)
+        void send(TMessage message)
         {
             auto list = observers.find(message.get_id());
 

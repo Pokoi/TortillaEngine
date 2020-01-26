@@ -36,9 +36,10 @@
 PlayerController::PlayerController(TEntity* player)
     : TComponent{ player }
 {
-    
-   
-    
+    parent->get_scene()->get_dispatcher()->add(*this, "Move Up");
+    parent->get_scene()->get_dispatcher()->add(*this, "Move Down");
+    parent->get_scene()->get_dispatcher()->add(*this, "Move Left");
+    parent->get_scene()->get_dispatcher()->add(*this, "Move Right");
 }
 
 void PlayerController::handle(TMessage& m)
@@ -98,24 +99,24 @@ bool PlayerController::parse_component(rapidxml::xml_node<>* component_node)
 
 bool PlayerController::able_to_increase_vertical_position()
 {
-    float z = parent->get_transform().get_position()[2];
+    float z = parent->get_transform().get_position().z;
     return z < GameManager::get()->limits.max_z;
 }
 
 bool PlayerController::able_to_decrease_vertical_position()
 {
-    float z = parent->get_transform().get_position()[2];
+    float z = parent->get_transform().get_position().z;
     return  z > GameManager::get()->limits.min_z;
 }
 
 bool PlayerController::able_to_increase_horizontal_position()
 {
-    float x = parent->get_transform().get_position()[0];
+    float x = parent->get_transform().get_position().x;
     return x < GameManager::get()->limits.max_x;
 }
 
 bool PlayerController::able_to_decrease_horizontal_position()
 {
-    float x = parent->get_transform().get_position()[0];
+    float x = parent->get_transform().get_position().x;
     return x > GameManager::get()->limits.min_x;
 }

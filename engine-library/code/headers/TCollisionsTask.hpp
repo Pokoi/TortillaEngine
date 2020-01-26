@@ -33,7 +33,7 @@
 #include <TTask.hpp>
 #include <TCollider.hpp>
 #include <TEntity.hpp>
-#include <vector>
+#include <list>
 
 namespace TortillaEngine
 {
@@ -47,7 +47,7 @@ namespace TortillaEngine
         /**
         @brief The collection of colliders subscribed to the task         
         */
-        std::vector<TCollider*> colliders;
+        std::list<TCollider*> colliders;
 
     public:
 
@@ -69,7 +69,7 @@ namespace TortillaEngine
         {
             if (collider != nullptr)
             {
-                colliders.push_back(collider);
+              colliders.push_back(collider);
             }
         }
 
@@ -81,7 +81,7 @@ namespace TortillaEngine
         {
             if (collider != nullptr)
             {
-                std::vector<TCollider*>::iterator it = std::find(colliders.begin(), colliders.end(), collider);
+                std::list<TCollider*>::iterator it = std::find(colliders.begin(), colliders.end(), collider);
                 if(it != colliders.end())
                 { 
                     colliders.erase(it);

@@ -36,6 +36,9 @@
 #include <TRenderComponent.hpp>
 #include <TComponent.hpp>
 #include <TSound.hpp>
+#include "PlayerController.hpp"
+#include "EnemyController.hpp"
+#include "GameManager.hpp"
 
 using namespace TortillaEngine;
 
@@ -43,27 +46,27 @@ using namespace TortillaEngine;
 int main()
 {
     
-    TWindow window{(char*) "ventana", 800,800 };
+    TWindow window{(char*) "ventana", 1500,900 };
     
     TScene scene(&window);
-
-    TEntity player("Player", &scene, nullptr);
-
-    TEntity camera("Camera", &scene, nullptr);
-    std::shared_ptr<TCameraComponent> camera_component{ new TCameraComponent{ &camera, 1.f, 2000.f, 20.f, 1.f } };
-    camera.add_component("Camera", camera_component);
-
-    TEntity light1("Light1", &scene, nullptr);
-    std::shared_ptr<TLightComponent> light_component1{ new TLightComponent{ &light1, {1.f, 1.f, 1.f}, 0.9f } };
-    light1.add_component("Light1", light_component1);
+    scene.load("../../assets/scene.xml");  
     
-    std::shared_ptr < TRenderComponent> render_component{ new TRenderComponent{ &player, "../../assets/head.obj" } };
-    player.add_component("Render Model", render_component);
+    //Add the custom components
+    std::shared_ptr <TEntity> player = scene.get_entity("Player");
+    player->add_component("PlayerController", std::make_shared<PlayerController>(player.get()));
 
+    std::shared_ptr <TEntity> enemy = scene.get_entity("Enemy");
+    enemy->add_component("EnemyController", std::make_shared<EnemyController>(enemy.get(), player.get()));
+
+    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_A", "Move Left");
+    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_S", "Move Down");
+    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_D", "Move Right");
+    std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->add_action("KEY_PRESSED_W", "Move Up");
     
-    camera.get_transform().translate(0, 0, 1.5f);    
-    light1.get_transform().translate(0, 0, 1);
-    
+    GameManager::get()->limits.max_x = 100;
+    GameManager::get()->limits.max_z = 100;
+    GameManager::get()->limits.min_x = -100;
+    GameManager::get()->limits.min_z = -100;
 
     scene.run();
 

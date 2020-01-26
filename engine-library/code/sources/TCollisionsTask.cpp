@@ -42,19 +42,19 @@ namespace TortillaEngine
     void TCollisionsTask::run(float delta)
     {
         
-        for (int i = 0; i < colliders.size(); ++i)
+        for (TCollider* collider1 : colliders)
         {
-            for (int j = 0; i < colliders.size(); ++j)
+            for (TCollider* collider2 : colliders)
             {
-                if (colliders[i]->collides(*colliders[j]))
+                if (collider1->collides(*collider2))
                 {
                     //When a collision occurs, a message its sent with the info of the collision
-                    TMessage message(colliders[i]->get_parent()->get_name() + "_COLLIDES");
-                    TVariant value(colliders[j]->get_parent()->get_name());
+                    TMessage message(collider1->get_parent()->get_name() + "_COLLIDES");
+                    TVariant value(collider2->get_parent()->get_name());
                     message.add_parameter("collision", value);
                     owner_scene->get_dispatcher()->send(message);
                 }
             }
-        }
+        }        
     }
 }

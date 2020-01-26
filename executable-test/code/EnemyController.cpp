@@ -53,7 +53,7 @@ void EnemyController::handle(TMessage& m)
         m["collision"].to_string() == target->get_name()
         )
     {
-        GameManager::get()->reset_game();
+        GameManager::get()->reset_game(parent->get_scene());
     }
 }
 
@@ -64,12 +64,12 @@ bool EnemyController::parse_component(rapidxml::xml_node<>* component_node)
 
 void EnemyController::execute()
 {
-    float * target_position  = target->get_transform().get_position();
-    float * self_position    = parent->get_transform().get_position();
+    glm::vec4 target_position  = target->get_transform().get_position();
+    glm::vec4 self_position    = parent->get_transform().get_position();
 
-    double delta_x = (double)target_position[0] - (double)self_position[0];
-    double delta_y = (double)target_position[1] - (double)self_position[1];
-    double delta_z = (double)target_position[2] - (double)self_position[2];
+    double delta_x = (double)target_position.x - (double)self_position.x;
+    double delta_y = (double)target_position.y - (double)self_position.y;
+    double delta_z = (double)target_position.z - (double)self_position.z;
 
     float magnitude = sqrt(
                             (delta_x * delta_x) +

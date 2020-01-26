@@ -73,7 +73,7 @@ namespace TortillaEngine
 		//TTransformComponent operator * (TTransformComponent& other) const;
 		void				operator = (TTransformComponent& other);
         
-        float* get_position();
+        glm::vec4 get_position();
 
     };
 }

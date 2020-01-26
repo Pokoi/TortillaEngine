@@ -43,7 +43,7 @@ namespace TortillaEngine
         
         TEvent(Type type, std::string key) : type{ type }, key{ key }{}
 
-        const std::string& to_string()
+        std::string to_string()
         {
             switch (type)
             {

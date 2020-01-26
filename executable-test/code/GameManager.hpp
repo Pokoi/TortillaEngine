@@ -30,7 +30,7 @@
 #pragma once
 
 #include <TSound.hpp>
-
+#include <TScene.hpp>
 using namespace TortillaEngine;
 
 class GameManager
@@ -88,9 +88,9 @@ public:
         sound_effect->LoadSound(path);
     }
 
-    void reset_game()
+    void reset_game(TScene * scene)
     {
-    
+        scene->reset();
     }
    
 };

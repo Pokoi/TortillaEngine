@@ -2,10 +2,137 @@
 
 <scene>
 	<entities>
-		<entity name="">
-			<components type="">
-				<attribute>value</attribute>
+		
+		<entity name="Player">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>0</xposition>
+					<yposition>0</yposition>
+					<zposition>-2</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>1</xscale>
+					<yscale>1</yscale>
+					<zscale>1</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/head.obj</asset>				
+
+				</component>				
+
 			</components>
+
 		</entity>
+
+		<entity name="Enemy">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>4</xposition>
+					<yposition>0</yposition>
+					<zposition>-6</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>0.5</xscale>
+					<yscale>0.5</yscale>
+					<zscale>0.5</zscale>
+
+				</component>
+
+				<component type="render">
+					
+					<asset>../../assets/bunny-lowpoly.obj</asset>				
+
+				</component>				
+
+			</components>
+
+		</entity>
+
+
+		<entity name="Light">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>0</xposition>
+					<yposition>0</yposition>
+					<zposition>1</zposition>
+					
+					<pitch>0</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>1</xscale>
+					<yscale>1</yscale>
+					<zscale>1</zscale>
+
+				</component>
+
+				<component type="light">
+					
+					<intensity>1</intensity>
+
+					<redcolor>1</redcolor>
+					<greencolor>1</greencolor>
+					<bluecolor>1</bluecolor>									
+
+				</component>
+
+			</components>
+
+		</entity>
+
+		<entity name="Camera">
+			
+			<components>
+
+				<component type="transform">
+					
+					<xposition>0</xposition>
+					<yposition>1.5</yposition>
+					<zposition>2.5</zposition>
+					
+					<pitch>-0.5</pitch>
+					<yaw>0</yaw>
+					<roll>0</roll>
+
+					<xscale>1</xscale>
+					<yscale>1</yscale>
+					<zscale>1</zscale>
+
+				</component>
+
+				<component type="camera">
+					
+					<near>1</near>
+
+					<far>2000</far>
+					<fov>20</fov>
+					<ratio>1.67</ratio>									
+
+				</component>
+
+			</components>
+
+		</entity>
+
+
+
 	</entities>
 </scene>
