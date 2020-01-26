@@ -1,0 +1,10 @@
+digraph "TortillaEngine::TInputMapperTask::add_action"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TortillaEngine::TInputMapper\lTask::add_action",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Adds an action to the action map."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TInputMapper\lTask::load_from_xml",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_input_mapper_task.html#a837da4e6da0b584f2c000b7cfb7ebc1a",tooltip="Loads the map from a xml file."];
+}

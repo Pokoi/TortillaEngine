@@ -1,0 +1,16 @@
+digraph "glm::detail::floatTo11bit"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::detail::floatTo11bit",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::float2packed11",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#af3fe5d54f7627eb98c3493ee0a4b6fba",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::isinf",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#gaf28f7a4696746f081685c9fd05c7e2de",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::isnan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga6cb8f202a52eed2331724a3800198ebf",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

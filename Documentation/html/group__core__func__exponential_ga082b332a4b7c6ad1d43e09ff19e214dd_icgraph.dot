@@ -1,0 +1,25 @@
+digraph "glm::pow"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::pow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::compute\l_rgbToSrgb::call",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__rgb_to_srgb.html#a641d15ac773c5b20ad9917ec0ea2974c",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::convertLinearToSRGB",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__color__space.html#gad813dcd99644cafc775e83d6504ccb93",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::detail::compute\l_srgbToRgb::call",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__srgb_to_rgb.html#a73d176e6c80940ded57f4e76dc362f72",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::convertSRGBToLinear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__color__space.html#ga28e98e64347cf385cadc1ceb4def55c9",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TortillaEngine::TSphereCollider\l::collides",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_sphere_collider.html#aaaec519c442293b4524fa2eda0e5793e",tooltip="Checks if there is a collision between this and other collider."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::lxNorm",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__norm.html#ga932bb0854e5c5a6ab5a14b023c451ca7",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::packF3x9_E1x5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__packing.html#ga0984f9598edc648d59a9643d9a61b121",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="glm::unpackF3x9_E1x5",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__packing.html#ga15d8845a31e1e55d493803d0c8cb5910",tooltip=" "];
+}

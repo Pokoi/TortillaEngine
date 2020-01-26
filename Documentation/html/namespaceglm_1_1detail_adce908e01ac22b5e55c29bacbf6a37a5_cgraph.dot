@@ -1,0 +1,12 @@
+digraph "glm::detail::permute"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::detail::permute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::mod289",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#a9968154b610b2b78f492b2f7babd728c",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::floor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga568b822b78f045f77c3325e165b44d5d",tooltip=" "];
+}

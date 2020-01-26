@@ -1,0 +1,20 @@
+digraph "glm::perspectiveFov"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::perspectiveFov",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::perspectiveFovLH",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__matrix__transform.html#gae705a2f19c3ef5ef880bd6c92759cf2d",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::cos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#ga728fd86f14609e37d83f82429995b7b3",tooltip=" "];
+  Node3 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::sin",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#ga4a0ddceb6b1e64ce0e4da209dcb021d5",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::perspectiveFovRH",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__matrix__transform.html#ga07cd8df791bf90dcb782645fe0b21261",tooltip=" "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

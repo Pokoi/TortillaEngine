@@ -1,0 +1,33 @@
+digraph "glm::axis"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::axis",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::axisAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__matrix__interpolation.html#ga9aef292eb5f29bdbb58a53ef4281af92",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::interpolate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__matrix__interpolation.html#ga45099a92c5c704503565619ac2bcd5c6",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::axisAngleMatrix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__matrix__interpolation.html#ga82d4bc058e9628cb2ea1d4e117a0cf39",tooltip=" "];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__matrix__transform.html#ga161b1df124348f232d994ba7958e4815",tooltip=" "];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::orientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__rotate__vector.html#ga49b4d082305cdfcfe0a5c184f684a902",tooltip=" "];
+  Node5 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::orientedAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__vector__angle.html#ga82a19d474be13c92c7b10caab42a5a72",tooltip=" "];
+  Node5 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__rotate__vector.html#ga526b6f8995bc0946aa1a04e9297de7c6",tooltip=" "];
+  Node5 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TortillaEngine::TTransform\lComponent::rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_transform_component.html#acc20f5c53d101a9976b819df22aef496",tooltip="Rotates the matrix."];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="TortillaEngine::TTransform\lComponent::parse_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_transform_component.html#a53c58ec990b774d24d081e1466c214dd",tooltip="Loads the component data from a xml file."];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="TortillaEngine::TTransform\lComponent::TTransformComponent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_transform_component.html#a3e4372cf45555d92fc3e99f4a32ac788",tooltip="Creates a component with the given values."];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="glm::rotate_slow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a9fbbd196726ba74b00b82b9a3d48487f",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="glm::rotateNormalizedAxis",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__rotate__normalized__axis.html#gaada623964a895def5a8b77b5b7887dc4",tooltip=" "];
+}

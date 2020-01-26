@@ -1,0 +1,12 @@
+digraph "glm::ortho"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::ortho",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::orthoLH",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__matrix__transform.html#ga71503df1e691b12cc2d45e64fd0628fe",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::orthoRH",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__matrix__transform.html#gada0aaaee76f1fd3c272698c8eca735a1",tooltip=" "];
+}

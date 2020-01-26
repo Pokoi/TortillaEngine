@@ -1,0 +1,18 @@
+digraph "glm::detail::_swizzle_base0::elem"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::detail::_swizzle\l_base0::elem",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::_swizzle\l_base1\< 2, T, P, vecType,\l E0, E1,-1,-2, Aligned \>\l::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base1_3_012_00_01_t_00_01_p_00_01vec_type_00_01_e0_00_01_e1_00-1_00-2_00_01_aligned_01_4.html#a08b7cb3886356b94ac68beb83e03564c",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::detail::_swizzle\l_base1\< 3, T, P, vecType,\l E0, E1, E2,-1, Aligned\l \>::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base1_3_013_00_01_t_00_01_p_00_01vec_type_00_01_e0_00_01_e1_00_01_e2_00-1_00_01_aligned_01_4.html#a09485ed63b638b9887bd49ba3220ab7b",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::detail::_swizzle\l_base1\< 4, T, P, vecType,\l E0, E1, E2, E3, Aligned\l \>::operator()",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base1_3_014_00_01_t_00_01_p_00_01vec_type_00_01_e0_00_01_e1_0074d83cdf10610a072bf3157b31203824.html#a497e2bc364ab338474943fc655f69f1e",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::detail::_swizzle\l_base2\< N, T, P, vecType,\l E0, E1, E2, E3,(E0==E1\|\l\|E0==E2\|\|E0==E3\|\|E1==E2\|\|\lE1==E3\|\|E2==E3)\>::operator[]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base2.html#aa2ddf6ceceefa8a98ef2f7128ce57049",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::detail::_swizzle\l_base2\< N, T, P, vecType,\l E0, E1, E2, E3, 1 \>::operator[]",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base2_3_01_n_00_01_t_00_01_p_00_01vec_type_00_01_e0_00_01_e1_00_01_e2_00_01_e3_00_011_01_4.html#ad3ffb03de9a95ef467776571f51d40e7",tooltip=" "];
+}

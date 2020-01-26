@@ -1,0 +1,18 @@
+digraph "glm::sech"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::sech",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::sech",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__reciprocal.html#ga9a5cfd1e7170104a7b33863b1b75e5ae",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#gad4a4448baedb198b2b1e7880d2544dc9",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::acos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#ga58ad259b788528fe0a4bd2eeb5e381cc",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::cosh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#ga660582a4e5e843b6c1cd535777e8c295",tooltip=" "];
+  Node5 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+}

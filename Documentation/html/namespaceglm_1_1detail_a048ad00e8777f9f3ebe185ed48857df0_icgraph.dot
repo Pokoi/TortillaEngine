@@ -1,0 +1,16 @@
+digraph "glm::detail::mask"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::detail::mask",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::bitfieldExtract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__integer.html#gab84b88f3a8e367774e5dd1c618c353cf",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::bitfieldExtract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#ab781f965cc1130fc70a0a8aaf50e6813",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::bitfieldInsert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__integer.html#ga5681dfac9239beb1b8bd995e3c6496d7",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::bitfieldInsert",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#acec32bd3c6eb5719c5aea5b423085ae6",tooltip=" "];
+}

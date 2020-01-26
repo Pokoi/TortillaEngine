@@ -1,0 +1,16 @@
+digraph "glm::all"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::all",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::iround",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__integer.html#ga0a42ffb863cc980e91f98d2f5766de20",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::orientation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__rotate__vector.html#ga49b4d082305cdfcfe0a5c184f684a902",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::orientedAngle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__vector__angle.html#ga82a19d474be13c92c7b10caab42a5a72",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::uround",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__integer.html#gab61b8546aafdf58f119eb892b212607c",tooltip=" "];
+}

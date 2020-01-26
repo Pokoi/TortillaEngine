@@ -1,0 +1,16 @@
+digraph "glm::row"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::row",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::print\l_matrix_on",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#a705becbf05df4c8637731f85569fc0e6",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__io.html#ga61fbdb6ad70c4c8d750a847251fa4a4a",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::detail::print\l_matrix_pair_on",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#aff6c8f1c43115431bf40167f6638b78f",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__io.html#ga67ab2a9a13c872bd33e6a0455c97ce9c",tooltip=" "];
+}

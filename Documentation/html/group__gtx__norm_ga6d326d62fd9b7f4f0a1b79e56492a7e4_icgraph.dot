@@ -1,0 +1,14 @@
+digraph "glm::length2"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::length2",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::distance2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a109e6f3d69b13cc1ce23a83103601ab0",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::mat3x4_cast",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__dual__quaternion.html#ga576745d979e3c079a64152490c816954",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::rotation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__quaternion.html#gac4856d356c5c97cec74e9b672ea89240",tooltip=" "];
+}

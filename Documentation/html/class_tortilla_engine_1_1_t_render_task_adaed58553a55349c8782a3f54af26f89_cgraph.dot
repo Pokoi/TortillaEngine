@@ -1,0 +1,14 @@
+digraph "TortillaEngine::TRenderTask::add_camera"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TortillaEngine::TRenderTask\l::add_camera",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Adds a camera to the subscribed component collection."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TCameraComponent\l::get_camera",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_camera_component.html#ac2741b3ecf015bbd8f80587766b794c5",tooltip="Gets a reference of the camera."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TortillaEngine::TEntity\l::get_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#a0c749aaf3159d2c7aed110787115d4f4",tooltip="Gets the name of the entity."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TortillaEngine::TComponent\l::get_parent",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_component.html#aafee206253071c5109493a6d653c1d1c",tooltip="Gets a refence of the entity this component is attached to."];
+}

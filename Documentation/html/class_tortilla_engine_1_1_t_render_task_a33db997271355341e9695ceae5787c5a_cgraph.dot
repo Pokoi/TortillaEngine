@@ -1,0 +1,14 @@
+digraph "TortillaEngine::TRenderTask::run"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TortillaEngine::TRenderTask::run",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Executes the task rendering all the components subscribed to the task."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TScene\l::get_window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_scene.html#a555eb80a1fd014c0a3ee13926e6aaf99",tooltip="Gets a reference to the window this scene belongs to."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TortillaEngine::TWindow\l::reset",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_window.html#ae06af483db4ec97a74685f125c33ffc8",tooltip="Clears the window."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TortillaEngine::TWindow\l::swap_buffers",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_window.html#ae888171d9819cc6ef2432908fc6fd48a",tooltip="Swaps the windows buffers."];
+}

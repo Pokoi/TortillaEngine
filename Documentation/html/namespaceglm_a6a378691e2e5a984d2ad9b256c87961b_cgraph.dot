@@ -1,0 +1,17 @@
+digraph "glm::fastCos"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::fastCos",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::fastCos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__fast__trigonometry.html#gab34c8b45c23c0165a64dcecfcc3b302a",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::angle",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#gad4a4448baedb198b2b1e7880d2544dc9",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::acos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#ga58ad259b788528fe0a4bd2eeb5e381cc",tooltip=" "];
+  Node4 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::detail::cos_52s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#a09055f8d723109dc95c8cc2309e20acc",tooltip=" "];
+}

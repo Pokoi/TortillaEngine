@@ -1,0 +1,45 @@
+digraph "glm::simplex"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::simplex",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::clamp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga93bce26c7d80d30a62f5c508f8498a6c",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga98caa7f95a94c86a86ebce893a45326c",tooltip=" "];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga2c2bde1cec025b7ddff83c74a1113719",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::dot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga7dada304da2ba7dd3376ab4f178c3f6b",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::floor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga568b822b78f045f77c3325e165b44d5d",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::gtc::grad4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1gtc.html#a5c4a3d973c67fd78ab6bc8f993d172ac",tooltip=" "];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga693d77696ff36572a0da79efec965acd",tooltip=" "];
+  Node7 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="glm::fract",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga8ba89e40e55ae5cdf228548f9b7639c7",tooltip=" "];
+  Node9 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="glm::lessThan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__vector__relational.html#ga6261970937a70b0b747ae0d3ade1c188",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="glm::mod",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga12201563ef902e3b07e0d1d7656efdb1",tooltip=" "];
+  Node11 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="glm::detail::permute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#adce908e01ac22b5e55c29bacbf6a37a5",tooltip=" "];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="glm::detail::mod289",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#a9968154b610b2b78f492b2f7babd728c",tooltip=" "];
+  Node13 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="glm::step",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga015a1261ff23e12650211aa872863cce",tooltip=" "];
+  Node14 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="glm::mix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#gadccbaffe46f369cf1a96b2aef92cbfdd",tooltip=" "];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="glm::detail::taylorInvSqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#a82e6fa9d633a5f76f8b7e046ac5d91f4",tooltip=" "];
+}

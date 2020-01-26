@@ -1,0 +1,30 @@
+digraph "TortillaEngine::TCollider::TCollider"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TortillaEngine::TCollider\l::TCollider",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Creates a collider with the given values."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TComponent\l::add_to_update_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_component.html#abffd85363c4df85d840b51325dc04e28",tooltip="Adds this component to the update component of the entity. If no update component is added,..."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TortillaEngine::TEntity\l::add_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#a7c761a79af1e3dfb48f4c054f69a5542",tooltip="Adds a component to this entity."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TortillaEngine::TEntity\l::get_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#a86a0831b5fb108bfa8a2936943c0f93a",tooltip="Gets a reference to a component attached to this entity of the given type. If the component doesn't e..."];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TortillaEngine::TEntity\l::has_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#ab9914334d7b99fedf450d7fd684261d6",tooltip="Check if the entity has an attached component of the given type."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TortillaEngine::TCollider\l::calculate_center",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_collider.html#a86f0440dfa2d5b048e1aa51496ce7b29",tooltip="Calculates the center of the collider."];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TortillaEngine::TTransform\lComponent::get_position",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_transform_component.html#a2c75247bf22af67ef2c8bd49fbde5f1d",tooltip="Gets the position."];
+  Node6 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TortillaEngine::TEntity\l::get_transform",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#adabe9ed284fc32a6bb8da29ad67782f7",tooltip="Gets the local transfrom component of the entity."];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TortillaEngine::TCollider\l::subscribe_to_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_collider.html#aa99962ed6448a6edc928c7ff2ee31cda",tooltip="Subscription of the component to the task that manages it."];
+  Node9 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="TortillaEngine::TEntity\l::get_scene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#ab11af6a82768c3edc50d982342385dba",tooltip="Gets a reference of the scene this entity belongs to."];
+  Node9 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="TortillaEngine::TScene\l::get_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_scene.html#a5b7889e610fd3203068d9782f805b306",tooltip="Gets a task by his type."];
+}

@@ -1,0 +1,18 @@
+digraph "glm::roll"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::roll",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::eulerAngles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#gadb92ec1c1b0dd6b024176a73fbef3e64",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::eulerAngleYXZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga0242b5ab68651db70c6025815549427f",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::yawPitchRoll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#gaf9c8d0f1df88c5344165600774489bc5",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::orientate3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga33f0d790cecd8337ee83f8e3a8109b11",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::orientate4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga4e25c9468b6f002c76e9a2412bcfa503",tooltip=" "];
+}

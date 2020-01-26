@@ -1,0 +1,14 @@
+digraph "TortillaEngine::TMessage::get_id"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TortillaEngine::TMessage\l::get_id",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Gets the id of the message."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TDispatcher\l::send",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_dispatcher.html#a0533f9624dbb8407acc0dbbec8b36a74",tooltip="Sends a message to all the observers subscribed to this message id."];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TortillaEngine::TInputMapper\lTask::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_input_mapper_task.html#a8ac17b32f56abf4ab59f16874da7679d",tooltip="Recives the events in order and launch the messages of the actions."];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TortillaEngine::TCollisions\lTask::run",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_collisions_task.html#a2c1ec859f7fee45133496e825d3d065f",tooltip="Execute the collision detection check of all the subscribed colliders."];
+}

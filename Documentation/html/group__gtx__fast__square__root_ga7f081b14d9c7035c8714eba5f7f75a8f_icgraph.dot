@@ -1,0 +1,18 @@
+digraph "glm::fastInverseSqrt"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::fastInverseSqrt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::fastNormalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a30d366d62d66b3de535a2ec6dedcb370",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::fastNormalizeDot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__normalize__dot.html#ga8593b21bc2fe22184f01d5e08b5a2024",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::fastSqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__fast__square__root.html#ga6c460e9414a50b2fc455c8f64c86cdc9",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::fastLength",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__fast__square__root.html#gae28a3099cbd6404a4ea8ef22147ed7b0",tooltip=" "];
+  Node4 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::fastSqrt",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__fast__square__root.html#gaad9f601bbc3faa04dda384e4c4e1592c",tooltip=" "];
+}

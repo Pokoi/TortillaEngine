@@ -1,0 +1,24 @@
+digraph "rapidxml::xml_node::first_attribute"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="rapidxml::xml_node\l::first_attribute",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rapidxml::xml_node\l\< char \>::append_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#a33ce3386f8c42dd4db658b75cbb6e6c4",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rapidxml::memory_pool\l::clone_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1memory__pool.html#a0a10679fc17597d339a0dc107f8a94ac",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rapidxml::count_attributes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacerapidxml.html#a6255d15e5d8ad12ebcd7c60da51c97e2",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rapidxml::xml_node\l\< char \>::prepend_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#a8b62ee76489faf8e2d1210869d547684",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rapidxml::xml_node\l\< char \>::remove_all\l_attributes",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#aa8d5d9484aa1eb5ff1841a073c84c1aa",tooltip="Removes all attributes of node."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rapidxml::xml_node\l\< char \>::remove_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#a6f97b1b4f46a94a4587915df3c0c6b57",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="rapidxml::xml_node\l\< char \>::remove_first\l_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#aa95192d2a165cca16c551ed2a2a06aec",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="rapidxml::xml_node\l\< char \>::remove_last\l_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#a1781a2cbedc9a51d609ad5b528125635",tooltip=" "];
+}

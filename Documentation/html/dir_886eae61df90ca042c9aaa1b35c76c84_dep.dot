@@ -1,0 +1,24 @@
+digraph "D:/Repositorios/TortillaEngine/engine-library/code/headers/glm" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7c5ad5927ff93176f26f311e04a31ae4 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="headers" fontname="Helvetica", fontsize="10", URL="dir_7c5ad5927ff93176f26f311e04a31ae4.html"]
+  subgraph clusterdir_886eae61df90ca042c9aaa1b35c76c84 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_886eae61df90ca042c9aaa1b35c76c84.html"];
+    dir_886eae61df90ca042c9aaa1b35c76c84 [shape=plaintext label="glm"];
+    dir_b4448c93e0f2e1f11a116de1a083c279 [shape=box label="detail" color="black" fillcolor="white" style="filled" URL="dir_b4448c93e0f2e1f11a116de1a083c279.html"];
+    dir_0a7645d645f258f5916f193559d500be [shape=box label="gtc" color="black" fillcolor="white" style="filled" URL="dir_0a7645d645f258f5916f193559d500be.html"];
+    dir_40af022c04da0f03ca2fd285fbe3a37c [shape=box label="gtx" color="black" fillcolor="white" style="filled" URL="dir_40af022c04da0f03ca2fd285fbe3a37c.html"];
+    dir_b74e639b31050edeb08a94a91ad9798c [shape=box label="simd" color="black" fillcolor="white" style="filled" URL="dir_b74e639b31050edeb08a94a91ad9798c.html"];
+  }
+  }
+  dir_0a7645d645f258f5916f193559d500be->dir_b74e639b31050edeb08a94a91ad9798c [headlabel="1", labeldistance=1.5 headhref="dir_000009_000010.html"];
+  dir_0a7645d645f258f5916f193559d500be->dir_b4448c93e0f2e1f11a116de1a083c279 [headlabel="34", labeldistance=1.5 headhref="dir_000009_000008.html"];
+  dir_886eae61df90ca042c9aaa1b35c76c84->dir_b4448c93e0f2e1f11a116de1a083c279 [headlabel="79", labeldistance=1.5 headhref="dir_000006_000008.html"];
+  dir_40af022c04da0f03ca2fd285fbe3a37c->dir_0a7645d645f258f5916f193559d500be [headlabel="27", labeldistance=1.5 headhref="dir_000007_000009.html"];
+  dir_40af022c04da0f03ca2fd285fbe3a37c->dir_b4448c93e0f2e1f11a116de1a083c279 [headlabel="20", labeldistance=1.5 headhref="dir_000007_000008.html"];
+  dir_b4448c93e0f2e1f11a116de1a083c279->dir_0a7645d645f258f5916f193559d500be [headlabel="1", labeldistance=1.5 headhref="dir_000008_000009.html"];
+  dir_b4448c93e0f2e1f11a116de1a083c279->dir_b74e639b31050edeb08a94a91ad9798c [headlabel="4", labeldistance=1.5 headhref="dir_000008_000010.html"];
+  dir_b4448c93e0f2e1f11a116de1a083c279->dir_40af022c04da0f03ca2fd285fbe3a37c [headlabel="1", labeldistance=1.5 headhref="dir_000008_000007.html"];
+}

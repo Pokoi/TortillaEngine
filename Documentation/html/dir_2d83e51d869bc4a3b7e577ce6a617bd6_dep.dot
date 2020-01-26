@@ -1,0 +1,13 @@
+digraph "D:/Repositorios/TortillaEngine/engine-library" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_10bd89338e4161860fef250e5a065577 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="TortillaEngine" fontname="Helvetica", fontsize="10", URL="dir_10bd89338e4161860fef250e5a065577.html"]
+  subgraph clusterdir_2d83e51d869bc4a3b7e577ce6a617bd6 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_2d83e51d869bc4a3b7e577ce6a617bd6.html"];
+    dir_2d83e51d869bc4a3b7e577ce6a617bd6 [shape=plaintext label="engine-library"];
+    dir_b2ec75d41b7c6f0b63f2c23b69e7ad28 [shape=box label="code" color="red" fillcolor="white" style="filled" URL="dir_b2ec75d41b7c6f0b63f2c23b69e7ad28.html"];
+  }
+  }
+}

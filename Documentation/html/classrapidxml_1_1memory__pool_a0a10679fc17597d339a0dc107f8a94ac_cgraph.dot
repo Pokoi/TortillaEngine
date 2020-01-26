@@ -1,0 +1,18 @@
+digraph "rapidxml::memory_pool::clone_node"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="rapidxml::memory_pool\l::clone_node",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rapidxml::memory_pool\l::allocate_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1memory__pool.html#a3de2a66c983336e006ea3844e244ed30",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rapidxml::memory_pool\l::allocate_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1memory__pool.html#a4118581c29ee9a2f6b55ebf7dac185f8",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="rapidxml::xml_node\l::first_attribute",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#ab816ab6f13ee4b0588d5b76b0697511c",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="rapidxml::xml_node\l::first_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#acdf3691224d683f50692616a92a75d3f",tooltip=" "];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rapidxml::xml_node\l::type",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#a5f91729128856b0aaab598d4364ace60",tooltip=" "];
+}

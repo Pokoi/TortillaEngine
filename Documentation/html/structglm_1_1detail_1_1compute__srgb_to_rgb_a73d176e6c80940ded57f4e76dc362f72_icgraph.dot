@@ -1,0 +1,10 @@
+digraph "glm::detail::compute_srgbToRgb::call"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::detail::compute\l_srgbToRgb::call",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::convertSRGBToLinear",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__color__space.html#ga28e98e64347cf385cadc1ceb4def55c9",tooltip=" "];
+}

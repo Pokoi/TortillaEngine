@@ -1,0 +1,12 @@
+digraph "glm::inversesqrt"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::inversesqrt",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::compute\l_normalize::call",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__normalize.html#a3c50cc24c57b7cd61d1fb90352699127",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::normalizeDot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__normalize__dot.html#gaffbc2f2cb15838de8886a68048f9004d",tooltip=" "];
+}

@@ -1,0 +1,22 @@
+digraph "glm::detail::toFloat32"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::detail::toFloat32",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::compute\l_half\< P, tvec1 \>::unpack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec1_01_4.html#a92e6b667d1d28ae167b9df692c805afd",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::detail::compute\l_half\< P, tvec2 \>::unpack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec2_01_4.html#a6458eaa1f6f937b70380469ad6c17f5e",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::detail::compute\l_half\< P, tvec3 \>::unpack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec3_01_4.html#a48226a2ef3176a5fbf6bbad330180517",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::detail::compute\l_half\< P, tvec4 \>::unpack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec4_01_4.html#a60cf0de8f240ff4836f7f96799cf5494",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::unpackHalf1x16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__packing.html#gaa6eebcdfc746584b7d1823f1d5344fed",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::unpackHalf2x16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__packing.html#ga90be544929ed83fa7039208bbab8c0ba",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::unpackHalf4x16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__packing.html#gaea526d6491ad40401eac34803984bf27",tooltip=" "];
+}

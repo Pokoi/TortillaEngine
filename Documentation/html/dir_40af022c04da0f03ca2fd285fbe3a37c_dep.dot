@@ -1,0 +1,16 @@
+digraph "D:/Repositorios/TortillaEngine/engine-library/code/headers/glm/gtx" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_886eae61df90ca042c9aaa1b35c76c84 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="glm" fontname="Helvetica", fontsize="10", URL="dir_886eae61df90ca042c9aaa1b35c76c84.html"]
+  dir_40af022c04da0f03ca2fd285fbe3a37c [shape=box, label="gtx", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_40af022c04da0f03ca2fd285fbe3a37c.html"];
+  }
+  dir_0a7645d645f258f5916f193559d500be [shape=box label="gtc" URL="dir_0a7645d645f258f5916f193559d500be.html"];
+  dir_b4448c93e0f2e1f11a116de1a083c279 [shape=box label="detail" URL="dir_b4448c93e0f2e1f11a116de1a083c279.html"];
+  dir_0a7645d645f258f5916f193559d500be->dir_b4448c93e0f2e1f11a116de1a083c279 [headlabel="34", labeldistance=1.5 headhref="dir_000009_000008.html"];
+  dir_40af022c04da0f03ca2fd285fbe3a37c->dir_0a7645d645f258f5916f193559d500be [headlabel="27", labeldistance=1.5 headhref="dir_000007_000009.html"];
+  dir_40af022c04da0f03ca2fd285fbe3a37c->dir_b4448c93e0f2e1f11a116de1a083c279 [headlabel="20", labeldistance=1.5 headhref="dir_000007_000008.html"];
+  dir_b4448c93e0f2e1f11a116de1a083c279->dir_0a7645d645f258f5916f193559d500be [headlabel="1", labeldistance=1.5 headhref="dir_000008_000009.html"];
+  dir_b4448c93e0f2e1f11a116de1a083c279->dir_40af022c04da0f03ca2fd285fbe3a37c [headlabel="1", labeldistance=1.5 headhref="dir_000008_000007.html"];
+}

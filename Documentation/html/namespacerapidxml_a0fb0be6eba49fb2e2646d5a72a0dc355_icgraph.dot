@@ -1,0 +1,12 @@
+digraph "rapidxml::print"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="rapidxml::print",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="rapidxml::operator\<\<",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacerapidxml.html#a9ed8e626dd81348caede1f92a6c8418a",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="rapidxml::print",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespacerapidxml.html#a0d2e114d5dd85e13c23b8dab600720fe",tooltip=" "];
+}

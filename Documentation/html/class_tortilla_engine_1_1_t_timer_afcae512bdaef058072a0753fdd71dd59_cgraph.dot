@@ -1,0 +1,10 @@
+digraph "TortillaEngine::TTimer::elapsed_seconds"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TortillaEngine::TTimer\l::elapsed_seconds",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Gets the elapsed time in seconds."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TTimer\l::elapsed_milliseconds",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_timer.html#a7cf074ff4a0df98902881674ce09a6c6",tooltip="Gets the elapsed time in milliseconds."];
+}

@@ -1,0 +1,16 @@
+digraph "glm::eulerAngleZ"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::eulerAngleZ",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::eulerAngleXZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#gab2d7dc94b9a7519d741aaa208c7a335b",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::eulerAngleYZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga1033f84f51d61646145352ef0c1bb58c",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::eulerAngleZX",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#gaef83cf40bd9ae780011b29970f16f622",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::eulerAngleZY",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga02f037926568bbd12dfece3b28b20343",tooltip=" "];
+}

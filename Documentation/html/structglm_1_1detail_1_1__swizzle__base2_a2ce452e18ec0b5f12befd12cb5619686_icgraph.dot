@@ -1,0 +1,18 @@
+digraph "glm::detail::_swizzle_base2::_apply_op"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::detail::_swizzle\l_base2::_apply_op",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::_swizzle\l_base2\< N, T, P, vecType,\l E0, E1, E2, E3,(E0==E1\|\l\|E0==E2\|\|E0==E3\|\|E1==E2\|\|\lE1==E3\|\|E2==E3)\>::operator*=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base2.html#afc710132e971b2121701ec7a5bd8761b",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::detail::_swizzle\l_base2\< N, T, P, vecType,\l E0, E1, E2, E3,(E0==E1\|\l\|E0==E2\|\|E0==E3\|\|E1==E2\|\|\lE1==E3\|\|E2==E3)\>::operator+=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base2.html#a20ab7639070ba0bc572b6224d77c1052",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::detail::_swizzle\l_base2\< N, T, P, vecType,\l E0, E1, E2, E3,(E0==E1\|\l\|E0==E2\|\|E0==E3\|\|E1==E2\|\|\lE1==E3\|\|E2==E3)\>::operator-=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base2.html#a526ef7902d169766df8eb27d74381187",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::detail::_swizzle\l_base2\< N, T, P, vecType,\l E0, E1, E2, E3,(E0==E1\|\l\|E0==E2\|\|E0==E3\|\|E1==E2\|\|\lE1==E3\|\|E2==E3)\>::operator/=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base2.html#adadee6f3dfed945dab83ecd0a2805756",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::detail::_swizzle\l_base2\< N, T, P, vecType,\l E0, E1, E2, E3,(E0==E1\|\l\|E0==E2\|\|E0==E3\|\|E1==E2\|\|\lE1==E3\|\|E2==E3)\>::operator=",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1__swizzle__base2.html#ab4f91d3891e4f4e0acb1e96364527c2b",tooltip=" "];
+}

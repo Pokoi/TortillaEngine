@@ -1,0 +1,12 @@
+digraph "glm::length"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::length",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::normalize",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#ga35b6bcb22ac6d1e4a85440f5b69bdf86",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::tquat\< T, defaultp\l \>::tquat",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1tquat.html#a5c680cd9a6e7de9e5b0fc2e9e096e6a7",tooltip="Explicit conversion operators."];
+}

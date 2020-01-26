@@ -1,0 +1,15 @@
+digraph "glm::isfinite"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="glm::isfinite",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::isfinite",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__compatibility.html#ga8c6a59e2f2ac84fba0c5932f1c35bf7a",tooltip="Test whether or not a scalar or each vector component is a finite value. (From GLM_GTX_compatibility)"];
+  Node2 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::max",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga98caa7f95a94c86a86ebce893a45326c",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::min",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__common.html#ga2c2bde1cec025b7ddff83c74a1113719",tooltip=" "];
+}

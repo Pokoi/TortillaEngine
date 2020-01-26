@@ -1,0 +1,40 @@
+digraph "glm::atan"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::atan",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::acot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__reciprocal.html#gaeadfb9c9d71093f7865b2ba2ca8d104d",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::acot",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a83b17146fd12b7822b1a6ef98790a8da",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::atan",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__trigonometric.html#gae8f22458bba8f2321ceb1bfc4a543216",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::log",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__quaternion.html#ga791f42e134bfe97fc9c96f4668dd7489",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::pitch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#ga2c08b93a4261c10748fd4d2104346f17",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::eulerAngles",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#gadb92ec1c1b0dd6b024176a73fbef3e64",tooltip=" "];
+  Node6 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::eulerAngleYXZ",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga0242b5ab68651db70c6025815549427f",tooltip=" "];
+  Node6 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="glm::yawPitchRoll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#gaf9c8d0f1df88c5344165600774489bc5",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="glm::orientate3",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga33f0d790cecd8337ee83f8e3a8109b11",tooltip=" "];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="glm::orientate4",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__euler__angles.html#ga4e25c9468b6f002c76e9a2412bcfa503",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="glm::polar",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__polar__coordinates.html#gafcf95a38c780a4ad5ba14c8ac9e522bb",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="glm::euclidean",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__polar__coordinates.html#ga45ece1fbf7260c43e0f873c498202581",tooltip=" "];
+  Node13 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="glm::roll",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__quaternion.html#ga4fd705376c6c1fd667be0055a0ea58ec",tooltip=" "];
+  Node14 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="glm::shortMix",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__quaternion.html#ga3534443de2a1a806f386976546cddc81",tooltip=" "];
+}

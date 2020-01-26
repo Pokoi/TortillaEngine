@@ -1,0 +1,23 @@
+digraph "glm::exp"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::exp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::exp2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a8f6240c6756f850537398b1af2751c4b",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::fastPow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__fast__exponential.html#ga5340e98a11fcbbd936ba6e983a154d50",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::fastPow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a5afa4ee352971a9d5ce538f4370074e9",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::frexp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a90f422cea9e6e5c383bb69b593434c97",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::gauss",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__functions.html#ga0b50b197ff74261a0fad90f4b8d24702",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::intermediate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__quaternion.html#ga56abae85b3669c866e91f3c57b298b9c",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::ldexp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a2632eefd82cbdf3ca860c41579a5ef9e",tooltip=" "];
+}

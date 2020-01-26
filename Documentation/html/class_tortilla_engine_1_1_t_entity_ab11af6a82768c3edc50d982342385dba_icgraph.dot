@@ -1,0 +1,22 @@
+digraph "TortillaEngine::TEntity::get_scene"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="TortillaEngine::TEntity\l::get_scene",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Gets a reference of the scene this entity belongs to."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TCameraComponent\l::subscribe_to_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_camera_component.html#a0509ba7625b6cf15501c867a4ae5a370",tooltip="Subscribe to the render task."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TortillaEngine::TRenderComponent\l::subscribe_to_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_render_component.html#ac8a8b37453ebc06e6ca5b6fd1961919c",tooltip="Subscribes to the render task."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TortillaEngine::TRenderComponent\l::parse_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_render_component.html#a6ba48751000bb8b7215d193f2103b2e9",tooltip="Loads the component data from a xml node."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TortillaEngine::TUpdateComponent\l::subscribe_to_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_update_component.html#af9e2f39436b0b77893701ceef7890689",tooltip="Subscribe the component to the script task."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="TortillaEngine::TLightComponent\l::subscribe_to_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_light_component.html#a14238c3779b2541679025f38e996be5f",tooltip="Adds the ligth to the render task."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TortillaEngine::TCollider\l::subscribe_to_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_collider.html#aa99962ed6448a6edc928c7ff2ee31cda",tooltip="Subscription of the component to the task that manages it."];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TortillaEngine::TCollider\l::TCollider",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_collider.html#aca14a63deb74db91a06158a6fc6d21fe",tooltip="Creates a collider with the given values."];
+}

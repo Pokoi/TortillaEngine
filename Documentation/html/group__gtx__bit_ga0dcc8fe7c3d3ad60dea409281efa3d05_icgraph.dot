@@ -1,0 +1,16 @@
+digraph "glm::highestBitValue"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::highestBitValue",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::highestBitValue",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__bit.html#ga5eea3a4d429040af13d39a7d7cd84d73",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::powerOfTwoAbove",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a4f29a0e902ea0e3a76fc10c5b0ef31b6",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::powerOfTwoBelow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a895c5bb540f5f52ef2b7a81321a98627",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::powerOfTwoNearest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a90d716367872062cffce4a8cd51acd0c",tooltip=" "];
+}

@@ -1,0 +1,24 @@
+digraph "glm::detail::overflow"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::detail::overflow",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::toFloat16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#ac16321696a34b41c55f941b319d50652",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::detail::compute\l_half\< P, tvec1 \>::pack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec1_01_4.html#a9a68b199364fc66de210ca1de0d2242b",tooltip=" "];
+  Node2 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::detail::compute\l_half\< P, tvec2 \>::pack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec2_01_4.html#ad4f9aae8c371dfc6bb0c566beac0d172",tooltip=" "];
+  Node2 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::detail::compute\l_half\< P, tvec3 \>::pack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec3_01_4.html#a329d076df25a395e8d4872384ca17221",tooltip=" "];
+  Node2 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::detail::compute\l_half\< P, tvec4 \>::pack",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__half_3_01_p_00_01tvec4_01_4.html#a10c39dc8342760eee962fb57e5d8a391",tooltip=" "];
+  Node2 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::packHalf1x16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__packing.html#gaba534b320836a35372e00af5771dd1a2",tooltip=" "];
+  Node2 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::packHalf2x16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__packing.html#ga082f6dd65f73a547ed3067ef00be036f",tooltip=" "];
+  Node2 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="glm::packHalf4x16",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__packing.html#ga8104f0b719b7792491f2b789a6dd6f96",tooltip=" "];
+}

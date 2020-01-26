@@ -1,0 +1,24 @@
+digraph "TortillaEngine::TInputTask::run"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TortillaEngine::TInputTask::run",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Execute the input detection."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TScene\l::get_kernel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_scene.html#ae93380dfcf813e4e037e74d3381da6b8",tooltip="Gets a reference to the kernel."];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TortillaEngine::TKeyboard\lInput::TKey::get_name",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$struct_tortilla_engine_1_1_t_keyboard_input_1_1_t_key.html#a54cfb4b3db057b61fe8d4ac36aa83a30",tooltip="Gives the name of the key."];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TortillaEngine::TScene\l::get_window",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_scene.html#a555eb80a1fd014c0a3ee13926e6aaf99",tooltip="Gets a reference to the window this scene belongs to."];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TortillaEngine::TWindow\l::poll_events",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_window.html#aec0c9d9293efe08642961f767f2e6441",tooltip="Gets the event index."];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::e",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__constants.html#ga4b7956eb6e2fbedfc7cf2e46e85c5139",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="TortillaEngine::TKernel\l::stop",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_kernel.html#a7446631e3417bcea243ce9f40c5e1d5c",tooltip="Stops the execution."];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TortillaEngine::TKeyboard\lInput::translate_sdl_code",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_keyboard_input.html#a4e9f6187def773e30201d9c6ef619cd0",tooltip="Translate the sdl code of the key."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="glm::length",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__func__geometric.html#ga18d45e3d4c7705e67ccfabd99e521604",tooltip=" "];
+}

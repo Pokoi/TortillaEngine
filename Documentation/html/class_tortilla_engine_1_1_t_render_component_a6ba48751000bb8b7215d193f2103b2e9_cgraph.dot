@@ -1,0 +1,28 @@
+digraph "TortillaEngine::TRenderComponent::parse_component"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="TortillaEngine::TRenderComponent\l::parse_component",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Loads the component data from a xml node."];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="TortillaEngine::TComponent\l::add_to_update_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_component.html#abffd85363c4df85d840b51325dc04e28",tooltip="Adds this component to the update component of the entity. If no update component is added,..."];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="TortillaEngine::TEntity\l::add_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#a7c761a79af1e3dfb48f4c054f69a5542",tooltip="Adds a component to this entity."];
+  Node2 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="TortillaEngine::TEntity\l::get_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#a86a0831b5fb108bfa8a2936943c0f93a",tooltip="Gets a reference to a component attached to this entity of the given type. If the component doesn't e..."];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="TortillaEngine::TEntity\l::has_component",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#ab9914334d7b99fedf450d7fd684261d6",tooltip="Check if the entity has an attached component of the given type."];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="rapidxml::xml_node\l::first_node",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#acdf3691224d683f50692616a92a75d3f",tooltip=" "];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="rapidxml::xml_node\l::next_sibling",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classrapidxml_1_1xml__node.html#ad36aa4445ced578f93c3e06770cb3ef9",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="TortillaEngine::TRenderComponent\l::subscribe_to_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_render_component.html#ac8a8b37453ebc06e6ca5b6fd1961919c",tooltip="Subscribes to the render task."];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="TortillaEngine::TEntity\l::get_scene",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_entity.html#ab11af6a82768c3edc50d982342385dba",tooltip="Gets a reference of the scene this entity belongs to."];
+  Node8 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="TortillaEngine::TScene\l::get_task",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_tortilla_engine_1_1_t_scene.html#a5b7889e610fd3203068d9782f805b306",tooltip="Gets a task by his type."];
+}

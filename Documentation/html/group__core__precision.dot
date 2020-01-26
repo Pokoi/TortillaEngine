@@ -1,0 +1,11 @@
+digraph "Precision types"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=box];
+  rankdir=LR;
+  Node1 [label="Precision types",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="Non-GLSL types that are used to define precision-based types."];
+  Node3 [label="Types",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core__types.html",tooltip="The standard types defined by the specification."];
+  Node2 [label="GLM Core",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__core.html",tooltip="The core of GLM, which implements exactly and only the GLSL specification to the degree possible."];
+  Node2->Node1 [shape=plaintext, dir="back", style="solid"];
+  Node3->Node1 [shape=plaintext, dir="back", style="solid"];
+}

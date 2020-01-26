@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<input>
+	<actions>
+		
+		<action name="Move Left">
+
+			<key>KEY_PRESSED_A</key>				
+
+		</action>
+
+		<action name="Move Down">
+
+			<key>KEY_PRESSED_S</key>				
+
+		</action>
+
+		<action name="Move Right">
+
+			<key>KEY_PRESSED_D</key>				
+
+		</action>
+
+		<action name="Move Up">
+
+			<key>KEY_PRESSED_W</key>				
+
+		</action>
+
+	</actions>
+</input>

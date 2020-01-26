@@ -1,0 +1,33 @@
+digraph "glm::log"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::log",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::acosh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a68b59a562e15154aa2ef3bfb8f2348dc",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::asinh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a95c8fa9b13f28e9bb3e232c67ad7e419",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::atanh",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a97f30482bc92e985c2da212b97d40f10",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::fastLog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a68f4f516c08702395c9b76791bab5969",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="glm::fastPow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__fast__exponential.html#ga5340e98a11fcbbd936ba6e983a154d50",tooltip=" "];
+  Node6 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="glm::fastPow",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a5afa4ee352971a9d5ce538f4370074e9",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="glm::gaussRand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__random.html#ga5193a83e49e4fdc5652c084711083574",tooltip=" "];
+  Node8 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="glm::gaussRand",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#adc010d4dd74cff264ee912f72de1adb9",tooltip=" "];
+  Node1 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="glm::intermediate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__quaternion.html#ga56abae85b3669c866e91f3c57b298b9c",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="glm::detail::log2",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#a3d24a612f2c5fa4f3aaf97dcd979ef1c",tooltip=" "];
+  Node11 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="glm::detail::compute\l_log2::call",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__log2.html#a1ed6d8be264cc5602a6808d3574bdb06",tooltip=" "];
+  Node12 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="glm::detail::compute\l_log2\< T, P, vecType,\l false, Aligned \>::call",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structglm_1_1detail_1_1compute__log2_3_01_t_00_01_p_00_01vec_type_00_01false_00_01_aligned_01_4.html#a207c0e9ebab0865aec294f9940bd9c64",tooltip=" "];
+}

@@ -1,0 +1,17 @@
+digraph "glm::cosh"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::cosh",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::coth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__reciprocal.html#ga6b8b770eb7198e4dea59d52e6db81442",tooltip=" "];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::coth",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#ab851ec044cf6fe8cecb0c3d15359b110",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::sech",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtc__reciprocal.html#ga9a5cfd1e7170104a7b33863b1b75e5ae",tooltip=" "];
+  Node4 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="glm::sech",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#ad9b404c885d4fb0f7d227186b2444a10",tooltip=" "];
+}

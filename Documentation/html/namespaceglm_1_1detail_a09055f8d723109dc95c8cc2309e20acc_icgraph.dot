@@ -1,0 +1,14 @@
+digraph "glm::detail::cos_52s"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="glm::detail::cos_52s",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="glm::detail::cos_52s",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm_1_1detail.html#ad0c49f46dc1033d16811b2b90f1dcc64",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="glm::fastCos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$group__gtx__fast__trigonometry.html#gab34c8b45c23c0165a64dcecfcc3b302a",tooltip=" "];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="glm::fastCos",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespaceglm.html#a6a378691e2e5a984d2ad9b256c87961b",tooltip=" "];
+}
