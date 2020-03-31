@@ -62,6 +62,9 @@
     <Filter Include="sources\TScriptSystem">
       <UniqueIdentifier>{cd331d47-4b4a-4956-917a-25c6c8469e00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="headers\T2DPhysics">
+      <UniqueIdentifier>{3aa2d6e0-c88d-4861-9541-25f68c80507d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\TCollider.hpp">
@@ -159,6 +162,12 @@
     </ClInclude>
     <ClInclude Include="..\..\code\headers\TTimer.hpp">
       <Filter>headers\TBase</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\T2DPhysicWorld.hpp">
+      <Filter>headers\T2DPhysics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\T2DPhysicBody.hpp">
+      <Filter>headers\T2DPhysics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
