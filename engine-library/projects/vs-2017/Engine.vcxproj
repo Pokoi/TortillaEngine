@@ -14,6 +14,7 @@
     <ClInclude Include="..\..\code\headers\declarations.hpp" />
     <ClInclude Include="..\..\code\headers\initialize.hpp" />
     <ClInclude Include="..\..\code\headers\T2DPhysicBody.hpp" />
+    <ClInclude Include="..\..\code\headers\T2DPhysicCollider.hpp" />
     <ClInclude Include="..\..\code\headers\T2DPhysicWorld.hpp" />
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />
     <ClInclude Include="..\..\code\headers\TCameraComponent.hpp" />
@@ -48,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\initialize.cpp" />
+    <ClCompile Include="..\..\code\sources\T2DPhysicBody.cpp" />
+    <ClCompile Include="..\..\code\sources\T2DPhysicCollider.cpp" />
+    <ClCompile Include="..\..\code\sources\T2DPhysicWorld.cpp" />
     <ClCompile Include="..\..\code\sources\TAudio.cpp" />
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TCollider.cpp" />

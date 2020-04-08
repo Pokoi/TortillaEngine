@@ -1,6 +1,6 @@
 /*
- * File: T2DPhysicWorld.hpp
- * File Created: 31st March 2020
+ * File: T2DPhysicWorld.cpp
+ * File Created: 8th April 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
@@ -27,29 +27,19 @@
  * SOFTWARE.
  */
 
-#pragma once
-
-#include <glm/glm.hpp> 
-#include <T2DPhysicBody.hpp>
-#include <memory>
-
+#include <T2DPhysicWorld.hpp>
+#include <box2d.h>
 
 namespace TortillaEngine
 {
-
-    class T2DPhysicWorld
+    T2DPhysicWorld::T2DPhysicWorld(glm::vec2 gravity) 
     {
+        world = new b2World(b2Vec2{ gravity.x, gravity.y });
+    }
 
-        class b2World * world = nullptr;
-    public:
-
-        T2DPhysicWorld(glm::vec2 gravity);
-        
-        ~T2DPhysicWorld()
-        {
-            delete world;
-        }
-
-        std::shared_ptr<class b2Body &> create_body();
-    };
+    std::shared_ptr<class b2Body&> T2DPhysicWorld::create_body()
+    {
+        b2BodyDef body_def;
+        return std::make_shared<b2Body>(world->CreateBody(&body_def));
+    }
 }

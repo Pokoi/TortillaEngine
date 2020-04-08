@@ -65,6 +65,9 @@
     <Filter Include="headers\T2DPhysics">
       <UniqueIdentifier>{3aa2d6e0-c88d-4861-9541-25f68c80507d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="sources\T2DPhysics">
+      <UniqueIdentifier>{63d9cc83-88f8-4536-9a3e-bbaf737d9852}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\TCollider.hpp">
@@ -169,6 +172,9 @@
     <ClInclude Include="..\..\code\headers\T2DPhysicBody.hpp">
       <Filter>headers\T2DPhysics</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\headers\T2DPhysicCollider.hpp">
+      <Filter>headers\T2DPhysics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">
@@ -230,6 +236,15 @@
     </ClCompile>
     <ClCompile Include="..\..\code\sources\TTimer.cpp">
       <Filter>sources\TBase</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\T2DPhysicBody.cpp">
+      <Filter>sources\T2DPhysics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\T2DPhysicWorld.cpp">
+      <Filter>sources\T2DPhysics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\T2DPhysicCollider.cpp">
+      <Filter>sources\T2DPhysics</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -392,6 +392,8 @@ public:
 	/// Dump this body to a log file
 	void Dump();
 
+	~b2Body();
+
 private:
 
 	friend class b2World;
@@ -425,7 +427,7 @@ private:
 	};
 
 	b2Body(const b2BodyDef* bd, b2World* world);
-	~b2Body();
+	
 
 	void SynchronizeFixtures();
 	void SynchronizeTransform();

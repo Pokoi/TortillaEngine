@@ -29,10 +29,45 @@
 
 #pragma once
 
+#include <T2DPhysicCollider.hpp>  // For the collider list
+
+#include <TComponent.hpp>
+#include <list>
+#include <memory>
+
 namespace TortillaEngine
 {
-    class T2DPhysicBody
+    class T2DPhysicBody : public TComponent
     {
+    public:
+        enum body_types {STATIC, DYNAMIC, KINEMATIC};
 
+    private:
+        std::shared_ptr<class b2Body> body = nullptr;
+        class b2MassData* mass_data = nullptr;
+
+        std::list <std::shared_ptr<T2DPhysicCollider> > colliders;
+
+    public:
+        T2DPhysicBody(class T2DPhysicWorld & world, body_types type);
+        ~T2DPhysicBody();
+
+        float get_mass();
+
+        bool is_dynamic();
+        bool is_static();
+        bool is_kinematic();
+
+        void set_dynamic();
+        void set_static();
+        void set_kinematic();
+        
+        void set_mass(float mass);
+        void set_position(glm::vec2 new_position);
+
+        void activate();
+        void inactivate();
+
+        void add_collider(T2DPhysicCollider& collider);
     };
 }
