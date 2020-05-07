@@ -31,6 +31,7 @@
 #include <TEntity.hpp>
 #include <TScene.hpp>
 #include <TVariant.hpp>
+#include <gtc/matrix_transform.inl>
 
 
 namespace TortillaEngine

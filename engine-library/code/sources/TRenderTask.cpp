@@ -30,9 +30,9 @@
 #include <TRenderTask.hpp>
 #include <TRenderComponent.hpp>
 #include <TScene.hpp>
-#include <Model_Obj.hpp>
-#include <Render_Node.hpp>
 #include <Light.hpp>
+
+#include <glad.h>
 
 
 namespace TortillaEngine
@@ -45,7 +45,10 @@ namespace TortillaEngine
     TRenderTask::TRenderTask(TScene* scene, int priority)
         :TTask{priority, scene} 
     {
-        renderer.reset(new glt::Render_Node);
+        gladLoadGL();
+        glEnable(GL_DEPTH_TEST);
+        glEnable(GL_CULL_FACE);
+        glCullFace(GL_BACK);
     }
 
     /**
@@ -62,7 +65,22 @@ namespace TortillaEngine
     void TRenderTask::run(float delta) 
     {        
         owner_scene ->get_window()->reset();
-        renderer    ->render();
+        
+        //skybox 
+
+        // lights
+
+        // models opaque
+
+        glEnable(GL_BLEND);
+        glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+        // transparent models
+
+        glDisable(GL_BLEND);
+
+        // Post process
+
         owner_scene ->get_window()->swap_buffers();
     }
 

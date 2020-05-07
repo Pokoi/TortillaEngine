@@ -32,6 +32,7 @@
 
 #include <declarations.hpp>
 #include <TComponent.hpp>
+#include <Camera.hpp>
 #include <memory>
 
 namespace TortillaEngine
@@ -44,7 +45,7 @@ namespace TortillaEngine
         /**
         @brief A reference to the camera
         */
-        std::shared_ptr<glt::Camera> camera;
+        std::shared_ptr<Rendering3D::Camera> camera;
 
     public:
 
@@ -75,7 +76,7 @@ namespace TortillaEngine
         @brief Gets a reference of the camera
         @return The reference to the camera
         */
-        std::shared_ptr<glt::Camera> get_camera();
+        std::shared_ptr<Rendering3D::Camera> get_camera();
 
         /**
         @brief Subscribe to the render task
@@ -86,7 +87,7 @@ namespace TortillaEngine
         @brief Apply the given transform to the camera
         @param transfrom The transform to apply
         */
-        void            apply_transform(glm::mat4& transform) override;
+        void  apply_transform(glm::mat4& transform) override;
     };
 
     

@@ -30,7 +30,7 @@
 
 #include <TWindow.hpp>
 #include <SDL.h>
-#include <OpenGL.hpp>
+#include <SDL_opengl.h>
 #include <iostream>
 #include <initialize.hpp>
 
@@ -102,9 +102,7 @@ namespace TortillaEngine
 
             if (window)
             {
-                context = SDL_GL_CreateContext (window);        
-
-                if (context)  glt::initialize_opengl_extensions();
+                context = SDL_GL_CreateContext (window);   
             }
         }
 			

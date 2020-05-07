@@ -1,12 +1,12 @@
 /*
- * File: declarations.hpp
- * File Created: 15th December 2019
+ * File: Camera.cpp
+ * File Created: 14th February 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
  * MIT License
  *
- * Copyright (c) 2019 Pokoidev
+ * Copyright (c) 2020 Pokoidev
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
  * this software and associated documentation files (the "Software"), to deal in
@@ -27,25 +27,22 @@
  * SOFTWARE.
  */
 
-#pragma once
+#include <Camera.hpp>
 
 
-////////////////////////////////////////////
-// SDL Mixer
+#include <math.h>
 
-typedef struct Mix_Chunk T_Chunk;
+namespace Rendering3D
+{
 
-////////////////////////////////////////////
-// SDL2
-
-typedef struct      SDL_Window SDL_Window;
-typedef void    *   SDL_GLContext;
-typedef union       SDL_Event SDL_Event;
-
-
-
-
-
-
-
-
+    /**
+    @brief Change the field of view
+    @param view The view reference
+    @param modificator The modification to apply
+    */
+    void Camera::change_fov(float modificator)
+    {
+        current_fov += modificator;
+        projection = glm::perspective(current_fov, aspect_ratio, near_plane, near_plane + render_distance);
+    }
+}

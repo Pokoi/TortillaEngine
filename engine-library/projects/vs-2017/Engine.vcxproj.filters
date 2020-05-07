@@ -62,11 +62,11 @@
     <Filter Include="sources\TScriptSystem">
       <UniqueIdentifier>{cd331d47-4b4a-4956-917a-25c6c8469e00}</UniqueIdentifier>
     </Filter>
-    <Filter Include="headers\T2DPhysics">
-      <UniqueIdentifier>{3aa2d6e0-c88d-4861-9541-25f68c80507d}</UniqueIdentifier>
+    <Filter Include="headers\render_base">
+      <UniqueIdentifier>{1013d09a-78d1-486a-8d0d-8dadfb4a68c1}</UniqueIdentifier>
     </Filter>
-    <Filter Include="sources\T2DPhysics">
-      <UniqueIdentifier>{63d9cc83-88f8-4536-9a3e-bbaf737d9852}</UniqueIdentifier>
+    <Filter Include="sources\render_base">
+      <UniqueIdentifier>{06a58c6b-b11d-4c05-843c-99eeca49fcc2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -166,14 +166,20 @@
     <ClInclude Include="..\..\code\headers\TTimer.hpp">
       <Filter>headers\TBase</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\T2DPhysicWorld.hpp">
-      <Filter>headers\T2DPhysics</Filter>
+    <ClInclude Include="..\..\code\render_base\headers\Camera.hpp">
+      <Filter>headers\render_base</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\T2DPhysicBody.hpp">
-      <Filter>headers\T2DPhysics</Filter>
+    <ClInclude Include="..\..\code\render_base\headers\Light.hpp">
+      <Filter>headers\render_base</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\code\headers\T2DPhysicCollider.hpp">
-      <Filter>headers\T2DPhysics</Filter>
+    <ClInclude Include="..\..\code\render_base\headers\Material.hpp">
+      <Filter>headers\render_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\render_base\headers\Mesh.hpp">
+      <Filter>headers\render_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\render_base\headers\Model.hpp">
+      <Filter>headers\render_base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -237,14 +243,14 @@
     <ClCompile Include="..\..\code\sources\TTimer.cpp">
       <Filter>sources\TBase</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\code\sources\T2DPhysicBody.cpp">
-      <Filter>sources\T2DPhysics</Filter>
+    <ClCompile Include="..\..\code\render_base\sources\Camera.cpp">
+      <Filter>sources\render_base</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\code\sources\T2DPhysicWorld.cpp">
-      <Filter>sources\T2DPhysics</Filter>
+    <ClCompile Include="..\..\code\render_base\sources\Mesh.cpp">
+      <Filter>sources\render_base</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\code\sources\T2DPhysicCollider.cpp">
-      <Filter>sources\T2DPhysics</Filter>
+    <ClCompile Include="..\..\code\render_base\sources\Model.cpp">
+      <Filter>sources\render_base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

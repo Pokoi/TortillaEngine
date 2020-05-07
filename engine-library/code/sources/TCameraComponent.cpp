@@ -50,7 +50,7 @@ namespace TortillaEngine
                                             float far_field = 2000.f,
                                             float fov = 0.5f,
                                             float aspect_ratio = 1.f
-                                        ) : TComponent{ parent }, camera{ new glt::Camera (fov, near_field, far_field, aspect_ratio)}
+                                        ) : TComponent{ parent }, camera{ new Rendering3D::Camera (fov, aspect_ratio, near_field, far_field - near_field)}
     {        
         add_to_update_component();
         subscribe_to_task();
@@ -62,6 +62,7 @@ namespace TortillaEngine
     */
     bool TCameraComponent::parse_component(rapidxml::xml_node<>* component_node)
     {
+        float near_plane, far_plane, fov, aspect_ratio;
 
         for (
             rapidxml::xml_node<>* camera = component_node->first_node();
@@ -73,23 +74,23 @@ namespace TortillaEngine
 
             if ((std::string)camera->name() == "near")
             {
-                this->camera->set_near(std::stof(value));                
+                near_plane = std::stof(value);                
             }
             else if ((std::string)camera->name() == "far")
             {
-                this->camera->set_far(std::stof(value));
+                far_plane = std::stof(value);
             }
             else if ((std::string)camera->name() == "fov")
             {
-                this->camera->set_fov(std::stof(value));
+                fov = std::stof(value);
             }
             else if ((std::string)camera->name() == "ratio")
             {
-                this->camera->set_aspect_ratio(std::stof(value));
+                aspect_ratio = std::stof(value);                
             }
         }
-
         
+        camera = std::make_shared<Rendering3D::Camera>(fov, aspect_ratio, near_plane, far_plane - near_plane);
 
         return true;
     }
@@ -98,7 +99,7 @@ namespace TortillaEngine
     @brief Gets a reference of the camera
     @return The reference to the camera
     */
-    std::shared_ptr<glt::Camera> TCameraComponent::get_camera()
+    std::shared_ptr<Rendering3D::Camera> TCameraComponent::get_camera()
     {
         return camera;
     }

@@ -13,9 +13,6 @@
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\declarations.hpp" />
     <ClInclude Include="..\..\code\headers\initialize.hpp" />
-    <ClInclude Include="..\..\code\headers\T2DPhysicBody.hpp" />
-    <ClInclude Include="..\..\code\headers\T2DPhysicCollider.hpp" />
-    <ClInclude Include="..\..\code\headers\T2DPhysicWorld.hpp" />
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />
     <ClInclude Include="..\..\code\headers\TCameraComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TCollider.hpp" />
@@ -46,12 +43,17 @@
     <ClInclude Include="..\..\code\headers\TUpdateComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TVariant.hpp" />
     <ClInclude Include="..\..\code\headers\TWindow.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\Camera.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\Light.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\Material.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\Mesh.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\Model.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\code\render_base\sources\Camera.cpp" />
+    <ClCompile Include="..\..\code\render_base\sources\Mesh.cpp" />
+    <ClCompile Include="..\..\code\render_base\sources\Model.cpp" />
     <ClCompile Include="..\..\code\sources\initialize.cpp" />
-    <ClCompile Include="..\..\code\sources\T2DPhysicBody.cpp" />
-    <ClCompile Include="..\..\code\sources\T2DPhysicCollider.cpp" />
-    <ClCompile Include="..\..\code\sources\T2DPhysicWorld.cpp" />
     <ClCompile Include="..\..\code\sources\TAudio.cpp" />
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TCollider.cpp" />
@@ -119,15 +121,15 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/opengl-toolkit/headers;../../libraries/sdl2_mixer/include;../../libraries/box2D/headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/static/x64;../../libraries/opengl-toolkit/lib/x64;../../libraries/sdl2_mixer/lib/x64;../../libraries/box2D/lib/Debug</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2d.lib;opengl-toolkit-debug.lib;box2d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/static/x64;../../libraries/sdl2_mixer/lib/x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2d.lib</AdditionalDependencies>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>
@@ -143,7 +145,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/opengl-toolkit/headers;../../libraries/sdl2_mixer/include;../../libraries/box2D/headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -152,8 +154,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/static/x64;../../libraries/opengl-toolkit/lib/x64;../../libraries/sdl2_mixer/lib/x64;../../libraries/box2D/lib/Release</AdditionalLibraryDirectories>
-      <AdditionalDependencies>SDL2.lib;opengl-toolkit-release.lib;SDL2_mixer.lib;box2d.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../../libraries/sdl2/lib/static/x64;../../libraries/sdl2_mixer/lib/x64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_mixer.lib</AdditionalDependencies>
     </Lib>
     <ProjectReference>
       <LinkLibraryDependencies>true</LinkLibraryDependencies>

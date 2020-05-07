@@ -44,16 +44,17 @@ namespace TortillaEngine
     @brief Render management.
     */
     class TRenderTask : public TTask
-    {
-        /**
-        @brief A reference to the renderer node
-        */
-        std::unique_ptr<glt::Render_Node> renderer;
+    {        
 
         /**
         @brief A collection of the components subscribed to the task
         */
         std::vector<TRenderComponent*> render_components;
+
+        /**
+        @brief A collection of the light components in the scene
+        */
+        std::vector<TLightComponent*> lights_components;
 
 
     public:
