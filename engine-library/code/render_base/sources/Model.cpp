@@ -43,6 +43,8 @@
 
 #include <View.hpp>
 
+#include <glad.h>
+
 #include <cmath>
 
 namespace Rendering3D
@@ -53,9 +55,7 @@ namespace Rendering3D
     @param mesh_path The path of the mesh
     */
 	Model::Model(std::string mesh_path)
-	{
-
-		transform = new Transform;
+	{		
 
 		/////////////////////////////////////////////////////////////////////////////////////
 		// Code based in code snippet from tinyobjloader repository README 
@@ -71,6 +71,19 @@ namespace Rendering3D
 
 		if (tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, mesh_path.c_str()))
 		{
+
+           std::vector<GLfloat> vertices = attrib.vertices;
+           std::vector<GLfloat> uv       = attrib.texcoords;
+           std::vector<GLfloat> normals  = attrib.normals;
+           std::vector<GLint>   indices;
+
+           // This approach only supports one shape per model.
+           // For more shapes you must do this process in a loop. Tortilla Engine is not prepared for that
+           for (auto& index : shapes[0].mesh.indices)
+           {
+               indices.push_back(index.vertex_index);
+           }
+
 			// For each tinyobj shape 
 			for (size_t s = 0; s < shapes.size(); ++s)
 			{
@@ -112,15 +125,7 @@ namespace Rendering3D
 
 		/////////////////////////////////////////////////////////////////////////////////////
 	}
-
-    /**
-    @brief Gets the transform reference
-    @return The transform reference
-    */
-	Transform & Model::get_transform()
-	{
-		return *transform;
-	}
+  
 
     /**
     @brief Update the model
@@ -168,12 +173,9 @@ namespace Rendering3D
     @brief Render the model
     @param view The view reference
     */
-    void Model::Render(View& view)
+    void Model::Render(glm::mat4 view)
     {
-        for (std::shared_ptr <Mesh> & mesh : meshes)
-        {
-            mesh->Render(view);
-        }
+        mesh->Render(view);
     }
 
     /**

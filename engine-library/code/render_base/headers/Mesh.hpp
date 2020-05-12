@@ -33,7 +33,8 @@
 #include <memory>			// For shared_ptr
 #include <Material.hpp>		// For Material reference
 #include <Point.hpp>        // For frontface check
-
+#include <vao.hpp>
+#include <vbo.hpp>
 
 namespace Rendering3D
 {
@@ -42,15 +43,32 @@ namespace Rendering3D
     */
 	class Mesh
 	{
+        
         /**
-        @brief The collection of indices of this mesh   
+        @brief The vao of the mesh
         */
-		std::vector<int> indices;		
-		
+        Vao vao;
+
         /**
-        @brief The material to apply to this mesh
+        @brief The indices vertex buffer object
         */
-		Material		material;
+        Vbo indices;
+
+        /**
+        @brief The normals vertex buffer object
+        */
+        Vbo normals;
+
+        /**
+        @brief The vertices vertex buffer object
+        */
+        Vbo vertices;
+
+        /**
+        @brief The uvs vertex buffer object
+        */
+        Vbo uvs;
+
 
         /**
         @brief A pointer to the model this mesh belongs to
@@ -66,7 +84,11 @@ namespace Rendering3D
         @param owner  A pointer to the model this mesh belongs to
         */
 		Mesh (
-				std::vector<int>	indices,				
+				Vao vao,
+                Vbo indices,
+                Vbo normals,
+                Vbo vertices,
+                Vbo uvs,
 				class Model    *	owner
 			);
 

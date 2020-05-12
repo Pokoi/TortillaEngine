@@ -72,6 +72,11 @@ namespace TortillaEngine
 
         // models opaque
 
+        for (auto& model : render_components)
+        {
+
+        }
+
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -90,7 +95,7 @@ namespace TortillaEngine
     */
     void TRenderTask::add_component(TRenderComponent * component)
     {
-        renderer->add(component->get_parent()->get_name(), component->get_model());
+       // renderer->add(component->get_parent()->get_name(), component->get_model());
     }
 
     /**
@@ -99,7 +104,7 @@ namespace TortillaEngine
     */
     void TRenderTask::add_camera(TCameraComponent* camera)
     {
-        renderer->add(camera->get_parent()->get_name(), camera->get_camera());
+        this->camera = camera;
     }
 
     /**
@@ -108,7 +113,7 @@ namespace TortillaEngine
     */
     void TRenderTask::add_light(TLightComponent* light)
     {
-       renderer->add(light->get_parent()->get_name(), light->get_light());
+      // renderer->add(light->get_parent()->get_name(), light->get_light());
     }
    
 }

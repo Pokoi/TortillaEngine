@@ -1,6 +1,6 @@
 /*
- * File: Model.hpp
- * File Created: 11th February 2020
+ * File: vao.hpp
+ * File Created: 12th May 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
@@ -29,61 +29,17 @@
 
 #pragma once
 
-#include <vector>						// For collections
-#include <Point.hpp>					// For collections
-#include <Vector.hpp>					// For normals
-
-#include <string>						// For path and name
-#include <memory>						// For shared_ptr
-#include <Mesh.hpp>						// For collection of meshes
-
-#include <glm.hpp>
-
-#include <Transformation.hpp>
+#include <glad.h>
+#include <memory>
 
 namespace Rendering3D
 {
-	struct Transform;
+    class Vao 
+    {
 
-    /**
-    @brief Model class    
-    */
-	class Model
-	{
-        /**
-        @brief The mesh of this model
-        */
-		std::shared_ptr<Mesh>	mesh;
-		               
+    public:
 
-	public:
+        void 
+    };
 
-        /**
-        @brief Creates a instance of model
-        @param mesh_path The path of the mesh
-        */
-		Model(std::string mesh_path);
-
-
-        /**
-        @brief Update the model
-        @param delta The delta time
-        @param view The view reference
-        */
-		void Update(float delta, class View& view);		
-
-        /**
-        @brief Render the model
-        @param view The view reference
-        */
-        void Render(glm::mat4 view);
-
-        /**
-        @brief Gets the material reference of the given mesh by index
-        @param index The index of the mesh to get the material attached to
-        @return The material reference
-        */
-		class Material& get_material(size_t index);
-	
-	};
 }

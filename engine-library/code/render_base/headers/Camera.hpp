@@ -118,6 +118,15 @@ namespace Rendering3D
         {
             return projection;
         }
+
+        /**
+        @brief Sets a projection matrix
+        @param projection The projection to set
+        */
+        void set_projection(glm::mat4 projection)
+        {
+            this->projection = projection;
+        }
     
 
         /**

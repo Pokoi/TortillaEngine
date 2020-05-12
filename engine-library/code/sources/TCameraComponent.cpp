@@ -118,6 +118,6 @@ namespace TortillaEngine
     */
     void TCameraComponent::apply_transform(glm::mat4& transform)
     {
-       camera->set_transformation(transform);
+       camera->set_projection(camera->get_projection() * transform);
     }
 }

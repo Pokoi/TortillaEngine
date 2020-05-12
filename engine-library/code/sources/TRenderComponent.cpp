@@ -71,7 +71,7 @@ namespace TortillaEngine
 
             if ((std::string)render->name() == "asset")
             {
-                model = std::make_shared < glt::Model_Obj>(glt::Model_Obj(value));
+                model = std::make_shared < Rendering3D::Model>(glt::Model_Obj(value));
             }            
         }
 

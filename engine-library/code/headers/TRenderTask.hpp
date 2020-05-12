@@ -56,6 +56,11 @@ namespace TortillaEngine
         */
         std::vector<TLightComponent*> lights_components;
 
+        /**
+        @brief A reference to the scene camera
+        */
+        TCameraComponent* camera;
+
 
     public:
 

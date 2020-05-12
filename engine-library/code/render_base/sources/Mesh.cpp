@@ -68,45 +68,7 @@ namespace Rendering3D
     */
 	void Mesh::Render(View& view)
 	{
-
-        // Ilumination
-        illuminate(view);        
-        
-        // World Coordinates to Screen Coordinates
-        display_coordinates_transformation(view.get_width(), view.get_height());    
-        
-        // Clipping and Rendering
-        for (int* index = indices.data(), *end = index + indices.size(); index < end; index += 3)
-        {           
-
-            if (is_frontface(model->get_transformed_vertices().data(), index))
-            {				
-                // Clip polygons                
-                std::vector<toolkit::Point4i> clipped_vertices;
-                static const int clipped_indices[] = { 0,1,2,3,4,5,6,7,8,9 };
-				
-				material.calculate_average_color(index, index + 3);
-                
-                int vertex_count = Clipping::get().polygon_clipper
-                (
-                    model->get_display_vertices().data(),
-                    index,
-                    index + 3,
-                    view.get_width(),
-                    view.get_height(),
-                    clipped_vertices
-                );
-				
-                // Render
-                if (vertex_count >= 3)
-                {
-                    view.get_rasterizer().set_color(material.get_average_color());
-                    
-                    // With clipping
-                    view.get_rasterizer().fill_convex_polygon_z_buffer(clipped_vertices.data(), clipped_indices, clipped_indices + vertex_count);
-                }
-            }
-        }
+        vao->bind();
 	}
 
     /**

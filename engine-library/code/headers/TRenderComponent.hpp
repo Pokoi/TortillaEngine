@@ -29,10 +29,10 @@
 
 #pragma once
 
-#include <declarations.hpp>
 #include <TComponent.hpp>
 #include <memory>
 #include <string>
+#include <Model.hpp>
 
 namespace TortillaEngine
 {
@@ -44,7 +44,7 @@ namespace TortillaEngine
         /**
         @brief A reference to the model 
         */
-        std::shared_ptr<glt::Model_Obj> model;
+        std::shared_ptr<Rendering3D::Model> model;
                 
 
     public:
@@ -68,7 +68,7 @@ namespace TortillaEngine
         @brief Gets a reference to the model
         @return A reference to the model 
         */
-        std::shared_ptr<glt::Model_Obj> get_model()
+        std::shared_ptr<Rendering3D::Model> get_model()
         {
             return model;
         }

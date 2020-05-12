@@ -48,6 +48,8 @@
     <ClInclude Include="..\..\code\render_base\headers\Material.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Mesh.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Model.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\vao.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\vbo.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\render_base\sources\Camera.cpp" />
@@ -121,7 +123,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -145,7 +147,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
