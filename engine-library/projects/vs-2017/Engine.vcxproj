@@ -43,7 +43,9 @@
     <ClInclude Include="..\..\code\headers\TUpdateComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TVariant.hpp" />
     <ClInclude Include="..\..\code\headers\TWindow.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\BufferObject.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Camera.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\ebo.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Light.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Material.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Mesh.hpp" />

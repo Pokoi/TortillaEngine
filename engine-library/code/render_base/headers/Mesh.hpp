@@ -31,10 +31,10 @@
 
 #include <vector>			// For collections
 #include <memory>			// For shared_ptr
-#include <Material.hpp>		// For Material reference
-#include <Point.hpp>        // For frontface check
+
 #include <vao.hpp>
 #include <vbo.hpp>
+#include <ebo.hpp>
 
 namespace Rendering3D
 {
@@ -50,27 +50,6 @@ namespace Rendering3D
         Vao vao;
 
         /**
-        @brief The indices vertex buffer object
-        */
-        Vbo indices;
-
-        /**
-        @brief The normals vertex buffer object
-        */
-        Vbo normals;
-
-        /**
-        @brief The vertices vertex buffer object
-        */
-        Vbo vertices;
-
-        /**
-        @brief The uvs vertex buffer object
-        */
-        Vbo uvs;
-
-
-        /**
         @brief A pointer to the model this mesh belongs to
         */
 		class Model*	model;
@@ -84,11 +63,7 @@ namespace Rendering3D
         @param owner  A pointer to the model this mesh belongs to
         */
 		Mesh (
-				Vao vao,
-                Vbo indices,
-                Vbo normals,
-                Vbo vertices,
-                Vbo uvs,
+				Vao vao,                
 				class Model    *	owner
 			);
 

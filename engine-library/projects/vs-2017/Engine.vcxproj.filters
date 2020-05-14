@@ -187,6 +187,12 @@
     <ClInclude Include="..\..\code\render_base\headers\vbo.hpp">
       <Filter>headers\render_base</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\render_base\headers\ebo.hpp">
+      <Filter>headers\render_base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\render_base\headers\BufferObject.hpp">
+      <Filter>headers\render_base</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">

@@ -69,61 +69,31 @@ namespace Rendering3D
 		std::string warn;
 		std::string err;
 
-		if (tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, mesh_path.c_str()))
-		{
+        if (tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, mesh_path.c_str()))
+        {
 
-           std::vector<GLfloat> vertices = attrib.vertices;
-           std::vector<GLfloat> uv       = attrib.texcoords;
-           std::vector<GLfloat> normals  = attrib.normals;
-           std::vector<GLint>   indices;
+            std::vector<GLfloat> vertices   = attrib.vertices;
+            std::vector<GLfloat> uv         = attrib.texcoords;
+            std::vector<GLfloat> normals    = attrib.normals;
+            std::vector<GLint>   indices;
 
-           // This approach only supports one shape per model.
-           // For more shapes you must do this process in a loop. Tortilla Engine is not prepared for that
-           for (auto& index : shapes[0].mesh.indices)
-           {
-               indices.push_back(index.vertex_index);
-           }
+            // This approach only supports one shape per model.
+            // For more shapes you must do this process in a loop. Tortilla Engine is not prepared for that
+            for (auto& index : shapes[0].mesh.indices)
+            {
+                indices.push_back(index.vertex_index);
+            }
 
-			// For each tinyobj shape 
-			for (size_t s = 0; s < shapes.size(); ++s)
-			{
-				size_t index_offset = 0;
+            // Vertex Array Object
+            Vao vao;          
 
-				std::vector<int> indices;
-                				
-				indices.resize(shapes[s].mesh.indices.size());
-                
-                // Calculate the vertex and normal for each index
-				for (size_t index = 0; index < indices.size(); ++index)
-				{
-					int vertex_index = shapes[s].mesh.indices[index].vertex_index;
-					int normal_index = shapes[s].mesh.indices[index].normal_index;
-					
-					tinyobj::real_t		vx = attrib.vertices[3 * vertex_index + 0];
-					tinyobj::real_t		vy = attrib.vertices[3 * vertex_index + 1];
-					tinyobj::real_t		vz = attrib.vertices[3 * vertex_index + 2];
-					tinyobj::real_t		nx = attrib.normals[3 * normal_index + 0];
-					tinyobj::real_t		ny = attrib.normals[3 * normal_index + 1];
-					tinyobj::real_t		nz = attrib.normals[3 * normal_index + 2];
-					
-                    original_vertices.push_back ( { {vx, vy, vz, 1} } );
-                    original_normals.push_back  ( { {nx, ny, nz, 1} } );
-                    
-                    indices[index] = index_offset + index;
-				}
+            vao.add_vertices (vertices.data(), vertices.size() * sizeof(GLfloat));
+            vao.add_uvs      (uv.data()      , uv.size()       * sizeof(GLfloat));
+            vao.add_normals  (normals.data() , normals.size()  * sizeof(GLfloat));
+            vao.add_indices  (indices.data() , indices.size()  * sizeof(GLint));
 
-                index_offset += indices.size();
-				std::shared_ptr<Mesh> mesh = std::make_shared<Mesh>(indices, this);				
-				meshes.push_back(mesh);               
-			}
-		}
-
-		// Assign the size to the collections
-		transformed_vertices.resize(original_vertices.size());
-        transformed_normals.resize(original_normals.size());
-		display_vertices.resize(original_vertices.size());
-
-		/////////////////////////////////////////////////////////////////////////////////////
+            mesh = std::make_shared<Mesh>(vao, this);
+        }
 	}
   
 

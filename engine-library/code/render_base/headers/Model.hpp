@@ -30,8 +30,6 @@
 #pragma once
 
 #include <vector>						// For collections
-#include <Point.hpp>					// For collections
-#include <Vector.hpp>					// For normals
 
 #include <string>						// For path and name
 #include <memory>						// For shared_ptr
@@ -39,7 +37,6 @@
 
 #include <glm.hpp>
 
-#include <Transformation.hpp>
 
 namespace Rendering3D
 {

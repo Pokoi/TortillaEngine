@@ -1,6 +1,6 @@
 /*
-* File: vbo.hpp
-* File Created: 12th May 2020
+* File: ebo.hpp
+* File Created: 13th May 2020
 * ––––––––––––––––––––––––
 * Author: Jesus Fermin, 'Pokoi', Villar(hello@pokoidev.com)
 * ––––––––––––––––––––––––
@@ -26,75 +26,60 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 */
-
 #pragma once
-#include "BufferObject.hpp"
 
+#include "BufferObject.hpp"
 
 namespace Rendering3D
 {
-    class Vbo : public BufferObject
-    {
-    public:      
-      
-        enum content {_float};
-        
-    private:       
-
-        content content_type;
+    class Ebo : public BufferObject
+    {       
 
     public:
-
+        
         /**
         @brief Creates a buffer
         */
-        Vbo(
-                void *              content, 
-                Vbo::content        type, 
-                size_t              content_size,                 
-                BufferObject::draw  drawing
+        Ebo(
+            void*               content,            
+            size_t              content_size,
+            BufferObject::draw  drawing
             )
-            :    
-            content_type (type), 
+            :            
             BufferObject(drawing)
         {
             size = content_size;
 
             glGenBuffers(1, &id);
             open_buffer();
-            
-            glBufferData(GL_ARRAY_BUFFER, content_size, content, buffer_draw_type);
-        }
 
-        /**
-        @brief Frees the memory
-        */
-        ~Vbo()
-        {
-            glDeleteBuffers(1, &id);
+            glBufferData(GL_ELEMENT_ARRAY_BUFFER, content_size, content, buffer_draw_type);
+
         }
 
         /**
         @brief Opens the buffer for operations
         */
         void open_buffer()
-        {            
-            glBindBuffer(GL_ARRAY_BUFFER, id);            
+        {
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
         }
 
         /**
         @brief Closes the buffer after operations
         */
         void close_buffer()
-        {            
-           glBindBuffer(GL_ARRAY_BUFFER, 0);              
+        {
+            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
         }
 
+        /**
+        @brief Frees the memory
+        */
+        ~Ebo()
+        {
+            glDeleteBuffers(1, &id);
+        }
 
     };
-
 }
-
-
-
-
