@@ -29,13 +29,68 @@
 
 #pragma once
 #include <TShader.hpp>
-#include <vector>
+#include <string>
+#include <memory>
+#include <map>
 
 namespace TortillaEngine
 {
     class TShaderProgram
     {
+        /**
+        @brief The collection of shaders this shader program has
+        */
+        std::map<std::string, std::shared_ptr<TShader>> shaders;
 
+        /**
+        @brief The id of the shader program
+        */
+        unsigned int id;
+
+    public:
+
+        /**
+        @brief Creates an instance
+        */
+        TShaderProgram();
+
+        /**
+        @brief Frees the memory
+        */
+        ~TShaderProgram();
+
+        /**
+        @brief Activates the shader program to use it in the render
+        */
+        void activate();
+
+        /**
+        @brief Adds a given shader to the shader program 
+        @param shader The shader to add to the shader program
+        */
+        void add(TShader& shader);
+
+        /**
+        @brief Removes a given shader from the shader program 
+        @param shader The shader to remove from the shader program 
+        */
+        void remove(TShader& shader);
+
+        /**
+        @brief Gets a shader reference from the shader program
+        @param key The key name of the shader
+        */
+        std::shared_ptr <TShader>& get_shader(std::string key)
+        {
+            return shaders[key];
+        }
+
+        /**
+        @brief Gets the location of a uniform param 
+        @param uniform_param_name The name of the uniform param of the desired location
+        @return The location of the uniform param
+        */
+        unsigned int get_location(std::string uniform_param_name);
 
     };
 

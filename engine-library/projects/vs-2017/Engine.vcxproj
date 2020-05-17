@@ -78,6 +78,7 @@
     <ClCompile Include="..\..\code\sources\TRenderTask.cpp" />
     <ClCompile Include="..\..\code\sources\TScene.cpp" />
     <ClCompile Include="..\..\code\sources\TShader.cpp" />
+    <ClCompile Include="..\..\code\sources\TShaderProgram.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
     <ClCompile Include="..\..\code\sources\TSphereCollider.cpp" />
     <ClCompile Include="..\..\code\sources\TTimer.cpp" />

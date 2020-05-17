@@ -37,8 +37,16 @@ namespace TortillaEngine
     /**
     @brief Creates an instance
     @param file_path The path where the shader file is
+    @param type The type of shader
+    @param name The name of the shader
     */
-    TShader::TShader(std::string file_path, TShaderTypes type) : type{type}
+    TShader::TShader(
+                        std::string file_path,
+                        TShaderTypes type,
+                        std::string name
+                    ) : 
+                        type {type},
+                        name {name}
     {
         std::fstream reader(file_path, std::fstream::in | std::fstream::binary);
         

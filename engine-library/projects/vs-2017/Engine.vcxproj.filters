@@ -288,5 +288,8 @@
     <ClCompile Include="..\..\code\sources\TShader.cpp">
       <Filter>sources\TRenderSystem</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\code\sources\TShaderProgram.cpp">
+      <Filter>sources\TRenderSystem</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

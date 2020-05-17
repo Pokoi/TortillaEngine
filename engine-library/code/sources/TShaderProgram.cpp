@@ -1,6 +1,6 @@
 /*
- * File: TShader.hpp
- * File Created: 16th May 2020
+ * File: TShaderProgram.cpp
+ * File Created: 17th May 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
@@ -27,55 +27,59 @@
  * SOFTWARE.
  */
 
-#pragma once
-
-#include <string>
+#include <TShaderProgram.hpp>
+#include <glad.h>
 
 namespace TortillaEngine
 {
-    class TShader
+
+    /**
+    @brief Creates an instance
+    */
+    TShaderProgram::TShaderProgram()
     {
-    public:
-        enum TShaderTypes {VERTEX, FRAGMENT};
+        id = glCreateProgram();
+    }
 
-    private:
-        std::string name;
-        std::string content;
-        TShaderTypes type;
-        unsigned int id;
+    /**
+    @brief Frees the memory
+    */
+    TShaderProgram::~TShaderProgram()
+    {
+        glDeleteProgram(id);
+    }
 
-    public:
+    /**
+    @brief Activates the shader program to use it in the render
+    */
+    void TShaderProgram::activate()
+    {
+        glUseProgram(id);
+    }
 
-        /**
-        @brief Creates an instance
-        @param file_path The path where the shader file is
-        @param type The type of shader
-        @param name The name of the shader
-        */
-        TShader(std::string file_path, TShaderTypes type, std::string name);
+    /**
+    @brief Adds a given shader to the shader program
+    @param shader The shader to add to the shader program
+    */
+    void TShaderProgram::add(TShader& shader)
+    {
+        shaders[shader.get_name()] = std::make_shared <TShader> (shader);
+
+        glAttachShader(id, shader.get_id());
+        glLinkProgram(id);
+        glDeleteShader(shader.get_id());
+    }
+
+    /**
+    @brief Removes a given shader from the shader program
+    @param shader The shader to remove from the shader program
+    */
+    void TShaderProgram::remove(TShader& shader)
+    {
+        shaders.erase(shader.get_name());
         
-        /**
-        @brief Releases the memory
-        */
-        ~TShader();
+        glDetachShader(id, shader.get_id());
+    }
 
-        /**
-        @brief Gets the id of the shader
-        @return The shader id
-        */
-        unsigned int get_id()
-        {
-            return id;
-        }
 
-        /**
-        @brief Gets the name of the shader
-        @return The name of the shader
-        */
-        std::string get_name()
-        {
-            return name;
-        }
-
-    };
 }
