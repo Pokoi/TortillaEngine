@@ -1,6 +1,6 @@
 /*
-* File: vbo.hpp
-* File Created: 12th May 2020
+* File: BufferObject.cpp
+* File Created: 14th May 2020
 * ––––––––––––––––––––––––
 * Author: Jesus Fermin, 'Pokoi', Villar(hello@pokoidev.com)
 * ––––––––––––––––––––––––
@@ -27,52 +27,5 @@
 * SOFTWARE.
 */
 
-#pragma once
 #include "BufferObject.hpp"
-
-
-namespace Rendering3D
-{
-    class Vbo : public BufferObject
-    {
-    public:      
-      
-        enum content {_float};
-        
-    private:       
-
-        content content_type;
-
-    public:
-
-        /**
-        @brief Creates a buffer
-        */
-        Vbo(
-                void *              content, 
-                Vbo::content        type, 
-                size_t              content_size,                 
-                BufferObject::draw  drawing
-            );
-
-        /**
-        @brief Frees the memory
-        */
-        ~Vbo();
-
-        /**
-        @brief Opens the buffer for operations
-        */
-        void open_buffer();
-
-        /**
-        @brief Closes the buffer after operations
-        */
-        void close_buffer();
-    };
-
-}
-
-
-
-
+#include <glad.h>

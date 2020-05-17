@@ -29,20 +29,18 @@
 
 #pragma once
 
-#include <glad.h>
 #include <vector>
-#include "vbo.hpp"
-#include "ebo.hpp"
+#include <vbo.hpp>
+#include <ebo.hpp>
 #include <memory>
 
 namespace Rendering3D
 {
     class Vao
     {        
-
         enum locations {VERTICES = 0, UVS = 2, NORMALS = 3};
 
-        GLuint id;
+        unsigned int id;
 
        std::shared_ptr<Vbo> vertices;
        std::shared_ptr<Vbo> uvs;
@@ -55,112 +53,55 @@ namespace Rendering3D
         /**
         @brief Creates a vao
         */
-        Vao()
-        {
-            glGenVertexArrays(1, &id);
-        }
+        Vao();
 
         /**
         @brief Frees the memory used by the vao
         */
-        ~Vao()
-        {
-            glDeleteVertexArrays(1, &id);
-        }
+        ~Vao();
 
         /**
         @brief Opens the vao for operations
         */
-        void open_vao()
-        {
-            glBindVertexArray(id);
-        }
+        void open_vao();
 
         /**
         @brief Closes the vao after operations
         */
-        void close_vao()
-        {
-            glBindVertexArray(0);
-        }
+        void close_vao();
 
         /**
         @brief Add the vertices VBO
         @param data The vertices data
         @param data_size Size of the data
         */
-        void add_vertices(void* data, size_t data_size)
-        {
-            open_vao();
-            
-            vertices = std::make_shared<Vbo>(data, Vbo::content::_float, data_size, BufferObject::draw::static_draw);
-            
-            glEnableVertexAttribArray(0);
-            glVertexAttribPointer(locations::VERTICES, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void*)0);
-            
-            close_vao();
-        }
+        void add_vertices(void* data, size_t data_size);
 
         /**
         @brief Add the uvs VBO
         @param data The uvs data
         @param data_size Size of the data
         */
-        void add_uvs(void* data, size_t data_size)
-        {            
-            open_vao();
-
-            uvs = std::make_shared<Vbo>(data, Vbo::content::_float, data_size, BufferObject::draw::static_draw);
-
-            glEnableVertexAttribArray(2);
-            glVertexAttribPointer(locations::UVS, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void*)0);
-
-            close_vao();
-        }
+        void add_uvs(void* data, size_t data_size);
 
         /**
         @brief Add the normals VBO
         @param data The normals data
         @param data_size Size of the data
         */
-        void add_normals(void* data, size_t data_size)
-        {
-            open_vao();
-
-            normals = std::make_shared<Vbo>(data, Vbo::content::_float, data_size, BufferObject::draw::static_draw);
-        
-            glEnableVertexAttribArray(2);
-            glVertexAttribPointer(locations::NORMALS, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(GLfloat), (void*)0);
-        
-            close_vao();
-        }
+        void add_normals(void* data, size_t data_size);
 
         /**
         @brief Add the indices EBO
         @param data The indices data
         @param data_size Size of the data
         */
-        void add_indices(void* data, size_t data_size)
-        {
-            open_vao();
+        void add_indices(void* data, size_t data_size);
 
-            indices = std::make_shared<Ebo>(data, data_size, BufferObject::draw::static_draw);
-
-            close_vao();
-        }
-
-        void render()
-        {
-            // If has a texture, select the texture
-
-
-            // 
-            open_vao();            
-
-            glDrawElements(GL_TRIANGLES, indices->get_size(), GL_UNSIGNED_INT, 0);
-
-            close_vao();
-        }
+        /**
+        @brief Do the draw call 
+        */
+        void render();
 
     };
 

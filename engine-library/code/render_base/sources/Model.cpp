@@ -92,7 +92,7 @@ namespace Rendering3D
             vao.add_normals  (normals.data() , normals.size()  * sizeof(GLfloat));
             vao.add_indices  (indices.data() , indices.size()  * sizeof(GLint));
 
-            mesh = std::make_shared<Mesh>(vao, this);
+            mesh = std::make_shared<Mesh>(std::make_shared<Vao> (vao), this);
         }
 	}
   

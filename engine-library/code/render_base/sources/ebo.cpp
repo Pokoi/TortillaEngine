@@ -1,6 +1,6 @@
 /*
-* File: vbo.hpp
-* File Created: 12th May 2020
+* File: ebo.cpp
+* File Created: 14th May 2020
 * ––––––––––––––––––––––––
 * Author: Jesus Fermin, 'Pokoi', Villar(hello@pokoidev.com)
 * ––––––––––––––––––––––––
@@ -26,53 +26,47 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 * SOFTWARE.
 */
-
-#pragma once
-#include "BufferObject.hpp"
-
+#include <ebo.hpp>
+#include <glad.h>
 
 namespace Rendering3D
 {
-    class Vbo : public BufferObject
+    /**
+    @brief Creates a buffer
+    */
+    Ebo::Ebo(void* content, size_t content_size, BufferObject::draw drawing)
+        :
+        BufferObject(drawing)
     {
-    public:      
-      
-        enum content {_float};
-        
-    private:       
+        size = content_size;
 
-        content content_type;
+        glGenBuffers(1, &id);
+        open_buffer();
 
-    public:
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, content_size, content, buffer_draw_type);
+    }
 
-        /**
-        @brief Creates a buffer
-        */
-        Vbo(
-                void *              content, 
-                Vbo::content        type, 
-                size_t              content_size,                 
-                BufferObject::draw  drawing
-            );
+    /**
+    @brief Opens the buffer for operations
+    */
+    void Ebo::open_buffer()
+    {
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
+    }
 
-        /**
-        @brief Frees the memory
-        */
-        ~Vbo();
+    /**
+    @brief Closes the buffer after operations
+    */
+    void Ebo::close_buffer()
+    {
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    }
 
-        /**
-        @brief Opens the buffer for operations
-        */
-        void open_buffer();
-
-        /**
-        @brief Closes the buffer after operations
-        */
-        void close_buffer();
-    };
-
+    /**
+    @brief Frees the memory
+    */
+    Ebo::~Ebo()
+    {
+        glDeleteBuffers(1, &id);
+    }
 }
-
-
-
-

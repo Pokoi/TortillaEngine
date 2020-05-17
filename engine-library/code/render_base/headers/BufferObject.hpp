@@ -28,7 +28,7 @@
 */
 
 #pragma once
-#include <glad.h>
+
 
 
 namespace Rendering3D
@@ -41,9 +41,9 @@ namespace Rendering3D
         
 
     protected:
-        draw buffer_draw_type;
-        GLuint id;
-        size_t size;
+        draw            buffer_draw_type;
+        unsigned int    id;
+        size_t          size;
 
         BufferObject(BufferObject::draw type) : buffer_draw_type {type}
         {}

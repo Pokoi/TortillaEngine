@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\declarations.hpp" />
     <ClInclude Include="..\..\code\headers\initialize.hpp" />
+    <ClInclude Include="..\..\code\headers\TShader.hpp" />
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />
     <ClInclude Include="..\..\code\headers\TCameraComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TCollider.hpp" />
@@ -35,6 +36,7 @@
     <ClInclude Include="..\..\code\headers\TScene.hpp" />
     <ClInclude Include="..\..\code\headers\TScriptComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TScriptTask.hpp" />
+    <ClInclude Include="..\..\code\headers\TShaderProgram.hpp" />
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
     <ClInclude Include="..\..\code\headers\TSphereCollider.hpp" />
     <ClInclude Include="..\..\code\headers\TTask.hpp" />
@@ -54,9 +56,14 @@
     <ClInclude Include="..\..\code\render_base\headers\vbo.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\code\render_base\sources\BufferObject.cpp" />
     <ClCompile Include="..\..\code\render_base\sources\Camera.cpp" />
+    <ClCompile Include="..\..\code\render_base\sources\ebo.cpp" />
+    <ClCompile Include="..\..\code\render_base\sources\Material.cpp" />
     <ClCompile Include="..\..\code\render_base\sources\Mesh.cpp" />
     <ClCompile Include="..\..\code\render_base\sources\Model.cpp" />
+    <ClCompile Include="..\..\code\render_base\sources\vao.cpp" />
+    <ClCompile Include="..\..\code\render_base\sources\vbo.cpp" />
     <ClCompile Include="..\..\code\sources\initialize.cpp" />
     <ClCompile Include="..\..\code\sources\TAudio.cpp" />
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp" />
@@ -70,6 +77,7 @@
     <ClCompile Include="..\..\code\sources\TRenderComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TRenderTask.cpp" />
     <ClCompile Include="..\..\code\sources\TScene.cpp" />
+    <ClCompile Include="..\..\code\sources\TShader.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
     <ClCompile Include="..\..\code\sources\TSphereCollider.cpp" />
     <ClCompile Include="..\..\code\sources\TTimer.cpp" />
@@ -125,7 +133,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj;../../libraries/angel_rodriguez_dependencies</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -149,7 +157,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj;../../libraries/angel_rodriguez_dependencies</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

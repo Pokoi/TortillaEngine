@@ -1,6 +1,6 @@
 /*
- * File: Mesh.hpp
- * File Created: 11th February 2020
+ * File: TShader.hpp
+ * File Created: 16th May 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
@@ -29,67 +29,41 @@
 
 #pragma once
 
-#include <vector>			// For collections
-#include <memory>			// For shared_ptr
+#include <string>
 
-#include <vao.hpp>
-#include <vbo.hpp>
-#include <ebo.hpp>
-#include <Material.hpp>
-
-namespace Rendering3D
+namespace TortillaEngine
 {
-    /**
-    @brief Class that manages meshs
-    */
-	class Mesh
-	{
-        
-        /**
-        @brief The vao of the mesh
-        */
-        std::shared_ptr <Vao> vao;
-		
-        /**
-        @brief A pointer to the material
-        */
-        std::shared_ptr <Material> material;
-
-	public:
-
-        /**
-        @brief Creates an instance of this class.
-        @param vao The collecion of data       
-        */
-		Mesh (std::shared_ptr<Vao> vao);
-
-        /**
-        @brief Render the mesh
-        @param view A view reference this mesh belongs to
-        */
-		void Render(class View & view);
-
-        /**
-        @brief Sets the material
-        @param material The given material
-        */
-		void set_material(std::shared_ptr <Material> material)
-		{
-			this->material = material;
-		}
-
-        /**
-        @brief Gets a refence to the material
-        @return A reference to the material
-        */
-		std::shared_ptr <Material> & get_material()
-		{
-			return material;
-		}
+    class TShader
+    {
+    public:
+        enum TShaderTypes {VERTEX, FRAGMENT};
 
     private:
+        std::string content;
+        TShaderTypes type;
+        unsigned int id;
 
+    public:
+
+        /**
+        @brief Creates an instance
+        @param file_path The path where the shader file is
+        */
+        TShader(std::string file_path, TShaderTypes type);
         
+        /**
+        @brief Releases the memory
+        */
+        ~TShader();
 
-	};
+        /**
+        @brief Gets the id of the shader
+        @return The shader id
+        */
+        unsigned int get_id()
+        {
+            return id;
+        }
+
+    };
 }

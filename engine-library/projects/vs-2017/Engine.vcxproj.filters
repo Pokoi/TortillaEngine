@@ -193,6 +193,12 @@
     <ClInclude Include="..\..\code\render_base\headers\BufferObject.hpp">
       <Filter>headers\render_base</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\headers\TShader.hpp">
+      <Filter>headers\TRenderSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\code\headers\TShaderProgram.hpp">
+      <Filter>headers\TRenderSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">
@@ -263,6 +269,24 @@
     </ClCompile>
     <ClCompile Include="..\..\code\render_base\sources\Model.cpp">
       <Filter>sources\render_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\render_base\sources\Material.cpp">
+      <Filter>sources\render_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\render_base\sources\vao.cpp">
+      <Filter>sources\render_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\render_base\sources\vbo.cpp">
+      <Filter>sources\render_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\render_base\sources\ebo.cpp">
+      <Filter>sources\render_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\render_base\sources\BufferObject.cpp">
+      <Filter>sources\render_base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\TShader.cpp">
+      <Filter>sources\TRenderSystem</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

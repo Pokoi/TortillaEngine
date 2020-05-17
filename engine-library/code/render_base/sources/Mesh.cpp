@@ -33,34 +33,22 @@
 
 #include <Model.hpp>		// For constructor assignation
 
-#include <Scaling.hpp>		// For Update transformations
-#include <Rotation.hpp>		// For Update transformations
-#include <Projection.hpp>	// For Update transformations
-#include <Translation.hpp>	// For Update transformations
-
-#include <View.hpp>         // For render
-#include <Clipping.hpp>     // For polygon clipping
-
 #include <Color_Buffer_Rgba8888.hpp> // For illumination
 #include <Light.hpp>				 // For illumination
 
 
 namespace Rendering3D
 {
-
+     
     /**
     @brief Creates an instance of this class.
-    @param indices The collecion of indices
-    @param owner  A pointer to the model this mesh belongs to
+    @param vao The collecion of data
     */
-	Mesh::Mesh(
-				std::vector<int> given_indices,				
-				Model * owner
-			): material{given_indices.size()}
-	{
-        indices = given_indices;
-		model   = owner;	
-	}
+    Mesh::Mesh(std::shared_ptr<Vao> vao) : vao{vao}
+    {
+    
+    }
+
 	
     /**
     @brief Render the mesh
@@ -68,140 +56,9 @@ namespace Rendering3D
     */
 	void Mesh::Render(View& view)
 	{
-        vao->bind();
+        material->render();
+        vao->render();
 	}
 
-    /**
-    @brief Calculates if the polygon is frontface
-    @param projected_vertices the vertices of the polygon
-    @param indices the indices
-    @return True if is frontface, false otherwise
-    */
-    bool Mesh::is_frontface(const toolkit::Point4f* const projected_vertices, const int* const indices)
-    {
-        const toolkit::Point4f & v0 = projected_vertices[indices[0]];
-        const toolkit::Point4f & v1 = projected_vertices[indices[1]];
-        const toolkit::Point4f & v2 = projected_vertices[indices[2]];
-
-        return ((v1[0] - v0[0]) * (v2[1] - v0[1]) - (v2[0] - v0[0]) * (v1[1] - v0[1]) > 0.f);
-    }
-
-    /**
-    @brief Illuminate the mesh
-    @param view The reference to the view
-    */
-    void Mesh::illuminate(View& view)
-    {
-        auto normals                = model->get_original_normals();
-        auto & transformed_normals  = model->get_transformed_normals();        
-
-        for (size_t i = 0; i < indices.size(); ++i)
-        {
-			Color_Buffer_Rgba8888::Color diffuse = material.get_color();
-            Color_Buffer_Rgba8888::Color ambient = view.get_ambient_color();
-
-			float r_component = 0;
-			float g_component = 0;
-			float b_component = 0;
-
-			diffuse * material.get_kd();
-
-			// Directional lights illumination
-            for (std::shared_ptr<DirectionalLight> & light : view.get_directional_lights())
-            {
-			    Color_Buffer_Rgba8888::Color	light_color		= light->get_light_color(model->get_transformed_vertices()[indices[i]]);
-			    toolkit::Vector4f				direction		= light->get_direction(model->get_transformed_vertices()[indices[i]]);
-			
-			    float multiplier = model->get_transformed_normals()[indices[i]].dot_product(direction);
-			
-				if (multiplier > 1)
-				{
-					multiplier = 1;
-				}
-				
-				else if (multiplier < 0)
-				{
-					multiplier = 0;
-				}			
-             
-                light_color * material.get_kl();
-
-				r_component += ((diffuse.data.component.r * light_color.data.component.r) >> 8) * multiplier;
-				g_component += ((diffuse.data.component.g * light_color.data.component.g) >> 8) * multiplier;
-				b_component += ((diffuse.data.component.b * light_color.data.component.b) >> 8) * multiplier;
-
-                
-            }
-
-			// Point Lights illumination
-			for (std::shared_ptr<PointLight>& light : view.get_point_lights())
-			{
-
-				Color_Buffer_Rgba8888::Color	light_color = light->get_light_color(model->get_transformed_vertices()[indices[i]]);
-				toolkit::Vector4f				direction = light->get_direction(model->get_transformed_vertices()[indices[i]]);
-
-				float multiplier = model->get_transformed_normals()[indices[i]].dot_product(direction);
-
-				if (multiplier > 1)
-				{
-					multiplier = 1;
-				}
-				else if (multiplier < 0)
-				{
-					multiplier = 0;
-				}
-				
-				light_color* material.get_kl();
-
-				r_component += ((diffuse.data.component.r * light_color.data.component.r) >> 8) * multiplier;
-				g_component += ((diffuse.data.component.g * light_color.data.component.g) >> 8) * multiplier;
-				b_component += ((diffuse.data.component.b * light_color.data.component.b) >> 8) * multiplier;
-			}
-
-            // Add ambient component
-            r_component += ambient.data.component.r * material.get_ka();
-            g_component += ambient.data.component.g * material.get_ka();
-            b_component += ambient.data.component.b * material.get_ka();
-
-            // Set the final color
-            material.get_transformed_colors()[indices[i]].set( (int)r_component, (int)g_component, (int)b_component );          
-                 
-        }       
-    }   
-
-    /**
-    @brief Transform to normalize device coordinates
-    */
-    void Mesh::NDC_transformation()
-    {   
-        auto & transformed_vertices = model->get_transformed_vertices();
-
-        for (size_t i = 0; i < indices.size(); ++i)
-        {
-            toolkit::Point4f& vertex = transformed_vertices[indices[i]];
-            
-            float inv_w = 1.f / vertex[3];
-            vertex[0] *= inv_w;
-            vertex[1] *= inv_w;
-            vertex[2] *= inv_w;        
-        }
-    }
-
-    /**
-    @brief Transform coordinates to display coordinates
-    @param width The width of the screen
-    @param height The height of the screen
-    */
-    void Mesh::display_coordinates_transformation(size_t width, size_t height)
-    {
-        toolkit::Scaling3f        scaling = toolkit::Scaling3f(float(width / 2), float(height / 2), 100000000.f);
-        toolkit::Translation3f    translation = toolkit::Translation3f(float(width / 2), float(height / 2), 0.f);
-
-        toolkit::Transformation3f transformation = translation * scaling;
-
-        for (size_t i = 0; i < indices.size(); ++i)
-        {
-            model->get_display_vertices()[indices[i]] = Point4i(toolkit::Matrix44f(transformation) * toolkit::Matrix41f(model->get_transformed_vertices()[indices[i]]));
-        }
-    }
+   
 }

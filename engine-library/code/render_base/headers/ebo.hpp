@@ -44,42 +44,22 @@ namespace Rendering3D
             void*               content,            
             size_t              content_size,
             BufferObject::draw  drawing
-            )
-            :            
-            BufferObject(drawing)
-        {
-            size = content_size;
-
-            glGenBuffers(1, &id);
-            open_buffer();
-
-            glBufferData(GL_ELEMENT_ARRAY_BUFFER, content_size, content, buffer_draw_type);
-
-        }
+            );
 
         /**
         @brief Opens the buffer for operations
         */
-        void open_buffer()
-        {
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, id);
-        }
+        void open_buffer();
 
         /**
         @brief Closes the buffer after operations
         */
-        void close_buffer()
-        {
-            glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-        }
+        void close_buffer();
 
         /**
         @brief Frees the memory
         */
-        ~Ebo()
-        {
-            glDeleteBuffers(1, &id);
-        }
+        ~Ebo();
 
     };
 }
