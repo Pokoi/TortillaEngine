@@ -92,6 +92,35 @@ namespace TortillaEngine
         */
         unsigned int get_location(std::string uniform_param_name);
 
+        /**
+        @brief Set the value of a uniform param
+        @param location The location of the uniform param to set
+        @param value The value to set
+        */
+        void set_uniform_value(unsigned int location, float value);
+
+        /**
+        @brief Set the value of a uniform param
+        @param location The location of the uniform param to set
+        @param value The value to set
+        */
+        void set_uniform_value(unsigned int location, int value);
+
+        /**
+        @brief Set the value of a uniform param
+        @param location The location of the uniform param to set
+        @param value The value to set
+        */
+        void set_uniform_value(unsigned int location, float value_0, float value_1, float value_2);
+
+        /**
+        @brief Set the value of a uniform param
+        @param location The location of the uniform param to set
+        @param value The value to set
+        */
+        void set_uniform_value(unsigned int location, float value_0, float value_1, float value_2, float value_3);
+       
+
     };
 
 }

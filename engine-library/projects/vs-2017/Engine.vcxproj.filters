@@ -199,6 +199,9 @@
     <ClInclude Include="..\..\code\headers\TShaderProgram.hpp">
       <Filter>headers\TRenderSystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\headers\TFramebuffer.hpp">
+      <Filter>headers\TRenderSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">
@@ -289,6 +292,9 @@
       <Filter>sources\TRenderSystem</Filter>
     </ClCompile>
     <ClCompile Include="..\..\code\sources\TShaderProgram.cpp">
+      <Filter>sources\TRenderSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\code\sources\TFramebuffer.cpp">
       <Filter>sources\TRenderSystem</Filter>
     </ClCompile>
   </ItemGroup>

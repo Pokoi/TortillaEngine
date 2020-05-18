@@ -36,7 +36,8 @@
 #include <TLightComponent.hpp>
 #include <memory>
 #include <vector>
-
+#include <TShaderProgram.hpp>
+#include <TFramebuffer.hpp>
 
 namespace TortillaEngine
 {
@@ -61,6 +62,10 @@ namespace TortillaEngine
         */
         TCameraComponent* camera;
 
+        /**
+        @brief The framebuffer of the render
+        */
+        TFramebuffer framebuffer;
 
     public:
 

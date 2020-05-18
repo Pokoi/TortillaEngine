@@ -29,6 +29,7 @@
 
 #include <TShaderProgram.hpp>
 #include <glad.h>
+#include <glm.hpp>
 
 namespace TortillaEngine
 {
@@ -80,6 +81,56 @@ namespace TortillaEngine
         
         glDetachShader(id, shader.get_id());
     }
+
+    /**
+    @brief Gets the location of a uniform param
+    @param uniform_param_name The name of the uniform param of the desired location
+    @return The location of the uniform param
+    */
+    unsigned int TShaderProgram::get_location(std::string uniform_param_name)
+    {
+        return glGetUniformLocation(id, uniform_param_name.c_str());
+    }
+
+    /**
+    @brief Set the value of a uniform param
+    @param location The location of the uniform param to set
+    @param value The value to set
+    */
+    void TShaderProgram::set_uniform_value(unsigned int location, float value)
+    {
+        glUniform1f(location, value);
+    }
+
+    /**
+    @brief Set the value of a uniform param
+    @param location The location of the uniform param to set
+    @param value The value to set
+    */
+    void TShaderProgram::set_uniform_value(unsigned int location, int value)
+    {
+        glUniform1i(location, value);
+    }
+
+    /**
+    @brief Set the value of a uniform param
+    @param location The location of the uniform param to set
+    @param value The value to set
+    */
+    void TShaderProgram::set_uniform_value(unsigned int location, float value_0, float value_1, float value_2)
+    {
+        glUniform3f(location, value_0, value_1, value_2);
+    }
+
+    /**
+    @brief Set the value of a uniform param
+    @param location The location of the uniform param to set
+    @param value The value to set
+    */
+    void TShaderProgram::set_uniform_value(unsigned int location, float value_0, float value_1, float value_2, float value_3)
+    {
+        glUniform4f(location, value_0, value_1, value_2, value_3);
+    }    
 
 
 }

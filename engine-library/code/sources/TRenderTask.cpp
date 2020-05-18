@@ -71,7 +71,6 @@ namespace TortillaEngine
         // lights
 
         // models opaque
-
         for (auto& model : render_components)
         {
 
@@ -81,6 +80,10 @@ namespace TortillaEngine
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
         // transparent models
+        for (auto& model : render_components)
+        {
+
+        }
 
         glDisable(GL_BLEND);
 
