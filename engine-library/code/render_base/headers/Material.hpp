@@ -30,6 +30,7 @@
 #pragma once
 #include <memory>
 #include <string>
+#include <TShaderProgram.hpp>
 
 namespace Rendering3D
 {
@@ -38,23 +39,36 @@ namespace Rendering3D
     */
 	class Material
 	{
+        typedef example::Color_Buffer_Rgba8888 Color_Buffer_Rgba8888;
+
         /**
         @brief The texture of the material
         */
-        std::shared_ptr <class example::Color_Buffer_Rgba8888> texture;
+        std::shared_ptr <Color_Buffer_Rgba8888> texture;
 
         /**
         @brief The texture id
         */
         unsigned int texture_id;
 
+        /**
+        @brief Flag if this material is transparent or opaque
+        */
+        bool opaque;
+
+        /**
+        @brief A reference to the shader program of the material
+        */
+        std::shared_ptr <TortillaEngine::TShaderProgram> shader_program;
+
     public:
 
         /**
         @brief Creates an instance with the texture in the given path
-        @param texture_path The path of the texture 
+        @param texture_path The path of the texture
+        @param opaque If this material is opaque or transparent
         */
-        Material(std::string texture_path);
+        Material(std::string texture_path, bool opaque);
 
         /**
         @brief Creates a default instance
@@ -71,6 +85,25 @@ namespace Rendering3D
         @brief Select the texture if needed and activates the shader
         */
         void render();
+
+        /**
+        @brief Get if the material is transparent or not
+        @return true The material is opaque
+        @return false The material is transparent
+        */
+        bool is_opaque()
+        {
+            return opaque;
+        }
+
+        /**
+        @brief Gets a reference to the shader program of this material
+        @return The reference of the shader program
+        */
+        std::shared_ptr <TortillaEngine::TShaderProgram>& get_shader_program()
+        {
+            return shader_program;
+        }
        
 	};
 }

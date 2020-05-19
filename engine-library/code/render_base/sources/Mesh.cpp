@@ -33,8 +33,11 @@
 
 #include <Model.hpp>		// For constructor assignation
 
-#include <Color_Buffer_Rgba8888.hpp> // For illumination
-#include <Light.hpp>				 // For illumination
+#include <glm.hpp>
+#include <gtc/matrix_transform.hpp>
+#include <gtc/type_ptr.hpp>
+
+#include <glad.h>
 
 
 namespace Rendering3D
@@ -55,9 +58,27 @@ namespace Rendering3D
     */
 	void Mesh::Render()
 	{
+        
+        // Model View
+        unsigned int model_view_matrix_id = material->get_shader_program()->get_location("model_view_matrix");      
+        glUniformMatrix4fv(model_view_matrix_id, 1, GL_FALSE, glm::value_ptr(model_view_matrix));
+
+        // Normal matrix
+        glm::mat4 normal_matrix = glm::transpose(glm::inverse(model_view_matrix));
+        unsigned int normal_matrix_id = material->get_shader_program()->get_location("model_normal_matrix");
+        glUniformMatrix4fv(normal_matrix_id, 1, GL_FALSE, glm::value_ptr(normal_matrix));
+
         material->render();
         vao->render();
 	}
 
+    /**
+    @brief Apply the matrix transformation to the mesh
+    @param transformation The transformation to apply
+    */
+    void Mesh::apply_transform(glm::mat4 transformation)
+    {
+        model_view_matrix = transformation;
+    }
    
 }

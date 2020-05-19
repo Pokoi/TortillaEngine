@@ -130,7 +130,7 @@ namespace TortillaEngine
     void TShaderProgram::set_uniform_value(unsigned int location, float value_0, float value_1, float value_2, float value_3)
     {
         glUniform4f(location, value_0, value_1, value_2, value_3);
-    }    
+    }   
 
 
 }

@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\code\headers\declarations.hpp" />
     <ClInclude Include="..\..\code\headers\initialize.hpp" />
+    <ClInclude Include="..\..\code\headers\TBatch.hpp" />
     <ClInclude Include="..\..\code\headers\TFramebuffer.hpp" />
     <ClInclude Include="..\..\code\headers\TShader.hpp" />
     <ClInclude Include="..\..\code\headers\TAudio.hpp" />

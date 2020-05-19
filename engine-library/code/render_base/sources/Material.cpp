@@ -37,8 +37,9 @@ namespace Rendering3D
     /**
     @brief Creates an instance with the texture in the given path
     @param texture_path The path of the texture
+    @param opaque If this material is opaque or transparent
     */
-    Material::Material(std::string texture_path)
+    Material::Material(std::string texture_path, bool opaque = true) : opaque{opaque}
     {
         tga_image  loaded;
 
@@ -78,7 +79,7 @@ namespace Rendering3D
                 GL_UNSIGNED_BYTE,
                 texture->colors()
                 );
-        }
+        }        
     }
 
     /**

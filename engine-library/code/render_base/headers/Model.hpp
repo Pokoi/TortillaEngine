@@ -66,7 +66,7 @@ namespace Rendering3D
         @brief Render the model
         @param view The view reference
         */
-        void Render(class mat4 view);
+        void Render();
 
         /**
         @brief Gets the material reference of the given mesh by index
@@ -76,9 +76,10 @@ namespace Rendering3D
         std::shared_ptr<Material>& get_material(size_t index);
 
         /**
-        
+        @brief Apply the matrix transformation of the transform to the model
+        @param transform The transformation matrix to apply
         */
-        void apply_transformations(class mat4 transform);
+        void apply_transformations(mat4 transform);
 	
 	};
 }

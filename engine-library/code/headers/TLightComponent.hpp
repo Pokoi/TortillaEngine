@@ -40,7 +40,7 @@ namespace TortillaEngine
     */
     class TLightComponent : public TComponent
     {
-
+        
     public:
 
         /**
@@ -82,11 +82,6 @@ namespace TortillaEngine
     private:
 
         /**
-        @brief A reference to the light
-        */
-        std::shared_ptr<glt::Light> light;
-
-        /**
         @brief The light color
         */
         TColor                      light_color{ 0.f, 0.f, 0.f };
@@ -95,6 +90,11 @@ namespace TortillaEngine
         @brief The light intensity
         */
         float                       intensity;
+
+        /**
+        @brief Position of the light
+        */
+        std::shared_ptr<class vec3> position;
 
     public:
 
@@ -147,13 +147,7 @@ namespace TortillaEngine
         @param component_node The xml node with the data 
         */
         virtual bool    parse_component(rapidxml::xml_node<>* component_node);
-
-        /**
-        @brief Gets a reference to the light
-        @return The reference to the light
-        */
-        std::shared_ptr<glt::Light> get_light();
-
+        
         /**
         @brief Adds the ligth to the render task
         */
@@ -164,6 +158,12 @@ namespace TortillaEngine
         @param transform The transformation to apply
         */
         void    apply_transform(glm::mat4 transform) override;
+
+        /**
+        @brief Get the position of the light
+        @return The position
+        */
+        std::shared_ptr<class vec3>& get_position();
     };
 
 }

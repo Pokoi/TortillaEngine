@@ -29,10 +29,10 @@
 
 #include <TLightComponent.hpp>
 #include <TEntity.hpp>
-#include <Light.hpp>
 #include <TRenderTask.hpp>
 #include <memory>
 #include <TScene.hpp>
+#include <glm.hpp>
 
 namespace TortillaEngine
 {
@@ -49,13 +49,10 @@ namespace TortillaEngine
                                     ) 
                                     :  
                                         TComponent{ parent },
-                                        light{ new glt::Light() },
                                         light_color{light_color},
-                                        intensity{ intensity }
+                                        intensity{ intensity },
+                                        position{}
     {
-        light->set_color({ light_color.red, light_color.green, light_color.blue });
-        light->set_intensity(intensity);       
-
         add_to_update_component();
         subscribe_to_task();
     }
@@ -70,9 +67,7 @@ namespace TortillaEngine
     {
         light_color.red = red;
         light_color.green = green;
-        light_color.blue = blue;
-
-        light->set_color({ red, green, blue });
+        light_color.blue = blue;        
     }
 
     /**
@@ -81,9 +76,7 @@ namespace TortillaEngine
     */
     void TLightComponent::set_color(TLightComponent::TColor color)
     {
-        light_color = color;
-
-        light->set_color({ light_color.red, light_color.green, light_color.blue });
+        light_color = color;        
     }
 
     /**
@@ -101,8 +94,7 @@ namespace TortillaEngine
     */
     void TLightComponent::set_intensity(float intensity)
     {
-        this->intensity = intensity;
-        light->set_intensity(intensity);
+        this->intensity = intensity;        
     }
 
     /**
@@ -155,15 +147,7 @@ namespace TortillaEngine
         return true;
     }
 
-    /**
-    @brief Gets a reference to the light
-    @return The reference to the light
-    */
-    std::shared_ptr<glt::Light> TLightComponent::get_light()
-    {
-        return light;
-    }
-
+    
     /**
     @brief Adds the ligth to the render task
     */
@@ -178,7 +162,16 @@ namespace TortillaEngine
     */
     void TLightComponent::apply_transform(glm::mat4 transform)
     {
-        light->set_transformation(transform);
+        position = std::make_shared<glm::vec3>(transform[3][0], transform[3][1], transform[3][2]);       
+    }
+
+    /**
+    @brief Get the position of the light
+    @return The position
+    */
+    std::shared_ptr<class vec3>& TLightComponent::get_position()
+    {
+        return position;
     }
 
 }

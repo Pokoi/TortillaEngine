@@ -38,6 +38,7 @@
 #include <vector>
 #include <TShaderProgram.hpp>
 #include <TFramebuffer.hpp>
+#include <TBatch.hpp>
 
 namespace TortillaEngine
 {
@@ -48,14 +49,14 @@ namespace TortillaEngine
     {        
 
         /**
-        @brief A collection of the components subscribed to the task
+        @brief A collection of render batches
         */
-        std::vector<TRenderComponent*> render_components;
+        std::vector<std::shared_ptr<TBatch>> render_batches;
 
         /**
-        @brief A collection of the light components in the scene
+        @brief The light component in the scene
         */
-        std::vector<TLightComponent*> lights_components;
+        TLightComponent* light;
 
         /**
         @brief A reference to the scene camera
@@ -66,6 +67,7 @@ namespace TortillaEngine
         @brief The framebuffer of the render for the post processing
         */
         std::shared_ptr<TFramebuffer> framebuffer;
+
 
     public:
 

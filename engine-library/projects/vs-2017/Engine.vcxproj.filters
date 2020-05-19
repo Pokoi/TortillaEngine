@@ -202,6 +202,9 @@
     <ClInclude Include="..\..\code\headers\TFramebuffer.hpp">
       <Filter>headers\TRenderSystem</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\code\headers\TBatch.hpp">
+      <Filter>headers\TRenderSystem</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\sources\TCameraComponent.cpp">

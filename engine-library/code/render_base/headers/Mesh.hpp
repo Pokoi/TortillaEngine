@@ -44,6 +44,9 @@ namespace Rendering3D
     */
 	class Mesh
 	{
+
+        typedef glm::mat4 mat4;
+
         
         /**
         @brief The vao of the mesh
@@ -54,6 +57,11 @@ namespace Rendering3D
         @brief A pointer to the material
         */
         std::shared_ptr <Material> material;
+        
+        /**
+        @brief The model view matrix
+        */
+        mat4 model_view_matrix;
 
 	public:
 
@@ -85,6 +93,13 @@ namespace Rendering3D
 		{
 			return material;
 		}
+
+        /**
+        @brief Apply the matrix transformation to the mesh
+        @param transformation The transformation to apply
+        */
+        void apply_transform(mat4 transformation);
+
 
     private:
 

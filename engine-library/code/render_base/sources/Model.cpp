@@ -90,9 +90,9 @@ namespace Rendering3D
     @brief Render the model
     @param view The view reference
     */
-    void Model::Render(glm::mat4 view)
+    void Model::Render()
     {
-        mesh->Render(view);
+        mesh->Render();
     }
 
     /**
@@ -104,4 +104,13 @@ namespace Rendering3D
 	{
 		return mesh->get_material();
 	}
+
+    /**
+    @brief Apply the matrix transformation of the transform to the model
+    @param transform The transformation matrix to apply
+    */
+    void Model::apply_transformations(glm::mat4 transform)
+    {
+        mesh->apply_transform(transform);
+    }
 }

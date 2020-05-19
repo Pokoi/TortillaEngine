@@ -86,6 +86,6 @@ namespace TortillaEngine
     */
     void TRenderComponent::apply_transform(glm::mat4 transform)
     {
-        
+        model->apply_transformations(transform);
     }
 }

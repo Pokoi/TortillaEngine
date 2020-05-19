@@ -33,6 +33,8 @@
 #include <Light.hpp>
 
 #include <glad.h>
+#include <glm.hpp>
+#include <gtc/type_ptr.hpp>
 
 
 namespace TortillaEngine
@@ -71,21 +73,55 @@ namespace TortillaEngine
         framebuffer->activate();
         //skybox 
 
-        // lights
-
-        // models opaque
-        for (auto& model : render_components)
+        // Opaque models
+        // For each batch
+        for (auto& batch : render_batches)
         {
+            batch->get_shader_program()->activate();
 
-        }
+            // Light information
+            batch->get_shader_program()->set_uniform_value(batch->get_shader_program()->get_location("light_intensity"), light->get_intensity());
+            batch->get_shader_program()->set_uniform_value(batch->get_shader_program()->get_location("light_color"), light->get_color().red, light->get_color().green, light->get_color().blue);
+            
+            // Camera
+            unsigned int proyection_matrix_id = batch->get_shader_program()->get_location("proyection_matrix");
+            glUniformMatrix4fv(proyection_matrix_id, 1, GL_FALSE, glm::value_ptr(camera->get_camera()->get_projection()));
+            
+            // Models
+            for (auto& render_component : batch->get_components())
+            {
+                if (render_component->get_model()->get_material(0)->is_opaque())
+                {
+                    render_component->get_model()->Render();
+                }
+            }
+        }                
 
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-        // transparent models
-        for (auto& model : render_components)
+       
+        // Transparent models
+        // For each batch
+        for (auto& batch : render_batches)
         {
+            batch->get_shader_program()->activate();
 
+            // Light information
+            batch->get_shader_program()->set_uniform_value(batch->get_shader_program()->get_location("light_intensity"), light->get_intensity());
+            batch->get_shader_program()->set_uniform_value(batch->get_shader_program()->get_location("light_color"), light->get_color().red, light->get_color().green, light->get_color().blue);
+
+            // Camera
+            unsigned int proyection_matrix_id = batch->get_shader_program()->get_location("proyection_matrix");
+            glUniformMatrix4fv(proyection_matrix_id, 1, GL_FALSE, glm::value_ptr(camera->get_camera()->get_projection()));
+
+            // Models
+            for (auto& render_component : batch->get_components())
+            {
+                if (!render_component->get_model()->get_material(0)->is_opaque())
+                {
+                    render_component->get_model()->Render();
+                }
+            }
         }
 
         glDisable(GL_BLEND);
@@ -100,8 +136,16 @@ namespace TortillaEngine
     @param component A reference to the component to add
     */
     void TRenderTask::add_component(TRenderComponent * component)
-    {
-       render_components.push_back(component);
+    {                   
+        if (render_batches.size() >= 0)
+        {
+            for (auto& render_batch : render_batches)
+            {
+                if (render_batch->add_render_component(component)) return;
+            }
+        }
+        
+        render_batches.push_back(std::make_shared<TBatch>(component->get_model()->get_material(0)->get_shader_program()));
     }
 
     /**
@@ -119,7 +163,7 @@ namespace TortillaEngine
     */
     void TRenderTask::add_light(TLightComponent* light)
     {
-      // renderer->add(light->get_parent()->get_name(), light->get_light());
+        this->light = light;        
     }
    
 }
