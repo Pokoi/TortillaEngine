@@ -28,17 +28,8 @@
  */
 
 #include <TRenderComponent.hpp>
-
-#include <glm/glm.hpp>
-#include <glm/gtc/type_ptr.hpp>
-#include <glm/gtx/matrix_decompose.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-
-#include <Model_Obj.hpp>
-
-#include <Cube.hpp>
+#include <glm.hpp>
 #include <TEntity.hpp>
-#include <Render_Node.hpp>
 #include <memory>
 #include <TScene.hpp>
 
@@ -49,7 +40,7 @@ namespace TortillaEngine
     @param parent A reference to the entity this component is attached to.
     @param path The path for obj file with the 3D mesh
     */
-    TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{parent}, model{ new glt::Model_Obj(path) }
+    TRenderComponent::TRenderComponent(TEntity* parent, std::string path) : TComponent{parent}, model{ std::make_shared <Rendering3D::Model> (path) }
     {
         add_to_update_component();
         subscribe_to_task();       
@@ -71,7 +62,7 @@ namespace TortillaEngine
 
             if ((std::string)render->name() == "asset")
             {
-                model = std::make_shared < Rendering3D::Model>(glt::Model_Obj(value));
+                model = std::make_shared < Rendering3D::Model>(value);
             }            
         }
 
@@ -93,8 +84,8 @@ namespace TortillaEngine
     @brief Applies a given transformation to the model
     @param transfrom The transformation to apply
     */
-    void TRenderComponent::apply_transform(glm::mat4 & transform)
+    void TRenderComponent::apply_transform(glm::mat4 transform)
     {
-        model->set_transformation(transform);
+        
     }
 }

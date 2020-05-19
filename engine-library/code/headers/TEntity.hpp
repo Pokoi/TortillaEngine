@@ -140,10 +140,10 @@ namespace TortillaEngine
 		TTransformComponent get_transform()
 		{
             return this->transform;            
-            /*
-			if (parent) return parent->get_transform() * this->transform;
-			else return this->transform;
-            */
+            
+			/*if (parent) return parent->get_transform() * this->transform;
+			else return this->transform;*/
+            
 		}
 
         /**
@@ -152,6 +152,15 @@ namespace TortillaEngine
         TScene* get_scene()
         {
             return scene;
+        }
+
+        /**
+        @brief Gets a reference to the parent entity
+        @return The parent entity
+        */
+        TEntity* get_parent()
+        {
+            return parent;
         }
 
     };

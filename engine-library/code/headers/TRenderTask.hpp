@@ -63,9 +63,9 @@ namespace TortillaEngine
         TCameraComponent* camera;
 
         /**
-        @brief The framebuffer of the render
+        @brief The framebuffer of the render for the post processing
         */
-        TFramebuffer framebuffer;
+        std::shared_ptr<TFramebuffer> framebuffer;
 
     public:
 

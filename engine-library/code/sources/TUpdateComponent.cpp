@@ -30,7 +30,6 @@
 #include <TUpdateComponent.hpp>
 #include <TEntity.hpp>
 #include <TScriptTask.hpp>
-#include <Math.hpp>
 #include <memory>
 #include <TScene.hpp>
 
@@ -46,7 +45,7 @@ namespace TortillaEngine
         {
             if (component != nullptr)
             {                
-                component->apply_transform(*(component->get_parent()->get_transform().get_transformation()));
+                component->apply_transform((component->get_parent()->get_transform().get_transformation()));
             }
         }
     }

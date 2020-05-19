@@ -35,18 +35,19 @@
 #include <memory>						// For shared_ptr
 #include <Mesh.hpp>						// For collection of meshes
 
-#include <glm.hpp>
+
 
 
 namespace Rendering3D
 {
-	struct Transform;
 
     /**
     @brief Model class    
     */
 	class Model
 	{
+        typedef glm::mat4 mat4;
+
         /**
         @brief The mesh of this model
         */
@@ -60,27 +61,24 @@ namespace Rendering3D
         @param mesh_path The path of the mesh
         */
 		Model(std::string mesh_path);
-
-
-        /**
-        @brief Update the model
-        @param delta The delta time
-        @param view The view reference
-        */
-		void Update(float delta, class View& view);		
-
+	
         /**
         @brief Render the model
         @param view The view reference
         */
-        void Render(glm::mat4 view);
+        void Render(class mat4 view);
 
         /**
         @brief Gets the material reference of the given mesh by index
         @param index The index of the mesh to get the material attached to
         @return The material reference
         */
-		class Material& get_material(size_t index);
+        std::shared_ptr<Material>& get_material(size_t index);
+
+        /**
+        
+        */
+        void apply_transformations(class mat4 transform);
 	
 	};
 }

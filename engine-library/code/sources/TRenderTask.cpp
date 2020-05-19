@@ -49,6 +49,8 @@ namespace TortillaEngine
         glEnable(GL_DEPTH_TEST);
         glEnable(GL_CULL_FACE);
         glCullFace(GL_BACK);
+
+        framebuffer = std::make_shared<TFramebuffer>(scene->get_window()->get_width(), scene->get_window()->get_height());
     }
 
     /**
@@ -56,7 +58,7 @@ namespace TortillaEngine
     */
     TRenderTask::~TRenderTask()
     {
-
+        delete camera;
     }
 
     /**
@@ -66,6 +68,7 @@ namespace TortillaEngine
     {        
         owner_scene ->get_window()->reset();
         
+        framebuffer->activate();
         //skybox 
 
         // lights
@@ -98,7 +101,7 @@ namespace TortillaEngine
     */
     void TRenderTask::add_component(TRenderComponent * component)
     {
-       // renderer->add(component->get_parent()->get_name(), component->get_model());
+       render_components.push_back(component);
     }
 
     /**

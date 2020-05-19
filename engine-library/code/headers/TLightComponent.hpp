@@ -163,7 +163,7 @@ namespace TortillaEngine
         @brief Applies the given transform to the light
         @param transform The transformation to apply
         */
-        void    apply_transform(glm::mat4& transform) override;
+        void    apply_transform(glm::mat4 transform) override;
     };
 
 }

@@ -87,7 +87,7 @@ namespace TortillaEngine
         @brief Gets the transformation matrix
         @return A reference to the transformation matrix
         */
-        glm::mat4*	get_transformation() const;
+        glm::mat4 get_transformation() const;
 		
         /**
         @brief Translates the matrix

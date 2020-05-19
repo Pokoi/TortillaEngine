@@ -78,7 +78,7 @@ namespace TortillaEngine
         @brief Applies a given transformation to itself
         @param transfrom A reference to the transformation to apply
         */
-        virtual void    apply_transform(glm::mat4 & transform) {}
+        virtual void    apply_transform(glm::mat4 transform) {}
 
         /**
         @brief Load the component values from a xml

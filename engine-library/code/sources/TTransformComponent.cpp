@@ -88,9 +88,14 @@ namespace TortillaEngine
     @brief Gets the transformation matrix
     @return A reference to the transformation matrix
     */
-    glm::mat4* TTransformComponent::get_transformation() const
+    glm::mat4 TTransformComponent::get_transformation() const
     {
-        return transformation;
+        if (parent->get_parent())
+        {
+            return (*transformation) * parent->get_parent()->get_transform().get_transformation();
+        }
+
+        return (*transformation);
     }
     	
     /**

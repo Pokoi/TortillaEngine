@@ -87,7 +87,7 @@ namespace TortillaEngine
         @brief Apply the given transform to the camera
         @param transfrom The transform to apply
         */
-        void  apply_transform(glm::mat4& transform) override;
+        void  apply_transform(glm::mat4 transform) override;
     };
 
     

@@ -84,8 +84,7 @@ namespace TortillaEngine
         @param width The width of the framebuffer
         @param height The height of the framebuffer
         */
-        TFramebuffer( unsigned int width, unsigned int height);
-
+        TFramebuffer( unsigned int width, unsigned int height);        
 
         /**
         @brief Render the framebuffer
@@ -100,6 +99,11 @@ namespace TortillaEngine
         {
             return effect;
         }
+
+        /**
+        @brief Bind the framebuffer to activate it
+        */
+        void activate();
     };
 
 }

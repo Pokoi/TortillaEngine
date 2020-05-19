@@ -120,7 +120,14 @@ namespace TortillaEngine
         */
         void set_uniform_value(unsigned int location, float value_0, float value_1, float value_2, float value_3);
        
-
+        /**
+        @brief Get the id of the shader program
+        @return The id
+        */
+        unsigned int get_id()
+        {
+            return id;
+        }
     };
 
 }

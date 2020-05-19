@@ -47,7 +47,7 @@ namespace TortillaEngine
     {
         // Frambuffer creation
         glGenFramebuffers(1, &id);
-        glBindFramebuffer(GL_FRAMEBUFFER, id);
+        activate();
 
 
         // Out texture creation
@@ -90,14 +90,20 @@ namespace TortillaEngine
         {
             +1.0f, -1.0f, 0.0f,
             +1.0f, +1.0f, 0.0f,
-            -1.0f, +1.0f, 0.0f
+            -1.0f, +1.0f, 0.0f, 
+            +1.0f, -1.0f, 0.0f, 
+            -1.0f, +1.0f, 0.0f,
+            -1.0f, -1.0f, 0.0f
         };
 
         static const GLfloat triangle_texture_uv[] =
         {
             +1.0f,  0.0f,
             +1.0f, +1.0f,
-             0.0f, +1.0f
+             0.0f, +1.0f,
+            +1.0f, 0.0f, 
+             0.0f, +1.0f,
+             0.0f, 0.0f
         };
 
         glGenBuffers(1, &triangle_vbo_0);
@@ -107,8 +113,6 @@ namespace TortillaEngine
         glGenBuffers(1, &triangle_vbo_1);
         glBindBuffer(GL_ARRAY_BUFFER, triangle_vbo_1);
         glBufferData(GL_ARRAY_BUFFER, sizeof(triangle_texture_uv), triangle_texture_uv, GL_STATIC_DRAW);
-
-
     }
 
     /**
@@ -120,7 +124,28 @@ namespace TortillaEngine
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
 
+        glUseProgram(effect.get_id());
+
+        glBindTexture(GL_TEXTURE_2D, out_texture_id);
+
+        glEnableVertexAttribArray(0);
+        glBindBuffer(GL_ARRAY_BUFFER, triangle_vbo_0);
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
+
+        glEnableVertexAttribArray(1);
+        glBindBuffer(GL_ARRAY_BUFFER, triangle_vbo_1);
+        glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 0, 0);
+
+        glDrawArrays(GL_TRIANGLES, 0, 3);
     
+    }
+
+    /**
+    @brief Bind the framebuffer to activate it
+    */
+    void TFramebuffer::activate()
+    {
+        glBindFramebuffer(GL_FRAMEBUFFER, id);
     }
     
 

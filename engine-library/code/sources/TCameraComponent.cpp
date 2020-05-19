@@ -116,7 +116,7 @@ namespace TortillaEngine
     @brief Apply the given transform to the camera
     @param transfrom The transform to apply
     */
-    void TCameraComponent::apply_transform(glm::mat4& transform)
+    void TCameraComponent::apply_transform(glm::mat4 transform)
     {
        camera->set_projection(camera->get_projection() * transform);
     }

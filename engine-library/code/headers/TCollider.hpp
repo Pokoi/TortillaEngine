@@ -159,7 +159,7 @@ namespace TortillaEngine
         /**
         @brief Apply the transform of the parent
         */
-        virtual void apply_transform(glm::mat4 & transform) override;
+        virtual void apply_transform(glm::mat4 transform) override;
 
         /**
         @brief Subscription of the component to the task that manages it

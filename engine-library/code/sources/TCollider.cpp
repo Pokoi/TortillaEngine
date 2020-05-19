@@ -30,7 +30,6 @@
 #include <TCollider.hpp>
 #include <TEntity.hpp>
 #include <TScene.hpp>
-#include <Math.hpp>
 #include <string>
 #include <memory>
 #include <TUpdateComponent.hpp>
@@ -101,7 +100,7 @@ namespace TortillaEngine
     /**
      @brief Apply the transform of the parent
     */
-    void TCollider::apply_transform(glm::mat4 & transform)
+    void TCollider::apply_transform(glm::mat4 transform)
     {
         calculate_center();
     }

@@ -51,10 +51,9 @@ namespace Rendering3D
 
 	
     /**
-    @brief Render the mesh
-    @param view A view reference this mesh belongs to
+    @brief Render the mesh    
     */
-	void Mesh::Render(View& view)
+	void Mesh::Render()
 	{
         material->render();
         vao->render();

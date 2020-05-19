@@ -64,10 +64,9 @@ namespace Rendering3D
 		Mesh (std::shared_ptr<Vao> vao);
 
         /**
-        @brief Render the mesh
-        @param view A view reference this mesh belongs to
+        @brief Render the mesh        
         */
-		void Render(class View & view);
+		void Render();
 
         /**
         @brief Sets the material

@@ -81,6 +81,9 @@ namespace TortillaEngine
 						    int			width,
 						    int			height
 					    )
+                        :
+                        width{width}, 
+                        height{height}
 	{
 		window	= nullptr; 
 		context = nullptr;
@@ -156,6 +159,6 @@ namespace TortillaEngine
     int TWindow::poll_events(SDL_Event & e)
     {
         return SDL_PollEvent(&e);
-    }
-	
+    }  
+
 }

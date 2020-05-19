@@ -77,7 +77,7 @@ namespace TortillaEngine
         @brief Applies a given transformation to the model
         @param transfrom The transformation to apply
         */
-        void            apply_transform(glm::mat4 & transform ) override;
+        void            apply_transform(glm::mat4 transform ) override;
 
         /**
         @brief Executes the component

@@ -54,6 +54,16 @@ namespace TortillaEngine
         */
 		SDL_GLContext		context;
 
+        /**
+        @brief The window width
+        */
+        unsigned int width;
+
+        /**
+        @brief The window height
+        */
+        unsigned int height;
+
 	public:
         
         /**
@@ -94,6 +104,24 @@ namespace TortillaEngine
         @return The index
         */
         int  poll_events(SDL_Event & e);
+
+        /**
+        @brief Gets the width of the window
+        @return The width of the window
+        */
+        unsigned int get_width()
+        {
+            return width;
+        }
+
+        /**
+        @brief Gets the height of the window
+        @return The height of the window
+        */
+        unsigned int get_height()
+        {
+            return height;
+        }
 
 	};
 }
