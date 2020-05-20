@@ -28,7 +28,11 @@
  */
 
 #include <Material.hpp>
+extern "C"
+{
 #include <targa.h>
+}
+
 #include <glad.h>
 #include <Color_Buffer_Rgba8888.hpp>
 

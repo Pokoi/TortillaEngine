@@ -31,7 +31,7 @@
 #include <TEntity.hpp>
 #include <TScene.hpp>
 #include <TVariant.hpp>
-#include <gtc/matrix_transform.inl>
+#include <gtc/matrix_transform.hpp>
 
 
 namespace TortillaEngine
@@ -61,8 +61,7 @@ namespace TortillaEngine
 													float y_scale,
 													float z_scale
 												) : TComponent (entity)
-	{
-        transformation = new glm::mat4();
+	{        
         translate(x_position	, y_position, z_position);
 		rotate	 (pitch_angle	, yaw_angle	, roll_angle);
 		scale	 (x_scale		, y_scale	, z_scale	);
@@ -74,7 +73,7 @@ namespace TortillaEngine
     */
     TTransformComponent::TTransformComponent(glm::mat4 & transformation)
     {        
-        this->transformation = &transformation;
+        this->transformation = transformation;
     }
 
     /**
@@ -92,10 +91,10 @@ namespace TortillaEngine
     {
         if (parent->get_parent())
         {
-            return (*transformation) * parent->get_parent()->get_transform().get_transformation();
+            return (transformation) * parent->get_parent()->get_transform().get_transformation();
         }
 
-        return (*transformation);
+        return (transformation);
     }
     	
     /**
@@ -106,7 +105,7 @@ namespace TortillaEngine
     */
 	inline void TTransformComponent::translate	(float x		  , float y			, float z			)
 	{        
-        *transformation = glm::translate(*transformation, glm::vec3{ x,y,z });       
+        transformation = glm::translate(transformation, glm::vec3{ x,y,z });       
     }
 
     /**
@@ -119,15 +118,15 @@ namespace TortillaEngine
 	{
 		if (pitch_angle)
 		{
-            *transformation = glm::rotate(*transformation, pitch_angle, glm::vec3(1.f, 0.f, 0.f));
+            transformation = glm::rotate(transformation, pitch_angle, glm::vec3(1.f, 0.f, 0.f));
 		}
 		if (yaw_angle)
 		{
-            *transformation = glm::rotate(*transformation, yaw_angle, glm::vec3(0.f, 1.f, 0.f));
+            transformation = glm::rotate(transformation, yaw_angle, glm::vec3(0.f, 1.f, 0.f));
 		}
 		if (roll_angle)
 		{
-            *transformation = glm::rotate(*transformation, roll_angle, glm::vec3(0.f, 0.f, 1.f));
+            transformation = glm::rotate(transformation, roll_angle, glm::vec3(0.f, 0.f, 1.f));
 		}
 	}
 
@@ -139,7 +138,7 @@ namespace TortillaEngine
     */
 	inline void TTransformComponent::scale		(float scale_x	  , float scale_y	, float scale_z		)
 	{
-        *transformation = glm::scale(*transformation, glm::vec3(scale_x, scale_y, scale_z));
+        transformation = glm::scale(transformation, glm::vec3(scale_x, scale_y, scale_z));
     }
 		
 
@@ -164,7 +163,7 @@ namespace TortillaEngine
     */
     glm::vec4 TTransformComponent::get_position()
     {
-        return (*transformation)[3];      
+        return (transformation)[3];      
         
     }
 

@@ -36,6 +36,8 @@
 #include <vbo.hpp>
 #include <ebo.hpp>
 #include <Material.hpp>
+#include <glm.hpp>
+
 
 namespace Rendering3D
 {
@@ -45,9 +47,6 @@ namespace Rendering3D
 	class Mesh
 	{
 
-        typedef glm::mat4 mat4;
-
-        
         /**
         @brief The vao of the mesh
         */
@@ -61,7 +60,7 @@ namespace Rendering3D
         /**
         @brief The model view matrix
         */
-        mat4 model_view_matrix;
+        glm::mat4 model_view_matrix;
 
 	public:
 
@@ -98,7 +97,7 @@ namespace Rendering3D
         @brief Apply the matrix transformation to the mesh
         @param transformation The transformation to apply
         */
-        void apply_transform(mat4 transformation);
+        void apply_transform(glm::mat4 transformation);
 
 
     private:

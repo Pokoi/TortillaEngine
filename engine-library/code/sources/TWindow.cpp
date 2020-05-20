@@ -82,8 +82,8 @@ namespace TortillaEngine
 						    int			height
 					    )
                         :
-                        width{width}, 
-                        height{height}
+                        width{unsigned int (width)}, 
+                        height{unsigned int (height)}
 	{
 		window	= nullptr; 
 		context = nullptr;

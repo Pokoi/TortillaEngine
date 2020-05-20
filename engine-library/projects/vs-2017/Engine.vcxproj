@@ -39,6 +39,7 @@
     <ClInclude Include="..\..\code\headers\TScriptComponent.hpp" />
     <ClInclude Include="..\..\code\headers\TScriptTask.hpp" />
     <ClInclude Include="..\..\code\headers\TShaderProgram.hpp" />
+    <ClInclude Include="..\..\code\headers\TSkybox.hpp" />
     <ClInclude Include="..\..\code\headers\TSound.hpp" />
     <ClInclude Include="..\..\code\headers\TSphereCollider.hpp" />
     <ClInclude Include="..\..\code\headers\TTask.hpp" />
@@ -49,8 +50,8 @@
     <ClInclude Include="..\..\code\headers\TWindow.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\BufferObject.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Camera.hpp" />
+    <ClInclude Include="..\..\code\render_base\headers\CubemapTexture.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\ebo.hpp" />
-    <ClInclude Include="..\..\code\render_base\headers\Light.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Material.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Mesh.hpp" />
     <ClInclude Include="..\..\code\render_base\headers\Model.hpp" />
@@ -60,6 +61,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\code\render_base\sources\BufferObject.cpp" />
     <ClCompile Include="..\..\code\render_base\sources\Camera.cpp" />
+    <ClCompile Include="..\..\code\render_base\sources\CubemapTexture.cpp" />
     <ClCompile Include="..\..\code\render_base\sources\ebo.cpp" />
     <ClCompile Include="..\..\code\render_base\sources\Material.cpp" />
     <ClCompile Include="..\..\code\render_base\sources\Mesh.cpp" />
@@ -82,6 +84,7 @@
     <ClCompile Include="..\..\code\sources\TScene.cpp" />
     <ClCompile Include="..\..\code\sources\TShader.cpp" />
     <ClCompile Include="..\..\code\sources\TShaderProgram.cpp" />
+    <ClCompile Include="..\..\code\sources\TSkybox.cpp" />
     <ClCompile Include="..\..\code\sources\TSound.cpp" />
     <ClCompile Include="..\..\code\sources\TSphereCollider.cpp" />
     <ClCompile Include="..\..\code\sources\TTimer.cpp" />
@@ -89,6 +92,8 @@
     <ClCompile Include="..\..\code\sources\TUpdateComponent.cpp" />
     <ClCompile Include="..\..\code\sources\TWindow.cpp" />
     <ClCompile Include="..\..\code\sources\winmain.cpp" />
+    <ClCompile Include="..\..\libraries\glad\glad.c" />
+    <ClCompile Include="..\..\libraries\targa\src\targa.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -137,7 +142,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj;../../libraries/angel_rodriguez_dependencies</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj;../../libraries/angel_rodriguez_dependencies;../../code/glm</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -161,7 +166,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/glm;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj;../../libraries/angel_rodriguez_dependencies</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../code/headers;../../libraries/sdl2/include;../../libraries/sdl2_mixer/include;../../libraries/glad;../../libraries/targa/include;../../code/base/headers;../../code/render_base/headers;../../libraries/tinyobj;../../libraries/angel_rodriguez_dependencies;../../code/glm</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

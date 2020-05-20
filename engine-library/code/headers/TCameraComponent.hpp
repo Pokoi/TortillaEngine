@@ -34,6 +34,7 @@
 #include <TComponent.hpp>
 #include <Camera.hpp>
 #include <memory>
+#include <glm.hpp>
 
 namespace TortillaEngine
 {

@@ -29,9 +29,9 @@
 
 #pragma once
 
+
 #include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
-
 
 namespace Rendering3D
 {
@@ -45,6 +45,11 @@ namespace Rendering3D
         @brief The camera projection 
         */
         glm::mat4 projection;
+
+        /**
+        @brief The camera model_view
+        */
+        glm::mat4 model_view;
        
         /**
         @brief Initial field of view 
@@ -128,6 +133,23 @@ namespace Rendering3D
             this->projection = projection;
         }
     
+        /**
+       @brief Gets the model view matrix
+       @return The model view matrix
+       */
+        glm::mat4 get_model_view()
+        {
+            return model_view;
+        }
+
+        /**
+        @brief Sets a model view matrix
+        @param model_view The matrix to set
+        */
+        void set_model_view(glm::mat4 model_view)
+        {
+            this->projection = model_view;
+        }
 
         /**
         @brief Change the field of view

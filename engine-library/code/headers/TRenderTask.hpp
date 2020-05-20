@@ -39,6 +39,7 @@
 #include <TShaderProgram.hpp>
 #include <TFramebuffer.hpp>
 #include <TBatch.hpp>
+#include <TSkybox.hpp>
 
 namespace TortillaEngine
 {
@@ -67,6 +68,11 @@ namespace TortillaEngine
         @brief The framebuffer of the render for the post processing
         */
         std::shared_ptr<TFramebuffer> framebuffer;
+
+        /**
+        @brief A reference to the skybox object
+        */
+        std::shared_ptr<TSkybox> skybox;
 
 
     public:

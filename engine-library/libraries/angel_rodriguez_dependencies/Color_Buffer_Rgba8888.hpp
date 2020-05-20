@@ -12,8 +12,7 @@
 #ifndef COLOR_BUFFER_RGBA8888_HEADER
 #define COLOR_BUFFER_RGBA8888_HEADER
 
-    #include "Color_Buffer.hpp"
-    #include <SFML/OpenGL.hpp>
+    #include "Color_Buffer.hpp"    
     #include <stdint.h>             // This header is <csdint> on C++11...
     #include <vector>
 
@@ -121,12 +120,7 @@
 
             void gl_draw_pixels (int raster_x, int raster_y) const
             {
-                // glDrawPixels() is efficient when the driver has proper support. Otherwise it will be slow.
-                // Color buffer objects could be more appropriate, but glDrawPixels() is more simple and compatible
-                // within the context of this example.
-
-                glRasterPos2i (raster_x, raster_y);
-                glDrawPixels  (width, height, GL_RGBA, GL_UNSIGNED_BYTE, colors ());
+                
             }
 
         };

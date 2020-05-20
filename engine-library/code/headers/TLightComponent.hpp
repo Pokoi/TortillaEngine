@@ -33,6 +33,7 @@
 #include <TComponent.hpp>
 #include <memory>
 
+
 namespace TortillaEngine
 {
     /**
@@ -94,7 +95,7 @@ namespace TortillaEngine
         /**
         @brief Position of the light
         */
-        std::shared_ptr<class vec3> position;
+        glm::vec3 position;
 
     public:
 
@@ -163,7 +164,7 @@ namespace TortillaEngine
         @brief Get the position of the light
         @return The position
         */
-        std::shared_ptr<class vec3>& get_position();
+        glm::vec3 & get_position();
     };
 
 }

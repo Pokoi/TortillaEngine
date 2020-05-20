@@ -32,7 +32,6 @@
 #include <TRenderTask.hpp>
 #include <memory>
 #include <TScene.hpp>
-#include <glm.hpp>
 
 namespace TortillaEngine
 {
@@ -162,14 +161,14 @@ namespace TortillaEngine
     */
     void TLightComponent::apply_transform(glm::mat4 transform)
     {
-        position = std::make_shared<glm::vec3>(transform[3][0], transform[3][1], transform[3][2]);       
+        position = glm::vec3(transform[3][0], transform[3][1], transform[3][2]);       
     }
 
     /**
     @brief Get the position of the light
     @return The position
     */
-    std::shared_ptr<class vec3>& TLightComponent::get_position()
+    glm::vec3 & TLightComponent::get_position()
     {
         return position;
     }

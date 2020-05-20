@@ -42,7 +42,7 @@ namespace TortillaEngine
         /**
         @brief Transformation matrix
         */
-        glm::mat4* transformation;
+        glm::mat4 transformation;
 
     public:
 

@@ -14,7 +14,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 #define TGA_KEEP_MACROS /* BIT, htole16, letoh16 */
-#include "targa.h"
+#include <targa.h>
 #include <stdlib.h>
 #include <string.h> /* memcpy, memcmp */
 

@@ -103,6 +103,15 @@ namespace Rendering3D
         */
         void render();
 
+        /**
+        @brief Get the vao id
+        @return The id
+        */
+        unsigned int get_id()
+        {
+            return id;
+        }
+
     };
 
 }

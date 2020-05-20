@@ -32,6 +32,11 @@
 #include <string>
 #include <TShaderProgram.hpp>
 
+namespace example
+{
+    class Color_Buffer_Rgba8888;
+}
+
 namespace Rendering3D
 {
     /**
@@ -39,22 +44,21 @@ namespace Rendering3D
     */
 	class Material
 	{
-        typedef example::Color_Buffer_Rgba8888 Color_Buffer_Rgba8888;
 
         /**
         @brief The texture of the material
         */
-        std::shared_ptr <Color_Buffer_Rgba8888> texture;
+        std::shared_ptr <example::Color_Buffer_Rgba8888> texture;
 
         /**
         @brief The texture id
         */
-        unsigned int texture_id;
+        unsigned int texture_id = 0;
 
         /**
         @brief Flag if this material is transparent or opaque
         */
-        bool opaque;
+        bool opaque = true;
 
         /**
         @brief A reference to the shader program of the material
@@ -103,6 +107,15 @@ namespace Rendering3D
         std::shared_ptr <TortillaEngine::TShaderProgram>& get_shader_program()
         {
             return shader_program;
+        }
+
+        /**
+        @brief Sets the shader program
+        @param shader_program The reference of the shader program to set
+        */
+        void set_shader_program(std::shared_ptr<TortillaEngine::TShaderProgram> shader_program)
+        {
+            shader_program = shader_program;
         }
        
 	};

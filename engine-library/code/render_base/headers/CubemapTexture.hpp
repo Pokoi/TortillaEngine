@@ -1,6 +1,6 @@
 /*
- * File: Model.hpp
- * File Created: 11th February 2020
+ * File: CubemapTexture.hpp
+ * File Created: 20th May 2020
  * ––––––––––––––––––––––––
  * Author: Jesus Fermin, 'Pokoi', Villar  (hello@pokoidev.com)
  * ––––––––––––––––––––––––
@@ -24,69 +24,51 @@
  * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
  * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+ * SOFTWARE
+*/
 
 #pragma once
 
-#include <vector>						// For collections
-
-#include <string>						// For path and name
-#include <memory>						// For shared_ptr
-#include <Mesh.hpp>						// For collection of meshes
-#include <glm.hpp>
-
+#include <Color_Buffer_Rgba8888.hpp>
+#include <string>
 
 namespace Rendering3D
 {
+    class CubemapTexture
+    {
+        /**
+        @brief The id of the texture
+        */
+        unsigned int texture_id = 0;
 
-    /**
-    @brief Model class    
-    */
-	class Model
-	{
+    public:
 
         /**
-        @brief The mesh of this model
+        @brief Creates an instance        
         */
-		std::shared_ptr<Mesh>	mesh;
-		               
-
-	public:
+        CubemapTexture() {}
 
         /**
-        @brief Creates a instance of model
-        @param mesh_path The path of the mesh
+        @brief Creates an instance
+        @param path The path of the texture
         */
-		Model(std::string mesh_path);
-	
-        /**
-        @brief Render the model
-        @param view The view reference
-        */
-        void Render();
+        CubemapTexture(std::string path);
 
         /**
-        @brief Gets the material reference of the given mesh by index
-        @param index The index of the mesh to get the material attached to
-        @return The material reference
+        @brief Releases the memory
         */
-        std::shared_ptr<Material>& get_material(size_t index);
+        ~CubemapTexture();   
 
         /**
-        @brief Gets the mesh of this model        
-        @return The mesh reference
+        @brief Get the id of the texture
+        @return The texture id
         */
-        std::shared_ptr<Mesh>& get_mesh()
+        unsigned int get_id()
         {
-            return mesh;
+            return texture_id;
         }
 
-        /**
-        @brief Apply the matrix transformation of the transform to the model
-        @param transform The transformation matrix to apply
-        */
-        void apply_transformations(glm::mat4 transform);
-	
-	};
+
+    };
+
 }

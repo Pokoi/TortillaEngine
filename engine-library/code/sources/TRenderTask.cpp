@@ -30,7 +30,6 @@
 #include <TRenderTask.hpp>
 #include <TRenderComponent.hpp>
 #include <TScene.hpp>
-#include <Light.hpp>
 
 #include <glad.h>
 #include <glm.hpp>
@@ -71,7 +70,9 @@ namespace TortillaEngine
         owner_scene ->get_window()->reset();
         
         framebuffer->activate();
-        //skybox 
+        
+        //Skybox
+        skybox->render(camera->get_camera()->get_projection(), camera->get_camera()->get_model_view());
 
         // Opaque models
         // For each batch
@@ -82,9 +83,10 @@ namespace TortillaEngine
             // Light information
             batch->get_shader_program()->set_uniform_value(batch->get_shader_program()->get_location("light_intensity"), light->get_intensity());
             batch->get_shader_program()->set_uniform_value(batch->get_shader_program()->get_location("light_color"), light->get_color().red, light->get_color().green, light->get_color().blue);
+            batch->get_shader_program()->set_uniform_value(batch->get_shader_program()->get_location("light_position"), (light->get_position())[0], (light->get_position())[1], (light->get_position())[2]);
             
             // Camera
-            unsigned int proyection_matrix_id = batch->get_shader_program()->get_location("proyection_matrix");
+            unsigned int proyection_matrix_id = batch->get_shader_program()->get_location("projection_matrix");
             glUniformMatrix4fv(proyection_matrix_id, 1, GL_FALSE, glm::value_ptr(camera->get_camera()->get_projection()));
             
             // Models

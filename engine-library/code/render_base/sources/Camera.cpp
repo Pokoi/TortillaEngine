@@ -29,9 +29,6 @@
 
 #include <Camera.hpp>
 
-
-#include <math.h>
-
 namespace Rendering3D
 {
 

@@ -33,7 +33,6 @@
 
 #include <Model.hpp>		// For constructor assignation
 
-#include <glm.hpp>
 #include <gtc/matrix_transform.hpp>
 #include <gtc/type_ptr.hpp>
 
@@ -47,7 +46,7 @@ namespace Rendering3D
     @brief Creates an instance of this class.
     @param vao The collecion of data
     */
-    Mesh::Mesh(std::shared_ptr<Vao> vao) : vao{vao}
+    Mesh::Mesh(std::shared_ptr<Vao> vao) : vao{ vao }
     {
     
     }
@@ -57,8 +56,7 @@ namespace Rendering3D
     @brief Render the mesh    
     */
 	void Mesh::Render()
-	{
-        
+	{ 
         // Model View
         unsigned int model_view_matrix_id = material->get_shader_program()->get_location("model_view_matrix");      
         glUniformMatrix4fv(model_view_matrix_id, 1, GL_FALSE, glm::value_ptr(model_view_matrix));

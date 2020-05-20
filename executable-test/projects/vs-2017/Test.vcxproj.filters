@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{a73c7256-7cba-42ca-a074-f82e8efb930a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\code\main.cpp">
@@ -35,5 +38,19 @@
     <ClInclude Include="..\..\code\GameManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\code\shaders\PointLightVertexShader.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\code\shaders\PointLightFragmentShader.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\code\shaders\SkyboxVertexShader.shader">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\..\code\shaders\SkyboxFragmentShader.shader">
+      <Filter>Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
