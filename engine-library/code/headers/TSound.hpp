@@ -61,7 +61,7 @@ namespace TortillaEngine
         */
         ~TSound()
         {
-            delete sound_source;
+            //delete sound_source;
         }
         
         /**

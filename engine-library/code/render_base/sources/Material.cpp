@@ -107,5 +107,4 @@ namespace Rendering3D
             glBindTexture(GL_TEXTURE_2D, texture_id);
         }
     }
-
 }

@@ -36,10 +36,12 @@
 #include <TLightComponent.hpp>
 #include <memory>
 #include <vector>
+#include <map>
 #include <TShaderProgram.hpp>
 #include <TFramebuffer.hpp>
 #include <TBatch.hpp>
 #include <TSkybox.hpp>
+#include <Material.hpp>
 
 namespace TortillaEngine
 {
@@ -73,6 +75,16 @@ namespace TortillaEngine
         @brief A reference to the skybox object
         */
         std::shared_ptr<TSkybox> skybox;
+
+        /**
+        @brief A collection of the shader programs in the program
+        */
+        std::map<std::string, std::shared_ptr<TShaderProgram>> shader_programs;
+
+        /**
+        @brief A collection of the materials in the program
+        */
+        std::map<std::string, std::shared_ptr<Rendering3D::Material>> materials;
 
 
     public:
@@ -111,6 +123,55 @@ namespace TortillaEngine
         @param light A reference to the light to add
         */
         void add_light(TLightComponent* light);
+
+        /**
+        @brief Adds a shader program to the collection of shader programs
+        @param name The name of the shader program
+        @param shader_program The shader program to add
+        */
+        void add_shader_program(std::string name, std::shared_ptr<TShaderProgram> shader_program)
+        {
+            shader_programs[name] = shader_program;
+        }
+
+        /**
+        @brief Gets a reference to a shader program by name
+        @param name The name of the shader program to get
+        @return A reference to the shader program 
+        */
+        std::shared_ptr<TShaderProgram>& get_shader_program(std::string name)
+        {
+            return shader_programs[name];
+        }
+
+        /**
+        @brief Adds a material to the collection of materials
+        @param name The name of the material
+        @param material The material to add
+        */
+        void add_material(std::string name, std::shared_ptr<Rendering3D::Material> material)
+        {
+            materials[name] = material;
+        }
+
+        /**
+        @brief Gets a reference to a material by name
+        @param name The name of the material to get
+        @return A reference to the material
+        */
+        std::shared_ptr<Rendering3D::Material>& get_material(std::string name)
+        {
+            return materials[name];
+        }
+
+        /**
+        @brief Sets the skybox reference of the render task
+        @param skybox The skybox reference to set
+        */
+        void set_skybox(std::shared_ptr<TSkybox> skybox)
+        {
+            this->skybox = skybox;
+        }
 
     };
 }

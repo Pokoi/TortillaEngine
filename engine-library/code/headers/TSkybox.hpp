@@ -102,11 +102,5 @@ namespace TortillaEngine
             this->shader_program = shader_program;
         }
 
-        /**
-        @brief Load the component values from a xml
-        @param component_node The xml node with this component info
-        */
-        virtual bool    parse_component(rapidxml::xml_node<>* component_node) override;
-
     };
 }

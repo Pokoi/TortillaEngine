@@ -231,7 +231,25 @@ namespace TortillaEngine
         @brief Parse all the entities data from a xml node
         @param node The xml node with the data
         */
-        void parse_entities  (rapidxml::xml_node<>* node);       
+        void parse_entities  (rapidxml::xml_node<>* node); 
+
+        /**
+        @brief Parse all the shaders data from a xml node
+        @param node The xml node with the data
+        */
+        void parse_shaders(rapidxml::xml_node<>* node);
+
+        /**
+        @brief Parse all the materials data from a xml node
+        @param node The xml node with the data
+        */
+        void parse_materials(rapidxml::xml_node<>* node);
+
+        /**
+        @brief Parse the skybox data from a xml node
+        @param node The xml node with the data
+        */
+        void parse_skybox(rapidxml::xml_node<>* node);
 
         /**
         @brief Gets the path of the xml file with this scene data

@@ -29,7 +29,6 @@
 
 #pragma once
 
-#include <Color_Buffer_Rgba8888.hpp>
 #include <string>
 
 namespace Rendering3D

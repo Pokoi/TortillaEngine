@@ -30,6 +30,7 @@
 #pragma once
 
 #include <CubemapTexture.hpp>
+#include <Color_Buffer_Rgba8888.hpp>
 #include <vector>
 #include <memory>
 

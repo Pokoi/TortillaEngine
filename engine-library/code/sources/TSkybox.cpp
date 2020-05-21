@@ -89,6 +89,8 @@ namespace TortillaEngine
 
         cube_vao.add_vertices(coordinates, 108 * sizeof(GLfloat));        
         
+        shader_program = std::make_shared<TShaderProgram>();
+
         shader_program->activate();
 
         TShader vertex_shader(vertex_shader_file, TShader::VERTEX, "skybox_vertex_shader");
@@ -124,46 +126,6 @@ namespace TortillaEngine
 
         glDepthMask(GL_TRUE);
 
-    }
-
-    /**
-    @brief Load the component values from a xml
-    @param component_node The xml node with this component info
-    */
-    bool TSkybox::parse_component(rapidxml::xml_node<>* component_node)
-    {
-        std::string vertex_shader_path;
-        std::string fragment_shader_path;
-        std::string texture_path;
-
-
-        for (
-            rapidxml::xml_node<>* render = component_node->first_node();
-            render;
-            render = render->next_sibling()
-            )
-        {
-            std::string value = render->value();
-
-            if ((std::string)render->name() == "texture")
-            {
-                texture_path = value;
-            }
-
-            else if ((std::string)render->name() == "vertex_shader")
-            {
-                vertex_shader_path = value;
-            }
-
-            else if ((std::string)render->name() == "fragment_shader")
-            {
-                fragment_shader_path = value;
-            }
-        }
-
-        *this = TSkybox(texture_path, vertex_shader_path, fragment_shader_path);
-
-        return true;
-    }
+    }    
 
 }

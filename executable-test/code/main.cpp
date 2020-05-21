@@ -51,7 +51,7 @@ int main()
     //Scene creation from a xml file
     TScene scene(&window);
     scene.load("../../assets/scene.xml");
-
+    /*
     //Read the input mapping from a xml file
     std::dynamic_pointer_cast<TInputMapperTask>(scene.get_task("TInputMapperTask"))->load_from_xml("../../assets/input.xml");
     
@@ -64,7 +64,7 @@ int main()
     {        
         std::shared_ptr <TEntity> enemy = scene.get_entity("Enemy" + std::to_string(i));
         enemy->add_component("EnemyController", std::make_shared<EnemyController>(enemy.get(), player.get()));
-    }        
+    }   */     
     scene.run();
 
 	return 0;

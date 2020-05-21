@@ -71,7 +71,7 @@ namespace Rendering3D
         @param index The index of the mesh to get the material attached to
         @return The material reference
         */
-        std::shared_ptr<Material>& get_material(size_t index);
+        std::shared_ptr<Material>& get_material(size_t index);        
 
         /**
         @brief Gets the mesh of this model        

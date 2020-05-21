@@ -63,7 +63,13 @@ namespace TortillaEngine
             if ((std::string)render->name() == "asset")
             {
                 model = std::make_shared < Rendering3D::Model>(value);
-            }            
+            }
+
+            else if ((std::string)render->name() == "material")
+            {
+                std::shared_ptr<TRenderTask> renderTask = std::reinterpret_pointer_cast<TRenderTask>(this->parent->get_scene()->get_task("TRenderTask"));
+                model->get_mesh()->set_material(renderTask->get_material(value));
+            }
         }
 
         add_to_update_component();

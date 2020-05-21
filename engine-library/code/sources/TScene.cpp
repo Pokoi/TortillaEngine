@@ -38,6 +38,9 @@
 #include <TLightComponent.hpp>
 #include <TTransformComponent.hpp>
 
+#include <TShader.hpp>
+#include <TShaderProgram.hpp>
+
 namespace TortillaEngine
 {
     /**
@@ -80,9 +83,283 @@ namespace TortillaEngine
                 {
                     parse_entities(entities);
                 }
+
+                else if ((std::string) entities->name() == "shader_programs")
+                {
+                    parse_shaders(entities);
+                }
+
+                else if ((std::string) entities->name() == "materials")
+                {
+                    parse_shaders(entities);
+                }
+
+                else if ((std::string) entities->name() == "skybox")
+                {
+                    parse_skybox(entities);
+                }
             }
         }
     }
+
+    /**
+    @brief Parse the skybox data from a xml node
+    @param node The xml node with the data
+    */
+    void TScene::parse_skybox(rapidxml::xml_node<>* node)
+    {
+        std::shared_ptr<TRenderTask> renderTask = std::reinterpret_pointer_cast<TRenderTask>(get_task("TRenderTask"));
+
+        for (
+            rapidxml::xml_node <>* material = node->first_node();
+            material;
+            material = material->next_sibling()
+            )
+        {            
+            
+            std::string texture;
+            std::string vertex_path;
+            std::string fragment_path;
+            
+
+            if (material->type() == rapidxml::node_element)
+            {
+                if ((std::string)material->name() != "material") return;
+            }
+
+            for (
+                rapidxml::xml_attribute<>* attributes = material->first_attribute();
+                attributes;
+                attributes = attributes->next_attribute()
+                )
+            {
+                if ((std::string)attributes->name() == "name")
+                {                    
+
+                    for (
+                        rapidxml::xml_node<>* key = material->first_node();
+                        key;
+                        key = key->next_sibling()
+                        )
+                    {
+                        if ((std::string)key->name() == "texture")
+                        {
+                            texture = key->value();
+                        }
+                        else if ((std::string)key->name() == "vertex_shader")
+                        {
+                            vertex_path = key->value();
+                        }
+                        else if ((std::string)key->name() == "fragment_shader")
+                        {
+                            fragment_path = key->value();
+                        }
+                    }
+                }
+            }
+
+            renderTask->set_skybox(std::make_shared<TSkybox>(texture, vertex_path, fragment_path));
+        }
+    }
+
+
+    /**
+    @brief Parse all the materials data from a xml node
+    @param node The xml node with the data
+    */
+    void TScene::parse_materials(rapidxml::xml_node<>* node)
+    {
+        std::shared_ptr<TRenderTask> renderTask = std::reinterpret_pointer_cast<TRenderTask>(get_task("TRenderTask"));
+        
+        for (
+            rapidxml::xml_node <>* material = node->first_node();
+            material;
+            material = material->next_sibling()
+            )
+        {
+            std::shared_ptr < Rendering3D::Material> material_ptr;
+            std::string name;
+            std::string texture;
+            std::string shader_program;
+            bool opaque;
+
+            if (material->type() == rapidxml::node_element)
+            {
+                if ((std::string)material->name() != "material") return;
+            }
+
+            for (
+                rapidxml::xml_attribute<>* attributes = material->first_attribute();
+                attributes;
+                attributes = attributes->next_attribute()
+                )
+            {
+                if ((std::string)attributes->name() == "name")
+                {
+                    name = (std::string) attributes->value();
+
+                    for (
+                        rapidxml::xml_node<>* key = material->first_node();
+                        key;
+                        key = key->next_sibling()
+                        )
+                    {
+                        if ((std::string)key->name() == "texture")
+                        {
+                            texture = key->value();
+                        }
+                        else if ((std::string)key->name() == "shader_program")
+                        {
+                            shader_program = key->value();
+                        }
+                        else if ((std::string)key->name() == "opaque")
+                        {
+                            if (key->value() == "true") opaque = true;
+                            else if (key->value() == "false") opaque = false;                            
+                        }
+                    }
+                }
+            }
+            
+            material_ptr = std::make_shared<Rendering3D::Material>(texture, opaque);
+            material_ptr->set_shader_program(renderTask->get_shader_program(shader_program));
+            renderTask->add_material(name, material_ptr);            
+        }           
+    }
+
+
+    /**
+    @brief Parse all the shaders data from a xml node
+    @param node The xml node with the data
+    */
+    void TScene::parse_shaders(rapidxml::xml_node<>* node)
+    {
+        std::shared_ptr<TRenderTask> renderTask = std::reinterpret_pointer_cast<TRenderTask>(get_task("TRenderTask"));
+        std::shared_ptr<TShaderProgram> new_shader_program = nullptr;
+        std::string shader_program_name;
+        for (
+            rapidxml::xml_node <>* shader_program = node->first_node();
+            shader_program;
+            shader_program = shader_program->next_sibling()
+            )
+        {
+            if (shader_program->type() == rapidxml::node_element)
+            {
+                if ((std::string)shader_program->name() != "shader_program") return;
+            }
+
+            for (
+                rapidxml::xml_attribute<>* attributes = shader_program->first_attribute();
+                attributes;
+                attributes = attributes->next_attribute()
+                )
+            {
+                if ((std::string)attributes->name() == "name")
+                {
+                    new_shader_program = std::make_shared<TShaderProgram>(); 
+                    shader_program_name = (std::string) attributes->value();
+
+                    for (
+                        rapidxml::xml_node<>* shaders = shader_program->first_node();
+                        shaders;
+                        shaders = shaders->next_sibling()
+                        )
+                    {
+                        if (shaders->type() == rapidxml::node_element)
+                        {
+                            if ((std::string)shaders->name() == "shaders")
+                            {
+                                for (
+                                    rapidxml::xml_node <>* shader = shaders->first_node();
+                                    shader;
+                                    shader = shader->next_sibling()
+                                    )
+                                {
+                                    if (shader->type() == rapidxml::node_element)
+                                    {
+                                        if ((std::string)shader->name() != "shader") return;
+                                    }
+
+                                    for (
+                                        rapidxml::xml_attribute<>* attribute = shader->first_attribute();
+                                        attribute;
+                                        attribute = attribute->next_attribute()
+                                        )
+                                    {
+                                        if ((std::string)attribute->name() == "type")
+                                        {
+                                            std::string type = attribute->value();
+
+                                            std::string shader_path;
+                                            std::string shader_name;
+
+                                            if ((std::string)type == "vertex")
+                                            {
+                                                
+                                                for (
+                                                    rapidxml::xml_node<>* param = shader->first_node();
+                                                    param;
+                                                    param = param->next_sibling()
+                                                    )
+                                                {
+                                                    std::string value = param->value();
+
+                                                    if ((std::string)param->name() == "path")
+                                                    {
+                                                        shader_path = value;
+                                                    }
+
+                                                    else if ((std::string)param->name() == "name")
+                                                    {
+                                                        shader_name = value;
+                                                    }
+
+                                                }
+
+                                                TShader new_shader(shader_path, TShader::VERTEX, shader_name);
+                                                new_shader_program->add(new_shader);
+                                            }
+
+                                            if ((std::string)type == "fragment")
+                                            {
+
+                                                for (
+                                                    rapidxml::xml_node<>* param = shader->first_node();
+                                                    param;
+                                                    param = param->next_sibling()
+                                                    )
+                                                {
+                                                    std::string value = param->value();
+
+                                                    if ((std::string)param->name() == "path")
+                                                    {
+                                                        shader_path = value;
+                                                    }
+
+                                                    else if ((std::string)param->name() == "name")
+                                                    {
+                                                        shader_name = value;
+                                                    }
+
+                                                }
+
+                                                TShader new_shader(shader_path, TShader::FRAGMENT, shader_name);
+                                                new_shader_program->add(new_shader);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    renderTask->add_shader_program(shader_program_name, new_shader_program);
+                }
+
+            }
+    }
+    }
+
 
     /**
     @brief Parse all the entities data from a xml node
@@ -147,20 +424,20 @@ namespace TortillaEngine
 
                                             if ((std::string)type == "sphere collider")
                                             {
-                                                std::shared_ptr<TSphereCollider> collider = std::make_shared<TSphereCollider>(new_entity.get(), 0, 0, 0, 0);
+                                                std::shared_ptr<TSphereCollider> collider = std::make_shared<TSphereCollider>(new_entity.get(), 0.f, 0.f, 0.f, 0.f);
                                                 new_entity->add_component("TSphereCollider", collider);
                                                 collider->parse_component(component);
                                             }
                                             else if ((std::string)type == "camera")
                                             {
-                                                std::shared_ptr<TCameraComponent> camera = std::make_shared<TCameraComponent>(new_entity.get(), 0, 0, 0, 0);
+                                                std::shared_ptr<TCameraComponent> camera = std::make_shared<TCameraComponent>(new_entity.get(), 0.f, 0.f, 0.f, 0.f);
                                                 new_entity->add_component("TCameraComponent", camera);
                                                 camera->parse_component(component);
                                             }
                                             else if ((std::string)type == "light")
                                             {
                                                 TLightComponent::TColor color{ 0,0,0 };
-                                                std::shared_ptr<TLightComponent> light = std::make_shared<TLightComponent>(new_entity.get(), color, 0);
+                                                std::shared_ptr<TLightComponent> light = std::make_shared<TLightComponent>(new_entity.get(), color, 0.f);
                                                 new_entity->add_component("TLightComponent", light);
                                                 light->parse_component(component);
                                             }

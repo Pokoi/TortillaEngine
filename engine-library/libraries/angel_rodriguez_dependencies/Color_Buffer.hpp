@@ -45,7 +45,7 @@
 
             int offset_at (int x, int y) const
             {
-                return (y * width + x);
+                return int(y * width + x);
             }
 
         public:
